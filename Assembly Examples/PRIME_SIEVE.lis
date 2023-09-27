@@ -1,0 +1,113 @@
+X-Makina Assembler - Version XM-23 Single Pass+ Assembler - Release 02.06.23
+Input file name: PRIME_SIEVE.asm
+Time of assembly: Fri 18 Aug 2023 19:13:32 
+  1	    	     	LR	equ	R5
+  2	    	     	PC	equ	R7
+  3	    	     	P	equ	R0
+  4	    	     	PP	equ 	R1
+  5	    	     	CNT	equ	R2
+  6	    	     	VAL	equ	R3
+  7	    	     	I	equ	R4
+  8	    	     	ONE	equ	R5
+  9	    	     	LIMNUM	equ	#7000		;greatest number is 7FFF because of comparisons with negatives (signed)
+ 10	    	     	LIMIT	equ	R6
+ 11	    	     	
+ 12	    	     	
+ 13	    	     	
+ 14	    	     		org	#FF00		;MAIN LOOP OCCURS AT FF00
+ 15	    	     	START
+ 16	FF00	6006		movl	LIMNUM,LIMIT
+ 17	FF02	7B86		movh	LIMNUM,LIMIT
+ 18	FF04	680D		movlz	$1,ONE
+ 19	FF06	6810		movlz	$2,P
+ 20	    	     	LOOP1	
+ 21	FF08	4C02		mov	P,CNT		;set counter to P
+ 22	FF0A	6801		movlz	#0000,PP
+ 23	    	     	
+ 24	FF0C	4001	MULTLP	add	P,PP		;add P to PP
+ 25	FF0E	428A		sub	$1,CNT		;decrement counter (initially set to P)
+ 26	FF10	27FD		bnz	MULTLP		;as long as counter isnt zero, continue looping
+ 27	    	     	
+ 28	FF12	4531		cmp	LIMIT,PP	;compare P squared to limit
+ 29	FF14	340B		BGE	STOPLOOP1	;stop looping if P squared is larger than loop limit
+ 30	FF16	5843		ld.b	P,VAL		;loads value from memory
+ 31	FF18	4583		cmp	$0,VAL		
+ 32	FF1A	2406		BNE	SKIP1		;if value is NOT zero, then skip following lines
+ 33	    	     		
+ 34	    	     	
+ 35	FF1C	4C0C		mov	PP,I		;set I initiaially equal to P squared		
+ 36	FF1E	4534	LOOP2	cmp	LIMIT,I		;compare I to limit
+ 37	FF20	3403		BGE	STOPLOOP2	;if I is larger than limit, then dont loop again
+ 38	FF22	5C6C		st.b	ONE,I		;store 1 in memory to indicate not prime
+ 39	FF24	4004		add	P,I		;increment I by P
+ 40	FF26	3FFB		BRA	LOOP2		;do loop again
+ 41	    	     	STOPLOOP2
+ 42	    	     	
+ 43	FF28	4088	SKIP1	add	$1,P		;increment P by 1
+ 44	FF2A	3FEE		BRA	LOOP1		;Loop again
+ 45	    	     	STOPLOOP1
+ 46	    	     	
+ 47	    	     	
+ 48	    	     	;at this point, any value in memory beteen locations 0000 and LIMIT (1000) should be a 1 or a zero.
+ 49	    	     	;if the value is a 1 that means it is not a prime, if a value is zero it is a prime
+ 50	    	     	;Now program goes through memory, checks if value in address is 0 or 1, if its 0, then write that address somewhere else to save it
+ 51	    	     	
+ 52	    	     	
+ 53	FF2C	6005		movl	#A000,R5	;can now override R5 (not needed any more) to set starting point for saving memory at location 10,000 (A000)
+ 54	FF2E	7D05		movh	#A000,R5	
+ 55	FF30	6810		movlz	#0002,P
+ 56	FF32	4530	LOOP3	cmp	LIMIT,P
+ 57	FF34	3409		BGE	STOPLOOP3	;stop looping if P is greater than or equal to limit
+ 58	FF36	5843		ld.b	P,VAL		;load value stored in memory
+ 59	FF38	4583		cmp	$0,VAL		
+ 60	FF3A	2404		BNE	SKIP2		;if value is not zero, it is not a prime, so skip saving it to memory
+ 61	FF3C	4D18		swpb	P		;swap bytes of P because of little endian (for presentation)
+ 62	FF3E	5C05		st	P,R5		;Store the byte address of val, not val itself
+ 63	FF40	4D18		swpb	P		;swap bytes back to how they should be
+ 64	FF42	4095		add	$2,R5		;Increment by two as we are storing addresses - 16 bits
+ 65	FF44	4088	SKIP2	add	$1,P
+ 66	FF46	3FF5		BRA	LOOP3
+ 67	    	     	STOPLOOP3
+ 68	FF48	3C2B	BRA	DONE
+ 69	    	     	
+ 70	    	     	
+ 71	    	     		org	#FFA0
+ 72	    	     	DONE
+ 73	    	     	end START
+
+Successful completion of assembly - 2P
+
+** Symbol table **
+Name                               	Type	Value	Decimal
+DONE                               	REL	FFA0	-96	PRI
+SKIP2                              	REL	FF44	-188	PRI
+STOPLOOP3                          	REL	FF48	-184	PRI
+LOOP3                              	REL	FF32	-206	PRI
+STOPLOOP2                          	REL	FF28	-216	PRI
+LOOP2                              	REL	FF1E	-226	PRI
+SKIP1                              	REL	FF28	-216	PRI
+STOPLOOP1                          	REL	FF2C	-212	PRI
+MULTLP                             	REL	FF0C	-244	PRI
+LOOP1                              	REL	FF08	-248	PRI
+START                              	REL	FF00	-256	PRI
+LIMIT                              	REG	0006	6	PRI
+LIMNUM                             	CON	7000	28672	PRI
+ONE                                	REG	0005	5	PRI
+I                                  	REG	0004	4	PRI
+VAL                                	REG	0003	3	PRI
+CNT                                	REG	0002	2	PRI
+PP                                 	REG	0001	1	PRI
+P                                  	REG	0000	0	PRI
+PC                                 	REG	0007	7	PRI
+LR                                 	REG	0005	5	PRI
+R7                                 	REG	0007	7	PRI
+R6                                 	REG	0006	6	PRI
+R5                                 	REG	0005	5	PRI
+R4                                 	REG	0004	4	PRI
+R3                                 	REG	0003	3	PRI
+R2                                 	REG	0002	2	PRI
+R1                                 	REG	0001	1	PRI
+R0                                 	REG	0000	0	PRI
+
+.XME file: C:\Users\romes\OneDrive - Dalhousie University\Desktop\Dal\6 - Summer 2023\3403 - Comp Arc\Assembler\PRIME_SIEVE.xme
+
