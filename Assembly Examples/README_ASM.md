@@ -4,6 +4,7 @@ The following contains information about the:
 - XM23 executable files (.xme)
 - XM23 Assembler
 - How to Use
+- Recommendations
 
 ## XM23 Assembly Files
 The XM23 assembly files use the XM23 assembly language detailed in the ISA and invented by Prof. Larry Hughes.
@@ -36,3 +37,15 @@ To a .asm file found in the repo, or that you have wrote on your own, drag and d
 If assembled correctly, two files will be added to the working directory:
 - A .xme file will be the executable that will be fed to the XM23 assembler.
 - A .lis file will proivde additional information added to the original .asm file that may be extremely useful when debugging code. The .lis file contains line numbers, memory addresses, instructions translated to hex (very useful for comparing with computer memory during debugging) for each instruction, as well as a symbol table at the end.
+
+## Recomendations
+If you are using the emulator for the first time I would recomend starting with the prime sieve example as it is the most visual and "useful" program. Assemble the PRIME_SIEVE.asm file by dragging it into the XM23ASSMBLR.exe file and then drag the newly genrated PRIME_SIEVE.xme file into the emulator. You can run the emulator either in debug mode or in continuous mode, but be sure to look at the memory at the end. The primes will be stored (in HEX) in memory locations 0xA000 and onwards (up to about 0xC###).
+All memory locations 0x0000 - 0x7000 will also be marked with either a 0 or a 1. If marked a 0, that memory location is prime, if marked 1, not a prime (eg. memory location 7 will store the value 0x00, while memory location 8 will store 0x01). 
+
+I recommend also running count_strings.asm and modifying the string in the assembly file to whatever you want (note that the string is limited in length due to assembler implementation, but the emulator can in theory handle a string of any size (up to memory constraints)).
+
+There are a few other files that can be ran, such as SVC.asm that involves calling a service routine and pushes variables to the stack, that are useful to execute as well.
+
+I have many more .asm files that can be added upon request.
+
+Most of all, I recommend writing your own assembly file and see what you can create! I am sure some impressive things can be done with eight 16-bit registers and 64kib of memory!
