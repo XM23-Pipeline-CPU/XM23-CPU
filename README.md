@@ -28,15 +28,13 @@ The following readme provides all the basic information one must know to use, op
     3. Output and Print Settings
 6. Emulator Architecture
     1. The Loader
-    2. Emulater Interface
-    3. The Debugger
-    4. Main Instruction Execution
-    5. Memory Access
+    2. Main Instruction Execution
+    3. Memory Access
         1. Direct Memory Access
         2. Direct Cache Access
         3. Associative Cache Access
         4. Combined Cache Access
-    6. Instructions
+    4. Instructions
 7. XM23 Architecture
     1. RISC Architecture
     2. Registers
