@@ -16,9 +16,8 @@ The following readme provides all the basic information one must know to use, op
     5. Recommendations
 4. Executing Code
 5. Emulator Features
-    1. Main Menu
-    2. Methods of Execution
-    3. Debugging
+    1. The Main Menu
+    2. The Debugger
         1. The "Continue" Statement
         2. Change PC
         3. Set New Breakpoint
@@ -26,7 +25,7 @@ The following readme provides all the basic information one must know to use, op
         5. Modify Registers
         6. View Memory
         7. Modify Cache Type
-    4. Output and Print Settings
+    3. Output and Print Settings
 6. Emulator Architecture
     1. The Loader
     2. Emulater Interface
@@ -103,3 +102,26 @@ There are a few other files that can be ran, such as SVC.asm that involves calli
 I have many more .asm files that can be added upon request.
 
 Most of all, I recommend writing your own assembly file and see what you can create! I am sure some impressive things can be done with eight 16-bit registers and 64kib of memory!
+
+## Executing Code
+As briefly mentioned above, to execute code one must drag and drop a single (added functionality coming soon) XME file onto the emulator executable. If the file has been loaded correctly (all checksums match up and there are no unexpected characters) you will be prompted with the main menu and will be able to execute your code as desired. Please read the following section for explenations as to the methods and options you have in executing your code.
+
+## Emulator Features
+The emulator boasts a number of ways in which you can interact with and execute your code, view the CPU memory and registers, modify values as needed, debug, output, and save information. This section outlines such features.
+
+### The Main Menu
+Once your file has been loaded onto the emulator and the loader has confirmed a successful upload of its contents onto the CPU memory, you will be prompted with the emulator's main menu. You may be underwhelmed by the somewhat limited number of options that first appear on screan, but fear not, most extended features are available in debug mode if you require them. In the main menu you will see the below:
+Choose the following:
+0 - QUIT
+1 - Run until end of memory
+2 - Run in Debug Mode
+3 - Modify print settings
+
+"Run until end of memory" will execute all instructions (or data if you have written poor code), starting from the address specified in the S9 record of your XME, all the way to address location #FFBE. The reason that this function does not execute up to #FFFE is learned about more "XM23 Architecture - Memory" but has to do with those memory locations being reserved for interrupt handlers.
+
+"Run in Debug Mode" will prompt the user with a new, much more extensive menu for running the code with all debugger options available. This will be expanded upon more soon.
+
+"Modify print settings" will allow the user to choose the verbosity of the emulator output, as well as if they want it to be printed to STDOUT or to an output file. Note that printing to an output file (and not printing at all) is orders of magnitudes faster than printing to STDOUT, so if you are bencharking your system, that is the way to go.
+
+## The Debugger
+asdasd
