@@ -33,10 +33,6 @@ The following readme provides all the basic information one must know to use, op
        2. Decode
        3. Execute
     4. Memory Access
-        1. Direct Memory Access
-        2. Direct Cache Access
-        3. Associative Cache Access
-        4. Combined Cache Access
     5. Instructions
 7. XM23 Architecture
     1. RISC Architecture
@@ -199,3 +195,6 @@ Note that if the opcode does not match into any of the cases, the default case i
 As explained above, there is no individual "execute" function. Once an instruction is decoded, the appropriate function to execute that specific instruction is called, and is provided with the instruction register as the argument. Nothing other than the contents of the instruction register is provided in the function call.
 
 While most instructions have a unique function, some share nested common functions. For example, the ADD function and the SUB function both call the exec_ADDITION() function when they are called but provide it with different function arguments derived from the contents of the instruction register. More on this can be found in the complete ISA or by looking through the code. Additional functions are often shared such as updating the PSW or branching to a different location in the code.
+
+### Memory Access
+kajsdhaksjdh
