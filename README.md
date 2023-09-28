@@ -123,5 +123,8 @@ Choose the following:
 
 "Modify print settings" will allow the user to choose the verbosity of the emulator output, as well as if they want it to be printed to STDOUT or to an output file. Note that printing to an output file (and not printing at all) is orders of magnitudes faster than printing to STDOUT, so if you are bencharking your system, that is the way to go.
 
-## The Debugger
-asdasd
+### The Debugger
+The debugger allows the user a much higher degree of control over the execution of the code and the visualization of the data. The following describes the features of the debugger:
+
+#### alskjd
+ljashd
