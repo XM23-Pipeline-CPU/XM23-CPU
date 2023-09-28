@@ -29,12 +29,15 @@ The following readme provides all the basic information one must know to use, op
 6. Emulator Architecture
     1. The Loader
     2. Main Instruction Execution
-    3. Memory Access
+       1. Fetch
+       2. Decode
+       3. Execute
+    4. Memory Access
         1. Direct Memory Access
         2. Direct Cache Access
         3. Associative Cache Access
         4. Combined Cache Access
-    4. Instructions
+    5. Instructions
 7. XM23 Architecture
     1. RISC Architecture
     2. Registers
@@ -165,3 +168,18 @@ As outlined above, the user has some choice on the output of the XM23 emulator. 
 A user can choose to print the remaining data (eg. information streamed by the emulator during its excution) either to STDOUT or to a file. At the end of program execution, the user can choose to empty the entire memory into a file in the working directory. Note that a Cache Dump is performed prior to this to ensure memory coherence.
 
 Lastly, as mentioned above, the destination and verbosity of your prints do have a significant impact on performance, with increasing verbosity being (slightly) slower, and printing to STDOUT rather than to a file being orders of magnitudes slower. Not printing anything at all (verbosity set to 0) is the fastest. Note that this is not an issue with the implementation of the emulator itself but just a general property of printing to STDOUT which prints to the screan, rather than to a file stored in your computer's memory, or more likely  CPU's cahce.
+
+## Emulator Architecure
+The following presents the general approach taken when developing some of the key features of the program. This is intended to give a brief overview of how the code is structured and where main modules are located.
+
+### The Loader
+The loader.c and loader.h files constitute a module for processing S-record files within the application. The loader function is the main interface, designed to handle command line inputs specifying the S-record file to be processed. Within the loader function, each line of the provided file is read and classified based on its S-record type, initiating tailored extraction processes for each type.
+
+The extract_header_type function processes S0 record type, presenting the file name and verifying the checksum for data integrity. For the S1 record type, extract_data_type function is called, performing the task of loading instructions into the defined memory address and conducting a checksum verification. Handling the S9 record type, the extract_address_type sets the Program Counter's starting address in alignment with the S-record. Each of these functions returns 0 upon successful completion, and 1 in the event of a checksum error. In a scenario where no file is provided, or it fails to open, the loader function will return -1. This robust error handling ensures smooth operation and ease of troubleshooting, aiding in the effective utilization of the module in your application. Including loader.h in your program allows seamless access to these functionalities, enhancing the handling and processing of S-record files within your application environment.
+
+Note that the loader is NOT meant to check the validity of your code. If you are to enter data that is valid in length and style, and the checksum matches, the loader will input it into memory. Once must relay on the assembler and their assembly skills to write correct code.
+
+### Main Instruction Execution
+Whether called through the debugger or through the continuous execution mode, the fetch-decode-execute-(increment) cycle remains the same, and is the core of the emulated CPU's computing loop.
+
+#### Fetch
