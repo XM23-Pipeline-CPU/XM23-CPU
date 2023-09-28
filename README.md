@@ -124,7 +124,46 @@ Choose the following:
 "Modify print settings" will allow the user to choose the verbosity of the emulator output, as well as if they want it to be printed to STDOUT or to an output file. Note that printing to an output file (and not printing at all) is orders of magnitudes faster than printing to STDOUT, so if you are bencharking your system, that is the way to go.
 
 ### The Debugger
-The debugger allows the user a much higher degree of control over the execution of the code and the visualization of the data. The following describes the features of the debugger:
+The debugger allows the user a much higher degree of control over the execution of the code and the visualization of the data. The debugger menu is shown below:
 
-#### alskjd
-ljashd
+Choose one of the following:
+QUIT              : (0)
+CONTINUE          : (1)
+Change PC         : (2)
+Set new breakpoint: (3)
+View Registers    : (4)
+Modify Registers  : (5)
+View Memory       : (6)
+Modify cache type : (7)
+
+#### The "Continue" Statement
+The Continue statement allows you to progress one step in the code execution. This essentially runs the fetch-decode-execute cycle once, and finishes by progressing the program counter by 2 unless otherwise controlled by an instruction.
+
+#### Change PC
+Change PC allows the user to change the program counter to any "valid" value, regardless of the state of the machine at the moment. A valid value for the program counter would be a non-negative (zero is allowed), even number, up to and including #FFFE. Once the program is resumed, or the next cycle is requested through the "Continue" statement, the next instruction fetched will be the one that lies where the program counter was set.
+
+#### Set New Breakpoint
+Set new breakpoint allows the user to run the code continuously untill the program counter hits the breakpoint or reaches end of memory. The breakpoint is limited to valid PC values, and is allowed to be set at a lower PC value than the current PC value. After a breakpoint is set, the continuous execution function will be called and ran. Note that when a breakpoint is hit, that instruction will NOT execute, meaning that the next fetch-decode-execute cycle will fetch and use that instruction. This is similar to how breakpoints work in modern IDEs.
+
+#### View Registers
+Shows a list of all registers as well as the Program Status Word (PSW) bits (see XM23 Architecture - Registers), and the current value in the instruction register. Note that the program counter is simply register 7 (R7), so that is the value of the program counter.
+
+#### Modify Registers
+Allows you to set any valid (#0000 - #FFFF) value to any register and it will be changed imidietly and be used when the program is continued.
+
+#### View Memory
+Prompts the user to enter a memory range that they are interested in viewing the contents of.
+
+#### Modify Cache Type
+This option allows the user to change, on the fly, between direct memory access (no cache), direct cache access, associative cache access, or combined cache access. See "XM23 Architecure - Cache" for more details about each cachce type. Note that if "combined cache" is chosen, an additional choice will be presented to the user, prompting them to choose the number of divisions the combined cache should have (2, 4, or 8).
+
+Note that the debugger menu reapears after a choice has been selected and performed.
+
+With the features outlined above, the debugger acts as a powerful tool for debugging not only the ASM code written, but the emulator itself. Viewing memory and register values is extremely beneficial, especially when done side by side with the .LIS file that shows the memory address, and value of each instruction.
+
+## Output and Print Settings
+As outlined above, the user has some choice on the output of the XM23 emulator. The user can choose both the verbosity of the output and the destination location. Some output, such as menus and debugging information cannot be modified, and will always be printed to STDOUT with one defined verbosity. Some (rare) errors raised by interrupts are also printed to STDOUT and not the specified destination.
+
+A user can choose to print the remaining data (eg. information streamed by the emulator during its excution) either to STDOUT or to a file. At the end of program execution, the user can choose to empty the entire memory into a file in the working directory. Note that a Cache Dump is performed prior to this to ensure memory coherence.
+
+Lastly, as mentioned above, the destination and verbosity of your prints do have a significant impact on performance, with increasing verbosity being (slightly) slower, and printing to STDOUT rather than to a file being orders of magnitudes slower. Not printing anything at all (verbosity set to 0) is the fastest. Note that this is not an issue with the implementation of the emulator itself but just a general property of printing to STDOUT which prints to the screan, rather than to a file stored in your computer's memory, or more likely  CPU's cahce.
