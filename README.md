@@ -161,7 +161,7 @@ Note that the debugger menu reapears after a choice has been selected and perfor
 
 With the features outlined above, the debugger acts as a powerful tool for debugging not only the ASM code written, but the emulator itself. Viewing memory and register values is extremely beneficial, especially when done side by side with the .LIS file that shows the memory address, and value of each instruction.
 
-## Output and Print Settings
+### Output and Print Settings
 As outlined above, the user has some choice on the output of the XM23 emulator. The user can choose both the verbosity of the output and the destination location. Some output, such as menus and debugging information cannot be modified, and will always be printed to STDOUT with one defined verbosity. Some (rare) errors raised by interrupts are also printed to STDOUT and not the specified destination.
 
 A user can choose to print the remaining data (eg. information streamed by the emulator during its excution) either to STDOUT or to a file. At the end of program execution, the user can choose to empty the entire memory into a file in the working directory. Note that a Cache Dump is performed prior to this to ensure memory coherence.
