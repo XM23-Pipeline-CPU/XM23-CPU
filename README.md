@@ -180,6 +180,22 @@ The extract_header_type function processes S0 record type, presenting the file n
 Note that the loader is NOT meant to check the validity of your code. If you are to enter data that is valid in length and style, and the checksum matches, the loader will input it into memory. Once must relay on the assembler and their assembly skills to write correct code.
 
 ### Main Instruction Execution
-Whether called through the debugger or through the continuous execution mode, the fetch-decode-execute-(increment) cycle remains the same, and is the core of the emulated CPU's computing loop.
+Whether called through the debugger or through the continuous execution mode, the fetch-(increment)-decode-execute cycle remains the same, and is the core of the emulated CPU's computing loop.
 
 #### Fetch
+The fetch() function is does more than just fetch the instruction pointed to by the program counter. When the fetch function is called, a few crucial checks must occur before the emulator determines that it is acceptible to fetch the instruction. First, the test_for_ISR_exit() function is called to ensure that it is not currently attempting to exit an interrupt service routine. This is expanded upon more in the XM23 Architecture section, but in short, due to the XM23 being a RISC architecture, there exists no "ret" instruction meaning that we must find another way to signal to the CPU that program execution should be handed back to the main routine. This is done by setting the PC to the invalid value of #FFFF. When this is detected, the program exists the service routine.
+Next, the fetch function calls the test_for_cex() function which determines if we are to skip any incoming instruction due to the CEX's conditional execution fields. This is explained more in depth in the full ISA, but in short, the CEX instruction allows some branch-like PC control embedded in the instruction data itself.
+Lastly, the fetch function checks for an illegal program counter, and raises the illegal address fault if it encounters it.
+Once all of the above has been verified, the fetch function calls the cache_func() which in turn loads the instsruction register with the data pointed to by the program counter (more on this in the Memory section).
+
+#### Decode
+In the main execution cycle there is no "decode" function, rather a decode_inst() which acts as a "decode + execute" function. This function does both the decoding, and then without returning to the main loop, executes the desired instruction. This is purely to save overhead when calling the function, and removing the need to return a function pointer to the main loop just to use it again the next line.
+
+The decode portion of the function is essentially a large switch statement that covers all viable opcode possibilites. The function recieves the instruction register as input and provides it as the switch statement's argument. The switch statement then bitwise ANDs the instruction register with a mask of the appropriate opcode length in each case and compares it to the masked opcode defined in the "instructions.h" header file. Through a series of nested switch-cases the function is able to decode the instruction and call the correct function to execute it.
+
+Note that if the opcode does not match into any of the cases, the default case is to call the illegal instruction interrupt service routine.
+
+#### Execute
+As explained above, there is no individual "execute" function. Once an instruction is decoded, the appropriate function to execute that specific instruction is called, and is provided with the instruction register as the argument. Nothing other than the contents of the instruction register is provided in the function call.
+
+While most instructions have a unique function, some share nested common functions. For example, the ADD function and the SUB function both call the exec_ADDITION() function when they are called but provide it with different function arguments derived from the contents of the instruction register. More on this can be found in the complete ISA or by looking through the code. Additional functions are often shared such as updating the PSW or branching to a different location in the code.
