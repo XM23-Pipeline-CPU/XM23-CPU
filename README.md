@@ -37,7 +37,6 @@ The following readme provides all the basic information one must know to use, op
         2. Associative Cache
         3. Combined Cache
         4. Direct Memory Access 
-    6. Instructions
 7. XM23 Architecture
     1. RISC Architecture
     2. Registers
@@ -238,3 +237,29 @@ The combined cache method combines the two approaches above by grouping the 16 c
 ```#define COMBINED_KEY_HASH(addr, div_num) (addr & (~((CACHE_SIZE >> (div_num >> 1)) - 1)) & (CACHE_SIZE - 1))```
 
 #### Direct Memory Access
+Direct memory access completely skips over the cache and is called by passing the same four arguments (MAR, *MDR, RW, WB) directly to the bus function. It is important to note that all cache functions also eventually only access memory through the bus function, and never directly modify the array. This direct memory access forgoes cache lines and calls the bus function directly whenever there is a call to memory.
+The bus function is short but dense and can be shown in this read me:
+```inline void bus(unsigned short MAR, unsigned short* MDR, unsigned char RW, unsigned char WB)
+{
+	// RW = 0 --> READ
+	if (RW == READ)
+	{
+		if (WB == WORD)	//WORD
+			*MDR = mem.w[MAR >> 1];
+		else			//BYTE
+			*MDR = mem.b[MAR];
+	}
+	// RW = 1 --> WRITE
+	else
+	{
+		if (WB == WORD)		//WORD
+			mem.w[MAR >> 1] = *MDR;
+		else				//BYTE
+			mem.b[MAR] = (*MDR & 0xFF);
+	}
+	GLOBAL_CLOCK += 3;
+	return;
+}```
+
+It is only here that the memory array is accessed directly with the *MDR and MAR arguments.
+Another important note is the increment of the "GLOBAL_CLOCK" variable. This signifies that a memory access takes three clock cycles, and is explained more on in the XM23 Architecture section.
