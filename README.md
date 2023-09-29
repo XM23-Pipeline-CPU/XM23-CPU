@@ -239,7 +239,8 @@ The combined cache method combines the two approaches above by grouping the 16 c
 #### Direct Memory Access
 Direct memory access completely skips over the cache and is called by passing the same four arguments (MAR, *MDR, RW, WB) directly to the bus function. It is important to note that all cache functions also eventually only access memory through the bus function, and never directly modify the array. This direct memory access forgoes cache lines and calls the bus function directly whenever there is a call to memory.
 The bus function is short but dense and can be shown in this read me:
-```inline void bus(unsigned short MAR, unsigned short* MDR, unsigned char RW, unsigned char WB)
+```
+inline void bus(unsigned short MAR, unsigned short* MDR, unsigned char RW, unsigned char WB)
 {
 	// RW = 0 --> READ
 	if (RW == READ)
@@ -259,7 +260,8 @@ The bus function is short but dense and can be shown in this read me:
 	}
 	GLOBAL_CLOCK += 3;
 	return;
-}```
+}
+```
 
 It is only here that the memory array is accessed directly with the *MDR and MAR arguments.
 Another important note is the increment of the "GLOBAL_CLOCK" variable. This signifies that a memory access takes three clock cycles, and is explained more on in the XM23 Architecture section.
