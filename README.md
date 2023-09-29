@@ -118,7 +118,7 @@ Choose the following:
 2 - Run in Debug Mode
 3 - Modify print settings
 ```
-"Run until end of memory" will execute all instructions (or data if you have written poor code), starting from the address specified in the S9 record of your XME, all the way to address location #FFBE. The reason that this function does not execute up to #FFFE is learned about more "XM23 Architecture - Memory" but has to do with those memory locations being reserved for interrupt handlers.
+"Run until end of memory" will execute all instructions (or data if you have written poor code), starting from the address specified in the S9 record of your XME, all the way to address location 0xFFBE. The reason that this function does not execute up to 0xFFFE is learned about more "XM23 Architecture - Memory" but has to do with those memory locations being reserved for interrupt handlers.
 
 "Run in Debug Mode" will prompt the user with a new, much more extensive menu for running the code with all debugger options available. This will be expanded upon more soon.
 
@@ -141,7 +141,7 @@ Modify cache type : (7)
 The Continue statement allows you to progress one step in the code execution. This essentially runs the fetch-decode-execute cycle once, and finishes by progressing the program counter by 2 unless otherwise controlled by an instruction.
 
 #### Change PC
-Change PC allows the user to change the program counter to any "valid" value, regardless of the state of the machine at the moment. A valid value for the program counter would be a non-negative (zero is allowed), even number, up to and including #FFFE. Once the program is resumed, or the next cycle is requested through the "Continue" statement, the next instruction fetched will be the one that lies where the program counter was set.
+Change PC allows the user to change the program counter to any "valid" value, regardless of the state of the machine at the moment. A valid value for the program counter would be a non-negative (zero is allowed), even number, up to and including 0xFFFE. Once the program is resumed, or the next cycle is requested through the "Continue" statement, the next instruction fetched will be the one that lies where the program counter was set.
 
 #### Set New Breakpoint
 Set new breakpoint allows the user to run the code continuously untill the program counter hits the breakpoint or reaches end of memory. The breakpoint is limited to valid PC values, and is allowed to be set at a lower PC value than the current PC value. After a breakpoint is set, the continuous execution function will be called and ran. Note that when a breakpoint is hit, that instruction will NOT execute, meaning that the next fetch-decode-execute cycle will fetch and use that instruction. This is similar to how breakpoints work in modern IDEs.
@@ -150,7 +150,7 @@ Set new breakpoint allows the user to run the code continuously untill the progr
 Shows a list of all registers as well as the Program Status Word (PSW) bits (see XM23 Architecture - Registers), and the current value in the instruction register. Note that the program counter is simply register 7 (R7), so that is the value of the program counter.
 
 #### Modify Registers
-Allows you to set any valid (#0000 - #FFFF) value to any register and it will be changed imidietly and be used when the program is continued.
+Allows you to set any valid (0x0000 - 0xFFFF) value to any register and it will be changed imidietly and be used when the program is continued.
 
 #### View Memory
 Prompts the user to enter a memory range that they are interested in viewing the contents of.
@@ -183,7 +183,7 @@ Note that the loader is NOT meant to check the validity of your code. If you are
 Whether called through the debugger or through the continuous execution mode, the fetch-(increment)-decode-execute cycle remains the same, and is the core of the emulated CPU's computing loop.
 
 #### Fetch
-The fetch() function is does more than just fetch the instruction pointed to by the program counter. When the fetch function is called, a few crucial checks must occur before the emulator determines that it is acceptible to fetch the instruction. First, the test_for_ISR_exit() function is called to ensure that it is not currently attempting to exit an interrupt service routine. This is expanded upon more in the XM23 Architecture section, but in short, due to the XM23 being a RISC architecture, there exists no "ret" instruction meaning that we must find another way to signal to the CPU that program execution should be handed back to the main routine. This is done by setting the PC to the invalid value of #FFFF. When this is detected, the program exists the service routine.
+The fetch() function is does more than just fetch the instruction pointed to by the program counter. When the fetch function is called, a few crucial checks must occur before the emulator determines that it is acceptible to fetch the instruction. First, the test_for_ISR_exit() function is called to ensure that it is not currently attempting to exit an interrupt service routine. This is expanded upon more in the XM23 Architecture section, but in short, due to the XM23 being a RISC architecture, there exists no "ret" instruction meaning that we must find another way to signal to the CPU that program execution should be handed back to the main routine. This is done by setting the PC to the invalid value of 0xFFFF. When this is detected, the program exists the service routine.
 Next, the fetch function calls the test_for_cex() function which determines if we are to skip any incoming instruction due to the CEX's conditional execution fields. This is explained more in depth in the full ISA, but in short, the CEX instruction allows some branch-like PC control embedded in the instruction data itself.
 Lastly, the fetch function checks for an illegal program counter, and raises the illegal address fault if it encounters it.
 Once all of the above has been verified, the fetch function calls the cache_func() which in turn loads the instsruction register with the data pointed to by the program counter (more on this in the Memory section).
@@ -265,3 +265,66 @@ inline void bus(unsigned short MAR, unsigned short* MDR, unsigned char RW, unsig
 
 It is only here that the memory array is accessed directly with the *MDR and MAR arguments.
 Another important note is the increment of the "GLOBAL_CLOCK" variable. This signifies that a memory access takes three clock cycles, and is explained more on in the XM23 Architecture section.
+
+## XM23 Architecture
+The following section is a BRIEF overview of the XM23 architecture. This repository contains a 100+ page document that outlines the entire architecture in detail, written by Prof. Larry Hughes; the inventor of the XM23 architecture. When developing code or when debaiting why a certain design choice was made in the emulator, the answer can, more likely than not, be found in the complete ISA. Regardless, this section outlines the basics and the important charactersitics of the architecture.
+
+### RISC Architecture
+The XM23 is a Reduced Instruction Set Computer architecure that drew a lot of inspiration from ARM and other older sympler architectures. A RISC architecture means that only the crucial instructions exist in the assembly language, and other instructions that may be seen in non RISC architectures can be derived from a combination of the RISC instructions. As a result some basic instructions such as HALT, or RET are not part of the ISA. While it can be argued that these intsructions are useful to include even in a RISC architecture, they were not in this one. Regardless, it is the responsibility of the developer to build other, more specialized instuctions, on their own in the form of subroutines, macros, etc.
+
+The XM23 architecture supports 41 instructions, all of which are outlined in the "Revised XM23 Instruction Set" excel sheet, and explained in great detail in the full ISA.
+
+### Registers
+The XM23 architecture supports eight 16-bit, general purpose registers. General purpose refers to the fact that registers can perform both arithmetic and logic operations, as well as addressing operations. Registers 0-3 have no other specialized use, register 4 acts as the Back Pointer register although this is rarely used, register 5 is the link register, register 6 is the stack pointer, and register 7 is the program counter. All can be modified by the assembly programmer through legitimate, legal instructions. Thus, the programmer must take great care when using the specialized registers as general registers to assure they are not corrupting important information within them. With only eight registers it is expected that the programmer will require using at the very least registers 4 and 5 when writing code. It is good practice to push to the stack the contents of a register if it is also being used as a specialized register before modifying it. Register 6 is often also used as a general purpose register if the use of the stack is not required for that specific program. Register 7 should generally never be touched as this may quickly cause unexpected behavior (there are a couple niche situations in which it may be used - as the final exam of the course had shown). 
+
+In addition to the eight general purpose registers, the architecture also allows for an additional instruction register, as well as a program status word. 
+The instruction register, as the name suggests, holds the current instruction fetched by the fetch function. It is most often the case that THIS is the register that is being pointed to by the *MDR pointer when a memory call is performed.
+The Program Status Word (PSW) holds the current "state" of the machine. This includes information on important status bits used for operations, priority information for multiple processes, and power information. The following is a rundown of the bits in the PSW:
+- C - Carry bit: is set if an arithmetic information resulted in a carry.
+- Z - Zero bit: is set if an arithmetic operation, a bit check, or a comparison, has returned or resulted in a zero.
+- N - Negative bit: is set if an arithmetic operation results in a negative, or a comparison returns a negative.
+- SLP - Sleep bit: information on process state (rarely used).
+V - Overflow bit: is set if an arithmetic operation results in an overflow (like a carry but for negative numbers).
+CP - Current Priority 3 bits: show the priority of the current running process (0-7).
+FLT - Fault Bit: is set if a fault has occured and is used later to determine if a double fault has occured.
+PP - Previous Priority 3 bits: show the priority of the previously running process (0-7).
+
+For detailed information about the PSW and how each of the bits are set, please refer to the ISA.
+
+In addition to the registers mentioned above, the XM23 has 8 supported built in contants:
+0x0000, 0x0001, 0x0002, 0x0004, 0x0008, 0x0010, 0x0020, 0xFFFF.
+These constants can be used in place of the source register in many assembly instructions.
+
+### Memory
+The XM23 architecture supports 64kib (65,536 bytes) of memory. Memory is addressable either by byte address (0x0000 - 0xFFFF) or by word address (0x0000 - 0x7FFF). Note that a word in the context of the XM23 referrs to 16 bits = 2 bytes. This is the C equivalant of an unsigned short.
+
+The XM23 uses the Von Neumman architecture, meaning that data and instructions are stored together on the same virtual and physical memory space. This allows for simpler development in the sense that all registers have access to both data and instructions, but presents the added difficulty of organizing the code in such a way to not read data as instructions and vice versa.
+
+### Cache
+The XM23 supports 16 16-bit cache lines that use a write-back cache write policy. A write-back policy means that the main system memory is only updated when the block of cache is replaced or removed. Because all data goes through the cache, it is ok if the cache and memory are not in sync, as long as they are synced whenever the cache overwrites a certain cache line. The write-back policy is also the reason I have implemented a cache-dump whenever the user requests to view memory, so that it is up to date and the user can debug it without issues or confusion.
+
+The XM23's cache line is made of the following:
+- Address: a 16 bit unsigned short representing the address in memory that the data has originated from.
+- Data: a 16 bit unsigned short that is the data.
+- Dirty Bit (DB): a single bit that signifies whether the cache line is out of sync with the main system memory. The DB is set to zero by default, whenever the data in the cache line is written to or modified in any way, the dirty bit is set.
+- Usage: a 4 bit unsgined nibble that represents the cache line's usage. This refers to how recently the cache line has been accessed and is exteremly useful to optimizing the hit to miss ratio. When using associative cache, if a miss has occured, one wants to make sure that they are replacing the cache line that is least likely to be needed again in the coming future. As a result we keep track of when a certain cache line has been last used in comparison to all other cache lines. We choose to "kick out" the cache line with the lowest usage if a miss has occured, because it has been the least recently used line.
+
+### Instructions
+All XM23 instructions are 16 bits long (unsigned short) and are comprised of an "opcode" and "data". The opcode (operand code) is a unique signifier of the instruction. It allows the decoder to know which instruction has been fetched, and as a result, how to treat it. The XM23 uses fixed size instructions meaning that the opcodes are stored within the 16 bit instruction along with the data that it encodes. This leads to opcodes varying in length from one instruction to another to accomodate for different data requirements per instruction. 
+
+An example instruction is shown below:
+```
+ADD = [ # | # | # | # | # | # | # | # | # | # | # | # | # | # | # | # ]
+    = [ OP| OP| OP| OP| OP| OP| OP| OP| RC| WB| SC| SC| SC| D | D | D ]
+```
+where OP represents an opcode bit, and the remaining bits are data bits (RC = register/constant, WB = word/byte, SC = source/constant, D = destination).
+
+The XM23 has a few general instruction types:
+- Control Flow instructions - branching instructions and the CEX instruction.
+- Arithmetic and logic instructions - such as ADD, SUBC, AND etc...
+- Bitwise check instuctions
+- Register manioulation instructions - such as MOV, SWAP etc...
+- Machine state modifier instructions - such as SETCC, CLRCC etc...
+- Memory related instructions - such as LD, STR etc...
+
+For details about all instructions and the meaning of the different data types please refer to the ISA.
