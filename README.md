@@ -112,12 +112,13 @@ The emulator boasts a number of ways in which you can interact with and execute 
 
 ### The Main Menu
 Once your file has been loaded onto the emulator and the loader has confirmed a successful upload of its contents onto the CPU memory, you will be prompted with the emulator's main menu. You may be underwhelmed by the somewhat limited number of options that first appear on screan, but fear not, most extended features are available in debug mode if you require them. In the main menu you will see the below:
+```
 Choose the following:
-- 0 - QUIT
-- 1 - Run until end of memory
-- 2 - Run in Debug Mode
-- 3 - Modify print settings
-
+0 - QUIT
+1 - Run until end of memory
+2 - Run in Debug Mode
+3 - Modify print settings
+```
 "Run until end of memory" will execute all instructions (or data if you have written poor code), starting from the address specified in the S9 record of your XME, all the way to address location #FFBE. The reason that this function does not execute up to #FFFE is learned about more "XM23 Architecture - Memory" but has to do with those memory locations being reserved for interrupt handlers.
 
 "Run in Debug Mode" will prompt the user with a new, much more extensive menu for running the code with all debugger options available. This will be expanded upon more soon.
@@ -126,17 +127,17 @@ Choose the following:
 
 ### The Debugger
 The debugger allows the user a much higher degree of control over the execution of the code and the visualization of the data. The debugger menu is shown below:
-
+```
 Choose one of the following:
-- QUIT              : (0)
-- CONTINUE          : (1)
-- Change PC         : (2)
-- Set new breakpoint: (3)
-- View Registers    : (4)
-- Modify Registers  : (5)
-- View Memory       : (6)
-- Modify cache type : (7)
-
+QUIT              : (0)
+CONTINUE          : (1)
+Change PC         : (2)
+Set new breakpoint: (3)
+View Registers    : (4)
+Modify Registers  : (5)
+View Memory       : (6)
+Modify cache type : (7)
+```
 #### The "Continue" Statement
 The Continue statement allows you to progress one step in the code execution. This essentially runs the fetch-decode-execute cycle once, and finishes by progressing the program counter by 2 unless otherwise controlled by an instruction.
 
@@ -211,9 +212,29 @@ First, when a call to memory is made, this is done through the cache_func() func
 
 The cache type is determined by the user at the start, or can be changed between instructions in debug mode. The cache_func() determines which cache type was chosen by the user and calls the correct cache function, providing it with the exact same four arguments detailed above.
 
+If you are familiar with the general structure of a cache line and what it represents, feel free to read on, if not, please refer to the "XM23 Architecture - Cache" section before reading the following.
+
 #### Associative Cache
 The associative access caching algorithm first searches through the cache to see if any address matches that received by the function. If an address matches (hit) the function checks whether a read or a write was requested. If a read, the function reads the cache line, decrements all cache lines with a usage greater than that of the read line, and sets the read line’s usage to max_usage. If a write was performed the function updates the cache line with new data, sets the dirty bit to 1, decrements the usage of all lines with a greater usage than the line edited, and sets the edited line’s usage to max. 
 
 If the address sent into the function did not match any address in the cache, the function goes into the “miss” section. If a read was performed and the dirty bit was not set, a new value is loaded from memory, if the dirty bit was set, the data is first saved in memory in the address specified by the cache line, and then the new data is loaded from the memory location sent into the function. In both cases the dirty bit is then set to zero. If a write was requested, rather than a read, the dirty bit is also checked. If the dirty bit was set, the cache data is first saved into the memory address specified by the address in the cache line. Then, regardless of the dirty bit value, the cache is updated with the new data and the dirty bit is set. Finally, for both read and write, the usage of all cache lines with a usage greater than zero gets decremented, and the usage of the edited line gets set to max_usage. The function then returns. 
 
 The following flow chart shows the flow of logic for a single access of the associative access algorithm. Note that the flow chart is for one cache access and uses the write back (WB) approach for writing to memory. Additionally, when data is loaded from memory, the dirty bit is set to zero. 
+![Associative Cache Flow Chart](misc/Associative_cache.png)
+
+#### Direct Cache
+The direct access caching algorithm uses a hash “key” to access the correct cache line. The key is defined as the four least significant bits of the address passed into the direct access function. To check if the cache contains the desired address, the key is used to index into the cache array. If the address stored in that line matches the desired address, it is a hit, if not, a miss. 
+
+If a hit has occurred, the function checks if a read or a write has been requested. For read, the function reads out the data, for write, the function first sets the data of the cache line to that provided by the function argument, and then sets the dirty bit of that cache line to one (1). 
+
+If a miss has occurred, the function checks if a read or a write has been requested. For read the function first checks the dirty bit of the line, if zero, the cache line’s data is overwritten from memory of index address, and then the data is read to the user. If the dirty bit was set, the cache line is first stored in its correct memory location (referenced by its address), and then the new data is overwritten from memory to the line and read to the user. If a write has been requested the dirty bit is also checked. If zero, the dirty bit is set, and the cache line’s data is set to the data sent into the function argument. If one, the cache line’s data is first saved into the correct memory location (referenced by the line’s address), then the data is overwritten from the function argument, and the dirty bit set high. The function returns at the end. 
+
+The following flow chart shows the flow of logic for a single access of the direct access algorithm. 
+Note that the flow chart is for one cache access and uses the write back (WB) approach for writing to memory. Additionally, when data is loaded from memory, the dirty bit is set to zero. 
+![Associative Cache Flow Chart](misc/Direct_cache.png)
+
+#### Combined Cache
+The combined cache method combines the two approaches above by grouping the 16 cache lines into either 2, 4, or 8 divisions, indexing into the divisions with a key, and then searching through the indexed division like an associative cache would. The hashing function to obtain the key is a bit more complicated for this and is as follows:
+```#define COMBINED_KEY_HASH(addr, div_num) (addr & (~((CACHE_SIZE >> (div_num >> 1)) - 1)) & (CACHE_SIZE - 1))```
+
+#### Direct Memory Access
