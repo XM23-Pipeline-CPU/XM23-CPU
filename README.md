@@ -29,11 +29,15 @@ The following readme provides all the basic information one must know to use, op
 6. Emulator Architecture
     1. The Loader
     2. Main Instruction Execution
-       1. Fetch
-       2. Decode
-       3. Execute
+        1. Fetch
+        2. Decode
+        3. Execute
     4. Memory Access
-    5. Instructions
+        1. Direct Cache
+        2. Associative Cache
+        3. Combined Cache
+        4. Direct Memory Access 
+    6. Instructions
 7. XM23 Architecture
     1. RISC Architecture
     2. Registers
@@ -197,4 +201,19 @@ As explained above, there is no individual "execute" function. Once an instructi
 While most instructions have a unique function, some share nested common functions. For example, the ADD function and the SUB function both call the exec_ADDITION() function when they are called but provide it with different function arguments derived from the contents of the instruction register. More on this can be found in the complete ISA or by looking through the code. Additional functions are often shared such as updating the PSW or branching to a different location in the code.
 
 ### Memory Access
-kajsdhaksjdh
+Memory access is implemented in the XM23 emulator in a few ways. The XM23 ISA specifies that the CPU has a 16 line cache, each line being able to hold a 16 bit word (more on this in the XM23 Architecture - Cache section), but does not specify which type of caching algorithm is used. The emulator allows for three dynamically interchangable caching algorithm (plus using direct memory access). This influences the implementation of memory access in the emulator.
+
+First, when a call to memory is made, this is done through the cache_func() function which takes in the following four arguments:
+- Memory Address Register (MAR) - an unsigned short that specifies the byte address in memory in which data is either written to, or taken from.
+- Memory Data Register (NDR) - a pointer to an unsigned short that is usually a general register or the instruction register. Data is either stored in this register, extracted from the memory location specified by the MAR, or the MDR points to the data that will be stored in memory pointed to by the MAR. In short, it either accepts data from memory, or writes its contents to memory.
+- Read/Write (RW) - an unsigned char that determines the direction of data transfer. If READ, we read from memory to the MDR, if WRITE, we write from the MDR to memory. Note that this can only take a 0 - READ or 1 - WRITE
+- Word/Byte (WB) - an unsigned char that specifies whether the data that is being transfered is a WORD - 0, or a BYTE - 1.
+
+The cache type is determined by the user at the start, or can be changed between instructions in debug mode. The cache_func() determines which cache type was chosen by the user and calls the correct cache function, providing it with the exact same four arguments detailed above.
+
+#### Associative Cache
+The associative access caching algorithm first searches through the cache to see if any address matches that received by the function. If an address matches (hit) the function checks whether a read or a write was requested. If a read, the function reads the cache line, decrements all cache lines with a usage greater than that of the read line, and sets the read line’s usage to max_usage. If a write was performed the function updates the cache line with new data, sets the dirty bit to 1, decrements the usage of all lines with a greater usage than the line edited, and sets the edited line’s usage to max. 
+
+If the address sent into the function did not match any address in the cache, the function goes into the “miss” section. If a read was performed and the dirty bit was not set, a new value is loaded from memory, if the dirty bit was set, the data is first saved in memory in the address specified by the cache line, and then the new data is loaded from the memory location sent into the function. In both cases the dirty bit is then set to zero. If a write was requested, rather than a read, the dirty bit is also checked. If the dirty bit was set, the cache data is first saved into the memory address specified by the address in the cache line. Then, regardless of the dirty bit value, the cache is updated with the new data and the dirty bit is set. Finally, for both read and write, the usage of all cache lines with a usage greater than zero gets decremented, and the usage of the edited line gets set to max_usage. The function then returns. 
+
+The following flow chart shows the flow of logic for a single access of the associative access algorithm. Note that the flow chart is for one cache access and uses the write back (WB) approach for writing to memory. Additionally, when data is loaded from memory, the dirty bit is set to zero. 
