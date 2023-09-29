@@ -113,10 +113,10 @@ The emulator boasts a number of ways in which you can interact with and execute 
 ### The Main Menu
 Once your file has been loaded onto the emulator and the loader has confirmed a successful upload of its contents onto the CPU memory, you will be prompted with the emulator's main menu. You may be underwhelmed by the somewhat limited number of options that first appear on screan, but fear not, most extended features are available in debug mode if you require them. In the main menu you will see the below:
 Choose the following:
-0 - QUIT
-1 - Run until end of memory
-2 - Run in Debug Mode
-3 - Modify print settings
+- 0 - QUIT
+- 1 - Run until end of memory
+- 2 - Run in Debug Mode
+- 3 - Modify print settings
 
 "Run until end of memory" will execute all instructions (or data if you have written poor code), starting from the address specified in the S9 record of your XME, all the way to address location #FFBE. The reason that this function does not execute up to #FFFE is learned about more "XM23 Architecture - Memory" but has to do with those memory locations being reserved for interrupt handlers.
 
@@ -128,14 +128,14 @@ Choose the following:
 The debugger allows the user a much higher degree of control over the execution of the code and the visualization of the data. The debugger menu is shown below:
 
 Choose one of the following:
-QUIT              : (0)
-CONTINUE          : (1)
-Change PC         : (2)
-Set new breakpoint: (3)
-View Registers    : (4)
-Modify Registers  : (5)
-View Memory       : (6)
-Modify cache type : (7)
+- QUIT              : (0)
+- CONTINUE          : (1)
+- Change PC         : (2)
+- Set new breakpoint: (3)
+- View Registers    : (4)
+- Modify Registers  : (5)
+- View Memory       : (6)
+- Modify cache type : (7)
 
 #### The "Continue" Statement
 The Continue statement allows you to progress one step in the code execution. This essentially runs the fetch-decode-execute cycle once, and finishes by progressing the program counter by 2 unless otherwise controlled by an instruction.
