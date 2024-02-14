@@ -1,3 +1,5 @@
+Note: This project has now been expanded to include the FPGA implementation of the XM3 (added pipelining) CPU. The end goal is to have a complete product by December 2024
+
 # XM23-Emulator
 A built from the ground up emulator for the XM23 RISC architecture featuring full support of the XM23 assembly language.
 
