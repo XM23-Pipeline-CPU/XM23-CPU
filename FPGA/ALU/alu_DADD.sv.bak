@@ -1,0 +1,46 @@
+//alu_DADD.sv
+module alu_BCD_DADD (
+    input logic [15:0] a,         // 16-bit BCD input A
+    input logic [15:0] b,         // 16-bit BCD input B
+    output logic [15:0] result,   // 16-bit BCD result
+    output logic carry_out        // Carry out
+);
+
+    // Internal signals for digit sums and carries
+    logic [3:0] digit_sum[3:0];   // Sum of each BCD digit
+    logic [3:0] digit_a[3:0];     // Each BCD digit of a
+    logic [3:0] digit_b[3:0];     // Each BCD digit of b
+    logic [3:0] digit_result[3:0]; // Corrected BCD digit result
+    logic digit_carry[3:0];       // Carry out for each digit
+
+    // Splitting 16-bit inputs into 4-bit BCD digits
+    assign digit_a[0] = a[3:0];
+    assign digit_a[1] = a[7:4];
+    assign digit_a[2] = a[11:8];
+    assign digit_a[3] = a[15:12];
+
+    assign digit_b[0] = b[3:0];
+    assign digit_b[1] = b[7:4];
+    assign digit_b[2] = b[11:8];
+    assign digit_b[3] = b[15:12];
+
+    // Perform digit-wise addition and correction
+    always_comb begin
+        for (int i = 0; i < 4; i++) begin
+            digit_sum[i] = digit_a[i] + digit_b[i];
+            if (digit_sum[i] > 4'd9) begin
+                digit_result[i] = digit_sum[i] + 4'd6; // BCD correction factor
+                digit_carry[i] = 1'b1;
+            end else begin
+                digit_result[i] = digit_sum[i];
+                digit_carry[i] = 1'b0;
+            end
+        end
+    end
+
+    // Combine the corrected digits back into the 16-bit result
+    assign result = {digit_result[3], digit_result[2], digit_result[1], digit_result[0]};
+    // Generate carry out for the overall result
+    assign carry_out = digit_carry[3];
+
+endmodule
