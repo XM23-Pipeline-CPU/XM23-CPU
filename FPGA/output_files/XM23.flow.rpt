@@ -1,6 +1,6 @@
 Flow report for XM23
-Sat Sep 21 17:39:09 2024
-Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Sat Sep 21 14:20:21 2024
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
 ---------------------
@@ -41,18 +41,18 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Sat Sep 21 17:39:07 2024       ;
-; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Flow Status                        ; Successful - Sat Sep 21 14:20:19 2024       ;
+; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; XM23                                        ;
 ; Top-level Entity Name              ; XM23                                        ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 201 / 114,480 ( < 1 % )                     ;
-;     Total combinational functions  ; 201 / 114,480 ( < 1 % )                     ;
+; Total logic elements               ; 1 / 114,480 ( < 1 % )                       ;
+;     Total combinational functions  ; 1 / 114,480 ( < 1 % )                       ;
 ;     Dedicated logic registers      ; 0 / 114,480 ( 0 % )                         ;
 ; Total registers                    ; 0                                           ;
-; Total pins                         ; 54 / 529 ( 10 % )                           ;
+; Total pins                         ; 3 / 529 ( < 1 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                       ;
 ; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                             ;
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/21/2024 17:38:49 ;
+; Start date & time ; 09/21/2024 14:20:02 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; XM23                ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 238300908692116.172695112904200        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 31350060135803.172695360112036         ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                   ; --            ; --          ; --         ;
@@ -94,11 +94,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:07     ; 1.0                     ; 4776 MB             ; 00:00:06                           ;
-; Fitter               ; 00:00:07     ; 1.0                     ; 6686 MB             ; 00:00:08                           ;
-; Assembler            ; 00:00:03     ; 1.0                     ; 4696 MB             ; 00:00:02                           ;
-; Timing Analyzer      ; 00:00:02     ; 1.1                     ; 4991 MB             ; 00:00:01                           ;
-; Total                ; 00:00:19     ; --                      ; --                  ; 00:00:17                           ;
+; Analysis & Synthesis ; 00:00:06     ; 1.0                     ; 4777 MB             ; 00:00:09                           ;
+; Fitter               ; 00:00:07     ; 1.0                     ; 6683 MB             ; 00:00:09                           ;
+; Assembler            ; 00:00:02     ; 1.0                     ; 4694 MB             ; 00:00:02                           ;
+; Timing Analyzer      ; 00:00:01     ; 1.0                     ; 4953 MB             ; 00:00:01                           ;
+; Total                ; 00:00:16     ; --                      ; --                  ; 00:00:21                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -107,10 +107,10 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; DESKTOP-TKUSISF  ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; DESKTOP-TKUSISF  ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; DESKTOP-TKUSISF  ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; DESKTOP-TKUSISF  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-QM2VEJE  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-QM2VEJE  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-QM2VEJE  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-QM2VEJE  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
