@@ -1,6 +1,6 @@
 Analysis & Synthesis report for XM23
-Sat Sep 21 14:20:08 2024
-Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Sat Sep 21 19:00:29 2024
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
 ---------------------
@@ -13,11 +13,13 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
- 12. Analysis & Synthesis Suppressed Messages
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Parameter Settings for User Entity Instance: Top-level Entity: |XM23
+ 11. Post-Synthesis Netlist Statistics for Top Partition
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
+ 14. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -44,16 +46,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Sep 21 14:20:08 2024       ;
-; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Analysis & Synthesis Status        ; Successful - Sat Sep 21 19:00:29 2024       ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; XM23                                        ;
 ; Top-level Entity Name              ; XM23                                        ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 1                                           ;
-;     Total combinational functions  ; 1                                           ;
-;     Dedicated logic registers      ; 0                                           ;
-; Total registers                    ; 0                                           ;
-; Total pins                         ; 3                                           ;
+; Total logic elements               ; 56                                          ;
+;     Total combinational functions  ; 56                                          ;
+;     Dedicated logic registers      ; 33                                          ;
+; Total registers                    ; 33                                          ;
+; Total pins                         ; 4                                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -156,52 +158,53 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                             ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                         ; Library ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------+---------+
-; XM23.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/Vlad/Desktop/Senior Year Project Repo/XM23-CPU/FPGA/XM23.sv ;         ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                              ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                          ; Library ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------+---------+
+; XM23.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv ;         ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-; Estimated Total logic elements              ; 1     ;
-;                                             ;       ;
-; Total combinational functions               ; 1     ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 0     ;
-;     -- 3 input functions                    ; 0     ;
-;     -- <=2 input functions                  ; 1     ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 1     ;
-;     -- arithmetic mode                      ; 0     ;
-;                                             ;       ;
-; Total registers                             ; 0     ;
-;     -- Dedicated logic registers            ; 0     ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 3     ;
-;                                             ;       ;
-; Embedded Multiplier 9-bit elements          ; 0     ;
-;                                             ;       ;
-; Maximum fan-out node                        ; f~0   ;
-; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 6     ;
-; Average fan-out                             ; 0.86  ;
-+---------------------------------------------+-------+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimated Total logic elements              ; 56             ;
+;                                             ;                ;
+; Total combinational functions               ; 56             ;
+; Logic element usage by number of LUT inputs ;                ;
+;     -- 4 input functions                    ; 10             ;
+;     -- 3 input functions                    ; 0              ;
+;     -- <=2 input functions                  ; 46             ;
+;                                             ;                ;
+; Logic elements by mode                      ;                ;
+;     -- normal mode                          ; 25             ;
+;     -- arithmetic mode                      ; 31             ;
+;                                             ;                ;
+; Total registers                             ; 33             ;
+;     -- Dedicated logic registers            ; 33             ;
+;     -- I/O registers                        ; 0              ;
+;                                             ;                ;
+; I/O pins                                    ; 4              ;
+;                                             ;                ;
+; Embedded Multiplier 9-bit elements          ; 0              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; clock_in~input ;
+; Maximum fan-out                             ; 33             ;
+; Total fan-out                               ; 236            ;
+; Average fan-out                             ; 2.43           ;
++---------------------------------------------+----------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -209,9 +212,19 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |XM23                      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 3    ; 0            ; |XM23               ; XM23        ; work         ;
+; |XM23                      ; 56 (56)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 4    ; 0            ; |XM23               ; XM23        ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------+
+; Registers Removed During Synthesis                           ;
++---------------------------------------+----------------------+
+; Register name                         ; Reason for Removal   ;
++---------------------------------------+----------------------+
+; clock~reg0                            ; Merged with led~reg0 ;
+; Total Number of Removed Registers = 1 ;                      ;
++---------------------------------------+----------------------+
 
 
 +------------------------------------------------------+
@@ -219,14 +232,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 33    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 33    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |XM23 ;
++----------------+----------+------------------------------------------+
+; Parameter Name ; Value    ; Type                                     ;
++----------------+----------+------------------------------------------+
+; DIVIDER        ; 50000000 ; Signed Integer                           ;
++----------------+----------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-----------------------------------------------------+
@@ -234,13 +257,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 3                           ;
-; cycloneiii_lcell_comb ; 1                           ;
-;     normal            ; 1                           ;
-;         2 data inputs ; 1                           ;
+; boundary_port         ; 4                           ;
+; cycloneiii_ff         ; 33                          ;
+;     CLR               ; 33                          ;
+; cycloneiii_lcell_comb ; 56                          ;
+;     arith             ; 31                          ;
+;         2 data inputs ; 31                          ;
+;     normal            ; 25                          ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 14                          ;
+;         4 data inputs ; 10                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 1.00                        ;
-; Average LUT depth     ; 1.00                        ;
+; Max LUT depth         ; 4.50                        ;
+; Average LUT depth     ; 3.73                        ;
 +-----------------------+-----------------------------+
 
 
@@ -258,60 +287,60 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Sat Sep 21 14:20:01 2024
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Sat Sep 21 19:00:22 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off XM23 -c XM23
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file pipeline_controller.sv
-    Info (12023): Found entity 1: pipeline_controller File: C:/Users/Vlad/Desktop/Senior Year Project Repo/XM23-CPU/FPGA/pipeline_controller.sv Line: 8
+    Info (12023): Found entity 1: pipeline_controller File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/pipeline_controller.sv Line: 8
 Info (12021): Found 1 design units, including 1 entities, in source file memory_access.sv
-    Info (12023): Found entity 1: memory_access File: C:/Users/Vlad/Desktop/Senior Year Project Repo/XM23-CPU/FPGA/memory_access.sv Line: 1
+    Info (12023): Found entity 1: memory_access File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/memory_access.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file decoder.sv
-    Info (12023): Found entity 1: DECODER File: C:/Users/Vlad/Desktop/Senior Year Project Repo/XM23-CPU/FPGA/DECODER.sv Line: 1
+    Info (12023): Found entity 1: DECODER File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/DECODER.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu_xor.sv
-    Info (12023): Found entity 1: alu_XOR File: C:/Users/Vlad/Desktop/Senior Year Project Repo/XM23-CPU/FPGA/alu_XOR.sv Line: 2
+    Info (12023): Found entity 1: alu_XOR File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_XOR.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file alu_top_level.sv
-    Info (12023): Found entity 1: alu_top_level File: C:/Users/Vlad/Desktop/Senior Year Project Repo/XM23-CPU/FPGA/alu_top_level.sv Line: 2
+    Info (12023): Found entity 1: alu_top_level File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_top_level.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file alu_sub.sv
-    Info (12023): Found entity 1: alu_SUB File: C:/Users/Vlad/Desktop/Senior Year Project Repo/XM23-CPU/FPGA/alu_SUB.sv Line: 2
+    Info (12023): Found entity 1: alu_SUB File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_SUB.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file alu_or.sv
-    Info (12023): Found entity 1: alu_OR File: C:/Users/Vlad/Desktop/Senior Year Project Repo/XM23-CPU/FPGA/alu_OR.sv Line: 2
+    Info (12023): Found entity 1: alu_OR File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_OR.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file alu_dadd.sv
-    Info (12023): Found entity 1: alu_DADD File: C:/Users/Vlad/Desktop/Senior Year Project Repo/XM23-CPU/FPGA/alu_DADD.sv Line: 2
+    Info (12023): Found entity 1: alu_DADD File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_DADD.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file alu_bit.sv
-    Info (12023): Found entity 1: alu_BIT File: C:/Users/Vlad/Desktop/Senior Year Project Repo/XM23-CPU/FPGA/alu_BIT.sv Line: 2
+    Info (12023): Found entity 1: alu_BIT File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_BIT.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file alu_bis.sv
-    Info (12023): Found entity 1: alu_BIS File: C:/Users/Vlad/Desktop/Senior Year Project Repo/XM23-CPU/FPGA/alu_BIS.sv Line: 2
+    Info (12023): Found entity 1: alu_BIS File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_BIS.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file alu_bic.sv
-    Info (12023): Found entity 1: alu_BIC File: C:/Users/Vlad/Desktop/Senior Year Project Repo/XM23-CPU/FPGA/alu_BIC.sv Line: 2
+    Info (12023): Found entity 1: alu_BIC File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_BIC.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file alu_and.sv
-    Info (12023): Found entity 1: alu_AND File: C:/Users/Vlad/Desktop/Senior Year Project Repo/XM23-CPU/FPGA/alu_AND.sv Line: 2
+    Info (12023): Found entity 1: alu_AND File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_AND.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file alu_add.sv
-    Info (12023): Found entity 1: alu_ADD File: C:/Users/Vlad/Desktop/Senior Year Project Repo/XM23-CPU/FPGA/alu_ADD.sv Line: 2
+    Info (12023): Found entity 1: alu_ADD File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_ADD.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file alu.sv
-    Info (12023): Found entity 1: alu File: C:/Users/Vlad/Desktop/Senior Year Project Repo/XM23-CPU/FPGA/alu.sv Line: 2
+    Info (12023): Found entity 1: alu File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file xm23.sv
-    Info (12023): Found entity 1: XM23 File: C:/Users/Vlad/Desktop/Senior Year Project Repo/XM23-CPU/FPGA/XM23.sv Line: 1
+    Info (12023): Found entity 1: XM23 File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv Line: 1
 Info (12127): Elaborating entity "XM23" for the top level hierarchy
 Info (286030): Timing-Driven Synthesis is running
-Info (144001): Generated suppressed messages file C:/Users/Vlad/Desktop/Senior Year Project Repo/XM23-CPU/FPGA/output_files/XM23.map.smsg
+Info (144001): Generated suppressed messages file C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/output_files/XM23.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 4 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 60 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
-    Info (21059): Implemented 1 output pins
-    Info (21061): Implemented 1 logic cells
+    Info (21059): Implemented 2 output pins
+    Info (21061): Implemented 56 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4777 megabytes
-    Info: Processing ended: Sat Sep 21 14:20:08 2024
+    Info: Peak virtual memory: 4836 megabytes
+    Info: Processing ended: Sat Sep 21 19:00:29 2024
     Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:09
+    Info: Total CPU time (on all processors): 00:00:06
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/Vlad/Desktop/Senior Year Project Repo/XM23-CPU/FPGA/output_files/XM23.map.smsg.
+The suppressed messages can be found in C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/output_files/XM23.map.smsg.
 
 

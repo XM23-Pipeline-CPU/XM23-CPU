@@ -4,15 +4,19 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "f",
+					"name" : "clock",
 					"strict" : false
 				},
 				{
-					"name" : "x1",
+					"name" : "led",
 					"strict" : false
 				},
 				{
-					"name" : "x2",
+					"name" : "clock_in",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
 					"strict" : false
 				}
 			]

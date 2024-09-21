@@ -1,5 +1,5 @@
 module DECODER(
-    input  logic [15:0] inst
+    input logic [15:0] inst
 );
 
     // Define masks and expected values for each instruction
@@ -398,131 +398,26 @@ module DECODER(
 		 end
 	end
 
-	
-//// Module instantiations
-//
-//// BL instruction
-//ctrl_BL bl_exec (.OFF(OFF), .enable(enable[0]));
-//
-//// BEQ/BZ instruction
-//ctrl_BEQ beq_exec (.OFF(OFF), .enable(enable[1]));
-//
-//// BNE/BNZ instruction
-//ctrl_BNE bne_exec (.OFF(OFF), .enable(enable[2]));
-//
-//// BC/BHS instruction
-//ctrl_BC bc_exec (.OFF(OFF), .enable(enable[3]));
-//
-//// BNC/BLO instruction
-//ctrl_BNC bnc_exec (.OFF(OFF), .enable(enable[4]));
-//
-//// BN instruction
-//ctrl_BN bn_exec (.OFF(OFF), .enable(enable[5]));
-//
-//// BGE instruction
-//ctrl_BGE bge_exec (.OFF(OFF), .enable(enable[6]));
-//
-//// BLT instruction
-//ctrl_BLT blt_exec (.OFF(OFF), .enable(enable[7]));
-//
-//// BRA instruction
-//ctrl_BRA bra_exec (.OFF(OFF), .enable(enable[8]));
-//
-//// ADD instruction
-//ctrl_ADD add_exec (.RC(RC), .WB(WB), .S(S), .D(D), .enable(enable[9]));
-//
-//// ADDC instruction
-//ctrl_ADDC addc_exec (.RC(RC), .WB(WB), .S(S), .D(D), .enable(enable[10]));
-//
-//// SUB instruction
-//ctrl_SUB sub_exec (.RC(RC), .WB(WB), .S(S), .D(D), .enable(enable[11]));
-//
-//// SUBC instruction
-//ctrl_SUBC subc_exec (.RC(RC), .WB(WB), .S(S), .D(D), .enable(enable[12]));
-//
-//// DADD instruction
-//ctrl_DADD dadd_exec (.RC(RC), .WB(WB), .S(S), .D(D), .enable(enable[13]));
-//
-//// CMP instruction
-//ctrl_CMP cmp_exec (.RC(RC), .WB(WB), .S(S), .D(D), .enable(enable[14]));
-//
-//// XOR instruction
-//ctrl_XOR xor_exec (.RC(RC), .WB(WB), .S(S), .D(D), .enable(enable[15]));
-//
-//// AND instruction
-//ctrl_AND and_exec (.RC(RC), .WB(WB), .S(S), .D(D), .enable(enable[16]));
-//
-//// OR instruction
-//ctrl_OR or_exec (.RC(RC), .WB(WB), .S(S), .D(D), .enable(enable[17]));
-//
-//// BIT instruction
-//ctrl_BIT bit_exec (.RC(RC), .WB(WB), .S(S), .D(D), .enable(enable[18]));
-//
-//// BIC instruction
-//ctrl_BIC bic_exec (.RC(RC), .WB(WB), .S(S), .D(D), .enable(enable[19]));
-//
-//// BIS instruction
-//ctrl_BIS bis_exec (.RC(RC), .WB(WB), .S(S), .D(D), .enable(enable[20]));
-//
-//// MOV instruction
-//ctrl_MOV mov_exec (.WB(WB), .S(S), .D(D), .enable(enable[21]));
-//
-//// SWAP instruction
-//ctrl_SWAP swap_exec (.S(S), .D(D), .enable(enable[22]));
-//
-//// SRA instruction
-//ctrl_SRA sra_exec (.WB(WB), .D(D), .enable(enable[23]));
-//
-//// RRC instruction
-//ctrl_RRC rrc_exec (.WB(WB), .D(D), .enable(enable[24]));
-//
-//// COMP instruction
-//ctrl_COMP comp_exec (.WB(WB), .D(D), .enable(enable[25]));
-//
-//// SWPB instruction
-//ctrl_SWPB swpb_exec (.D(D), .enable(enable[26]));
-//
-//// SXT instruction
-//ctrl_SXT sxt_exec (.D(D), .enable(enable[27]));
-//
-//// SETPRI instruction
-//ctrl_SETPRI setpri_exec (.PR(PR), .enable(enable[28]));
-//
-//// SVC instruction
-//ctrl_SVC svc_exec (.SA(SA), .enable(enable[29]));
-//
-//// SETCC instruction
-//ctrl_SETCC setcc_exec (.V(V), .SLP(SLP), .N(N), .Z(Z), .C(C), .enable(enable[30]));
-//
-//// CLRCC instruction
-//ctrl_CLRCC clrcc_exec (.V(V), .SLP(SLP), .N(N), .Z(Z), .C(C), .enable(enable[31]));
-//
-//// CEX instruction
-//ctrl_CEX cex_exec (.C(C), .T(T), .F(F), .enable(enable[32]));
-//
-//// LD instruction
-//ctrl_LD ld_exec (.PRPO(PRPO), .DEC(DEC), .INC(INC), .WB(WB), .S(S), .D(D), .enable(enable[33]));
-//
-//// ST instruction
-//ctrl_ST st_exec (.PRPO(PRPO), .DEC(DEC), .INC(INC), .WB(WB), .S(S), .D(D), .enable(enable[34]));
-//
-//// MOVL instruction
-//ctrl_MOVL movl_exec (.B(B), .D(D), .enable(enable[35]));
-//
-//// MOVLZ instruction
-//ctrl_MOVLZ movlz_exec (.B(B), .D(D), .enable(enable[36]));
-//
-//// MOVLS instruction
-//ctrl_MOVLS movls_exec (.B(B), .D(D), .enable(enable[37]));
-//
-//// MOVH instruction
-//ctrl_MOVH movh_exec (.B(B), .D(D), .enable(enable[38]));
-//
-//// LDR instruction
-//ctrl_LDR ldr_exec (.OFF(OFF), .WB(WB), .S(S), .D(D), .enable(enable[39]));
-//
-//// STR instruction
-//ctrl_STR str_exec (.OFF(OFF), .WB(WB), .S(S), .D(D), .enable(enable[40]));
-	 
-
+	//sends all data from decoder to pipeline registers module
+	pipeline_registers pipeline (
+		.WB(WB),
+		.SLP(SLP),
+		.N(N),
+		.Z(Z),
+		.C(C),
+		.V(V).
+		.PRPO(PRPO),
+		.DEC(DEC),
+		.INC(INC),
+		.RC(RC),
+		.D(D),
+		.S(S),
+		.PR(PR),
+		.F(F),
+		.T(T),
+		.SA(SA),
+		.OFF(OFF),
+		.B(B),
+		.enable(enable)
+	);
 endmodule
