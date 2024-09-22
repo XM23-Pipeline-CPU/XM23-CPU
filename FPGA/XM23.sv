@@ -24,9 +24,12 @@ module XM23 (
 	 
 	 
 	 // Internal signals
-    logic [15:0] inst;
-	 inst <= 0100_0000_0000_1000;	// add, (registers), (word size), from reg 000 + 001, save in reg 000
+	 logic [15:0] inst;
+
+	 always_comb begin
+		  inst <= 16'b0100_0000_0000_1000; // add, (registers), (word size), from reg 000 + 001, save in reg 000
+	 end
 
 	 
-	 decode_stage decode(.inst(inst));
+	 // decode_stage decode(.inst(inst));
 endmodule

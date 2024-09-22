@@ -405,7 +405,7 @@ module DECODER(
 		.N(N),
 		.Z(Z),
 		.C(C),
-		.V(V).
+		.V(V),
 		.PRPO(PRPO),
 		.DEC(DEC),
 		.INC(INC),
