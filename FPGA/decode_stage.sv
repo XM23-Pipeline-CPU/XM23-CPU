@@ -1,4 +1,4 @@
-module DECODER(
+module decode_stage(
     input logic [15:0] inst
 );
 
@@ -153,7 +153,7 @@ module DECODER(
 		 F = 3'b0;
 		 T = 3'b0;
 		 SA = 4'b0;
-		 OFF = 7'b0;
+		 OFF = 13'b0;
 		 B = 8'b0;
 		 enable = 41'b0; // Initialize all enable bits to 0
 

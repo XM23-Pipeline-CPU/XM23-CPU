@@ -1,20 +1,20 @@
 module XM23 (
-    input wire clock_in,    // Input clock (50 MHz from the FPGA)
+    input wire clk_in,    // Input clk (50 MHz from the FPGA)
     input wire reset,       // Reset signal
-    output reg clock,       // This is the global clock for other modules
-    output reg led          // LED output (blinking to confirm clock)
+    output reg clk,       // This is the global clk for other modules
+    output reg led          // LED output (blinking to confirm clk)
 );
     reg [31:0] counter = 0;
-    parameter DIVIDER = 50_000_000;  // Divides 50 MHz clock to desired speed
+    parameter DIVIDER = 50_000_000;  // Divides 50 MHz clk to desired speed
 
-    // Clock divider logic
-    always @(posedge clock_in or posedge reset) begin
+    // clk divider logic
+    always @(posedge clk_in or posedge reset) begin
         if (reset) begin
             counter <= 0;
-            clock <= 0;
+            clk <= 0;
             led <= 0;
         end else if (counter == (DIVIDER - 1)) begin
-            clock <= ~clock;  // Toggle the clock output
+            clk <= ~clk;  // Toggle the clk output
             led <= ~led;      // Toggle the LED (LED will blink)
             counter <= 0;     // Reset the counter
         end else begin
@@ -31,5 +31,5 @@ module XM23 (
 	 end
 
 	 
-	 // decode_stage decode(.inst(inst));
+	 decode_stage decode(.inst(inst));
 endmodule

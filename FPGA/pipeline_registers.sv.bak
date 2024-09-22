@@ -35,15 +35,15 @@ module pipeline_registers(
     output logic [15:0] PSW_o,
     
     // Output General purpose registers and constants
-    output logic [1:0][7:0][15:0] gprc_o
+    output logic [1:0][3:0][15:0] gprc_o
 );
 
     // Parameters
-    localparam NUM_STORED_STAGES = 3;
+    localparam NUM_STORED_STAGES = 4;
     localparam NUM_REGISTERS = 8;
     localparam SELECT_REG = 0;
     localparam SELECT_CON = 1;
-    localparam logic signed [15:0] CONSTANTS [7:0] = '{
+    localparam signed [15:0] CONSTANTS [7:0] = '{
         16'sd0,
         16'sd1,
         16'sd2,
@@ -62,7 +62,7 @@ module pipeline_registers(
     logic [2:0][7:0] B_i;
     logic [2:0][40:0] enable_i;
     
-    logic [1:0][7:0][15:0] gprc_i;
+    logic [1:0][3:0][15:0] gprc_i;
     
     logic [15:0] PSW_i;
 

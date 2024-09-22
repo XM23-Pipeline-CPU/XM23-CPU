@@ -4,7 +4,7 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "clock",
+					"name" : "clk",
 					"strict" : false
 				},
 				{
@@ -12,7 +12,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "clock_in",
+					"name" : "clk_in",
 					"strict" : false
 				},
 				{
