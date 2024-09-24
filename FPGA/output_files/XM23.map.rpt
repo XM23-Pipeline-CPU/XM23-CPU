@@ -1,5 +1,5 @@
 Analysis & Synthesis report for XM23
-Sat Sep 21 23:01:04 2024
+Mon Sep 23 21:45:13 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -48,7 +48,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Sep 21 23:01:04 2024       ;
+; Analysis & Synthesis Status        ; Successful - Mon Sep 23 21:45:13 2024       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; XM23                                        ;
 ; Top-level Entity Name              ; XM23                                        ;
@@ -360,10 +360,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sat Sep 21 23:00:57 2024
+    Info: Processing started: Mon Sep 23 21:45:06 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off XM23 -c XM23
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file regnum_to_values_to_alu.sv
+    Info (12023): Found entity 1: regnum_to_values_to_alu File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/regnum_to_values_to_alu.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file decode_stage.sv
     Info (12023): Found entity 1: decode_stage File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file pipeline_registers.sv
@@ -396,6 +398,11 @@ Info (12021): Found 1 design units, including 1 entities, in source file alu.sv
     Info (12023): Found entity 1: alu File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file xm23.sv
     Info (12023): Found entity 1: XM23 File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv Line: 1
+Warning (12019): Can't analyze file -- file regnum_to_values.sv is missing
+Info (12021): Found 1 design units, including 1 entities, in source file alu_addc.sv
+    Info (12023): Found entity 1: alu_ADDC File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_ADDC.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file alu_subc.sv
+    Info (12023): Found entity 1: alu_SUBC File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_SUBC.sv Line: 2
 Warning (10236): Verilog HDL Implicit Net warning at decode_stage.sv(403): created implicit net for "WB" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 403
 Warning (10236): Verilog HDL Implicit Net warning at decode_stage.sv(404): created implicit net for "SLP" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 404
 Warning (10236): Verilog HDL Implicit Net warning at decode_stage.sv(405): created implicit net for "N" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 405
@@ -479,11 +486,11 @@ Info (21057): Implemented 60 device resources after synthesis - the final resour
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 2 output pins
     Info (21061): Implemented 56 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 70 warnings
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 71 warnings
     Info: Peak virtual memory: 4838 megabytes
-    Info: Processing ended: Sat Sep 21 23:01:04 2024
+    Info: Processing ended: Mon Sep 23 21:45:13 2024
     Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:07
+    Info: Total CPU time (on all processors): 00:00:06
 
 
 +------------------------------------------+
