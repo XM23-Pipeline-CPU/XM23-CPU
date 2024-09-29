@@ -1,5 +1,5 @@
 Analysis & Synthesis report for XM23
-Mon Sep 23 21:45:13 2024
+Sun Sep 29 20:45:57 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -16,12 +16,14 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   8. Registers Removed During Synthesis
   9. General Register Statistics
  10. Parameter Settings for User Entity Instance: Top-level Entity: |XM23
- 11. Port Connectivity Checks: "decode_stage:decode|pipeline_registers:pipeline"
- 12. Port Connectivity Checks: "decode_stage:decode"
- 13. Post-Synthesis Netlist Statistics for Top Partition
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
- 16. Analysis & Synthesis Suppressed Messages
+ 11. Port Connectivity Checks: "pipeline_controller:controller|pipeline_registers:stall_out"
+ 12. Port Connectivity Checks: "pipeline_controller:controller"
+ 13. Port Connectivity Checks: "pipeline_registers:pipeline"
+ 14. Port Connectivity Checks: "decode_stage:decode"
+ 15. Post-Synthesis Netlist Statistics for Top Partition
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
+ 18. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -48,7 +50,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Sep 23 21:45:13 2024       ;
+; Analysis & Synthesis Status        ; Successful - Sun Sep 29 20:45:57 2024       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; XM23                                        ;
 ; Top-level Entity Name              ; XM23                                        ;
@@ -70,7 +72,6 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                           ; EP4CE115F29C7      ;                    ;
 ; Top-level entity name                                            ; XM23               ; XM23               ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
@@ -168,15 +169,29 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                            ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                        ; Library ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------------------+---------+
-; decode_stage.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv       ;         ;
-; pipeline_registers.sv            ; yes             ; User SystemVerilog HDL File  ; C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/pipeline_registers.sv ;         ;
-; XM23.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv               ;         ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                 ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                             ; Library ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------------------------+---------+
+; regnum_to_values_to_alu.sv       ; yes             ; User SystemVerilog HDL File  ; C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/regnum_to_values_to_alu.sv ;         ;
+; decode_stage.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv            ;         ;
+; pipeline_registers.sv            ; yes             ; User SystemVerilog HDL File  ; C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/pipeline_registers.sv      ;         ;
+; pipeline_controller.sv           ; yes             ; User SystemVerilog HDL File  ; C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/pipeline_controller.sv     ;         ;
+; alu_XOR.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_XOR.sv                 ;         ;
+; alu_SUB.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_SUB.sv                 ;         ;
+; alu_OR.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_OR.sv                  ;         ;
+; alu_DADD.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_DADD.sv                ;         ;
+; alu_BIT.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_BIT.sv                 ;         ;
+; alu_BIS.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_BIS.sv                 ;         ;
+; alu_BIC.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_BIC.sv                 ;         ;
+; alu_AND.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_AND.sv                 ;         ;
+; alu_ADD.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_ADD.sv                 ;         ;
+; alu.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu.sv                     ;         ;
+; XM23.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv                    ;         ;
+; alu_ADDC.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_ADDC.sv                ;         ;
+; alu_SUBC.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_SUBC.sv                ;         ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +------------------------------------------------------------+
@@ -257,36 +272,39 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "decode_stage:decode|pipeline_registers:pipeline"                                                                                                         ;
+; Port Connectivity Checks: "pipeline_controller:controller|pipeline_registers:stall_out"                                                                                             ;
 +------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port             ; Type   ; Severity ; Details                                                                                                                                      ;
 +------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; WB               ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
-; SLP              ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
-; N                ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
-; Z                ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
-; C                ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
-; V                ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
-; PRPO             ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
-; DEC              ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
-; INC              ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
-; RC               ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
-; D                ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
-; S                ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
-; PR               ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
-; F                ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
-; T                ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
-; SA               ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
-; OFF              ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
-; B                ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
-; enable           ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
 ; clk              ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; fetch_in         ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; WB               ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; SLP              ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; N                ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; Z                ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; C                ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; V                ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; PRPO             ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; DEC              ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; INC              ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; RC               ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; D                ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; S                ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; PR               ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; F                ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; T                ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; SA               ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; OFF              ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; B                ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; enable           ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
 ; PSW_mask         ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
 ; PSW              ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
 ; CEX              ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
 ; reg_write_enable ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
 ; reg_write_select ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
 ; reg_write_value  ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; exec_result      ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; p_reg            ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
 ; WB_o             ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
 ; SLP_o            ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
 ; N_o              ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
@@ -308,6 +326,62 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; enable_o         ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
 ; PSW_o            ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
 ; gprc_o           ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; exec_result_o    ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
++------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "pipeline_controller:controller"                                                                                                                       ;
++---------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                                                                                      ;
++---------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; stage_3_dep   ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; stage_4_dep   ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; three_msb     ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; thirteen_lsb  ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; PC_in         ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; PSW_in        ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; PC_next       ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; LBPC          ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; LBPSW         ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; display_stage ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; led           ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
++---------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "pipeline_registers:pipeline"                                                                                                                             ;
++------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port             ; Type   ; Severity ; Details                                                                                                                                      ;
++------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; S_o[2]           ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; S_o[1][2..1]     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; D_o[2]           ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; D_o[1][2..1]     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; enable_o[2..1]   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; PSW_o[15..1]     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; fetch_in         ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; CEX              ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; reg_write_enable ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; reg_write_select ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; reg_write_value  ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; p_reg            ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; WB_o             ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; SLP_o            ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; N_o              ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; Z_o              ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; C_o              ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; V_o              ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; PRPO_o           ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; DEC_o            ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; INC_o            ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; PR_o             ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; F_o              ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; T_o              ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; SA_o             ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; OFF_o            ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; B_o              ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; exec_result_o    ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
 +------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -360,7 +434,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon Sep 23 21:45:06 2024
+    Info: Processing started: Sun Sep 29 20:45:51 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off XM23 -c XM23
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -396,6 +470,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file alu_add
     Info (12023): Found entity 1: alu_ADD File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_ADD.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file alu.sv
     Info (12023): Found entity 1: alu File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu.sv Line: 2
+Warning (10275): Verilog HDL Module Instantiation warning at XM23.sv(193): ignored dangling comma in List of Port Connections File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv Line: 193
 Info (12021): Found 1 design units, including 1 entities, in source file xm23.sv
     Info (12023): Found entity 1: XM23 File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv Line: 1
 Warning (12019): Can't analyze file -- file regnum_to_values.sv is missing
@@ -403,81 +478,70 @@ Info (12021): Found 1 design units, including 1 entities, in source file alu_add
     Info (12023): Found entity 1: alu_ADDC File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_ADDC.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file alu_subc.sv
     Info (12023): Found entity 1: alu_SUBC File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_SUBC.sv Line: 2
-Warning (10236): Verilog HDL Implicit Net warning at decode_stage.sv(403): created implicit net for "WB" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 403
-Warning (10236): Verilog HDL Implicit Net warning at decode_stage.sv(404): created implicit net for "SLP" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 404
-Warning (10236): Verilog HDL Implicit Net warning at decode_stage.sv(405): created implicit net for "N" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 405
-Warning (10236): Verilog HDL Implicit Net warning at decode_stage.sv(406): created implicit net for "Z" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 406
-Warning (10236): Verilog HDL Implicit Net warning at decode_stage.sv(407): created implicit net for "C" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 407
-Warning (10236): Verilog HDL Implicit Net warning at decode_stage.sv(408): created implicit net for "V" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 408
-Warning (10236): Verilog HDL Implicit Net warning at decode_stage.sv(409): created implicit net for "PRPO" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 409
-Warning (10236): Verilog HDL Implicit Net warning at decode_stage.sv(410): created implicit net for "DEC" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 410
-Warning (10236): Verilog HDL Implicit Net warning at decode_stage.sv(411): created implicit net for "INC" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 411
-Warning (10236): Verilog HDL Implicit Net warning at decode_stage.sv(412): created implicit net for "RC" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 412
-Warning (10236): Verilog HDL Implicit Net warning at decode_stage.sv(413): created implicit net for "D" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 413
-Warning (10236): Verilog HDL Implicit Net warning at decode_stage.sv(414): created implicit net for "S" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 414
-Warning (10236): Verilog HDL Implicit Net warning at decode_stage.sv(415): created implicit net for "PR" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 415
-Warning (10236): Verilog HDL Implicit Net warning at decode_stage.sv(416): created implicit net for "F" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 416
-Warning (10236): Verilog HDL Implicit Net warning at decode_stage.sv(417): created implicit net for "T" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 417
-Warning (10236): Verilog HDL Implicit Net warning at decode_stage.sv(418): created implicit net for "SA" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 418
-Warning (10236): Verilog HDL Implicit Net warning at decode_stage.sv(419): created implicit net for "OFF" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 419
-Warning (10236): Verilog HDL Implicit Net warning at decode_stage.sv(420): created implicit net for "B" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 420
-Warning (10236): Verilog HDL Implicit Net warning at decode_stage.sv(421): created implicit net for "enable" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 421
+Warning (10236): Verilog HDL Implicit Net warning at alu_SUB.sv(14): created implicit net for "carry_out" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_SUB.sv Line: 14
+Warning (10236): Verilog HDL Implicit Net warning at alu_DADD.sv(50): created implicit net for "carry_out" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_DADD.sv Line: 50
+Warning (10236): Verilog HDL Implicit Net warning at alu_ADD.sv(14): created implicit net for "carry_out" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_ADD.sv Line: 14
+Warning (10236): Verilog HDL Implicit Net warning at alu_ADDC.sv(16): created implicit net for "carry_out" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_ADDC.sv Line: 16
+Warning (10236): Verilog HDL Implicit Net warning at alu_SUBC.sv(16): created implicit net for "carry_out" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_SUBC.sv Line: 16
 Info (12127): Elaborating entity "XM23" for the top level hierarchy
-Info (12128): Elaborating entity "decode_stage" for hierarchy "decode_stage:decode" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv Line: 34
-Warning (10036): Verilog HDL or VHDL warning at decode_stage.sv(133): object "WB" assigned a value but never read File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 133
-Warning (10036): Verilog HDL or VHDL warning at decode_stage.sv(133): object "SLP" assigned a value but never read File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 133
-Warning (10036): Verilog HDL or VHDL warning at decode_stage.sv(133): object "N" assigned a value but never read File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 133
-Warning (10036): Verilog HDL or VHDL warning at decode_stage.sv(133): object "Z" assigned a value but never read File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 133
-Warning (10036): Verilog HDL or VHDL warning at decode_stage.sv(133): object "C" assigned a value but never read File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 133
-Warning (10036): Verilog HDL or VHDL warning at decode_stage.sv(133): object "V" assigned a value but never read File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 133
-Warning (10036): Verilog HDL or VHDL warning at decode_stage.sv(133): object "PRPO" assigned a value but never read File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 133
-Warning (10036): Verilog HDL or VHDL warning at decode_stage.sv(133): object "DEC" assigned a value but never read File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 133
-Warning (10036): Verilog HDL or VHDL warning at decode_stage.sv(133): object "INC" assigned a value but never read File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 133
-Warning (10036): Verilog HDL or VHDL warning at decode_stage.sv(133): object "RC" assigned a value but never read File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 133
-Warning (10036): Verilog HDL or VHDL warning at decode_stage.sv(134): object "D" assigned a value but never read File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 134
-Warning (10036): Verilog HDL or VHDL warning at decode_stage.sv(134): object "S" assigned a value but never read File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 134
-Warning (10036): Verilog HDL or VHDL warning at decode_stage.sv(134): object "PR" assigned a value but never read File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 134
-Warning (10036): Verilog HDL or VHDL warning at decode_stage.sv(134): object "F" assigned a value but never read File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 134
-Warning (10036): Verilog HDL or VHDL warning at decode_stage.sv(134): object "T" assigned a value but never read File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 134
-Warning (10036): Verilog HDL or VHDL warning at decode_stage.sv(135): object "SA" assigned a value but never read File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 135
-Warning (10036): Verilog HDL or VHDL warning at decode_stage.sv(136): object "OFF" assigned a value but never read File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 136
-Warning (10036): Verilog HDL or VHDL warning at decode_stage.sv(137): object "B" assigned a value but never read File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 137
-Warning (10036): Verilog HDL or VHDL warning at decode_stage.sv(138): object "enable" assigned a value but never read File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 138
-Warning (10230): Verilog HDL assignment warning at decode_stage.sv(156): truncated value with size 13 to match size of target (7) File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 156
-Warning (10230): Verilog HDL assignment warning at decode_stage.sv(163): truncated value with size 13 to match size of target (7) File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 163
-Warning (10230): Verilog HDL assignment warning at decode_stage.sv(167): truncated value with size 10 to match size of target (7) File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 167
-Warning (10230): Verilog HDL assignment warning at decode_stage.sv(171): truncated value with size 10 to match size of target (7) File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 171
-Warning (10230): Verilog HDL assignment warning at decode_stage.sv(175): truncated value with size 10 to match size of target (7) File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 175
-Warning (10230): Verilog HDL assignment warning at decode_stage.sv(179): truncated value with size 10 to match size of target (7) File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 179
-Warning (10230): Verilog HDL assignment warning at decode_stage.sv(183): truncated value with size 10 to match size of target (7) File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 183
-Warning (10230): Verilog HDL assignment warning at decode_stage.sv(187): truncated value with size 10 to match size of target (7) File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 187
-Warning (10230): Verilog HDL assignment warning at decode_stage.sv(191): truncated value with size 10 to match size of target (7) File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 191
-Warning (10230): Verilog HDL assignment warning at decode_stage.sv(195): truncated value with size 10 to match size of target (7) File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 195
-Warning (10230): Verilog HDL assignment warning at decode_stage.sv(341): truncated value with size 4 to match size of target (1) File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 341
-Warning (10030): Net "WB" at decode_stage.sv(403) has no driver or initial value, using a default initial value '0' File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 403
-Warning (10030): Net "SLP" at decode_stage.sv(404) has no driver or initial value, using a default initial value '0' File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 404
-Warning (10030): Net "N" at decode_stage.sv(405) has no driver or initial value, using a default initial value '0' File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 405
-Warning (10030): Net "Z" at decode_stage.sv(406) has no driver or initial value, using a default initial value '0' File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 406
-Warning (10030): Net "C" at decode_stage.sv(407) has no driver or initial value, using a default initial value '0' File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 407
-Warning (10030): Net "V" at decode_stage.sv(408) has no driver or initial value, using a default initial value '0' File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 408
-Warning (10030): Net "PRPO" at decode_stage.sv(409) has no driver or initial value, using a default initial value '0' File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 409
-Warning (10030): Net "DEC" at decode_stage.sv(410) has no driver or initial value, using a default initial value '0' File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 410
-Warning (10030): Net "INC" at decode_stage.sv(411) has no driver or initial value, using a default initial value '0' File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 411
-Warning (10030): Net "RC" at decode_stage.sv(412) has no driver or initial value, using a default initial value '0' File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 412
-Warning (10030): Net "D" at decode_stage.sv(413) has no driver or initial value, using a default initial value '0' File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 413
-Warning (10030): Net "S" at decode_stage.sv(414) has no driver or initial value, using a default initial value '0' File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 414
-Warning (10030): Net "PR" at decode_stage.sv(415) has no driver or initial value, using a default initial value '0' File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 415
-Warning (10030): Net "F" at decode_stage.sv(416) has no driver or initial value, using a default initial value '0' File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 416
-Warning (10030): Net "T" at decode_stage.sv(417) has no driver or initial value, using a default initial value '0' File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 417
-Warning (10030): Net "SA" at decode_stage.sv(418) has no driver or initial value, using a default initial value '0' File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 418
-Warning (10030): Net "OFF" at decode_stage.sv(419) has no driver or initial value, using a default initial value '0' File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 419
-Warning (10030): Net "B" at decode_stage.sv(420) has no driver or initial value, using a default initial value '0' File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 420
-Warning (10030): Net "enable" at decode_stage.sv(421) has no driver or initial value, using a default initial value '0' File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 421
-Info (12128): Elaborating entity "pipeline_registers" for hierarchy "decode_stage:decode|pipeline_registers:pipeline" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 422
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gprc_o_wire" into its bus
+Info (12128): Elaborating entity "decode_stage" for hierarchy "decode_stage:decode" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv Line: 108
+Warning (10230): Verilog HDL assignment warning at decode_stage.sv(468): truncated value with size 4 to match size of target (1) File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 468
+Info (12128): Elaborating entity "pipeline_registers" for hierarchy "pipeline_registers:pipeline" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv Line: 151
+Warning (10858): Verilog HDL warning at pipeline_registers.sv(84): object exec_result_i used but never assigned File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/pipeline_registers.sv Line: 84
+Warning (10230): Verilog HDL assignment warning at pipeline_registers.sv(147): truncated value with size 14 to match size of target (7) File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/pipeline_registers.sv Line: 147
+Warning (10030): Net "exec_result_i[1]" at pipeline_registers.sv(84) has no driver or initial value, using a default initial value '0' File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/pipeline_registers.sv Line: 84
+Warning (10034): Output port "p_reg" at pipeline_registers.sv(34) has no driver File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/pipeline_registers.sv Line: 34
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gprc_o" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gprc_i" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gprc_o" into its bus
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (12128): Elaborating entity "pipeline_controller" for hierarchy "pipeline_controller:controller" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv Line: 164
+Info (12128): Elaborating entity "regnum_to_values_to_alu" for hierarchy "regnum_to_values_to_alu:regnum_inst" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv Line: 177
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gprc" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gprc" into its bus
+Info (12128): Elaborating entity "alu" for hierarchy "alu:alu_inst" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv Line: 193
+Info (12128): Elaborating entity "alu_AND" for hierarchy "alu:alu_inst|alu_AND:and_op" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu.sv Line: 59
+Warning (10034): Output port "psw_out" at alu_AND.sv(5) has no driver File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_AND.sv Line: 5
+Warning (10034): Output port "psw_msk" at alu_AND.sv(6) has no driver File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_AND.sv Line: 6
+Info (12128): Elaborating entity "alu_OR" for hierarchy "alu:alu_inst|alu_OR:or_op" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu.sv Line: 60
+Warning (10034): Output port "psw_out" at alu_OR.sv(5) has no driver File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_OR.sv Line: 5
+Warning (10034): Output port "psw_msk" at alu_OR.sv(6) has no driver File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_OR.sv Line: 6
+Info (12128): Elaborating entity "alu_XOR" for hierarchy "alu:alu_inst|alu_XOR:xor_op" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu.sv Line: 61
+Warning (10034): Output port "psw_out" at alu_XOR.sv(5) has no driver File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_XOR.sv Line: 5
+Warning (10034): Output port "psw_msk" at alu_XOR.sv(6) has no driver File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_XOR.sv Line: 6
+Info (12128): Elaborating entity "alu_BIT" for hierarchy "alu:alu_inst|alu_BIT:bit_op" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu.sv Line: 63
+Warning (10230): Verilog HDL assignment warning at alu_BIT.sv(9): truncated value with size 32 to match size of target (16) File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_BIT.sv Line: 9
+Warning (10034): Output port "psw_out" at alu_BIT.sv(5) has no driver File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_BIT.sv Line: 5
+Warning (10034): Output port "psw_msk" at alu_BIT.sv(6) has no driver File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_BIT.sv Line: 6
+Info (12128): Elaborating entity "alu_BIC" for hierarchy "alu:alu_inst|alu_BIC:bic_op" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu.sv Line: 64
+Warning (10230): Verilog HDL assignment warning at alu_BIC.sv(9): truncated value with size 32 to match size of target (16) File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_BIC.sv Line: 9
+Warning (10034): Output port "psw_out" at alu_BIC.sv(5) has no driver File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_BIC.sv Line: 5
+Warning (10034): Output port "psw_msk" at alu_BIC.sv(6) has no driver File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_BIC.sv Line: 6
+Info (12128): Elaborating entity "alu_BIS" for hierarchy "alu:alu_inst|alu_BIS:bis_op" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu.sv Line: 65
+Warning (10230): Verilog HDL assignment warning at alu_BIS.sv(9): truncated value with size 32 to match size of target (16) File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_BIS.sv Line: 9
+Warning (10034): Output port "psw_out" at alu_BIS.sv(5) has no driver File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_BIS.sv Line: 5
+Warning (10034): Output port "psw_msk" at alu_BIS.sv(6) has no driver File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_BIS.sv Line: 6
+Info (12128): Elaborating entity "alu_ADD" for hierarchy "alu:alu_inst|alu_ADD:add_op" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu.sv Line: 67
+Warning (10036): Verilog HDL or VHDL warning at alu_ADD.sv(14): object "carry_out" assigned a value but never read File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_ADD.sv Line: 14
+Warning (10034): Output port "psw_out" at alu_ADD.sv(5) has no driver File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_ADD.sv Line: 5
+Warning (10034): Output port "psw_msk" at alu_ADD.sv(6) has no driver File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_ADD.sv Line: 6
+Info (12128): Elaborating entity "alu_SUB" for hierarchy "alu:alu_inst|alu_SUB:sub_op" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu.sv Line: 68
+Warning (10036): Verilog HDL or VHDL warning at alu_SUB.sv(14): object "carry_out" assigned a value but never read File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_SUB.sv Line: 14
+Warning (10034): Output port "psw_out" at alu_SUB.sv(5) has no driver File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_SUB.sv Line: 5
+Warning (10034): Output port "psw_msk" at alu_SUB.sv(6) has no driver File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_SUB.sv Line: 6
+Info (12128): Elaborating entity "alu_ADDC" for hierarchy "alu:alu_inst|alu_ADDC:addc_op" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu.sv Line: 69
+Warning (10036): Verilog HDL or VHDL warning at alu_ADDC.sv(16): object "carry_out" assigned a value but never read File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_ADDC.sv Line: 16
+Warning (10034): Output port "psw_out" at alu_ADDC.sv(6) has no driver File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_ADDC.sv Line: 6
+Warning (10034): Output port "psw_msk" at alu_ADDC.sv(7) has no driver File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_ADDC.sv Line: 7
+Info (12128): Elaborating entity "alu_SUBC" for hierarchy "alu:alu_inst|alu_SUBC:subc_op" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu.sv Line: 70
+Warning (10036): Verilog HDL or VHDL warning at alu_SUBC.sv(16): object "carry_out" assigned a value but never read File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_SUBC.sv Line: 16
+Warning (10034): Output port "psw_out" at alu_SUBC.sv(6) has no driver File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_SUBC.sv Line: 6
+Warning (10034): Output port "psw_msk" at alu_SUBC.sv(7) has no driver File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_SUBC.sv Line: 7
+Info (12128): Elaborating entity "alu_DADD" for hierarchy "alu:alu_inst|alu_DADD:dadd_op" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu.sv Line: 71
+Warning (10036): Verilog HDL or VHDL warning at alu_DADD.sv(50): object "carry_out" assigned a value but never read File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_DADD.sv Line: 50
+Warning (10034): Output port "psw_out" at alu_DADD.sv(7) has no driver File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_DADD.sv Line: 7
+Warning (10034): Output port "psw_msk" at alu_DADD.sv(9) has no driver File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_DADD.sv Line: 9
+Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/output_files/XM23.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
@@ -486,11 +550,11 @@ Info (21057): Implemented 60 device resources after synthesis - the final resour
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 2 output pins
     Info (21061): Implemented 56 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 71 warnings
-    Info: Peak virtual memory: 4838 megabytes
-    Info: Processing ended: Mon Sep 23 21:45:13 2024
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:06
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 44 warnings
+    Info: Peak virtual memory: 4835 megabytes
+    Info: Processing ended: Sun Sep 29 20:45:57 2024
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:07
 
 
 +------------------------------------------+

@@ -1,12 +1,18 @@
 module pipeline_registers(
     // Clock
     input logic clk,
-    
+	 
+	 // Stalling input (if any bit is set then stall)
+	 input logic [7:0] stall_in,
+	 
+	 // Actual Instruction Registers input (need to update top level to actually use this)
+	 input logic [15:0] fetch_in,
+	 
     // Input Decoder
     input logic WB, SLP, N, Z, C, V, PRPO, DEC, INC, RC,
     input logic [2:0] D, S, PR, F, T,
     input logic [3:0] SA,
-    input logic [6:0] OFF,
+    input logic [13:0] OFF,
     input logic [7:0] B,
     input logic [40:0] enable, 
     
@@ -19,8 +25,14 @@ module pipeline_registers(
     input logic reg_write_enable,
     input logic [3:0] reg_write_select,
     input logic [15:0] reg_write_value,
+	 
+	 // Input to store alu result
+	 input logic [15:0] exec_result,
     
-    // Output previous decoder values
+	 
+	 // Actual Instruction Registers output (need to update top level to actually use this)
+	 output logic [4:0][15:0] p_reg,
+	 // Output previous decoder values
     // index [0] for execute stage
     // index [1] for memory access stage
     // index [2] for register writeback stage
@@ -35,7 +47,10 @@ module pipeline_registers(
     output logic [15:0] PSW_o,
     
     // Output General purpose registers and constants
-    output logic [1:0][7:0][15:0] gprc_o
+    output logic [1:0][7:0][15:0] gprc_o,
+	 
+	 // Writing alu results out
+	 output logic [15:0] exec_result_o
 );
 
     // Parameters
@@ -65,6 +80,8 @@ module pipeline_registers(
     logic [1:0][7:0][15:0] gprc_i;
     
     logic [15:0] PSW_i;
+	 
+	 logic [1:0][15:0] exec_result_i;
 
     // Declare loop variable
     integer i;
@@ -107,27 +124,60 @@ module pipeline_registers(
     	
     // Shift register logic
     always_ff @(posedge clk) begin
-        // Shift all pipeline stages on the positive edge of the clock
-        WB_i[2:1]    <= WB_i[1:0];    WB_i[0]    <= WB;
-        SLP_i[2:1]   <= SLP_i[1:0];   SLP_i[0]   <= SLP;
-        N_i[2:1]     <= N_i[1:0];     N_i[0]     <= N;
-        Z_i[2:1]     <= Z_i[1:0];     Z_i[0]     <= Z;
-        C_i[2:1]     <= C_i[1:0];     C_i[0]     <= C;
-        V_i[2:1]     <= V_i[1:0];     V_i[0]     <= V;
-        PRPO_i[2:1]  <= PRPO_i[1:0];  PRPO_i[0]  <= PRPO;
-        DEC_i[2:1]   <= DEC_i[1:0];   DEC_i[0]   <= DEC;
-        INC_i[2:1]   <= INC_i[1:0];   INC_i[0]   <= INC;
-        RC_i[2:1]    <= RC_i[1:0];    RC_i[0]    <= RC;
-        D_i[2:1]     <= D_i[1:0];     D_i[0]     <= D;
-        S_i[2:1]     <= S_i[1:0];     S_i[0]     <= S;
-        PR_i[2:1]    <= PR_i[1:0];    PR_i[0]    <= PR;
-        F_i[2:1]     <= F_i[1:0];     F_i[0]     <= F;
-        T_i[2:1]     <= T_i[1:0];     T_i[0]     <= T;
-        SA_i[2:1]    <= SA_i[1:0];    SA_i[0]    <= SA;
-        OFF_i[2:1]   <= OFF_i[1:0];   OFF_i[0]   <= OFF;
-        B_i[2:1]     <= B_i[1:0];     B_i[0]     <= B;
-        enable_i[2:1] <= enable_i[1:0]; enable_i[0] <= enable;
-    		
+		  // Bubble insertion if pipeline controller and decoder found stall dependancies
+		  if (!(|stall_in)) begin
+				 
+				 // If no stall propagate decode info
+		       WB_i[0] <= WB;
+				 SLP_i[0] <= SLP;
+				 N_i[0] <= N;
+				 Z_i[0] <= Z;
+				 C_i[0] <= C;
+				 V_i[0] <= V;
+				 PRPO_i[0] <= PRPO;
+				 DEC_i[0] <= DEC;
+				 INC_i[0] <= INC;
+				 RC_i[0] <= RC;
+				 D_i[0] <= D;
+				 S_i[0] <= S;
+				 PR_i[0] <= PR;
+				 F_i[0] <= F;
+				 T_i[0] <= T;
+				 SA_i[0] <= SA;
+				 OFF_i[0] <= OFF;
+				 B_i[0] <= B;
+				 enable_i[0] <= enable;
+				 
+		  end else begin
+		  
+				 // If stall then disable decode propagation.
+				 // Setting 0 to enable should disable all 
+				 // subsequent CPU functionality on the next shifted value
+			    enable_i[0] <= 41'b0;
+				 
+		  end
+		  
+		  // Shift all pipeline stages on the positive edge of the clock
+		  WB_i[2:1]    <= WB_i[1:0];
+        SLP_i[2:1]   <= SLP_i[1:0];
+        N_i[2:1]     <= N_i[1:0];
+        Z_i[2:1]     <= Z_i[1:0];
+        C_i[2:1]     <= C_i[1:0];
+        V_i[2:1]     <= V_i[1:0];
+        PRPO_i[2:1]  <= PRPO_i[1:0];
+        DEC_i[2:1]   <= DEC_i[1:0];
+        INC_i[2:1]   <= INC_i[1:0];
+        RC_i[2:1]    <= RC_i[1:0];
+        D_i[2:1]     <= D_i[1:0];
+        S_i[2:1]     <= S_i[1:0];
+        PR_i[2:1]    <= PR_i[1:0];
+        F_i[2:1]     <= F_i[1:0];
+        T_i[2:1]     <= T_i[1:0];
+        SA_i[2:1]    <= SA_i[1:0];
+        OFF_i[2:1]   <= OFF_i[1:0];
+        B_i[2:1]     <= B_i[1:0];
+        enable_i[2:1] <= enable_i[1:0];
+		  
         // Update PSW
         // If mask bit is high, update that bit; otherwise, retain old value
         PSW_i <= (PSW_i & ~PSW_mask) | (PSW & PSW_mask);
@@ -162,5 +212,7 @@ module pipeline_registers(
     assign PSW_o    = PSW_i;
     	
     assign gprc_o   = gprc_i;
+	 
+	 assign exec_result_o = exec_result_i[1];
     
 endmodule

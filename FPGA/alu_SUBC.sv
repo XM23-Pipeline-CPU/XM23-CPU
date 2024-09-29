@@ -3,9 +3,9 @@ module alu_SUBC (
     input logic [15:0] a,    // Operand A
     input logic [15:0] b,    // Operand B
 	 input logic carry_in,
-	 
-    output logic [15:0] result, // Result
-	 output logic carry_out
+	 output logic [15:0] psw_out,
+	 output logic [15:0] psw_msk,
+    output logic [15:0] result // Result
 
 );
 

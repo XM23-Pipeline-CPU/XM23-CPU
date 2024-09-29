@@ -2,9 +2,9 @@
 module alu_ADD (
     input logic [15:0] a,    // Operand A
     input logic [15:0] b,    // Operand B
-	 
-    output logic [15:0] result, // Result
-	 output logic carry_out
+	 output logic [15:0] psw_out,
+	 output logic [15:0] psw_msk,
+    output logic [15:0] result // Result
 );
 
     logic [16:0] wide_result;
