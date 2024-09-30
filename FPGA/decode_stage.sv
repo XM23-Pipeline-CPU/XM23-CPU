@@ -4,7 +4,7 @@ module decode_stage(
 	 output logic WB, SLP, N, Z, C, V, PRPO, DEC, INC, RC,
     output logic [2:0] D, S, PR, F, T,
     output logic [3:0] SA,
-    output logic [13:0] OFF,
+    output logic [12:0] OFF,
     output logic [7:0] B,
 	 
 	 output logic [40:0] enable, // 41-bit enable variable
@@ -540,7 +540,7 @@ module decode_stage(
 			  async_set[D] = 1'b1;    //set dependency
 			  
 		 end else if ((inst & MASK_LDR) == EXPECTED_LDR) begin
-			  OFF = inst[13:7];
+			  OFF = inst[12:7];
 			  WB = inst[6];
 			  S = inst[5:3];
 			  D = inst[2:0];
@@ -554,7 +554,7 @@ module decode_stage(
 			  async_dep[D] = 1'b1;    //be added as dependency
 			  
 		 end else if ((inst & MASK_STR) == EXPECTED_STR) begin
-			  OFF = inst[13:7];
+			  OFF = inst[12:7];
 			  WB = inst[6];
 			  S = inst[5:3];
 			  D = inst[2:0];

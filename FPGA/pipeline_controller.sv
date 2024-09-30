@@ -27,8 +27,6 @@ module pipeline_controller (
 	//   Clk--------*----*
 	
 	input logic clk,
-	output logic [7:0] stage_3_dep,	
-	output logic [7:0] stage_4_dep,
 	
 	// If either corresponding stage 3 or 4 dependancy 
 	// exists and the decode has the dependancy, stall.
@@ -63,6 +61,8 @@ module pipeline_controller (
 	// Test for dependancies in stage 3 or 4
 	// Stall if dependancy exists and decode block (stage 2) is dependant
 	
+	logic [7:0] stage_3_dep = 0;	
+	logic [7:0] stage_4_dep = 0;
 	logic [7:0] stage_3_or_4;
 	assign stage_3_or_4 = stage_3_dep | stage_4_dep;
 	assign stall = stage_3_or_4 & async_dep_from_decode;
@@ -111,11 +111,6 @@ module pipeline_controller (
 	
 	//------------------------------------------------------------------------
 	
-	//Connection to Pipeline Registers----------------------------------------
-	
-	pipeline_registers stall_out(.stall_in(stall));
-	
-	//------------------------------------------------------------------------
 
 	
 	// Debugging LEDs --------------------------------------------------------

@@ -12,7 +12,7 @@ module pipeline_registers(
     input logic WB, SLP, N, Z, C, V, PRPO, DEC, INC, RC,
     input logic [2:0] D, S, PR, F, T,
     input logic [3:0] SA,
-    input logic [13:0] OFF,
+    input logic [12:0] OFF,
     input logic [7:0] B,
     input logic [40:0] enable, 
     
@@ -39,7 +39,7 @@ module pipeline_registers(
     output logic [2:0] WB_o, SLP_o, N_o, Z_o, C_o, V_o, PRPO_o, DEC_o, INC_o, RC_o,
     output logic [2:0][2:0] D_o, S_o, PR_o, F_o, T_o,
     output logic [2:0][3:0] SA_o,
-    output logic [2:0][6:0] OFF_o,
+    output logic [2:0][12:0] OFF_o,
     output logic [2:0][7:0] B_o,
     output logic [2:0][40:0] enable_o, 
     
@@ -69,63 +69,55 @@ module pipeline_registers(
         -16'sd1
     };
     
-    // Internal signals
-    logic [2:0] WB_i, SLP_i, N_i, Z_i, C_i, V_i, PRPO_i, DEC_i, INC_i, RC_i;
-    logic [2:0][2:0] D_i, S_i, PR_i, F_i, T_i;
-    logic [2:0][3:0] SA_i;
-    logic [2:0][6:0] OFF_i;
-    logic [2:0][7:0] B_i;
-    logic [2:0][40:0] enable_i;
-    
-    logic [1:0][7:0][15:0] gprc_i;
-    
-    logic [15:0] PSW_i;
-	 
-	 logic [1:0][15:0] exec_result_i;
+	// Internal signals
 
-    // Declare loop variable
-    integer i;
+	// Scalar signals initialized to zero
+	logic [2:0] WB_i     = 3'b0,
+					SLP_i    = 3'b0,
+					N_i      = 3'b0,
+					Z_i      = 3'b0,
+					C_i      = 3'b0,
+					V_i      = 3'b0,
+					PRPO_i   = 3'b0,
+					DEC_i    = 3'b0,
+					INC_i    = 3'b0,
+					RC_i     = 3'b0;
 
-    // Initialize General Registers and Constants
-    initial begin
-        // Initialize General Purpose Registers
-        for (i = 0; i < NUM_REGISTERS; i++) begin
-            gprc_i[SELECT_REG][i] = 16'b0;
-        end
-        // Initialize Constants
-        for (i = 0; i < NUM_REGISTERS; i++) begin
-            gprc_i[SELECT_CON][i] = CONSTANTS[i];
-        end
+	// Arrays of 3 elements, each initialized to zero
+	logic [2:0][2:0] D_i      = '{default: 3'b0},
+						  S_i      = '{default: 3'b0},
+						  PR_i     = '{default: 3'b0},
+						  F_i      = '{default: 3'b0},
+						  T_i      = '{default: 3'b0};
 
-        // Initialize PSW
-        PSW_i = 16'b0;
+	// Array of 3 elements, each 4 bits wide, initialized to zero
+	logic [2:0][3:0] SA_i     = '{default: 4'b0};
 
-        // Initialize pipeline registers
-        WB_i     = 3'b0;
-        SLP_i    = 3'b0;
-        N_i      = 3'b0;
-        Z_i      = 3'b0;
-        C_i      = 3'b0;
-        V_i      = 3'b0;
-        PRPO_i   = 3'b0;
-        DEC_i    = 3'b0;
-        INC_i    = 3'b0;
-        RC_i     = 3'b0;
-        D_i      = '{default: 3'b0};
-        S_i      = '{default: 3'b0};
-        PR_i     = '{default: 3'b0};
-        F_i      = '{default: 3'b0};
-        T_i      = '{default: 3'b0};
-        SA_i     = '{default: 4'b0};
-        OFF_i    = '{default: 7'b0};
-        B_i      = '{default: 8'b0};
-        enable_i = '{default: 41'b0};
-    end
+	// Array of 3 elements, each 13 bits wide, initialized to zero
+	logic [2:0][12:0] OFF_i   = '{default: 13'b0};
+
+	// Array of 3 elements, each 8 bits wide, initialized to zero
+	logic [2:0][7:0] B_i      = '{default: 8'b0};
+
+	// Array of 3 elements, each 41 bits wide, initialized to zero
+	logic [2:0][40:0] enable_i = '{default: 41'b0};
+
+	// Initialize PSW_i to zero
+	logic [15:0] PSW_i = 16'b0;
+
+	// Initialize exec_result_i to zero
+	logic [1:0][15:0] exec_result_i = '{default: 16'b0};
     	
+	// Corrected declaration and initialization of gprc_i
+	logic [1:0][7:0][15:0] gprc_i = '{
+	 '{-16'sd1, 16'sd32, 16'sd16, 16'sd8, 16'sd4, 16'sd2, 16'sd1, 16'sd0},    	// CONSTANTS gprc_i[1]
+    '{16'b0, 16'b0, 16'b0, 16'b0, 16'b0, 16'b0, 16'b1, 16'b0000000000001100}  // REGISTERS gprc_i[0]
+	 };
+	
     // Shift register logic
     always_ff @(posedge clk) begin
 		  // Bubble insertion if pipeline controller and decoder found stall dependancies
-		  if (!(|stall_in)) begin
+		  if (!(|stall_in)) begin 
 				 
 				 // If no stall propagate decode info
 		       WB_i[0] <= WB;

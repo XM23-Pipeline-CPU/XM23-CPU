@@ -1,11 +1,11 @@
 module XM23 (
     input wire clk_in,    // Input clk (50 MHz from the FPGA)
     input wire reset,       // Reset signal
-    output reg clk,       // This is the global clk for other modules
     output reg led          // LED output (blinking to confirm clk)
 );
+	reg clk = 0;       // This is the global clk for other modules
 	reg [31:0] counter = 0;
-	parameter DIVIDER = 50_000_000;  // Divides 50 MHz clk to desired speed
+	parameter DIVIDER = 1;  // Divides 50 MHz clk to desired speed
 
 	// clk divider logic
 	always @(posedge clk_in or posedge reset) begin
@@ -41,7 +41,7 @@ module XM23 (
 	wire [2:0]   F_wire;
 	wire [2:0]   T_wire;
 	wire [3:0]   SA_wire;
-	wire [13:0]  OFF_wire;      
+	wire [12:0]  OFF_wire;      
 	wire [7:0]   B_wire;        
 	wire [40:0]  enable_wire;
 
@@ -189,7 +189,7 @@ module XM23 (
 		// OUTPUTS
 		.result(alu_result_wire),
 		.psw_out(psw_out_wire),
-		.psw_msk(psw_mask_wire),
+		.psw_msk(psw_mask_wire)
 	);
 		
 		

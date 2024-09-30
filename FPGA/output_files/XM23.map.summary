@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Sun Sep 29 20:45:57 2024
+Analysis & Synthesis Status : Successful - Sun Sep 29 23:22:35 2024
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : XM23
 Top-level Entity Name : XM23
 Family : Cyclone IV E
-Total logic elements : 56
-    Total combinational functions : 56
+Total logic elements : 45
+    Total combinational functions : 45
     Dedicated logic registers : 33
 Total registers : 33
-Total pins : 4
+Total pins : 3
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

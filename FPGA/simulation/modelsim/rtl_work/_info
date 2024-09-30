@@ -9,55 +9,490 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/simulation/modelsim
-vdecode_stage
+valu
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1727653592
+Z2 !s110 1727663005
 !i10b 1
-!s100 AF0D3_Om2G;L7TMQ:>zRC0
+!s100 __f>1G]flz7VRZ2?6=`QA0
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
-I4n2fVb?Z`1n^f`c:U3AJ_2
+I?i9n]=>A4W?P2`::Y[k7P3
 Z4 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
-w1727650367
-8C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv
-FC:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv
-!i122 1
-L0 1 570
+w1727649134
+8C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu.sv
+FC:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu.sv
+!i122 150
+L0 2 125
 Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1727653592.000000
-!s107 C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA|C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv|
+Z6 !s108 1727663005.000000
+!s107 C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu.sv|
 !i113 1
-Z7 o-sv -work work
-Z8 !s92 -sv -work work {+incdir+C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA}
-Z9 tCvgOpt 0
-vregnum_to_values_to_alu
+Z7 o-work work
+Z8 tCvgOpt 0
+valu_ADD
 R1
 R2
 !i10b 1
-!s100 GaRRHiz?XRHGA6CMX@MPM3
+!s100 :jj>Z8I?Q=nKVkDOC_BP10
 R3
-I13jgCFP^1Oi3W1M^oMVbh2
+IGImEnlH:_>h3HYHU8k6XE0
 R4
 S1
 R0
-w1727651138
-8C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/regnum_to_values_to_alu.sv
-FC:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/regnum_to_values_to_alu.sv
-!i122 0
-L0 3 21
+w1727644555
+8C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_ADD.sv
+FC:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_ADD.sv
+!i122 151
+Z9 L0 2 14
 R5
 r1
 !s85 0
 31
 R6
-!s107 C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/regnum_to_values_to_alu.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA|C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/regnum_to_values_to_alu.sv|
+!s107 C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_ADD.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_ADD.sv|
 !i113 1
 R7
 R8
+nalu_@a@d@d
+valu_ADDC
+R1
+R2
+!i10b 1
+!s100 aDV6gaWF`97DJ_B>9PIk32
+R3
+Iof<[b:[mdkho_^9NM^0O<2
+R4
+S1
+R0
+w1727644549
+8C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_ADDC.sv
+FC:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_ADDC.sv
+!i122 152
+Z10 L0 2 16
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_ADDC.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_ADDC.sv|
+!i113 1
+R7
+R8
+nalu_@a@d@d@c
+valu_AND
+R1
+R2
+!i10b 1
+!s100 nV14<nERgLBgEHdX3QPZO3
+R3
+IfB7UF<?7ReId>1:4ik8Mi0
+R4
+S1
+R0
+w1727644514
+8C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_AND.sv
+FC:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_AND.sv
+!i122 153
+Z11 L0 2 9
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_AND.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_AND.sv|
+!i113 1
+R7
+R8
+nalu_@a@n@d
+valu_BIC
+R1
+R2
+!i10b 1
+!s100 S8^761;6gMJ5Qi3ZLHO_M0
+R3
+IW;XmhnH:0Va@TXNgen]`92
+R4
+S1
+R0
+w1727644506
+8C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_BIC.sv
+FC:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_BIC.sv
+!i122 154
+R11
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_BIC.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_BIC.sv|
+!i113 1
+R7
+R8
+nalu_@b@i@c
+valu_BIS
+R1
+R2
+!i10b 1
+!s100 c6bAdnlgQK4<<K2;M0aOi0
+R3
+IY>YA;6AC]i^=Dh[60N_le2
+R4
+S1
+R0
+w1727644501
+8C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_BIS.sv
+FC:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_BIS.sv
+!i122 155
+R11
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_BIS.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_BIS.sv|
+!i113 1
+R7
+R8
+nalu_@b@i@s
+valu_BIT
+R1
+R2
+!i10b 1
+!s100 Xlb1Y`oKCTWkPhG>>96UX0
+R3
+IU?SV=I^5HjN;ngM[>HokT1
+R4
+S1
+R0
+w1727644497
+8C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_BIT.sv
+FC:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_BIT.sv
+!i122 156
+R11
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_BIT.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_BIT.sv|
+!i113 1
+R7
+R8
+nalu_@b@i@t
+valu_DADD
+R1
+Z12 !s110 1727663006
+!i10b 1
+!s100 =UcmclM2f3PFoN`k@UkC22
+R3
+I^VXO>ZQiVKGT0^J3EM]Xa0
+R4
+S1
+R0
+w1727644487
+8C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_DADD.sv
+FC:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_DADD.sv
+!i122 157
+L0 2 51
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_DADD.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_DADD.sv|
+!i113 1
+R7
+R8
+nalu_@d@a@d@d
+valu_OR
+R1
+R12
+!i10b 1
+!s100 4bO3PcK@OQMPk23OMzf0d1
+R3
+IT;KAWSWoOV;0z9Abhi`<M2
+R4
+S1
+R0
+w1727644460
+8C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_OR.sv
+FC:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_OR.sv
+!i122 158
+R11
+R5
+r1
+!s85 0
+31
+Z13 !s108 1727663006.000000
+!s107 C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_OR.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_OR.sv|
+!i113 1
+R7
+R8
+nalu_@o@r
+valu_SUB
+R1
+R12
+!i10b 1
+!s100 KnFH^b;c`[<OXa6CPJ5>S1
+R3
+IIQO1A<EkDb8KFY1FX7Whl0
+R4
+S1
+R0
+w1727644454
+8C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_SUB.sv
+FC:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_SUB.sv
+!i122 159
 R9
+R5
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_SUB.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_SUB.sv|
+!i113 1
+R7
+R8
+nalu_@s@u@b
+valu_SUBC
+R1
+R12
+!i10b 1
+!s100 IGNC<A6hV9`U7:=EePAhj2
+R3
+IB9B]51Thd2om7oOEimb4m3
+R4
+S1
+R0
+w1727644543
+8C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_SUBC.sv
+FC:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_SUBC.sv
+!i122 160
+R10
+R5
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_SUBC.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_SUBC.sv|
+!i113 1
+R7
+R8
+nalu_@s@u@b@c
+valu_top_level
+R1
+R12
+!i10b 1
+!s100 B^;VAERXae0BdT?B6HXz:3
+R3
+IPC<8e;[R6D0A=MRkM`SSc3
+R4
+S1
+R0
+w1726489618
+8C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_top_level.sv
+FC:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_top_level.sv
+!i122 161
+L0 2 44
+R5
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_top_level.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_top_level.sv|
+!i113 1
+R7
+R8
+valu_XOR
+R1
+R12
+!i10b 1
+!s100 =:=DXX]jKMBK?d<_5jG110
+R3
+I:WG:?Sd6fV3e<hnDDj;8e3
+R4
+S1
+R0
+w1727644437
+8C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_XOR.sv
+FC:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_XOR.sv
+!i122 162
+R11
+R5
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_XOR.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_XOR.sv|
+!i113 1
+R7
+R8
+nalu_@x@o@r
+vdecode_stage
+R1
+R12
+!i10b 1
+!s100 b:nfojB^8^le:BHgDc]W51
+R3
+IiY8>d7:R465I>AUfHmOH]3
+R4
+S1
+R0
+w1727656045
+8C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv
+FC:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv
+!i122 163
+L0 1 570
+R5
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv|
+!i113 1
+R7
+R8
+vmemory_access
+R1
+R12
+!i10b 1
+!s100 :^h@lo=]I:M07VVDWmIkm0
+R3
+I1mBi<DmGU4UIMHPfFHolP2
+R4
+S1
+R0
+w1726953726
+8C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/memory_access.sv
+FC:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/memory_access.sv
+!i122 164
+L0 1 56
+R5
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/memory_access.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/memory_access.sv|
+!i113 1
+R7
+R8
+vpipeline_controller
+R1
+R12
+!i10b 1
+!s100 >o^_Wl1^o=2?TPzK:^ck50
+R3
+ICjVj4URzZLmGXObgRE[GF0
+R4
+S1
+R0
+w1727662947
+8C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/pipeline_controller.sv
+FC:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/pipeline_controller.sv
+!i122 165
+L0 8 117
+R5
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/pipeline_controller.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/pipeline_controller.sv|
+!i113 1
+R7
+R8
+vpipeline_registers
+R1
+R12
+!i10b 1
+!s100 =gRM8NeS6DTJ:^:RN_GI71
+R3
+I_QB0kSHaIK]@NQ?cL2Yko3
+R4
+S1
+R0
+w1727662773
+8C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/pipeline_registers.sv
+FC:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/pipeline_registers.sv
+!i122 166
+L0 1 210
+R5
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/pipeline_registers.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/pipeline_registers.sv|
+!i113 1
+R7
+R8
+vregnum_to_values_to_alu
+R1
+Z14 !s110 1727663007
+!i10b 1
+!s100 =dnO::nSB:VVEjLD1i=b51
+R3
+I]2SSa6@?B6JoTn0H`TYl^1
+R4
+S1
+R0
+w1727662505
+8C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/regnum_to_values_to_alu.sv
+FC:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/regnum_to_values_to_alu.sv
+!i122 167
+L0 3 25
+R5
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/regnum_to_values_to_alu.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/regnum_to_values_to_alu.sv|
+!i113 1
+R7
+R8
+vXM23
+R1
+R14
+!i10b 1
+!s100 fId=hKdEDA5Q5[d9o<bMN3
+R3
+IQj73FHSVC`X3z^VNJngAl1
+R4
+S1
+R0
+w1727662925
+8C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv
+FC:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv
+!i122 168
+L0 1 197
+R5
+r1
+!s85 0
+31
+!s108 1727663007.000000
+!s107 C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv|
+!i113 1
+R7
+R8
+n@x@m23
