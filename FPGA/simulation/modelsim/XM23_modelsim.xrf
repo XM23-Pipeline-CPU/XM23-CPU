@@ -19,6 +19,7 @@ source_file = 1, C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP 
 source_file = 1, regnum_to_values.sv
 source_file = 1, C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_ADDC.sv
 source_file = 1, C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_SUBC.sv
+source_file = 1, C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/update_psw.sv
 source_file = 1, C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/db/XM23.cbx.xml
 design_name = XM23
 instance = comp, \led~output , led~output, XM23, 1

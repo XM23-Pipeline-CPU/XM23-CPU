@@ -3,9 +3,7 @@ module alu_DADD (
     input logic [15:0] a,         // 16-bit BCD input A
     input logic [15:0] b,         // 16-bit BCD input B
     input logic carry_in,         // Carry In
-    output logic [15:0] result,   // 16-bit BCD result
-	 output logic [15:0] psw_out,
-	 output logic [15:0] psw_msk
+    output logic [15:0] result   // 16-bit BCD result
 );
 
     // Internal signals for digit sums and carries

@@ -22,4 +22,5 @@ vlog -sv -work work +incdir+C:/Users/romes/OneDrive\ -\ Dalhousie\ University/De
 vlog -sv -work work +incdir+C:/Users/romes/OneDrive\ -\ Dalhousie\ University/Desktop/Dal/SYP\ -\ actual\ project/XM23-CPU/FPGA {C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv}
 vlog -sv -work work +incdir+C:/Users/romes/OneDrive\ -\ Dalhousie\ University/Desktop/Dal/SYP\ -\ actual\ project/XM23-CPU/FPGA {C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_ADDC.sv}
 vlog -sv -work work +incdir+C:/Users/romes/OneDrive\ -\ Dalhousie\ University/Desktop/Dal/SYP\ -\ actual\ project/XM23-CPU/FPGA {C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_SUBC.sv}
+vlog -sv -work work +incdir+C:/Users/romes/OneDrive\ -\ Dalhousie\ University/Desktop/Dal/SYP\ -\ actual\ project/XM23-CPU/FPGA {C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/update_psw.sv}
 

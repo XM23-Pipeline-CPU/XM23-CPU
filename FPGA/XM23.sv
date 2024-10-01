@@ -135,6 +135,8 @@ module XM23 (
 		
 		// INPUTS FROM ALU
 		.exec_result(alu_result_wire),
+		
+		// INPUTS FROM UPDATING PSW
 		.PSW(psw_out_wire),
 		.PSW_mask(psw_mask_wire),
 		
@@ -187,7 +189,19 @@ module XM23 (
 		.carry_in(PSW_o_wire[0]),
 		
 		// OUTPUTS
+		.result(alu_result_wire)
+	);
+	
+	// module to update the psw after alu
+	update_psw update_psw_inst(
+		// INPUTS FROM REGNUM
+		.a(dst_val_wire),
+		.b(src_val_wire),
+		
+		// INPUTS FROM ALU RESULT
 		.result(alu_result_wire),
+		
+		// OUTPUTS
 		.psw_out(psw_out_wire),
 		.psw_msk(psw_mask_wire)
 	);

@@ -17,7 +17,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
 
-// DATE "09/29/2024 23:22:43"
+// DATE "10/01/2024 17:29:26"
 
 // 
 // Device: Altera EP4CE6E22C6 Package TQFP144
@@ -33,9 +33,9 @@ module XM23 (
 	clk_in,
 	reset,
 	led);
-input 	reg clk_in ;
-input 	reg reset ;
-output 	reg led ;
+input 	clk_in;
+input 	reset;
+output 	led;
 
 // Design Ports Information
 // led	=>  Location: PIN_54,	 I/O Standard: 2.5 V,	 Current Strength: Default

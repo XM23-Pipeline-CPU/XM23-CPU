@@ -1,0 +1,9 @@
+module update_psw(
+	input logic [15:0] a,
+	input logic [15:0] b,
+	input logic [15:0] res,
+	output logic [15:0] psw_out,
+	output logic [15:0] psw_msk
+);
+
+endmodule
