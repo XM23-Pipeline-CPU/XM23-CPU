@@ -4,7 +4,8 @@ module alu (
 	input logic [15:0] b,         // Operand B
 	input logic [40:0] enable,    // Mode Select
 	input logic carry_in,         // Carry In for Addc/Subc/Dadd
-	output logic [15:0] result   // ALU Result
+	output logic [15:0] result,   // ALU Result
+	output logic enable_psw_msk
 );
 
 	// Internal result signals
@@ -42,28 +43,40 @@ module alu (
 	always_comb begin
 		if (enable[9] == 1'b1) begin //ADD
 			result = add_result;
+			enable_psw_msk = 1'b1;
 		end else if (enable[10] == 1'b1) begin //ADDC
 			result = addc_result;
+			enable_psw_msk = 1'b1;
 		end else if (enable[11] == 1'b1) begin //SUB
 			result = sub_result;
+			enable_psw_msk = 1'b1;
 		end else if (enable[12] == 1'b1) begin //SUBC
 			result = subc_result;
+			enable_psw_msk = 1'b1;
 		end else if (enable[13] == 1'b1) begin //DADD
 			result = dadd_result;
+			enable_psw_msk = 1'b1;
 		end else if (enable[15] == 1'b1) begin //XOR
 			result = xor_result;
+			enable_psw_msk = 1'b1;
 		end else if (enable[16] == 1'b1) begin //AND
 			result = and_result;
+			enable_psw_msk = 1'b1;
 		end else if (enable[17] == 1'b1) begin //OR
 			result = or_result;
+			enable_psw_msk = 1'b1;
 		end else if (enable[18] == 1'b1) begin //BIT
 			result = bit_result;
+			enable_psw_msk = 1'b1;
 		end else if (enable[19] == 1'b1) begin //BIC
 			result = bic_result;
+			enable_psw_msk = 1'b1;
 		end else if (enable[20] == 1'b1) begin //BIS
 			result = bis_result;
+			enable_psw_msk = 1'b1;
 		end else begin
 			result = 16'b0;
+			enable_psw_msk = 1'b0;
 		end
 	end
 			

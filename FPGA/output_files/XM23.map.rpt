@@ -1,5 +1,5 @@
 Analysis & Synthesis report for XM23
-Tue Oct 01 17:29:18 2024
+Thu Oct 03 22:40:17 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -48,7 +48,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Oct 01 17:29:18 2024       ;
+; Analysis & Synthesis Status        ; Successful - Thu Oct 03 22:40:17 2024       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; XM23                                        ;
 ; Top-level Entity Name              ; XM23                                        ;
@@ -358,7 +358,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Oct 01 17:29:12 2024
+    Info: Processing started: Thu Oct 03 22:40:09 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off XM23 -c XM23
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -410,38 +410,38 @@ Warning (10236): Verilog HDL Implicit Net warning at alu_ADDC.sv(14): created im
 Warning (10236): Verilog HDL Implicit Net warning at alu_SUBC.sv(14): created implicit net for "carry_out" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_SUBC.sv Line: 14
 Info (12127): Elaborating entity "XM23" for the top level hierarchy
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gprc_o_wire" into its bus
-Info (12128): Elaborating entity "decode_stage" for hierarchy "decode_stage:decode" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv Line: 108
+Info (12128): Elaborating entity "decode_stage" for hierarchy "decode_stage:decode" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv Line: 109
 Warning (10230): Verilog HDL assignment warning at decode_stage.sv(468): truncated value with size 4 to match size of target (1) File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv Line: 468
-Info (12128): Elaborating entity "pipeline_registers" for hierarchy "pipeline_registers:pipeline" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv Line: 153
+Info (12128): Elaborating entity "pipeline_registers" for hierarchy "pipeline_registers:pipeline" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv Line: 154
 Warning (10034): Output port "p_reg" at pipeline_registers.sv(34) has no driver File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/pipeline_registers.sv Line: 34
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gprc_o" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gprc_i" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gprc_o" into its bus
-Info (12128): Elaborating entity "pipeline_controller" for hierarchy "pipeline_controller:controller" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv Line: 166
-Info (12128): Elaborating entity "regnum_to_values_to_alu" for hierarchy "regnum_to_values_to_alu:regnum_inst" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv Line: 179
+Info (12128): Elaborating entity "pipeline_controller" for hierarchy "pipeline_controller:controller" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv Line: 167
+Info (12128): Elaborating entity "regnum_to_values_to_alu" for hierarchy "regnum_to_values_to_alu:regnum_inst" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv Line: 180
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gprc" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gprc" into its bus
-Info (12128): Elaborating entity "alu" for hierarchy "alu:alu_inst" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv Line: 193
-Info (12128): Elaborating entity "alu_AND" for hierarchy "alu:alu_inst|alu_AND:and_op" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu.sv Line: 27
-Info (12128): Elaborating entity "alu_OR" for hierarchy "alu:alu_inst|alu_OR:or_op" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu.sv Line: 28
-Info (12128): Elaborating entity "alu_XOR" for hierarchy "alu:alu_inst|alu_XOR:xor_op" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu.sv Line: 29
-Info (12128): Elaborating entity "alu_BIT" for hierarchy "alu:alu_inst|alu_BIT:bit_op" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu.sv Line: 31
+Info (12128): Elaborating entity "alu" for hierarchy "alu:alu_inst" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv Line: 195
+Info (12128): Elaborating entity "alu_AND" for hierarchy "alu:alu_inst|alu_AND:and_op" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu.sv Line: 28
+Info (12128): Elaborating entity "alu_OR" for hierarchy "alu:alu_inst|alu_OR:or_op" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu.sv Line: 29
+Info (12128): Elaborating entity "alu_XOR" for hierarchy "alu:alu_inst|alu_XOR:xor_op" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu.sv Line: 30
+Info (12128): Elaborating entity "alu_BIT" for hierarchy "alu:alu_inst|alu_BIT:bit_op" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu.sv Line: 32
 Warning (10230): Verilog HDL assignment warning at alu_BIT.sv(7): truncated value with size 32 to match size of target (16) File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_BIT.sv Line: 7
-Info (12128): Elaborating entity "alu_BIC" for hierarchy "alu:alu_inst|alu_BIC:bic_op" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu.sv Line: 32
+Info (12128): Elaborating entity "alu_BIC" for hierarchy "alu:alu_inst|alu_BIC:bic_op" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu.sv Line: 33
 Warning (10230): Verilog HDL assignment warning at alu_BIC.sv(7): truncated value with size 32 to match size of target (16) File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_BIC.sv Line: 7
-Info (12128): Elaborating entity "alu_BIS" for hierarchy "alu:alu_inst|alu_BIS:bis_op" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu.sv Line: 33
+Info (12128): Elaborating entity "alu_BIS" for hierarchy "alu:alu_inst|alu_BIS:bis_op" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu.sv Line: 34
 Warning (10230): Verilog HDL assignment warning at alu_BIS.sv(7): truncated value with size 32 to match size of target (16) File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_BIS.sv Line: 7
-Info (12128): Elaborating entity "alu_ADD" for hierarchy "alu:alu_inst|alu_ADD:add_op" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu.sv Line: 35
+Info (12128): Elaborating entity "alu_ADD" for hierarchy "alu:alu_inst|alu_ADD:add_op" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu.sv Line: 36
 Warning (10036): Verilog HDL or VHDL warning at alu_ADD.sv(12): object "carry_out" assigned a value but never read File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_ADD.sv Line: 12
-Info (12128): Elaborating entity "alu_SUB" for hierarchy "alu:alu_inst|alu_SUB:sub_op" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu.sv Line: 36
+Info (12128): Elaborating entity "alu_SUB" for hierarchy "alu:alu_inst|alu_SUB:sub_op" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu.sv Line: 37
 Warning (10036): Verilog HDL or VHDL warning at alu_SUB.sv(12): object "carry_out" assigned a value but never read File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_SUB.sv Line: 12
-Info (12128): Elaborating entity "alu_ADDC" for hierarchy "alu:alu_inst|alu_ADDC:addc_op" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu.sv Line: 37
+Info (12128): Elaborating entity "alu_ADDC" for hierarchy "alu:alu_inst|alu_ADDC:addc_op" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu.sv Line: 38
 Warning (10036): Verilog HDL or VHDL warning at alu_ADDC.sv(14): object "carry_out" assigned a value but never read File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_ADDC.sv Line: 14
-Info (12128): Elaborating entity "alu_SUBC" for hierarchy "alu:alu_inst|alu_SUBC:subc_op" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu.sv Line: 38
+Info (12128): Elaborating entity "alu_SUBC" for hierarchy "alu:alu_inst|alu_SUBC:subc_op" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu.sv Line: 39
 Warning (10036): Verilog HDL or VHDL warning at alu_SUBC.sv(14): object "carry_out" assigned a value but never read File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_SUBC.sv Line: 14
-Info (12128): Elaborating entity "alu_DADD" for hierarchy "alu:alu_inst|alu_DADD:dadd_op" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu.sv Line: 39
+Info (12128): Elaborating entity "alu_DADD" for hierarchy "alu:alu_inst|alu_DADD:dadd_op" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu.sv Line: 40
 Warning (10036): Verilog HDL or VHDL warning at alu_DADD.sv(48): object "carry_out" assigned a value but never read File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_DADD.sv Line: 48
-Info (12128): Elaborating entity "update_psw" for hierarchy "update_psw:update_psw_inst" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv Line: 207
+Info (12128): Elaborating entity "update_psw" for hierarchy "update_psw:update_psw_inst" File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv Line: 210
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "carry_arr" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "overflow_arr" into its bus
 Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
@@ -454,10 +454,10 @@ Info (21057): Implemented 48 device resources after synthesis - the final resour
     Info (21059): Implemented 1 output pins
     Info (21061): Implemented 45 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 18 warnings
-    Info: Peak virtual memory: 4835 megabytes
-    Info: Processing ended: Tue Oct 01 17:29:18 2024
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:07
+    Info: Peak virtual memory: 4836 megabytes
+    Info: Processing ended: Thu Oct 03 22:40:17 2024
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:06
 
 
 +------------------------------------------+

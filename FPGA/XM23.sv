@@ -55,7 +55,8 @@ module XM23 (
 	// Wires from alu_inst to pipeline_registers
 	wire [15:0]  alu_result_wire;    
 	wire [15:0]  psw_out_wire;       
-	wire [15:0]  psw_mask_wire;      
+	wire [15:0]  psw_mask_wire;
+	wire         enable_psw_msk_wire;
 
 	// Wires from pipeline_registers to regnum_to_values_to_alu
 	wire [1:0][7:0][15:0]  gprc_o_wire;        
@@ -189,7 +190,8 @@ module XM23 (
 		.carry_in(PSW_o_wire[0]),
 		
 		// OUTPUTS
-		.result(alu_result_wire)
+		.result(alu_result_wire),
+		.enable_psw_msk(enable_psw_msk_wire)
 	);
 	
 	// module to update the psw after alu
@@ -198,8 +200,9 @@ module XM23 (
 		.a(dst_val_wire),
 		.b(src_val_wire),
 		
-		// INPUTS FROM ALU RESULT
+		// INPUTS FROM ALU
 		.result(alu_result_wire),
+		.enable_psw_msk(enable_psw_msk_wire),
 		
 		// OUTPUTS
 		.psw_out(psw_out_wire),

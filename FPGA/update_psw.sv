@@ -2,6 +2,7 @@ module update_psw(
     input logic [15:0] a,
     input logic [15:0] b,
     input logic [15:0] result,
+	 input logic enable_psw_msk,
     output logic [15:0] psw_out,
     output logic [15:0] psw_msk
 );
@@ -54,16 +55,16 @@ module update_psw(
 
         // Update PSW and mask based on flag values
         psw_out[0] = carry_bit; // Set PSW[0] to carry
-        psw_msk[0] = 1'b1;      // Carry value needs to be updated
-
         psw_out[1] = zero_bit;
-        psw_msk[1] = 1'b1;
-
         psw_out[2] = negative_bit;
-        psw_msk[2] = 1'b1;
-
         psw_out[4] = overflow_bit;
-        psw_msk[4] = 1'b1;
+		  
+		  if(enable_psw_msk == 1'b1) begin
+			  psw_msk[0] = 1'b1;
+			  psw_msk[1] = 1'b1;
+			  psw_msk[2] = 1'b1;
+			  psw_msk[4] = 1'b1;
+		  end  
     end
 
 endmodule
