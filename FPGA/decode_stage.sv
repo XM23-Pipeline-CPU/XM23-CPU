@@ -204,7 +204,6 @@ module decode_stage(
 			  enable[9] = 1'b1;
 
 			  if(RC == IS_REG) begin
-			     async_set[S] = 1'b1; //set dependency
 				  async_dep[S] = 1'b1; //be added as dependency
 			  end
 			  async_set[D] = 1'b1;    //set dependency
@@ -218,7 +217,6 @@ module decode_stage(
 			  enable[10] = 1'b1;
 			  
 			  if(RC == IS_REG) begin
-			     async_set[S] = 1'b1; //set dependency
 				  async_dep[S] = 1'b1; //be added as dependency
 			  end
 			  async_set[D] = 1'b1;    //set dependency
@@ -232,7 +230,6 @@ module decode_stage(
 			  enable[11] = 1'b1;
 
 			  if(RC == IS_REG) begin
-			     async_set[S] = 1'b1; //set dependency
 				  async_dep[S] = 1'b1; //be added as dependency
 			  end
 			  async_set[D] = 1'b1;    //set dependency
@@ -246,7 +243,6 @@ module decode_stage(
 			  enable[12] = 1'b1;
 
 			  if(RC == IS_REG) begin
-			     async_set[S] = 1'b1; //set dependency
 				  async_dep[S] = 1'b1; //be added as dependency
 			  end
 			  async_set[D] = 1'b1;    //set dependency
@@ -260,7 +256,6 @@ module decode_stage(
 			  enable[13] = 1'b1;
 			  
 			  if(RC == IS_REG) begin
-			     async_set[S] = 1'b1; //set dependency
 				  async_dep[S] = 1'b1; //be added as dependency
 			  end
 			  async_set[D] = 1'b1;    //set dependency
@@ -286,7 +281,6 @@ module decode_stage(
 			  enable[15] = 1'b1;
 			  
 			  if(RC == IS_REG) begin
-			     async_set[S] = 1'b1; //set dependency
 				  async_dep[S] = 1'b1; //be added as dependency
 			  end
 			  async_set[D] = 1'b1;    //set dependency
@@ -300,7 +294,6 @@ module decode_stage(
 			  enable[16] = 1'b1;
 			  
 			  if(RC == IS_REG) begin
-			     async_set[S] = 1'b1; //set dependency
 				  async_dep[S] = 1'b1; //be added as dependency
 			  end
 			  async_set[D] = 1'b1;    //set dependency
@@ -314,7 +307,6 @@ module decode_stage(
 			  enable[17] = 1'b1;
 			  
 			  if(RC == IS_REG) begin
-			     async_set[S] = 1'b1; //set dependency
 				  async_dep[S] = 1'b1; //be added as dependency
 			  end
 			  async_set[D] = 1'b1;    //set dependency
@@ -328,7 +320,6 @@ module decode_stage(
 			  enable[18] = 1'b1;
 			  
 			  if(RC == IS_REG) begin
-			     async_set[S] = 1'b1; //set dependency
 				  async_dep[S] = 1'b1; //be added as dependency
 			  end
 			  async_set[D] = 1'b1;    //set dependency
@@ -342,7 +333,6 @@ module decode_stage(
 			  enable[19] = 1'b1;
 			  
 			  if(RC == IS_REG) begin
-			     async_set[S] = 1'b1; //set dependency
 				  async_dep[S] = 1'b1; //be added as dependency
 			  end
 			  async_set[D] = 1'b1;    //set dependency
@@ -356,7 +346,6 @@ module decode_stage(
 			  enable[20] = 1'b1;
 			  
 			  if(RC == IS_REG) begin
-			     async_set[S] = 1'b1; //set dependency
 				  async_dep[S] = 1'b1; //be added as dependency
 			  end
 			  async_set[D] = 1'b1;    //set dependency
@@ -369,7 +358,6 @@ module decode_stage(
 			  enable[21] = 1'b1;
 			  
 			  if(RC == IS_REG) begin
-			     async_set[S] = 1'b1; //set dependency
 				  async_dep[S] = 1'b1; //be added as dependency
 			  end
 			  async_set[D] = 1'b1;    //set dependency
@@ -393,7 +381,6 @@ module decode_stage(
 			  enable[23] = 1'b1;
 			  
 			  if(RC == IS_REG) begin
-			     async_set[S] = 1'b1; //set dependency
 				  async_dep[S] = 1'b1; //be added as dependency
 			  end
 			  async_set[D] = 1'b1;    //set dependency
@@ -405,7 +392,6 @@ module decode_stage(
 			  enable[24] = 1'b1;
 			  
 			  if(RC == IS_REG) begin
-			     async_set[S] = 1'b1; //set dependency
 				  async_dep[S] = 1'b1; //be added as dependency
 			  end
 			  async_set[D] = 1'b1;    //set dependency
@@ -417,7 +403,6 @@ module decode_stage(
 			  enable[25] = 1'b1;
 			  
 			  if(RC == IS_REG) begin
-			     async_set[S] = 1'b1; //set dependency
 				  async_dep[S] = 1'b1; //be added as dependency
 			  end
 			  async_set[D] = 1'b1;    //set dependency
@@ -428,7 +413,6 @@ module decode_stage(
 			  enable[26] = 1'b1;
 			  
 			  if(RC == IS_REG) begin
-			     async_set[S] = 1'b1; //set dependency
 				  async_dep[S] = 1'b1; //be added as dependency
 			  end
 			  async_set[D] = 1'b1;    //set dependency
@@ -438,7 +422,6 @@ module decode_stage(
 			  D = inst[2:0];
 			  enable[27] = 1'b1;
 			  if(RC == IS_REG) begin
-			     async_set[S] = 1'b1; //set dependency
 				  async_dep[S] = 1'b1; //be added as dependency
 			  end
 			  async_set[D] = 1'b1;    //set dependency
