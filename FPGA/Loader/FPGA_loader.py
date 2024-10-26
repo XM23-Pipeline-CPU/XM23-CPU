@@ -16,8 +16,8 @@ def write_mif_header(file):
     file.write(f"-- MIF File generated on {current_time}\n\n\n")
     
     # Write the MIF header details
-    file.write("WIDTH=8;\n")
-    file.write("DEPTH=65536;\n")
+    file.write("WIDTH=16;\n")
+    file.write("DEPTH=32768;\n")
     file.write("ADDRESS_RADIX=HEX;\n")
     file.write("DATA_RADIX=HEX;\n")
     file.write("CONTENT BEGIN\n")
@@ -67,12 +67,20 @@ def extract_program_type(buffer, program_file):
     s_address = (s_addH << 8) | s_addL
     offset = 0
 
+    first = True
+    wide_data = 0
     for i in range(DATA_START, s_length * 2 + 1, 2):
         s_data = int(buffer[i:i+2], 16)
         calc_CS += s_data
-        # Write to program MIF file
-        program_file.write(f"{s_address + offset:04X} : {s_data:02X};\n")
-        offset += 1
+        if first:
+            wide_data = s_data
+            first = False
+        else: # Write to program MIF file
+            wide_data += (s_data << 8)
+            program_file.write(f"{s_address + offset:04X} : {wide_data:04X};\n")
+            offset += 1
+            first = True
+        
 
     print("Written to program MIF file")
 
@@ -101,12 +109,19 @@ def extract_data_type(buffer, data_file):
     s_address = (s_addH << 8) | s_addL
     offset = 0
 
+    first = True
+    wide_data = 0
     for i in range(DATA_START, s_length * 2 + 1, 2):
         s_data = int(buffer[i:i+2], 16)
         calc_CS += s_data
-        # Write to data MIF file
-        data_file.write(f"{s_address + offset:04X} : {s_data:02X};\n")
-        offset += 1
+        if first:
+            wide_data = s_data
+            first = False
+        else: # Write to program MIF file
+            wide_data += (s_data << 8)
+            data_file.write(f"{s_address + offset:04X} : {wide_data:04X};\n")
+            offset += 1
+            first = True
 
     print("Written to data MIF file")
 
