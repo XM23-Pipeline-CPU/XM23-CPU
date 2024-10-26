@@ -1,5 +1,5 @@
 EDA Netlist Writer report for XM23
-Thu Oct 03 22:40:28 2024
+Sat Oct 26 18:26:15 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Thu Oct 03 22:40:28 2024 ;
+; EDA Netlist Writer Status ; Successful - Sat Oct 26 18:26:15 2024 ;
 ; Revision Name             ; XM23                                  ;
 ; Top-level Entity Name     ; XM23                                  ;
 ; Family                    ; Cyclone IV E                          ;
@@ -67,20 +67,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------------------------+---------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                                                                      ;
-+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; Generated Files                                                                                                                                 ;
-+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/simulation/modelsim/XM23_6_1200mv_85c_slow.svo    ;
-; C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/simulation/modelsim/XM23_6_1200mv_0c_slow.svo     ;
-; C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/simulation/modelsim/XM23_min_1200mv_0c_fast.svo   ;
-; C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/simulation/modelsim/XM23.svo                      ;
-; C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/simulation/modelsim/XM23_6_1200mv_85c_v_slow.sdo  ;
-; C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/simulation/modelsim/XM23_6_1200mv_0c_v_slow.sdo   ;
-; C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/simulation/modelsim/XM23_min_1200mv_0c_v_fast.sdo ;
-; C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/simulation/modelsim/XM23_v.sdo                    ;
-+-------------------------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                           ;
++------------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                      ;
++------------------------------------------------------------------------------------------------------+
+; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/simulation/modelsim/XM23_7_1200mv_85c_slow.svo    ;
+; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/simulation/modelsim/XM23_7_1200mv_0c_slow.svo     ;
+; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/simulation/modelsim/XM23_min_1200mv_0c_fast.svo   ;
+; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/simulation/modelsim/XM23.svo                      ;
+; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/simulation/modelsim/XM23_7_1200mv_85c_v_slow.sdo  ;
+; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/simulation/modelsim/XM23_7_1200mv_0c_v_slow.sdo   ;
+; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/simulation/modelsim/XM23_min_1200mv_0c_v_fast.sdo ;
+; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/simulation/modelsim/XM23_v.sdo                    ;
++------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -89,21 +89,21 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Oct 03 22:40:28 2024
+    Info: Processing started: Sat Oct 26 18:26:13 2024
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off XM23 -c XM23
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (204019): Generated file XM23_6_1200mv_85c_slow.svo in folder "C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file XM23_6_1200mv_0c_slow.svo in folder "C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file XM23_min_1200mv_0c_fast.svo in folder "C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file XM23.svo in folder "C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file XM23_6_1200mv_85c_v_slow.sdo in folder "C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file XM23_6_1200mv_0c_v_slow.sdo in folder "C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file XM23_min_1200mv_0c_v_fast.sdo in folder "C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file XM23_v.sdo in folder "C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file XM23_7_1200mv_85c_slow.svo in folder "C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file XM23_7_1200mv_0c_slow.svo in folder "C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file XM23_min_1200mv_0c_fast.svo in folder "C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file XM23.svo in folder "C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file XM23_7_1200mv_85c_v_slow.sdo in folder "C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file XM23_7_1200mv_0c_v_slow.sdo in folder "C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file XM23_min_1200mv_0c_v_fast.sdo in folder "C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file XM23_v.sdo in folder "C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/simulation/modelsim/" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4647 megabytes
-    Info: Processing ended: Thu Oct 03 22:40:28 2024
-    Info: Elapsed time: 00:00:00
-    Info: Total CPU time (on all processors): 00:00:00
+    Info: Peak virtual memory: 4674 megabytes
+    Info: Processing ended: Sat Oct 26 18:26:15 2024
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
 
 

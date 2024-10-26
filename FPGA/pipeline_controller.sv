@@ -41,7 +41,7 @@ module pipeline_controller (
 	input logic [12:0] thirteen_lsb,	// to get offset from bits 0-12
 	input logic signed [15:0] PC_in,	
 	input logic PSW_in,				
-	output logic [15:0] PC_next,			
+	output logic [15:0] PC_next,
 	output logic [15:0] LBPC,			// PC to revert if needed (at exec)
 	output logic [15:0] LBPSW,			// PSW to revert if needed (at exec)
 	

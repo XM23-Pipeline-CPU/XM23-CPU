@@ -3,9 +3,9 @@ module XM23 (
     input wire reset,       // Reset signal
     output reg led          // LED output (blinking to confirm clk)
 );
-	reg clk = 0;       // This is the global clk for other modules
+	reg clk = 0;       // This is the global clk for other modules (except memory which will take 50MHz)
 	reg [31:0] counter = 0;
-	parameter DIVIDER = 1;  // Divides 50 MHz clk to desired speed
+	parameter DIVIDER = 1;  // Divides 50 MHz clk to desired speed (DIVIDER+1 = number of edges until flip)
 
 	// clk divider logic
 	always @(posedge clk_in or posedge reset) begin
@@ -23,6 +23,16 @@ module XM23 (
 	end
 
 	// Declare wires for connections between modules
+	
+	// Reg/Wires for fetching from memory
+	wire [15:0] PC_wire;
+	wire [15:0] PC_next_wire;
+	wire [15:0] LBPC_wire;
+	
+	wire [15:0] next_PC; 
+	
+	// Wires for reading from the ram
+	wire [15:0] inst_wire;
 
 	// Wires from decode_stage to pipeline_registers
 	wire         WB_wire;
@@ -72,17 +82,36 @@ module XM23 (
 	wire [2:0][40:0]   	enable_o_wire;      
 	wire [15:0]   		PSW_o_wire;         
 
-	// Internal signals
-	logic [15:0] inst;
-
-	always_comb begin
-	  inst <= 16'b0100_0000_0000_1000; // add, (registers), (word size), from reg 000 + 001, save in reg 000
-	end
+	//always_comb begin
+	//  inst <= 16'b0000_0000_0000_1111; // add, (registers), (word size), from reg 000 + 001, save in reg 000
+	//end
+	
+	// program_counter
+	program_counter pcounter(
+		// INPUT FROM CONTROLLER
+		.PC_next(PC_next_wire),
+		.LBPC(LBPC_wire),
+		.branch_fail(1'b0), // TO DO
+		.clk(clk),
+		.stall_in(stall_wire),
+		
+		// OUTPUT PC
+		.true_PC(PC_wire)
+	);
+	
+	// fetch from program ram
+	p_ram pram(
+		.clock(clk_in),
+		.address(PC_wire[15:1]),
+		.data(16'b0),	// Never writing
+		.wren(1'b0),	// ...
+		.q(inst_wire)
+	);
 
 	// instructions are fed here from fetch
 	decode_stage decode(
 		// INPUT FROM FETCH
-		.inst(inst),
+		.inst(inst_wire),
 		
 		// OUTPUTS
 		.WB(WB_wire),
@@ -155,15 +184,22 @@ module XM23 (
 	
 	// takes dependency decisions from decoder
 	pipeline_controller controller(
-		//INPUT FROM TOPLEVEL
+		// INPUT FROM TOPLEVEL
 		.clk(clk),
+		.PC_in(PC_wire),
+		
+		// INPUT FROM FETCH
+		.three_msb(inst_wire[15:13]),
+		.thirteen_lsb(inst_wire[12:0]),
 		
 		// INPUTS FROM DECODER
 		.async_set_from_decode(async_set_wire),
 		.async_dep_from_decode(async_dep_wire),
 		
 		// OUTPUT
-		.stall(stall_wire)
+		.stall(stall_wire),
+		.PC_next(PC_next_wire),
+		.LBPC(LBPC_wire)
 	);
 	
 	// module to prepare data for alu from pipeline registers

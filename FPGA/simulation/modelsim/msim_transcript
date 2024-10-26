@@ -10,196 +10,219 @@
 # Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -sv -work work +incdir+C:/Users/romes/OneDrive\ -\ Dalhousie\ University/Desktop/Dal/SYP\ -\ actual\ project/XM23-CPU/FPGA {C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/regnum_to_values_to_alu.sv}
+# vlog -vlog01compat -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/p_ram.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:17:12 on Oct 01,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA" C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/regnum_to_values_to_alu.sv 
+# Start time: 18:26:26 on Oct 26,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/p_ram.v 
+# -- Compiling module p_ram
+# 
+# Top level modules:
+# 	p_ram
+# End time: 18:26:26 on Oct 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/regnum_to_values_to_alu.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:26:26 on Oct 26,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/regnum_to_values_to_alu.sv 
 # -- Compiling module regnum_to_values_to_alu
-# ** Warning: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/regnum_to_values_to_alu.sv(4): (vlog-13314) Defaulting port 'gprc' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
-# ** Warning: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/regnum_to_values_to_alu.sv(6): (vlog-13314) Defaulting port 'src_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
-# ** Warning: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/regnum_to_values_to_alu.sv(7): (vlog-13314) Defaulting port 'dst_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/regnum_to_values_to_alu.sv(4): (vlog-13314) Defaulting port 'gprc' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/regnum_to_values_to_alu.sv(6): (vlog-13314) Defaulting port 'src_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/regnum_to_values_to_alu.sv(7): (vlog-13314) Defaulting port 'dst_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
 # 
 # Top level modules:
 # 	regnum_to_values_to_alu
-# End time: 17:17:12 on Oct 01,2024, Elapsed time: 0:00:00
+# End time: 18:26:26 on Oct 26,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 3
-# vlog -sv -work work +incdir+C:/Users/romes/OneDrive\ -\ Dalhousie\ University/Desktop/Dal/SYP\ -\ actual\ project/XM23-CPU/FPGA {C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv}
+# vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/decode_stage.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:17:12 on Oct 01,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA" C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv 
+# Start time: 18:26:26 on Oct 26,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/decode_stage.sv 
 # -- Compiling module decode_stage
-# ** Warning: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv(90): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/decode_stage.sv(90): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
 # 
 # Top level modules:
 # 	decode_stage
-# End time: 17:17:12 on Oct 01,2024, Elapsed time: 0:00:00
+# End time: 18:26:26 on Oct 26,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 1
-# vlog -sv -work work +incdir+C:/Users/romes/OneDrive\ -\ Dalhousie\ University/Desktop/Dal/SYP\ -\ actual\ project/XM23-CPU/FPGA {C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/pipeline_registers.sv}
+# vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/pipeline_registers.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:17:12 on Oct 01,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA" C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/pipeline_registers.sv 
+# Start time: 18:26:26 on Oct 26,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/pipeline_registers.sv 
 # -- Compiling module pipeline_registers
 # 
 # Top level modules:
 # 	pipeline_registers
-# End time: 17:17:12 on Oct 01,2024, Elapsed time: 0:00:00
+# End time: 18:26:26 on Oct 26,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/romes/OneDrive\ -\ Dalhousie\ University/Desktop/Dal/SYP\ -\ actual\ project/XM23-CPU/FPGA {C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/pipeline_controller.sv}
+# vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/pipeline_controller.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:17:12 on Oct 01,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA" C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/pipeline_controller.sv 
+# Start time: 18:26:26 on Oct 26,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/pipeline_controller.sv 
 # -- Compiling module pipeline_controller
 # 
 # Top level modules:
 # 	pipeline_controller
-# End time: 17:17:12 on Oct 01,2024, Elapsed time: 0:00:00
+# End time: 18:26:27 on Oct 26,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/romes/OneDrive\ -\ Dalhousie\ University/Desktop/Dal/SYP\ -\ actual\ project/XM23-CPU/FPGA {C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_XOR.sv}
+# vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_XOR.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:17:12 on Oct 01,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA" C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_XOR.sv 
+# Start time: 18:26:27 on Oct 26,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_XOR.sv 
 # -- Compiling module alu_XOR
 # 
 # Top level modules:
 # 	alu_XOR
-# End time: 17:17:12 on Oct 01,2024, Elapsed time: 0:00:00
+# End time: 18:26:27 on Oct 26,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/romes/OneDrive\ -\ Dalhousie\ University/Desktop/Dal/SYP\ -\ actual\ project/XM23-CPU/FPGA {C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_SUB.sv}
+# vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_SUB.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:17:12 on Oct 01,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA" C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_SUB.sv 
+# Start time: 18:26:27 on Oct 26,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_SUB.sv 
 # -- Compiling module alu_SUB
 # 
 # Top level modules:
 # 	alu_SUB
-# End time: 17:17:12 on Oct 01,2024, Elapsed time: 0:00:00
+# End time: 18:26:27 on Oct 26,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/romes/OneDrive\ -\ Dalhousie\ University/Desktop/Dal/SYP\ -\ actual\ project/XM23-CPU/FPGA {C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_OR.sv}
+# vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_OR.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:17:12 on Oct 01,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA" C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_OR.sv 
+# Start time: 18:26:27 on Oct 26,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_OR.sv 
 # -- Compiling module alu_OR
 # 
 # Top level modules:
 # 	alu_OR
-# End time: 17:17:12 on Oct 01,2024, Elapsed time: 0:00:00
+# End time: 18:26:27 on Oct 26,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/romes/OneDrive\ -\ Dalhousie\ University/Desktop/Dal/SYP\ -\ actual\ project/XM23-CPU/FPGA {C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_DADD.sv}
+# vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_DADD.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:17:12 on Oct 01,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA" C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_DADD.sv 
+# Start time: 18:26:27 on Oct 26,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_DADD.sv 
 # -- Compiling module alu_DADD
 # 
 # Top level modules:
 # 	alu_DADD
-# End time: 17:17:13 on Oct 01,2024, Elapsed time: 0:00:01
+# End time: 18:26:27 on Oct 26,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/romes/OneDrive\ -\ Dalhousie\ University/Desktop/Dal/SYP\ -\ actual\ project/XM23-CPU/FPGA {C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_BIT.sv}
+# vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_BIT.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:17:13 on Oct 01,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA" C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_BIT.sv 
+# Start time: 18:26:27 on Oct 26,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_BIT.sv 
 # -- Compiling module alu_BIT
 # 
 # Top level modules:
 # 	alu_BIT
-# End time: 17:17:13 on Oct 01,2024, Elapsed time: 0:00:00
+# End time: 18:26:27 on Oct 26,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/romes/OneDrive\ -\ Dalhousie\ University/Desktop/Dal/SYP\ -\ actual\ project/XM23-CPU/FPGA {C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_BIS.sv}
+# vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_BIS.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:17:13 on Oct 01,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA" C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_BIS.sv 
+# Start time: 18:26:27 on Oct 26,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_BIS.sv 
 # -- Compiling module alu_BIS
 # 
 # Top level modules:
 # 	alu_BIS
-# End time: 17:17:13 on Oct 01,2024, Elapsed time: 0:00:00
+# End time: 18:26:27 on Oct 26,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/romes/OneDrive\ -\ Dalhousie\ University/Desktop/Dal/SYP\ -\ actual\ project/XM23-CPU/FPGA {C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_BIC.sv}
+# vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_BIC.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:17:13 on Oct 01,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA" C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_BIC.sv 
+# Start time: 18:26:27 on Oct 26,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_BIC.sv 
 # -- Compiling module alu_BIC
 # 
 # Top level modules:
 # 	alu_BIC
-# End time: 17:17:13 on Oct 01,2024, Elapsed time: 0:00:00
+# End time: 18:26:27 on Oct 26,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/romes/OneDrive\ -\ Dalhousie\ University/Desktop/Dal/SYP\ -\ actual\ project/XM23-CPU/FPGA {C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_AND.sv}
+# vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_AND.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:17:13 on Oct 01,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA" C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_AND.sv 
+# Start time: 18:26:27 on Oct 26,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_AND.sv 
 # -- Compiling module alu_AND
 # 
 # Top level modules:
 # 	alu_AND
-# End time: 17:17:13 on Oct 01,2024, Elapsed time: 0:00:00
+# End time: 18:26:27 on Oct 26,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/romes/OneDrive\ -\ Dalhousie\ University/Desktop/Dal/SYP\ -\ actual\ project/XM23-CPU/FPGA {C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_ADD.sv}
+# vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_ADD.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:17:13 on Oct 01,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA" C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_ADD.sv 
+# Start time: 18:26:27 on Oct 26,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_ADD.sv 
 # -- Compiling module alu_ADD
 # 
 # Top level modules:
 # 	alu_ADD
-# End time: 17:17:13 on Oct 01,2024, Elapsed time: 0:00:00
+# End time: 18:26:27 on Oct 26,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/romes/OneDrive\ -\ Dalhousie\ University/Desktop/Dal/SYP\ -\ actual\ project/XM23-CPU/FPGA {C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu.sv}
+# vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:17:13 on Oct 01,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA" C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu.sv 
+# Start time: 18:26:27 on Oct 26,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu.sv 
 # -- Compiling module alu
 # 
 # Top level modules:
 # 	alu
-# End time: 17:17:13 on Oct 01,2024, Elapsed time: 0:00:00
+# End time: 18:26:27 on Oct 26,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/romes/OneDrive\ -\ Dalhousie\ University/Desktop/Dal/SYP\ -\ actual\ project/XM23-CPU/FPGA {C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv}
+# vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:17:13 on Oct 01,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA" C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv 
+# Start time: 18:26:27 on Oct 26,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv 
 # -- Compiling module XM23
 # 
 # Top level modules:
 # 	XM23
-# End time: 17:17:13 on Oct 01,2024, Elapsed time: 0:00:00
+# End time: 18:26:27 on Oct 26,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/romes/OneDrive\ -\ Dalhousie\ University/Desktop/Dal/SYP\ -\ actual\ project/XM23-CPU/FPGA {C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_ADDC.sv}
+# vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_ADDC.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:17:13 on Oct 01,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA" C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_ADDC.sv 
+# Start time: 18:26:27 on Oct 26,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_ADDC.sv 
 # -- Compiling module alu_ADDC
 # 
 # Top level modules:
 # 	alu_ADDC
-# End time: 17:17:13 on Oct 01,2024, Elapsed time: 0:00:00
+# End time: 18:26:27 on Oct 26,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/romes/OneDrive\ -\ Dalhousie\ University/Desktop/Dal/SYP\ -\ actual\ project/XM23-CPU/FPGA {C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_SUBC.sv}
+# vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_SUBC.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:17:13 on Oct 01,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA" C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_SUBC.sv 
+# Start time: 18:26:27 on Oct 26,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_SUBC.sv 
 # -- Compiling module alu_SUBC
 # 
 # Top level modules:
 # 	alu_SUBC
-# End time: 17:17:13 on Oct 01,2024, Elapsed time: 0:00:00
+# End time: 18:26:28 on Oct 26,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/romes/OneDrive\ -\ Dalhousie\ University/Desktop/Dal/SYP\ -\ actual\ project/XM23-CPU/FPGA {C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/update_psw.sv}
+# vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/update_psw.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:17:13 on Oct 01,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA" C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/update_psw.sv 
+# Start time: 18:26:28 on Oct 26,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/update_psw.sv 
 # -- Compiling module update_psw
 # 
 # Top level modules:
 # 	update_psw
-# End time: 17:17:13 on Oct 01,2024, Elapsed time: 0:00:00
+# End time: 18:26:28 on Oct 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/program_counter.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:26:28 on Oct 26,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/program_counter.sv 
+# -- Compiling module program_counter
+# 
+# Top level modules:
+# 	program_counter
+# End time: 18:26:28 on Oct 26,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-vsim work.XM23
-# vsim work.XM23 
-# Start time: 17:17:20 on Oct 01,2024
+vsim -gui -l msim_transcript work.XM23 -L altera_mf_ver
+# vsim -gui -l msim_transcript work.XM23 -L altera_mf_ver 
+# Start time: 18:26:56 on Oct 26,2024
 # Loading sv_std.std
 # Loading work.XM23
+# Loading work.program_counter
+# Loading work.p_ram
+# Loading altera_mf_ver.altsyncram
 # Loading work.decode_stage
 # Loading work.pipeline_registers
 # Loading work.pipeline_controller
@@ -217,310 +240,91 @@ vsim work.XM23
 # Loading work.alu_SUBC
 # Loading work.alu_DADD
 # Loading work.update_psw
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
 # ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'pipeline'.  Expected 52, found 30.
-#    Time: 0 ps  Iteration: 0  Instance: /XM23/pipeline File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv Line: 111
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(111): [TFMPC] - Missing connection for port 'fetch_in'.
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(111): [TFMPC] - Missing connection for port 'CEX'.
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(111): [TFMPC] - Missing connection for port 'reg_write_enable'.
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(111): [TFMPC] - Missing connection for port 'reg_write_select'.
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(111): [TFMPC] - Missing connection for port 'reg_write_value'.
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(111): [TFMPC] - Missing connection for port 'p_reg'.
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(111): [TFMPC] - Missing connection for port 'WB_o'.
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(111): [TFMPC] - Missing connection for port 'SLP_o'.
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(111): [TFMPC] - Missing connection for port 'N_o'.
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(111): [TFMPC] - Missing connection for port 'Z_o'.
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(111): [TFMPC] - Missing connection for port 'C_o'.
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(111): [TFMPC] - Missing connection for port 'V_o'.
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(111): [TFMPC] - Missing connection for port 'PRPO_o'.
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(111): [TFMPC] - Missing connection for port 'DEC_o'.
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(111): [TFMPC] - Missing connection for port 'INC_o'.
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(111): [TFMPC] - Missing connection for port 'PR_o'.
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(111): [TFMPC] - Missing connection for port 'F_o'.
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(111): [TFMPC] - Missing connection for port 'T_o'.
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(111): [TFMPC] - Missing connection for port 'SA_o'.
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(111): [TFMPC] - Missing connection for port 'OFF_o'.
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(111): [TFMPC] - Missing connection for port 'B_o'.
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(111): [TFMPC] - Missing connection for port 'exec_result_o'.
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'controller'.  Expected 13, found 4.
-#    Time: 0 ps  Iteration: 0  Instance: /XM23/controller File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv Line: 156
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(156): [TFMPC] - Missing connection for port 'three_msb'.
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(156): [TFMPC] - Missing connection for port 'thirteen_lsb'.
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(156): [TFMPC] - Missing connection for port 'PC_in'.
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(156): [TFMPC] - Missing connection for port 'PSW_in'.
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(156): [TFMPC] - Missing connection for port 'PC_next'.
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(156): [TFMPC] - Missing connection for port 'LBPC'.
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(156): [TFMPC] - Missing connection for port 'LBPSW'.
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(156): [TFMPC] - Missing connection for port 'display_stage'.
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(156): [TFMPC] - Missing connection for port 'led'.
+#    Time: 0 ps  Iteration: 0  Instance: /XM23/pipeline File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv Line: 141
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'fetch_in'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'CEX'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'reg_write_enable'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'reg_write_select'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'reg_write_value'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'p_reg'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'WB_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'SLP_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'N_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'Z_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'C_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'V_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'PRPO_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'DEC_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'INC_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'PR_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'F_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'T_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'SA_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'OFF_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'B_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'exec_result_o'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'controller'.  Expected 13, found 9.
+#    Time: 0 ps  Iteration: 0  Instance: /XM23/controller File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv Line: 186
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(186): [TFMPC] - Missing connection for port 'PSW_in'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(186): [TFMPC] - Missing connection for port 'LBPSW'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(186): [TFMPC] - Missing connection for port 'display_stage'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(186): [TFMPC] - Missing connection for port 'led'.
 add wave -position end  sim:/XM23/clk_in
-add wave -position end  sim:/XM23/gprc_o_wire
-add wave -position end  sim:/XM23/regnum_inst/src_val
-add wave -position end  sim:/XM23/regnum_inst/dst_val
-add wave -position end  sim:/XM23/psw_out_wire
-add wave -position end  sim:/XM23/psw_mask_wire
-force -freeze sim:/XM23/clk_in 0 0, 1 {50 ps} -r 100
+add wave -position end  sim:/XM23/clk
+add wave -position end  sim:/XM23/PC_wire
+add wave -position end  sim:/XM23/inst_wire
+add wave -position end  sim:/XM23/alu_result_wire
+force -freeze sim:/XM23/clk_in 1 0, 0 {50 ps} -r 100
 run
 run
-vlog -reportprogress 300 -work work {C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:27:29 on Oct 01,2024
-# vlog -reportprogress 300 -work work C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu.sv 
-# -- Compiling module alu
-# 
-# Top level modules:
-# 	alu
-# End time: 17:27:29 on Oct 01,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work {C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_ADD.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:27:29 on Oct 01,2024
-# vlog -reportprogress 300 -work work C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_ADD.sv 
-# -- Compiling module alu_ADD
-# 
-# Top level modules:
-# 	alu_ADD
-# End time: 17:27:29 on Oct 01,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work {C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_ADDC.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:27:29 on Oct 01,2024
-# vlog -reportprogress 300 -work work C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_ADDC.sv 
-# -- Compiling module alu_ADDC
-# 
-# Top level modules:
-# 	alu_ADDC
-# End time: 17:27:29 on Oct 01,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work {C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_AND.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:27:29 on Oct 01,2024
-# vlog -reportprogress 300 -work work C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_AND.sv 
-# -- Compiling module alu_AND
-# 
-# Top level modules:
-# 	alu_AND
-# End time: 17:27:29 on Oct 01,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work {C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_BIC.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:27:29 on Oct 01,2024
-# vlog -reportprogress 300 -work work C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_BIC.sv 
-# -- Compiling module alu_BIC
-# 
-# Top level modules:
-# 	alu_BIC
-# End time: 17:27:29 on Oct 01,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work {C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_BIS.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:27:29 on Oct 01,2024
-# vlog -reportprogress 300 -work work C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_BIS.sv 
-# -- Compiling module alu_BIS
-# 
-# Top level modules:
-# 	alu_BIS
-# End time: 17:27:29 on Oct 01,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work {C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_BIT.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:27:29 on Oct 01,2024
-# vlog -reportprogress 300 -work work C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_BIT.sv 
-# -- Compiling module alu_BIT
-# 
-# Top level modules:
-# 	alu_BIT
-# End time: 17:27:29 on Oct 01,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work {C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_DADD.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:27:29 on Oct 01,2024
-# vlog -reportprogress 300 -work work C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_DADD.sv 
-# -- Compiling module alu_DADD
-# 
-# Top level modules:
-# 	alu_DADD
-# End time: 17:27:29 on Oct 01,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work {C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_OR.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:27:29 on Oct 01,2024
-# vlog -reportprogress 300 -work work C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_OR.sv 
-# -- Compiling module alu_OR
-# 
-# Top level modules:
-# 	alu_OR
-# End time: 17:27:29 on Oct 01,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work {C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_SUB.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:27:29 on Oct 01,2024
-# vlog -reportprogress 300 -work work C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_SUB.sv 
-# -- Compiling module alu_SUB
-# 
-# Top level modules:
-# 	alu_SUB
-# End time: 17:27:29 on Oct 01,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work {C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_SUBC.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:27:29 on Oct 01,2024
-# vlog -reportprogress 300 -work work C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_SUBC.sv 
-# -- Compiling module alu_SUBC
-# 
-# Top level modules:
-# 	alu_SUBC
-# End time: 17:27:29 on Oct 01,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work {C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_top_level.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:27:29 on Oct 01,2024
-# vlog -reportprogress 300 -work work C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_top_level.sv 
-# -- Compiling module alu_top_level
-# 
-# Top level modules:
-# 	alu_top_level
-# End time: 17:27:30 on Oct 01,2024, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work {C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_XOR.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:27:30 on Oct 01,2024
-# vlog -reportprogress 300 -work work C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/alu_XOR.sv 
-# -- Compiling module alu_XOR
-# 
-# Top level modules:
-# 	alu_XOR
-# End time: 17:27:30 on Oct 01,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work {C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:27:30 on Oct 01,2024
-# vlog -reportprogress 300 -work work C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv 
-# -- Compiling module decode_stage
-# ** Warning: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/decode_stage.sv(90): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
-# 
-# Top level modules:
-# 	decode_stage
-# End time: 17:27:30 on Oct 01,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 1
-vlog -reportprogress 300 -work work {C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/memory_access.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:27:30 on Oct 01,2024
-# vlog -reportprogress 300 -work work C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/memory_access.sv 
-# -- Compiling module memory_access
-# 
-# Top level modules:
-# 	memory_access
-# End time: 17:27:30 on Oct 01,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work {C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/pipeline_controller.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:27:30 on Oct 01,2024
-# vlog -reportprogress 300 -work work C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/pipeline_controller.sv 
-# -- Compiling module pipeline_controller
-# 
-# Top level modules:
-# 	pipeline_controller
-# End time: 17:27:30 on Oct 01,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work {C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/pipeline_registers.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:27:30 on Oct 01,2024
-# vlog -reportprogress 300 -work work C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/pipeline_registers.sv 
-# -- Compiling module pipeline_registers
-# 
-# Top level modules:
-# 	pipeline_registers
-# End time: 17:27:30 on Oct 01,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work {C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/regnum_to_values_to_alu.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:27:30 on Oct 01,2024
-# vlog -reportprogress 300 -work work C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/regnum_to_values_to_alu.sv 
-# -- Compiling module regnum_to_values_to_alu
-# ** Warning: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/regnum_to_values_to_alu.sv(4): (vlog-13314) Defaulting port 'gprc' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
-# ** Warning: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/regnum_to_values_to_alu.sv(6): (vlog-13314) Defaulting port 'src_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
-# ** Warning: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/regnum_to_values_to_alu.sv(7): (vlog-13314) Defaulting port 'dst_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
-# 
-# Top level modules:
-# 	regnum_to_values_to_alu
-# End time: 17:27:30 on Oct 01,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 3
-vlog -reportprogress 300 -work work {C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/update_psw.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:27:30 on Oct 01,2024
-# vlog -reportprogress 300 -work work C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/update_psw.sv 
-# -- Compiling module update_psw
-# 
-# Top level modules:
-# 	update_psw
-# End time: 17:27:30 on Oct 01,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work {C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:27:30 on Oct 01,2024
-# vlog -reportprogress 300 -work work C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv 
-# -- Compiling module XM23
-# 
-# Top level modules:
-# 	XM23
-# End time: 17:27:30 on Oct 01,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
+run
+add wave -position end  sim:/XM23/stall_wire
+run
+run
+run
+run
+run
+run
+run
+run
+run
 restart
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.XM23
-# Loading work.decode_stage
-# Loading work.pipeline_registers
-# Loading work.pipeline_controller
-# Loading work.regnum_to_values_to_alu
-# Loading work.alu
-# Loading work.alu_AND
-# Loading work.alu_OR
-# Loading work.alu_XOR
-# Loading work.alu_BIT
-# Loading work.alu_BIC
-# Loading work.alu_BIS
-# Loading work.alu_ADD
-# Loading work.alu_SUB
-# Loading work.alu_ADDC
-# Loading work.alu_SUBC
-# Loading work.alu_DADD
-# Loading work.update_psw
 # ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'pipeline'.  Expected 52, found 30.
-#    Time: 0 ps  Iteration: 0  Instance: /XM23/pipeline File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv Line: 111
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(111): [TFMPC] - Missing connection for port 'fetch_in'.
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(111): [TFMPC] - Missing connection for port 'CEX'.
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(111): [TFMPC] - Missing connection for port 'reg_write_enable'.
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(111): [TFMPC] - Missing connection for port 'reg_write_select'.
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(111): [TFMPC] - Missing connection for port 'reg_write_value'.
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(111): [TFMPC] - Missing connection for port 'p_reg'.
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(111): [TFMPC] - Missing connection for port 'WB_o'.
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(111): [TFMPC] - Missing connection for port 'SLP_o'.
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(111): [TFMPC] - Missing connection for port 'N_o'.
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(111): [TFMPC] - Missing connection for port 'Z_o'.
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(111): [TFMPC] - Missing connection for port 'C_o'.
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(111): [TFMPC] - Missing connection for port 'V_o'.
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(111): [TFMPC] - Missing connection for port 'PRPO_o'.
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(111): [TFMPC] - Missing connection for port 'DEC_o'.
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(111): [TFMPC] - Missing connection for port 'INC_o'.
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(111): [TFMPC] - Missing connection for port 'PR_o'.
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(111): [TFMPC] - Missing connection for port 'F_o'.
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(111): [TFMPC] - Missing connection for port 'T_o'.
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(111): [TFMPC] - Missing connection for port 'SA_o'.
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(111): [TFMPC] - Missing connection for port 'OFF_o'.
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(111): [TFMPC] - Missing connection for port 'B_o'.
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(111): [TFMPC] - Missing connection for port 'exec_result_o'.
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'controller'.  Expected 13, found 4.
-#    Time: 0 ps  Iteration: 0  Instance: /XM23/controller File: C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv Line: 156
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(156): [TFMPC] - Missing connection for port 'three_msb'.
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(156): [TFMPC] - Missing connection for port 'thirteen_lsb'.
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(156): [TFMPC] - Missing connection for port 'PC_in'.
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(156): [TFMPC] - Missing connection for port 'PSW_in'.
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(156): [TFMPC] - Missing connection for port 'PC_next'.
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(156): [TFMPC] - Missing connection for port 'LBPC'.
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(156): [TFMPC] - Missing connection for port 'LBPSW'.
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(156): [TFMPC] - Missing connection for port 'display_stage'.
-# ** Warning: (vsim-3722) C:/Users/romes/OneDrive - Dalhousie University/Desktop/Dal/SYP - actual project/XM23-CPU/FPGA/XM23.sv(156): [TFMPC] - Missing connection for port 'led'.
-force -freeze sim:/XM23/clk_in 0 0, 1 {50 ps} -r 100
+#    Time: 0 ps  Iteration: 0  Instance: /XM23/pipeline File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv Line: 141
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'fetch_in'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'CEX'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'reg_write_enable'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'reg_write_select'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'reg_write_value'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'p_reg'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'WB_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'SLP_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'N_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'Z_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'C_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'V_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'PRPO_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'DEC_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'INC_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'PR_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'F_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'T_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'SA_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'OFF_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'B_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'exec_result_o'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'controller'.  Expected 13, found 9.
+#    Time: 0 ps  Iteration: 0  Instance: /XM23/controller File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv Line: 186
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(186): [TFMPC] - Missing connection for port 'PSW_in'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(186): [TFMPC] - Missing connection for port 'LBPSW'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(186): [TFMPC] - Missing connection for port 'display_stage'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(186): [TFMPC] - Missing connection for port 'led'.
+force -freeze sim:/XM23/clk_in 1 0, 0 {50 ps} -r 100
 run
 # GetModuleFileName: The specified module could not be found.
 # 
@@ -530,5 +334,103 @@ run
 run
 run
 run
-# End time: 17:28:44 on Oct 01,2024, Elapsed time: 0:11:24
-# Errors: 0, Warnings: 33
+run
+run
+run
+run
+run
+add wave -position end sim:/XM23/alu_inst/*
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'pipeline'.  Expected 52, found 30.
+#    Time: 0 ps  Iteration: 0  Instance: /XM23/pipeline File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv Line: 141
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'fetch_in'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'CEX'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'reg_write_enable'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'reg_write_select'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'reg_write_value'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'p_reg'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'WB_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'SLP_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'N_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'Z_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'C_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'V_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'PRPO_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'DEC_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'INC_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'PR_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'F_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'T_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'SA_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'OFF_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'B_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'exec_result_o'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'controller'.  Expected 13, found 9.
+#    Time: 0 ps  Iteration: 0  Instance: /XM23/controller File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv Line: 186
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(186): [TFMPC] - Missing connection for port 'PSW_in'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(186): [TFMPC] - Missing connection for port 'LBPSW'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(186): [TFMPC] - Missing connection for port 'display_stage'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(186): [TFMPC] - Missing connection for port 'led'.
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'pipeline'.  Expected 52, found 30.
+#    Time: 0 ps  Iteration: 0  Instance: /XM23/pipeline File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv Line: 141
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'fetch_in'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'CEX'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'reg_write_enable'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'reg_write_select'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'reg_write_value'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'p_reg'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'WB_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'SLP_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'N_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'Z_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'C_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'V_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'PRPO_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'DEC_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'INC_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'PR_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'F_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'T_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'SA_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'OFF_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'B_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'exec_result_o'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'controller'.  Expected 13, found 9.
+#    Time: 0 ps  Iteration: 0  Instance: /XM23/controller File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv Line: 186
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(186): [TFMPC] - Missing connection for port 'PSW_in'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(186): [TFMPC] - Missing connection for port 'LBPSW'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(186): [TFMPC] - Missing connection for port 'display_stage'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(186): [TFMPC] - Missing connection for port 'led'.
+noforce sim:/XM23/clk_in
+force -freeze sim:/XM23/clk_in 1 0, 0 {50 ps} -r 100
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# End time: 18:32:37 on Oct 26,2024, Elapsed time: 0:05:41
+# Errors: 0, Warnings: 28
