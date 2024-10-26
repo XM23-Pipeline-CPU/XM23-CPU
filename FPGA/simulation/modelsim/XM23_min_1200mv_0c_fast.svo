@@ -17,7 +17,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
 
-// DATE "10/26/2024 18:26:14"
+// DATE "10/26/2024 19:36:16"
 
 // 
 // Device: Altera EP4CE115F29C7 Package FBGA780
@@ -41,9 +41,9 @@ input 	altera_reserved_tms;
 input 	altera_reserved_tck;
 input 	altera_reserved_tdi;
 output 	altera_reserved_tdo;
-input 	reg clk_in ;
-input 	reg reset ;
-output 	reg led ;
+input 	clk_in;
+input 	reset;
+output 	led;
 
 // Design Ports Information
 // led	=>  Location: PIN_G20,	 I/O Standard: 2.5 V,	 Current Strength: Default

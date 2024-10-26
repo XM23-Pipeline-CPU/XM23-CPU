@@ -1,5 +1,5 @@
 Fitter report for XM23
-Sat Oct 26 18:26:06 2024
+Sat Oct 26 19:36:08 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Sat Oct 26 18:26:06 2024       ;
+; Fitter Status                      ; Successful - Sat Oct 26 19:36:08 2024       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; XM23                                        ;
 ; Top-level Entity Name              ; XM23                                        ;
@@ -210,7 +210,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/output_files/XM23.pin.
+The pin-out file can be found in C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/output_files/XM23.pin.
 
 
 +----------------------------------------------------------------------------+
@@ -5764,15 +5764,15 @@ Info (332111): Found 1 clocks
     Info (332111):   Period   Clock Name
     Info (332111): ======== ============
     Info (332111):  100.000 altera_reserved_tck
-Info (176353): Automatically promoted node clk_in~input (placed in PIN J1 (CLK1, DIFFCLK_0n)) File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv Line: 2
+Info (176353): Automatically promoted node clk_in~input (placed in PIN J1 (CLK1, DIFFCLK_0n)) File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 2
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G2
 Info (176353): Automatically promoted node altera_internal_jtag~TCKUTAP 
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
-Info (176353): Automatically promoted node clk  File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv Line: 6
+Info (176353): Automatically promoted node clk  File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 6
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node clk~0 File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv Line: 6
-Info (176353): Automatically promoted node reset~input (placed in PIN Y2 (CLK2, DIFFCLK_1p)) File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv Line: 3
+        Info (176357): Destination node clk~0 File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 6
+Info (176353): Automatically promoted node reset~input (placed in PIN Y2 (CLK2, DIFFCLK_1p)) File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 3
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G1
 Info (176233): Starting register packing
 Info (176235): Finished register packing
@@ -5790,7 +5790,7 @@ Info (176215): I/O bank details before I/O pin placement
         Info (176213): I/O bank number 6 does not use VREF pins and has undetermined VCCIO pins. 1 total pin(s) used --  57 pins available
         Info (176213): I/O bank number 7 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  72 pins available
         Info (176213): I/O bank number 8 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  71 pins available
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:02
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
@@ -5804,23 +5804,23 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.16 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.18 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
-Info (144001): Generated suppressed messages file C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/output_files/XM23.fit.smsg
+Info (144001): Generated suppressed messages file C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/output_files/XM23.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 6723 megabytes
-    Info: Processing ended: Sat Oct 26 18:26:06 2024
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:07
+    Info: Peak virtual memory: 6724 megabytes
+    Info: Processing ended: Sat Oct 26 19:36:09 2024
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:10
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/output_files/XM23.fit.smsg.
+The suppressed messages can be found in C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/output_files/XM23.fit.smsg.
 
 

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for XM23
-Sat Oct 26 18:25:57 2024
+Sat Oct 26 19:35:59 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -59,7 +59,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Oct 26 18:25:57 2024       ;
+; Analysis & Synthesis Status        ; Successful - Sat Oct 26 19:35:59 2024       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; XM23                                        ;
 ; Top-level Entity Name              ; XM23                                        ;
@@ -180,59 +180,59 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                    ;
-+--------------------------------------------------------------------+-----------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------+-------------+
-; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                                                          ; Library     ;
-+--------------------------------------------------------------------+-----------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------+-------------+
-; regnum_to_values_to_alu.sv                                         ; yes             ; User SystemVerilog HDL File                  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/regnum_to_values_to_alu.sv                                         ;             ;
-; decode_stage.sv                                                    ; yes             ; User SystemVerilog HDL File                  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/decode_stage.sv                                                    ;             ;
-; pipeline_registers.sv                                              ; yes             ; User SystemVerilog HDL File                  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/pipeline_registers.sv                                              ;             ;
-; pipeline_controller.sv                                             ; yes             ; User SystemVerilog HDL File                  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/pipeline_controller.sv                                             ;             ;
-; alu_XOR.sv                                                         ; yes             ; User SystemVerilog HDL File                  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_XOR.sv                                                         ;             ;
-; alu_SUB.sv                                                         ; yes             ; User SystemVerilog HDL File                  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_SUB.sv                                                         ;             ;
-; alu_OR.sv                                                          ; yes             ; User SystemVerilog HDL File                  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_OR.sv                                                          ;             ;
-; alu_DADD.sv                                                        ; yes             ; User SystemVerilog HDL File                  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_DADD.sv                                                        ;             ;
-; alu_BIT.sv                                                         ; yes             ; User SystemVerilog HDL File                  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_BIT.sv                                                         ;             ;
-; alu_BIS.sv                                                         ; yes             ; User SystemVerilog HDL File                  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_BIS.sv                                                         ;             ;
-; alu_BIC.sv                                                         ; yes             ; User SystemVerilog HDL File                  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_BIC.sv                                                         ;             ;
-; alu_AND.sv                                                         ; yes             ; User SystemVerilog HDL File                  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_AND.sv                                                         ;             ;
-; alu_ADD.sv                                                         ; yes             ; User SystemVerilog HDL File                  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_ADD.sv                                                         ;             ;
-; alu.sv                                                             ; yes             ; User SystemVerilog HDL File                  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu.sv                                                             ;             ;
-; XM23.sv                                                            ; yes             ; User SystemVerilog HDL File                  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv                                                            ;             ;
-; alu_ADDC.sv                                                        ; yes             ; User SystemVerilog HDL File                  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_ADDC.sv                                                        ;             ;
-; alu_SUBC.sv                                                        ; yes             ; User SystemVerilog HDL File                  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_SUBC.sv                                                        ;             ;
-; update_psw.sv                                                      ; yes             ; User SystemVerilog HDL File                  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/update_psw.sv                                                      ;             ;
-; p_ram.v                                                            ; yes             ; User Wizard-Generated File                   ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/p_ram.v                                                            ;             ;
-; program_counter.sv                                                 ; yes             ; User SystemVerilog HDL File                  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/program_counter.sv                                                 ;             ;
-; altsyncram.tdf                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf                                                 ;             ;
-; stratix_ram_block.inc                                              ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                          ;             ;
-; lpm_mux.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.inc                                                    ;             ;
-; lpm_decode.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_decode.inc                                                 ;             ;
-; aglobal201.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                                                 ;             ;
-; a_rdenreg.inc                                                      ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_rdenreg.inc                                                  ;             ;
-; altrom.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.inc                                                     ;             ;
-; altram.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altram.inc                                                     ;             ;
-; altdpram.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altdpram.inc                                                   ;             ;
-; db/altsyncram_q6k1.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/altsyncram_q6k1.tdf                                             ;             ;
-; db/altsyncram_hlb2.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/altsyncram_hlb2.tdf                                             ;             ;
-; program_memory.mif                                                 ; yes             ; Auto-Found Memory Initialization File        ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/program_memory.mif                                                 ;             ;
-; db/decode_msa.tdf                                                  ; yes             ; Auto-Generated Megafunction                  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/decode_msa.tdf                                                  ;             ;
-; db/decode_f8a.tdf                                                  ; yes             ; Auto-Generated Megafunction                  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/decode_f8a.tdf                                                  ;             ;
-; db/mux_lob.tdf                                                     ; yes             ; Auto-Generated Megafunction                  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/mux_lob.tdf                                                     ;             ;
-; sld_mod_ram_rom.vhd                                                ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd                                            ;             ;
-; sld_jtag_endpoint_adapter.vhd                                      ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd                                  ;             ;
-; sld_jtag_endpoint_adapter_impl.sv                                  ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter_impl.sv                              ;             ;
-; sld_rom_sr.vhd                                                     ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_rom_sr.vhd                                                 ;             ;
-; sld_hub.vhd                                                        ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_hub.vhd                                                    ; altera_sld  ;
-; db/ip/sld928a91a1/alt_sld_fab.v                                    ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/ip/sld928a91a1/alt_sld_fab.v                                    ; alt_sld_fab ;
-; db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab.v             ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab.v             ; alt_sld_fab ;
-; db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; yes             ; Auto-Found SystemVerilog HDL File            ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; alt_sld_fab ;
-; db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; alt_sld_fab ;
-; db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; yes             ; Encrypted Auto-Found VHDL File               ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; alt_sld_fab ;
-; db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; alt_sld_fab ;
-; sld_jtag_hub.vhd                                                   ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                               ;             ;
-+--------------------------------------------------------------------+-----------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------+-------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                               ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+------------------------------------------------------------------------------------------------------------------+-------------+
+; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                                                     ; Library     ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+------------------------------------------------------------------------------------------------------------------+-------------+
+; regnum_to_values_to_alu.sv                                         ; yes             ; User SystemVerilog HDL File                  ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/regnum_to_values_to_alu.sv                                         ;             ;
+; decode_stage.sv                                                    ; yes             ; User SystemVerilog HDL File                  ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/decode_stage.sv                                                    ;             ;
+; pipeline_registers.sv                                              ; yes             ; User SystemVerilog HDL File                  ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/pipeline_registers.sv                                              ;             ;
+; pipeline_controller.sv                                             ; yes             ; User SystemVerilog HDL File                  ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/pipeline_controller.sv                                             ;             ;
+; alu_XOR.sv                                                         ; yes             ; User SystemVerilog HDL File                  ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_XOR.sv                                                         ;             ;
+; alu_SUB.sv                                                         ; yes             ; User SystemVerilog HDL File                  ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_SUB.sv                                                         ;             ;
+; alu_OR.sv                                                          ; yes             ; User SystemVerilog HDL File                  ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_OR.sv                                                          ;             ;
+; alu_DADD.sv                                                        ; yes             ; User SystemVerilog HDL File                  ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_DADD.sv                                                        ;             ;
+; alu_BIT.sv                                                         ; yes             ; User SystemVerilog HDL File                  ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_BIT.sv                                                         ;             ;
+; alu_BIS.sv                                                         ; yes             ; User SystemVerilog HDL File                  ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_BIS.sv                                                         ;             ;
+; alu_BIC.sv                                                         ; yes             ; User SystemVerilog HDL File                  ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_BIC.sv                                                         ;             ;
+; alu_AND.sv                                                         ; yes             ; User SystemVerilog HDL File                  ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_AND.sv                                                         ;             ;
+; alu_ADD.sv                                                         ; yes             ; User SystemVerilog HDL File                  ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_ADD.sv                                                         ;             ;
+; alu.sv                                                             ; yes             ; User SystemVerilog HDL File                  ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu.sv                                                             ;             ;
+; XM23.sv                                                            ; yes             ; User SystemVerilog HDL File                  ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv                                                            ;             ;
+; alu_ADDC.sv                                                        ; yes             ; User SystemVerilog HDL File                  ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_ADDC.sv                                                        ;             ;
+; alu_SUBC.sv                                                        ; yes             ; User SystemVerilog HDL File                  ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_SUBC.sv                                                        ;             ;
+; update_psw.sv                                                      ; yes             ; User SystemVerilog HDL File                  ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/update_psw.sv                                                      ;             ;
+; p_ram.v                                                            ; yes             ; User Wizard-Generated File                   ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/p_ram.v                                                            ;             ;
+; program_counter.sv                                                 ; yes             ; User SystemVerilog HDL File                  ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/program_counter.sv                                                 ;             ;
+; altsyncram.tdf                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf                                            ;             ;
+; stratix_ram_block.inc                                              ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                     ;             ;
+; lpm_mux.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.inc                                               ;             ;
+; lpm_decode.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_decode.inc                                            ;             ;
+; aglobal201.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                                            ;             ;
+; a_rdenreg.inc                                                      ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_rdenreg.inc                                             ;             ;
+; altrom.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.inc                                                ;             ;
+; altram.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altram.inc                                                ;             ;
+; altdpram.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altdpram.inc                                              ;             ;
+; db/altsyncram_q6k1.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/altsyncram_q6k1.tdf                                             ;             ;
+; db/altsyncram_hlb2.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/altsyncram_hlb2.tdf                                             ;             ;
+; program_memory.mif                                                 ; yes             ; Auto-Found Memory Initialization File        ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/program_memory.mif                                                 ;             ;
+; db/decode_msa.tdf                                                  ; yes             ; Auto-Generated Megafunction                  ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/decode_msa.tdf                                                  ;             ;
+; db/decode_f8a.tdf                                                  ; yes             ; Auto-Generated Megafunction                  ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/decode_f8a.tdf                                                  ;             ;
+; db/mux_lob.tdf                                                     ; yes             ; Auto-Generated Megafunction                  ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/mux_lob.tdf                                                     ;             ;
+; sld_mod_ram_rom.vhd                                                ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd                                       ;             ;
+; sld_jtag_endpoint_adapter.vhd                                      ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd                             ;             ;
+; sld_jtag_endpoint_adapter_impl.sv                                  ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter_impl.sv                         ;             ;
+; sld_rom_sr.vhd                                                     ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_rom_sr.vhd                                            ;             ;
+; sld_hub.vhd                                                        ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_hub.vhd                                               ; altera_sld  ;
+; db/ip/sld928a91a1/alt_sld_fab.v                                    ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/ip/sld928a91a1/alt_sld_fab.v                                    ; alt_sld_fab ;
+; db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab.v             ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab.v             ; alt_sld_fab ;
+; db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; yes             ; Auto-Found SystemVerilog HDL File            ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; alt_sld_fab ;
+; db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; alt_sld_fab ;
+; db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; yes             ; Encrypted Auto-Found VHDL File               ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; alt_sld_fab ;
+; db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; alt_sld_fab ;
+; sld_jtag_hub.vhd                                                   ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                          ;             ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+------------------------------------------------------------------------------------------------------------------+-------------+
 
 
 +------------------------------------------------------------------------+
@@ -539,36 +539,34 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "pipeline_registers:pipeline"                                                                                                                             ;
-+------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port             ; Type   ; Severity ; Details                                                                                                                                      ;
-+------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; enable_o[2..1]   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; PSW_o[15..1]     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; fetch_in         ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-; CEX              ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-; reg_write_enable ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-; reg_write_select ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-; reg_write_value  ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-; p_reg            ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
-; WB_o             ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
-; SLP_o            ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
-; N_o              ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
-; Z_o              ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
-; C_o              ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
-; V_o              ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
-; PRPO_o           ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
-; DEC_o            ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
-; INC_o            ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
-; PR_o             ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
-; F_o              ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
-; T_o              ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
-; SA_o             ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
-; OFF_o            ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
-; B_o              ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
-; exec_result_o    ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
-+------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "pipeline_registers:pipeline"                                                                                                                              ;
++-------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port              ; Type   ; Severity ; Details                                                                                                                                      ;
++-------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; enable_o[2..1]    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; PSW_o[15..1]      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; fetch_in          ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; CEX               ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; mem_access_result ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; p_reg             ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; WB_o              ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; SLP_o             ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; N_o               ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; Z_o               ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; C_o               ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; V_o               ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; PRPO_o            ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; DEC_o             ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; INC_o             ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; PR_o              ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; F_o               ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; T_o               ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; SA_o              ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; OFF_o             ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; B_o               ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; exec_result_o     ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
++-------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +----------------------------------------+
@@ -645,69 +643,69 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sat Oct 26 18:25:42 2024
+    Info: Processing started: Sat Oct 26 19:35:40 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off XM23 -c XM23
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file regnum_to_values_to_alu.sv
-    Info (12023): Found entity 1: regnum_to_values_to_alu File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/regnum_to_values_to_alu.sv Line: 3
+    Info (12023): Found entity 1: regnum_to_values_to_alu File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/regnum_to_values_to_alu.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file decode_stage.sv
-    Info (12023): Found entity 1: decode_stage File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/decode_stage.sv Line: 1
+    Info (12023): Found entity 1: decode_stage File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/decode_stage.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file pipeline_registers.sv
-    Info (12023): Found entity 1: pipeline_registers File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/pipeline_registers.sv Line: 1
+    Info (12023): Found entity 1: pipeline_registers File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/pipeline_registers.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file pipeline_controller.sv
-    Info (12023): Found entity 1: pipeline_controller File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/pipeline_controller.sv Line: 8
+    Info (12023): Found entity 1: pipeline_controller File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/pipeline_controller.sv Line: 8
 Info (12021): Found 1 design units, including 1 entities, in source file memory_access.sv
-    Info (12023): Found entity 1: memory_access File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/memory_access.sv Line: 1
+    Info (12023): Found entity 1: memory_access File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/memory_access.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu_xor.sv
-    Info (12023): Found entity 1: alu_XOR File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_XOR.sv Line: 2
+    Info (12023): Found entity 1: alu_XOR File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_XOR.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file alu_top_level.sv
-    Info (12023): Found entity 1: alu_top_level File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_top_level.sv Line: 2
+    Info (12023): Found entity 1: alu_top_level File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_top_level.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file alu_sub.sv
-    Info (12023): Found entity 1: alu_SUB File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_SUB.sv Line: 2
+    Info (12023): Found entity 1: alu_SUB File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_SUB.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file alu_or.sv
-    Info (12023): Found entity 1: alu_OR File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_OR.sv Line: 2
+    Info (12023): Found entity 1: alu_OR File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_OR.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file alu_dadd.sv
-    Info (12023): Found entity 1: alu_DADD File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_DADD.sv Line: 2
+    Info (12023): Found entity 1: alu_DADD File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_DADD.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file alu_bit.sv
-    Info (12023): Found entity 1: alu_BIT File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_BIT.sv Line: 2
+    Info (12023): Found entity 1: alu_BIT File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_BIT.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file alu_bis.sv
-    Info (12023): Found entity 1: alu_BIS File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_BIS.sv Line: 2
+    Info (12023): Found entity 1: alu_BIS File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_BIS.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file alu_bic.sv
-    Info (12023): Found entity 1: alu_BIC File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_BIC.sv Line: 2
+    Info (12023): Found entity 1: alu_BIC File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_BIC.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file alu_and.sv
-    Info (12023): Found entity 1: alu_AND File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_AND.sv Line: 2
+    Info (12023): Found entity 1: alu_AND File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_AND.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file alu_add.sv
-    Info (12023): Found entity 1: alu_ADD File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_ADD.sv Line: 2
+    Info (12023): Found entity 1: alu_ADD File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_ADD.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file alu.sv
-    Info (12023): Found entity 1: alu File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu.sv Line: 2
+    Info (12023): Found entity 1: alu File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file xm23.sv
-    Info (12023): Found entity 1: XM23 File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv Line: 1
+    Info (12023): Found entity 1: XM23 File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 1
 Warning (12019): Can't analyze file -- file regnum_to_values.sv is missing
 Info (12021): Found 1 design units, including 1 entities, in source file alu_addc.sv
-    Info (12023): Found entity 1: alu_ADDC File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_ADDC.sv Line: 2
+    Info (12023): Found entity 1: alu_ADDC File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_ADDC.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file alu_subc.sv
-    Info (12023): Found entity 1: alu_SUBC File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_SUBC.sv Line: 2
+    Info (12023): Found entity 1: alu_SUBC File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_SUBC.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file update_psw.sv
-    Info (12023): Found entity 1: update_psw File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/update_psw.sv Line: 1
+    Info (12023): Found entity 1: update_psw File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/update_psw.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file p_ram.v
-    Info (12023): Found entity 1: p_ram File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/p_ram.v Line: 40
+    Info (12023): Found entity 1: p_ram File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/p_ram.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file d_ram.v
-    Info (12023): Found entity 1: d_ram File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/d_ram.v Line: 40
+    Info (12023): Found entity 1: d_ram File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/d_ram.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file program_counter.sv
-    Info (12023): Found entity 1: program_counter File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/program_counter.sv Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at alu_SUB.sv(12): created implicit net for "carry_out" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_SUB.sv Line: 12
-Warning (10236): Verilog HDL Implicit Net warning at alu_DADD.sv(48): created implicit net for "carry_out" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_DADD.sv Line: 48
-Warning (10236): Verilog HDL Implicit Net warning at alu_ADD.sv(12): created implicit net for "carry_out" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_ADD.sv Line: 12
-Warning (10236): Verilog HDL Implicit Net warning at alu_ADDC.sv(14): created implicit net for "carry_out" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_ADDC.sv Line: 14
-Warning (10236): Verilog HDL Implicit Net warning at alu_SUBC.sv(14): created implicit net for "carry_out" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_SUBC.sv Line: 14
+    Info (12023): Found entity 1: program_counter File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/program_counter.sv Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at alu_SUB.sv(12): created implicit net for "carry_out" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_SUB.sv Line: 12
+Warning (10236): Verilog HDL Implicit Net warning at alu_DADD.sv(48): created implicit net for "carry_out" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_DADD.sv Line: 48
+Warning (10236): Verilog HDL Implicit Net warning at alu_ADD.sv(12): created implicit net for "carry_out" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_ADD.sv Line: 12
+Warning (10236): Verilog HDL Implicit Net warning at alu_ADDC.sv(14): created implicit net for "carry_out" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_ADDC.sv Line: 14
+Warning (10236): Verilog HDL Implicit Net warning at alu_SUBC.sv(14): created implicit net for "carry_out" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_SUBC.sv Line: 14
 Info (12127): Elaborating entity "XM23" for the top level hierarchy
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gprc_o_wire" into its bus
-Info (12128): Elaborating entity "program_counter" for hierarchy "program_counter:pcounter" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv Line: 100
-Info (12128): Elaborating entity "p_ram" for hierarchy "p_ram:pram" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv Line: 109
-Info (12128): Elaborating entity "altsyncram" for hierarchy "p_ram:pram|altsyncram:altsyncram_component" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/p_ram.v Line: 86
-Info (12130): Elaborated megafunction instantiation "p_ram:pram|altsyncram:altsyncram_component" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/p_ram.v Line: 86
-Info (12133): Instantiated megafunction "p_ram:pram|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/p_ram.v Line: 86
+Info (12128): Elaborating entity "program_counter" for hierarchy "program_counter:pcounter" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 100
+Info (12128): Elaborating entity "p_ram" for hierarchy "p_ram:pram" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 109
+Info (12128): Elaborating entity "altsyncram" for hierarchy "p_ram:pram|altsyncram:altsyncram_component" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/p_ram.v Line: 86
+Info (12130): Elaborated megafunction instantiation "p_ram:pram|altsyncram:altsyncram_component" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/p_ram.v Line: 86
+Info (12133): Instantiated megafunction "p_ram:pram|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/p_ram.v Line: 86
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
     Info (12134): Parameter "init_file" = "program_memory.mif"
@@ -724,25 +722,23 @@ Info (12133): Instantiated megafunction "p_ram:pram|altsyncram:altsyncram_compon
     Info (12134): Parameter "width_a" = "16"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_q6k1.tdf
-    Info (12023): Found entity 1: altsyncram_q6k1 File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/altsyncram_q6k1.tdf Line: 28
+    Info (12023): Found entity 1: altsyncram_q6k1 File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/altsyncram_q6k1.tdf Line: 28
 Info (12128): Elaborating entity "altsyncram_q6k1" for hierarchy "p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_hlb2.tdf
-    Info (12023): Found entity 1: altsyncram_hlb2 File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/altsyncram_hlb2.tdf Line: 34
-Info (12128): Elaborating entity "altsyncram_hlb2" for hierarchy "p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|altsyncram_hlb2:altsyncram1" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/altsyncram_q6k1.tdf Line: 37
-Warning (113028): 32764 out of 32768 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported. File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/program_memory.mif Line: 1
-    Warning (113027): Addresses ranging from 4 to 32767 are not initialized File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/program_memory.mif Line: 1
+    Info (12023): Found entity 1: altsyncram_hlb2 File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/altsyncram_hlb2.tdf Line: 34
+Info (12128): Elaborating entity "altsyncram_hlb2" for hierarchy "p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|altsyncram_hlb2:altsyncram1" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/altsyncram_q6k1.tdf Line: 37
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_msa.tdf
-    Info (12023): Found entity 1: decode_msa File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/decode_msa.tdf Line: 23
-Info (12128): Elaborating entity "decode_msa" for hierarchy "p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|altsyncram_hlb2:altsyncram1|decode_msa:decode4" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/altsyncram_hlb2.tdf Line: 50
+    Info (12023): Found entity 1: decode_msa File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/decode_msa.tdf Line: 23
+Info (12128): Elaborating entity "decode_msa" for hierarchy "p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|altsyncram_hlb2:altsyncram1|decode_msa:decode4" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/altsyncram_hlb2.tdf Line: 50
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_f8a.tdf
-    Info (12023): Found entity 1: decode_f8a File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/decode_f8a.tdf Line: 23
-Info (12128): Elaborating entity "decode_f8a" for hierarchy "p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|altsyncram_hlb2:altsyncram1|decode_f8a:rden_decode_a" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/altsyncram_hlb2.tdf Line: 52
+    Info (12023): Found entity 1: decode_f8a File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/decode_f8a.tdf Line: 23
+Info (12128): Elaborating entity "decode_f8a" for hierarchy "p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|altsyncram_hlb2:altsyncram1|decode_f8a:rden_decode_a" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/altsyncram_hlb2.tdf Line: 52
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_lob.tdf
-    Info (12023): Found entity 1: mux_lob File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/mux_lob.tdf Line: 23
-Info (12128): Elaborating entity "mux_lob" for hierarchy "p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|altsyncram_hlb2:altsyncram1|mux_lob:mux6" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/altsyncram_hlb2.tdf Line: 54
-Info (12128): Elaborating entity "sld_mod_ram_rom" for hierarchy "p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/altsyncram_q6k1.tdf Line: 38
-Info (12130): Elaborated megafunction instantiation "p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/altsyncram_q6k1.tdf Line: 38
-Info (12133): Instantiated megafunction "p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|sld_mod_ram_rom:mgl_prim2" with the following parameter: File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/altsyncram_q6k1.tdf Line: 38
+    Info (12023): Found entity 1: mux_lob File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/mux_lob.tdf Line: 23
+Info (12128): Elaborating entity "mux_lob" for hierarchy "p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|altsyncram_hlb2:altsyncram1|mux_lob:mux6" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/altsyncram_hlb2.tdf Line: 54
+Info (12128): Elaborating entity "sld_mod_ram_rom" for hierarchy "p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/altsyncram_q6k1.tdf Line: 38
+Info (12130): Elaborated megafunction instantiation "p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/altsyncram_q6k1.tdf Line: 38
+Info (12133): Instantiated megafunction "p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|sld_mod_ram_rom:mgl_prim2" with the following parameter: File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/altsyncram_q6k1.tdf Line: 38
     Info (12134): Parameter "CVALUE" = "0000000000000000"
     Info (12134): Parameter "IS_DATA_IN_RAM" = "1"
     Info (12134): Parameter "IS_READABLE" = "1"
@@ -754,42 +750,42 @@ Info (12133): Instantiated megafunction "p_ram:pram|altsyncram:altsyncram_compon
 Info (12128): Elaborating entity "sld_jtag_endpoint_adapter" for hierarchy "p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 302
 Info (12128): Elaborating entity "sld_jtag_endpoint_adapter_impl" for hierarchy "p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd Line: 232
 Info (12128): Elaborating entity "sld_rom_sr" for hierarchy "p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 828
-Info (12128): Elaborating entity "decode_stage" for hierarchy "decode_stage:decode" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv Line: 138
-Warning (10230): Verilog HDL assignment warning at decode_stage.sv(451): truncated value with size 4 to match size of target (1) File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/decode_stage.sv Line: 451
-Info (12128): Elaborating entity "pipeline_registers" for hierarchy "pipeline_registers:pipeline" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv Line: 183
-Warning (10034): Output port "p_reg" at pipeline_registers.sv(34) has no driver File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/pipeline_registers.sv Line: 34
+Info (12128): Elaborating entity "decode_stage" for hierarchy "decode_stage:decode" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 138
+Warning (10230): Verilog HDL assignment warning at decode_stage.sv(451): truncated value with size 4 to match size of target (1) File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/decode_stage.sv Line: 451
+Info (12128): Elaborating entity "pipeline_registers" for hierarchy "pipeline_registers:pipeline" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 183
+Warning (10034): Output port "p_reg" at pipeline_registers.sv(32) has no driver File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/pipeline_registers.sv Line: 32
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gprc_o" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gprc_i" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gprc_o" into its bus
-Info (12128): Elaborating entity "pipeline_controller" for hierarchy "pipeline_controller:controller" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv Line: 203
-Info (12128): Elaborating entity "regnum_to_values_to_alu" for hierarchy "regnum_to_values_to_alu:regnum_inst" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv Line: 216
+Info (12128): Elaborating entity "pipeline_controller" for hierarchy "pipeline_controller:controller" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 203
+Info (12128): Elaborating entity "regnum_to_values_to_alu" for hierarchy "regnum_to_values_to_alu:regnum_inst" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 216
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gprc" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gprc" into its bus
-Info (12128): Elaborating entity "alu" for hierarchy "alu:alu_inst" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv Line: 231
-Info (12128): Elaborating entity "alu_AND" for hierarchy "alu:alu_inst|alu_AND:and_op" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu.sv Line: 28
-Info (12128): Elaborating entity "alu_OR" for hierarchy "alu:alu_inst|alu_OR:or_op" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu.sv Line: 29
-Info (12128): Elaborating entity "alu_XOR" for hierarchy "alu:alu_inst|alu_XOR:xor_op" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu.sv Line: 30
-Info (12128): Elaborating entity "alu_BIT" for hierarchy "alu:alu_inst|alu_BIT:bit_op" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu.sv Line: 32
-Warning (10230): Verilog HDL assignment warning at alu_BIT.sv(7): truncated value with size 32 to match size of target (16) File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_BIT.sv Line: 7
-Info (12128): Elaborating entity "alu_BIC" for hierarchy "alu:alu_inst|alu_BIC:bic_op" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu.sv Line: 33
-Warning (10230): Verilog HDL assignment warning at alu_BIC.sv(7): truncated value with size 32 to match size of target (16) File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_BIC.sv Line: 7
-Info (12128): Elaborating entity "alu_BIS" for hierarchy "alu:alu_inst|alu_BIS:bis_op" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu.sv Line: 34
-Warning (10230): Verilog HDL assignment warning at alu_BIS.sv(7): truncated value with size 32 to match size of target (16) File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_BIS.sv Line: 7
-Info (12128): Elaborating entity "alu_ADD" for hierarchy "alu:alu_inst|alu_ADD:add_op" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu.sv Line: 36
-Warning (10036): Verilog HDL or VHDL warning at alu_ADD.sv(12): object "carry_out" assigned a value but never read File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_ADD.sv Line: 12
-Info (12128): Elaborating entity "alu_SUB" for hierarchy "alu:alu_inst|alu_SUB:sub_op" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu.sv Line: 37
-Warning (10036): Verilog HDL or VHDL warning at alu_SUB.sv(12): object "carry_out" assigned a value but never read File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_SUB.sv Line: 12
-Info (12128): Elaborating entity "alu_ADDC" for hierarchy "alu:alu_inst|alu_ADDC:addc_op" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu.sv Line: 38
-Warning (10036): Verilog HDL or VHDL warning at alu_ADDC.sv(14): object "carry_out" assigned a value but never read File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_ADDC.sv Line: 14
-Info (12128): Elaborating entity "alu_SUBC" for hierarchy "alu:alu_inst|alu_SUBC:subc_op" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu.sv Line: 39
-Warning (10036): Verilog HDL or VHDL warning at alu_SUBC.sv(14): object "carry_out" assigned a value but never read File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_SUBC.sv Line: 14
-Info (12128): Elaborating entity "alu_DADD" for hierarchy "alu:alu_inst|alu_DADD:dadd_op" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu.sv Line: 40
-Warning (10036): Verilog HDL or VHDL warning at alu_DADD.sv(48): object "carry_out" assigned a value but never read File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_DADD.sv Line: 48
-Info (12128): Elaborating entity "update_psw" for hierarchy "update_psw:update_psw_inst" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv Line: 246
+Info (12128): Elaborating entity "alu" for hierarchy "alu:alu_inst" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 231
+Info (12128): Elaborating entity "alu_AND" for hierarchy "alu:alu_inst|alu_AND:and_op" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu.sv Line: 28
+Info (12128): Elaborating entity "alu_OR" for hierarchy "alu:alu_inst|alu_OR:or_op" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu.sv Line: 29
+Info (12128): Elaborating entity "alu_XOR" for hierarchy "alu:alu_inst|alu_XOR:xor_op" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu.sv Line: 30
+Info (12128): Elaborating entity "alu_BIT" for hierarchy "alu:alu_inst|alu_BIT:bit_op" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu.sv Line: 32
+Warning (10230): Verilog HDL assignment warning at alu_BIT.sv(7): truncated value with size 32 to match size of target (16) File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_BIT.sv Line: 7
+Info (12128): Elaborating entity "alu_BIC" for hierarchy "alu:alu_inst|alu_BIC:bic_op" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu.sv Line: 33
+Warning (10230): Verilog HDL assignment warning at alu_BIC.sv(7): truncated value with size 32 to match size of target (16) File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_BIC.sv Line: 7
+Info (12128): Elaborating entity "alu_BIS" for hierarchy "alu:alu_inst|alu_BIS:bis_op" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu.sv Line: 34
+Warning (10230): Verilog HDL assignment warning at alu_BIS.sv(7): truncated value with size 32 to match size of target (16) File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_BIS.sv Line: 7
+Info (12128): Elaborating entity "alu_ADD" for hierarchy "alu:alu_inst|alu_ADD:add_op" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu.sv Line: 36
+Warning (10036): Verilog HDL or VHDL warning at alu_ADD.sv(12): object "carry_out" assigned a value but never read File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_ADD.sv Line: 12
+Info (12128): Elaborating entity "alu_SUB" for hierarchy "alu:alu_inst|alu_SUB:sub_op" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu.sv Line: 37
+Warning (10036): Verilog HDL or VHDL warning at alu_SUB.sv(12): object "carry_out" assigned a value but never read File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_SUB.sv Line: 12
+Info (12128): Elaborating entity "alu_ADDC" for hierarchy "alu:alu_inst|alu_ADDC:addc_op" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu.sv Line: 38
+Warning (10036): Verilog HDL or VHDL warning at alu_ADDC.sv(14): object "carry_out" assigned a value but never read File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_ADDC.sv Line: 14
+Info (12128): Elaborating entity "alu_SUBC" for hierarchy "alu:alu_inst|alu_SUBC:subc_op" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu.sv Line: 39
+Warning (10036): Verilog HDL or VHDL warning at alu_SUBC.sv(14): object "carry_out" assigned a value but never read File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_SUBC.sv Line: 14
+Info (12128): Elaborating entity "alu_DADD" for hierarchy "alu:alu_inst|alu_DADD:dadd_op" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu.sv Line: 40
+Warning (10036): Verilog HDL or VHDL warning at alu_DADD.sv(48): object "carry_out" assigned a value but never read File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_DADD.sv Line: 48
+Info (12128): Elaborating entity "update_psw" for hierarchy "update_psw:update_psw_inst" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 246
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "carry_arr" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "overflow_arr" into its bus
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2024.10.26.18:25:50 Progress: Loading sld928a91a1/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2024.10.26.19:35:50 Progress: Loading sld928a91a1/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -800,22 +796,22 @@ Info (11172): Ident: "alt_sld_fab" instantiated altera_connection_identification
 Info (11172): Alt_sld_fab: Done "alt_sld_fab" with 6 modules, 6 files
 Info (11171): Finished IP generation for the debug fabric: alt_sld_fab.
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld928a91a1/alt_sld_fab.v
-    Info (12023): Found entity 1: alt_sld_fab File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/ip/sld928a91a1/alt_sld_fab.v Line: 9
+    Info (12023): Found entity 1: alt_sld_fab File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/ip/sld928a91a1/alt_sld_fab.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab.v
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab.v Line: 9
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_ident.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_ident File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_ident.sv Line: 33
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_ident File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_ident.sv Line: 33
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_presplit.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_presplit File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_presplit.sv Line: 3
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_presplit File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_presplit.sv Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd
-    Info (12022): Found design unit 1: alt_sld_fab_alt_sld_fab_sldfabric-rtl File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 102
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
+    Info (12022): Found design unit 1: alt_sld_fab_alt_sld_fab_sldfabric-rtl File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 102
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_splitter.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
 Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
 Info (17049): 32 registers lost all their fanouts during netlist optimizations.
-Info (144001): Generated suppressed messages file C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/output_files/XM23.map.smsg
+Info (144001): Generated suppressed messages file C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/output_files/XM23.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Info (21057): Implemented 611 device resources after synthesis - the final resource count might be different
@@ -823,16 +819,16 @@ Info (21057): Implemented 611 device resources after synthesis - the final resou
     Info (21059): Implemented 2 output pins
     Info (21061): Implemented 539 logic cells
     Info (21064): Implemented 64 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 20 warnings
-    Info: Peak virtual memory: 4893 megabytes
-    Info: Processing ended: Sat Oct 26 18:25:57 2024
-    Info: Elapsed time: 00:00:15
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 18 warnings
+    Info: Peak virtual memory: 4897 megabytes
+    Info: Processing ended: Sat Oct 26 19:35:59 2024
+    Info: Elapsed time: 00:00:19
     Info: Total CPU time (on all processors): 00:00:13
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/output_files/XM23.map.smsg.
+The suppressed messages can be found in C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/output_files/XM23.map.smsg.
 
 

@@ -20,14 +20,12 @@ module pipeline_registers(
     input logic [15:0] PSW_mask,
     input logic [15:0] PSW,
     input logic [15:0] CEX,
-    
-    // Input Register writeback
-    input logic reg_write_enable,
-    input logic [3:0] reg_write_select,
-    input logic [15:0] reg_write_value,
 	 
 	 // Input to store alu result
 	 input logic [15:0] exec_result,
+	 
+	 // Input to store memory access result
+	 input logic [15:0] mem_access_result,
     
 	 
 	 // Actual Instruction Registers output (need to update top level to actually use this)
@@ -107,11 +105,14 @@ module pipeline_registers(
 
 	// Initialize exec_result_i to zero
 	logic [1:0][15:0] exec_result_i = '{default: 16'b0};
+	
+	// Initialize mem_access_result_i to zero
+	logic [15:0] mem_access_result_i = 16'b0;
     	
 	// Corrected declaration and initialization of gprc_i
 	logic [1:0][7:0][15:0] gprc_i = '{
 	 '{-16'sd1, 16'sd32, 16'sd16, 16'sd8, 16'sd4, 16'sd2, 16'sd1, 16'sd0},    	// CONSTANTS gprc_i[1]
-    '{16'b0, 16'b0, 16'b0, 16'b0, 16'b0, 16'b0, 16'b1, 16'b0000000000001100}  // REGISTERS gprc_i[0]
+    '{16'b0, 16'b0, 16'b0, 16'b0, 16'b0, 16'b0, 16'b0, 16'b0}  // REGISTERS gprc_i[0]
 	 };
 	
     // Shift register logic
@@ -169,15 +170,27 @@ module pipeline_registers(
         OFF_i[2:1]   <= OFF_i[1:0];
         B_i[2:1]     <= B_i[1:0];
         enable_i[2:1] <= enable_i[1:0];
+		  exec_result_i[1] <= exec_result_i[0];  
+		  exec_result_i[0] <= exec_result;
+		  mem_access_result_i <= mem_access_result;
 		  
         // Update PSW
         // If mask bit is high, update that bit; otherwise, retain old value
         PSW_i <= (PSW_i & ~PSW_mask) | (PSW & PSW_mask);
-    		
-        // Update general purpose registers if write enabled
-        if (reg_write_enable) begin
-            gprc_i[SELECT_REG][reg_write_select] <= reg_write_value;
-        end
+		  
+		  // Handling register writeback
+		  // If any of the instructions that modify the register are present from the execute stage, do
+		  if ((|enable_i[2][13:9]) || (|enable_i[2][17:15]) || (|enable_i[2][27:19]) || (|enable_i[2][38:35])) begin
+				// Execute result from two clock cycles ago goes into correct register
+				// Correct register is defined by decode from three clock cycles ago
+				gprc_i[SELECT_REG][D_i[2]] <= exec_result_i[1];
+        
+		  // If any of the instructions that modify the register are present from the memory access stage, do
+		  end else if (enable_i[2][33] || enable_i[2][39]) begin
+				// Memory access result from one clock cycle ago goes into correct register
+				// Correct register is defined by decode from three clock cycles ago
+				gprc_i[SELECT_REG][D_i[2]] <= mem_access_result_i;
+		  end
     end
 
     // Assign outputs from internal signals
