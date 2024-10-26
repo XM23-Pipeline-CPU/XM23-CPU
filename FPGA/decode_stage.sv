@@ -369,7 +369,7 @@ module decode_stage(
 			  enable[22] = 1'b1;
 			  
 			  if(RC == IS_REG) begin
-			     async_set[S] = 1'b1; //set dependency
+				  async_set[S] = 1'b1; //set dependency
 				  async_dep[S] = 1'b1; //be added as dependency
 			  end
 			  async_set[D] = 1'b1;    //set dependency
