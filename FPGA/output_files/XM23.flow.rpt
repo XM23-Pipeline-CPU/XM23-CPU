@@ -1,5 +1,5 @@
 Flow report for XM23
-Sun Oct 27 16:52:06 2024
+Sun Oct 27 20:26:26 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,20 +41,20 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Sun Oct 27 16:52:06 2024       ;
+; Flow Status                        ; Successful - Sun Oct 27 20:26:26 2024       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; XM23                                        ;
 ; Top-level Entity Name              ; XM23                                        ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 1,113 / 114,480 ( < 1 % )                   ;
-;     Total combinational functions  ; 1,036 / 114,480 ( < 1 % )                   ;
-;     Dedicated logic registers      ; 473 / 114,480 ( < 1 % )                     ;
-; Total registers                    ; 473                                         ;
+; Total logic elements               ; 1,518 / 114,480 ( 1 % )                     ;
+;     Total combinational functions  ; 1,428 / 114,480 ( 1 % )                     ;
+;     Dedicated logic registers      ; 519 / 114,480 ( < 1 % )                     ;
+; Total registers                    ; 519                                         ;
 ; Total pins                         ; 3 / 529 ( < 1 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 524,327 / 3,981,312 ( 13 % )                ;
+; Total memory bits                  ; 524,288 / 3,981,312 ( 13 % )                ;
 ; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                             ;
 ; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
 +------------------------------------+---------------------------------------------+
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/27/2024 16:51:29 ;
+; Start date & time ; 10/27/2024 20:25:35 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; XM23                ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 91755614181.173005868940028            ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 238300908692116.173007153521092        ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Systemverilog Hdl                      ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (SystemVerilog)        ; <None>        ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --             ;
@@ -97,12 +97,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:17     ; 1.0                     ; 4905 MB             ; 00:00:14                           ;
-; Fitter               ; 00:00:08     ; 1.1                     ; 6736 MB             ; 00:00:07                           ;
-; Assembler            ; 00:00:02     ; 1.0                     ; 4699 MB             ; 00:00:02                           ;
-; Timing Analyzer      ; 00:00:02     ; 1.4                     ; 5010 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4683 MB             ; 00:00:01                           ;
-; Total                ; 00:00:31     ; --                      ; --                  ; 00:00:25                           ;
+; Analysis & Synthesis ; 00:00:31     ; 1.0                     ; 4907 MB             ; 00:00:26                           ;
+; Fitter               ; 00:00:10     ; 1.1                     ; 6739 MB             ; 00:00:10                           ;
+; Assembler            ; 00:00:03     ; 1.0                     ; 4701 MB             ; 00:00:02                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.4                     ; 5012 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4686 MB             ; 00:00:02                           ;
+; Total                ; 00:00:48     ; --                      ; --                  ; 00:00:41                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -111,11 +111,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; DESKTOP-2EU525A  ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; DESKTOP-2EU525A  ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; DESKTOP-2EU525A  ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; DESKTOP-2EU525A  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-2EU525A  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-TKUSISF  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-TKUSISF  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-TKUSISF  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-TKUSISF  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-TKUSISF  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 

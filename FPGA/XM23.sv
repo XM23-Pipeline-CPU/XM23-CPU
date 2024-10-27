@@ -64,11 +64,14 @@ module XM23 (
 	// Wires from pipeline_controller to pipeline_registers
 	wire [7:0]   stall_wire;
 
-	// Wires from alu_inst to pipeline_registers
+	// Wires from alu_inst
 	wire [15:0]  alu_result_wire;    
 	wire [15:0]  psw_out_wire;       
 	wire [15:0]  psw_mask_wire;
 	wire         enable_psw_msk_wire;
+	
+	// wires from moves
+	wire [15:0]  moves_result_wire; 
 
 	// Wires from pipeline_registers to regnum_to_values_to_alu
 	wire [1:0][7:0][15:0]  gprc_o_wire;        
@@ -82,7 +85,14 @@ module XM23 (
 
 	// Wires from pipeline_registers 
 	wire [2:0][40:0]   	enable_o_wire;      
-	wire [15:0]   		   PSW_o_wire;         
+	wire [15:0]   		   PSW_o_wire; 
+
+	// Wires from pipeline registers to update psw
+	wire [2:0] SLP_o_wire;
+	wire [2:0] N_o_wire;
+	wire [2:0] Z_o_wire;
+	wire [2:0] C_o_wire;
+	wire [2:0] V_o_wire;
 	
 	// Program_counter
 	program_counter pcounter(
@@ -164,7 +174,10 @@ module XM23 (
 		.enable(enable_wire),
 		
 		// INPUTS FROM ALU
-		.exec_result(alu_result_wire),
+		.alu_result(alu_result_wire),
+		
+		// INPUTS FROM MOVES
+		.moves_result(moves_result_wire),
 		
 		// INPUTS FROM UPDATING PSW
 		.PSW(psw_out_wire),
@@ -179,7 +192,12 @@ module XM23 (
 		.S_o(S_o_wire),
 		.D_o(D_o_wire),
 		.enable_o(enable_o_wire),
-		.PSW_o(PSW_o_wire)
+		.PSW_o(PSW_o_wire),
+		.SLP_o(SLP_o_wire),
+		.N_o(N_o_wire),
+		.Z_o(Z_o_wire),
+		.C_o(C_o_wire),
+		.V_o(V_o_wire)
 	);
 	
 	// takes dependency decisions from decoder
@@ -254,9 +272,20 @@ module XM23 (
 		.a(dst_val_wire),
 		.b(src_val_wire),
 		
+		// INPUTS FROM DECODE
+		.enable(enable_o_wire[0]),
+		
+		
 		// INPUTS FROM ALU
 		.result(alu_result_wire),
 		.enable_psw_msk(enable_psw_msk_wire),
+		
+		// INPUTS FROM PIPELINE REGISTERS
+		.SLP_i(SLP_o_wire[0]),
+		.N_i(N_o_wire[0]),
+		.Z_i(Z_o_wire[0]),
+		.C_i(C_o_wire[0]),
+		.V_i(V_o_wire[0]),
 		
 		// OUTPUTS
 		.psw_out(psw_out_wire),

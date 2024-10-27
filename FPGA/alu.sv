@@ -7,7 +7,10 @@ module alu (
 	output logic [15:0] result,   // ALU Result
 	output logic enable_psw_msk
 );
-
+	// INPUT A == DST, INPUT B == SRC
+	
+	
+	
 	// Internal result signals
 	logic [15:0] and_result;
 	logic [15:0] or_result;
@@ -22,6 +25,14 @@ module alu (
 	logic [15:0] addc_result;
 	logic [15:0] subc_result;
 	logic [15:0] dadd_result;
+	
+	
+	logic [15:0] mov_result;
+	logic [15:0] sra_result;
+	logic [15:0] rrc_result;
+	logic [15:0] comp_result;
+	logic [15:0] swpb_result;
+	logic [15:0] sxt_result;
 
 
 	// Instantiate operation modules
@@ -38,6 +49,15 @@ module alu (
 	alu_ADDC addc_op (.a(a), .b(b), .carry_in(carry_in), .result(addc_result));
 	alu_SUBC subc_op (.a(a), .b(b), .carry_in(carry_in), .result(subc_result));
 	alu_DADD dadd_op (.a(a), .b(b), .carry_in(carry_in), .result(dadd_result));
+	
+	alu_MOV mov_op (.b(b), .result(mov_result));
+	
+	alu_SRA sra_op (.a(a), .result(sra_result));
+	alu_RRC rrc_op (.a(a), .carry_in(carry_in), .result(rrc_result));
+	alu_COMP comp_op (.a(a), .result(comp_result));
+	alu_SWPB swpb_op (.a(a), .result(swpb_result));
+	alu_SXT sxt_op (.a(a), .result(sxt_result));
+	
 
 	// Mode Select Logic
 	always_comb begin
@@ -70,7 +90,8 @@ module alu (
 			result = or_result;
 			enable_psw_msk = 1'b1;
 		end else if (enable[18] == 1'b1) begin //BIT
-			result = bit_result;
+			// This result will not be writen back
+			result = bit_result; 
 			enable_psw_msk = 1'b1;
 		end else if (enable[19] == 1'b1) begin //BIC
 			result = bic_result;
@@ -78,6 +99,24 @@ module alu (
 		end else if (enable[20] == 1'b1) begin //BIS
 			result = bis_result;
 			enable_psw_msk = 1'b1;
+		end else if (enable[21] == 1'b1) begin //MOV
+			result = mov_result;
+			enable_psw_msk = 1'b0;
+		end else if (enable[23] == 1'b1) begin //SRA
+			result = sra_result;
+			enable_psw_msk = 1'b0;
+		end else if (enable[24] == 1'b1) begin //RRC
+			result = rrc_result;
+			enable_psw_msk = 1'b0;
+		end else if (enable[25] == 1'b1) begin //COMP
+			result = comp_result;
+			enable_psw_msk = 1'b0;
+		end else if (enable[26] == 1'b1) begin //SWPB
+			result = swpb_result;
+			enable_psw_msk = 1'b0;
+		end else if (enable[27] == 1'b1) begin //SXT
+			result = sxt_result;
+			enable_psw_msk = 1'b0;
 		end else begin
 			result = 16'b0;
 			enable_psw_msk = 1'b0;

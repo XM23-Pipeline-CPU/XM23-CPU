@@ -22,7 +22,10 @@ module pipeline_registers(
     input logic [15:0] CEX,
 	 
 	 // Input to store alu result
-	 input logic [15:0] exec_result,
+	 input logic [15:0] alu_result,
+	 
+	 // Input to store moves result
+	 input logic [15:0] moves_result,
 	 
 	 // Input to store memory access result
 	 input logic [15:0] mem_access_result,
@@ -171,10 +174,16 @@ module pipeline_registers(
         B_i[2:1]     <= B_i[1:0];
         enable_i[2:1] <= enable_i[1:0];
 		  exec_result_i[1] <= exec_result_i[0];  
-		  exec_result_i[0] <= exec_result;
 		  mem_access_result_i <= mem_access_result;
 		  
-        // Update PSW
+        // Update the exec result wire with the correct input from either ALU or MOVES module
+		  if(!(|enable_i[0][38:35])) begin // if NOT moves
+				exec_result_i[0] <= alu_result; // take from alu
+		  end else begin
+				exec_result_i[0] <= moves_result; // take from moves
+		  end
+		  
+		  // Update PSW
         // If mask bit is high, update that bit; otherwise, retain old value
         PSW_i <= (PSW_i & ~PSW_mask) | (PSW & PSW_mask);
 		  
@@ -183,8 +192,14 @@ module pipeline_registers(
 		  if ((|enable_i[2][13:9]) || (|enable_i[2][17:15]) || (|enable_i[2][27:19]) || (|enable_i[2][38:35])) begin
 				// Execute result from two clock cycles ago goes into correct register
 				// Correct register is defined by decode from three clock cycles ago
-				gprc_i[SELECT_REG][D_i[2]] <= exec_result_i[1];
-        
+				
+				// If any instruction that is not SWAP, insert result
+				if (!enable_i[2][22]) begin
+					gprc_i[SELECT_REG][D_i[2]] <= exec_result_i[1];
+				end else begin		// If SWAP, SWAP
+					gprc_i[SELECT_REG][D_i[2]] <= gprc_i[SELECT_REG][S_i[2]];
+					gprc_i[SELECT_REG][S_i[2]] <= gprc_i[SELECT_REG][D_i[2]];
+				end
 		  // If any of the instructions that modify the register are present from the memory access stage, do
 		  end else if (enable_i[2][33] || enable_i[2][39]) begin
 				// Memory access result from one clock cycle ago goes into correct register

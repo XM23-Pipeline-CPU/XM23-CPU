@@ -1,0 +1,9 @@
+module moves (
+	input logic [40:0] enable,
+	input logic [1:0][7:0][15:0] gprc,
+	input logic [2:0][2:0] dst_i,
+	
+	output logic [15:0] result
+);
+	
+endmodule
