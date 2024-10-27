@@ -56,6 +56,10 @@ module alu (
 		end else if (enable[13] == 1'b1) begin //DADD
 			result = dadd_result;
 			enable_psw_msk = 1'b1;
+		end else if (enable[14] == 1'b1) begin //CMP
+			// This result will not be writen back
+			result = sub_result;
+			enable_psw_msk = 1'b1;
 		end else if (enable[15] == 1'b1) begin //XOR
 			result = xor_result;
 			enable_psw_msk = 1'b1;

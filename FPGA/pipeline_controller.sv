@@ -92,13 +92,13 @@ module pipeline_controller (
 	
 	always_comb begin
 		// Sign-extend 13-bit input to 16-bit signed output
-		extended = { {3{thirteen_lsb[12]}}, thirteen_lsb };
+		extended = { {3{thirteen_lsb[12]}}, thirteen_lsb } << 1;
 	end
 	
 	always_ff @(negedge clk) begin
 		// Store LBPC1, LBPC2 and calculate next PC
 		LBPC2 <= LBPC1;
-		LBPC1 <= PC_in;
+		LBPC1 <= PC_in + 16'b0000000000000010;
 		// Likewise for PSW
 		LBPSW2 <= LBPSW1;
 		LBPSW1 <= PSW_in;

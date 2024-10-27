@@ -5,7 +5,7 @@ module XM23 (
 );
 	reg clk = 0;       // This is the global clk for other modules (except memory which will take 50MHz)
 	reg [31:0] counter = 0;
-	parameter DIVIDER = 1;  // Divides 50 MHz clk to desired speed (DIVIDER+1 = number of edges until flip)
+	parameter DIVIDER = 2;  // Divides 50 MHz clk to desired speed (DIVIDER+1 = number of edges until flip)
 
 	// clk divider logic
 	always @(posedge clk_in or posedge reset) begin
@@ -28,11 +28,13 @@ module XM23 (
 	wire [15:0] PC_wire;
 	wire [15:0] PC_next_wire;
 	wire [15:0] LBPC_wire;
-	
-	wire [15:0] next_PC; 
-	
-	// Wires for reading from the ram
 	wire [15:0] inst_wire;
+	
+	// Wire for failed branch prediction
+	wire branch_predict_fail_wire;
+	
+	// wire for LR (link register)
+	wire [15:0] LR_wire;
 
 	// Wires from decode_stage to pipeline_registers
 	wire         WB_wire;
@@ -80,20 +82,18 @@ module XM23 (
 
 	// Wires from pipeline_registers 
 	wire [2:0][40:0]   	enable_o_wire;      
-	wire [15:0]   		PSW_o_wire;         
-
-	//always_comb begin
-	//  inst <= 16'b0000_0000_0000_1111; // add, (registers), (word size), from reg 000 + 001, save in reg 000
-	//end
+	wire [15:0]   		   PSW_o_wire;         
 	
-	// program_counter
+	// Program_counter
 	program_counter pcounter(
 		// INPUT FROM CONTROLLER
 		.PC_next(PC_next_wire),
 		.LBPC(LBPC_wire),
-		.branch_fail(1'b0), // TO DO
 		.clk(clk),
 		.stall_in(stall_wire),
+		
+		// INPUT FROM BRANCH INSTRUCTIONS
+		.branch_fail(branch_predict_fail_wire),
 		
 		// OUTPUT PC
 		.true_PC(PC_wire)
@@ -228,6 +228,24 @@ module XM23 (
 		// OUTPUTS
 		.result(alu_result_wire),
 		.enable_psw_msk(enable_psw_msk_wire)
+	);
+	
+	branch branch_inst(
+		// INPUT FROM TOPLEVEL
+		.clk(clk),
+		
+		// INPUTS FROM PIPELINE REGISTERS
+		.enable(enable_o_wire[0]),
+		.PSW_in(PSW_o_wire),
+		
+		// INPUTS FROM CONTROLLER
+		.LBPC_in(LBPC_wire),
+		
+		// OUTPUT TO PC
+		.branch_fail_o(branch_predict_fail_wire),
+		
+		// OUTPUT LR
+		.LR_o(LR_wire)
 	);
 	
 	// module to update the psw after alu

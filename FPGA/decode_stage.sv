@@ -322,7 +322,6 @@ module decode_stage(
 			  if(RC == IS_REG) begin
 				  async_dep[S] = 1'b1; //be added as dependency
 			  end
-			  async_set[D] = 1'b1;    //set dependency
 			  async_dep[D] = 1'b1;    //be added as dependency
 			  
 		 end else if ((inst & MASK_BIC) == EXPECTED_BIC) begin
