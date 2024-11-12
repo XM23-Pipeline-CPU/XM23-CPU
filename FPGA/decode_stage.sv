@@ -356,75 +356,57 @@ module decode_stage(
 			  D = inst[2:0];
 			  enable[21] = 1'b1;
 			  
-			  if(RC == IS_REG) begin
-				  async_dep[S] = 1'b1; //be added as dependency
-			  end
-			  async_set[D] = 1'b1;    //set dependency
-			  async_dep[D] = 1'b1;    //be added as dependency
+			  async_dep[S] = 1'b1; //be added as dependency
+			  async_set[D] = 1'b1; //set dependency
 			  
 		 end else if ((inst & MASK_SWAP) == EXPECTED_SWAP) begin
 			  S = inst[5:3];
 			  D = inst[2:0];
 			  enable[22] = 1'b1;
 			  
-			  if(RC == IS_REG) begin
-				  async_set[S] = 1'b1; //set dependency
-				  async_dep[S] = 1'b1; //be added as dependency
-			  end
-			  async_set[D] = 1'b1;    //set dependency
-			  async_dep[D] = 1'b1;    //be added as dependency
+			  async_set[S] = 1'b1; //set dependency
+			  async_dep[S] = 1'b1; //be added as dependency
+
+			  async_set[D] = 1'b1; //set dependency
+			  async_dep[D] = 1'b1; //be added as dependency
 			  
 		 end else if ((inst & MASK_SRA) == EXPECTED_SRA) begin
 			  WB = inst[6];
 			  D = inst[2:0];
 			  enable[23] = 1'b1;
 			  
-			  if(RC == IS_REG) begin
-				  async_dep[S] = 1'b1; //be added as dependency
-			  end
-			  async_set[D] = 1'b1;    //set dependency
-			  async_dep[D] = 1'b1;    //be added as dependency
+			  async_set[D] = 1'b1; //set dependency
+			  async_dep[D] = 1'b1; //be added as dependency
 			  
 		 end else if ((inst & MASK_RRC) == EXPECTED_RRC) begin
 			  WB = inst[6];
 			  D = inst[2:0];
 			  enable[24] = 1'b1;
 			  
-			  if(RC == IS_REG) begin
-				  async_dep[S] = 1'b1; //be added as dependency
-			  end
-			  async_set[D] = 1'b1;    //set dependency
-			  async_dep[D] = 1'b1;    //be added as dependency
+			  async_set[D] = 1'b1; //set dependency
+			  async_dep[D] = 1'b1; //be added as dependency
 			  
 		 end else if ((inst & MASK_COMP) == EXPECTED_COMP) begin
 			  WB = inst[6];
 			  D = inst[2:0];
 			  enable[25] = 1'b1;
 			  
-			  if(RC == IS_REG) begin
-				  async_dep[S] = 1'b1; //be added as dependency
-			  end
-			  async_set[D] = 1'b1;    //set dependency
-			  async_dep[D] = 1'b1;    //be added as dependency
+			  async_set[D] = 1'b1; //set dependency
+			  async_dep[D] = 1'b1; //be added as dependency
 			  
 		 end else if ((inst & MASK_SWPB) == EXPECTED_SWPB) begin
 			  D = inst[2:0];
 			  enable[26] = 1'b1;
 			  
-			  if(RC == IS_REG) begin
-				  async_dep[S] = 1'b1; //be added as dependency
-			  end
-			  async_set[D] = 1'b1;    //set dependency
-			  async_dep[D] = 1'b1;    //be added as dependency
+			  async_set[D] = 1'b1; //set dependency
+			  async_dep[D] = 1'b1; //be added as dependency
 			  
 		 end else if ((inst & MASK_SXT) == EXPECTED_SXT) begin
 			  D = inst[2:0];
 			  enable[27] = 1'b1;
-			  if(RC == IS_REG) begin
-				  async_dep[S] = 1'b1; //be added as dependency
-			  end
-			  async_set[D] = 1'b1;    //set dependency
-			  async_dep[D] = 1'b1;    //be added as dependency
+
+			  async_set[D] = 1'b1; //set dependency
+			  async_dep[D] = 1'b1; //be added as dependency
 			  
 		 end else if ((inst & MASK_SETPRI) == EXPECTED_SETPRI) begin
 			  PR = inst[2:0];
@@ -459,13 +441,15 @@ module decode_stage(
 			  S = inst[5:3];
 			  D = inst[2:0];
 			  enable[33] = 1'b1;
-			  
-			  if(RC == IS_REG) begin
-			     async_set[S] = 1'b1; //set dependency
-				  async_dep[S] = 1'b1; //be added as dependency
+			 
+           //set dependency only if PRE/POST INC/DEC
+           if (DEC == 1'b1 || INC == 1'b1) begin
+				  async_set[S] = 1'b1;    
 			  end
-			  async_set[D] = 1'b1;    //set dependency
-			  async_dep[D] = 1'b1;    //be added as dependency
+				  
+			  async_dep[S] = 1'b1; //be added as dependency
+			  
+			  async_set[D] = 1'b1; //set dependency
 			  
 		 end else if ((inst & MASK_ST) == EXPECTED_ST) begin
 			  PRPO = inst[9];
@@ -476,76 +460,63 @@ module decode_stage(
 			  D = inst[2:0];
 			  enable[34] = 1'b1;
 			  
-			  if(RC == IS_REG) begin
-				  async_dep[S] = 1'b1; //be added as dependency
+			  async_dep[S] = 1'b1; //be added as dependency
+
+			  if (DEC == 1'b1 || INC == 1'b1) begin
+			     async_set[D] = 1'b1; //set dependency
 			  end
-			  async_dep[D] = 1'b1;    //be added as dependency
+			  
+			  async_dep[D] = 1'b1; //be added as dependency
 			  
 		 end else if ((inst & MASK_MOVL) == EXPECTED_MOVL) begin
 			  B = inst[10:3];
 			  D = inst[2:0];
 			  enable[35] = 1'b1;
 			  
-			  if(RC == IS_REG) begin
-			     async_set[S] = 1'b1; //set dependency
-			  end
-			  async_set[D] = 1'b1;    //set dependency
+			  async_set[D] = 1'b1; //set dependency
 			  
 		 end else if ((inst & MASK_MOVLZ) == EXPECTED_MOVLZ) begin
 			  B = inst[10:3];
 			  D = inst[2:0];
 			  enable[36] = 1'b1;
 			  
-			  if(RC == IS_REG) begin
-			     async_set[S] = 1'b1; //set dependency
-			  end
-			  async_set[D] = 1'b1;    //set dependency
+			  async_set[D] = 1'b1; //set dependency
 			  
 		 end else if ((inst & MASK_MOVLS) == EXPECTED_MOVLS) begin
 			  B = inst[10:3];
 			  D = inst[2:0];
 			  enable[37] = 1'b1;
 			  
-			  if(RC == IS_REG) begin
-			     async_set[S] = 1'b1; //set dependency
-			  end
-			  async_set[D] = 1'b1;    //set dependency
+			  async_set[D] = 1'b1; //set dependency
 			  
 		 end else if ((inst & MASK_MOVH) == EXPECTED_MOVH) begin
 			  B = inst[10:3];
 			  D = inst[2:0];
 			  enable[38] = 1'b1;
-			  
-			  if(RC == IS_REG) begin
-			     async_set[S] = 1'b1; //set dependency
-			  end
-			  async_set[D] = 1'b1;    //set dependency
+
+			  async_set[D] = 1'b1; //set dependency
 			  
 		 end else if ((inst & MASK_LDR) == EXPECTED_LDR) begin
-			  OFF = inst[12:7];
+			  OFF = inst[13:7];
 			  WB = inst[6];
 			  S = inst[5:3];
 			  D = inst[2:0];
 			  enable[39] = 1'b1;
 			  
-			  if(RC == IS_REG) begin
-			     async_set[S] = 1'b1; //set dependency
-				  async_dep[S] = 1'b1; //be added as dependency
-			  end
-			  async_set[D] = 1'b1;    //set dependency
-			  async_dep[D] = 1'b1;    //be added as dependency
+			  async_dep[S] = 1'b1; //be added as dependency
+
+			  async_set[D] = 1'b1; //set dependency
 			  
 		 end else if ((inst & MASK_STR) == EXPECTED_STR) begin
-			  OFF = inst[12:7];
+			  OFF = inst[13:7];
 			  WB = inst[6];
 			  S = inst[5:3];
 			  D = inst[2:0];
 			  enable[40] = 1'b1;
 			  
-			  if(RC == IS_REG) begin
-				  async_dep[S] = 1'b1; //be added as dependency
-			  end
-			  async_dep[D] = 1'b1;    //be added as dependency
+			  async_dep[S] = 1'b1; //be added as dependency
+
+			  async_dep[D] = 1'b1; //be added as dependency
 			  
 		 end
 	end

@@ -1,0 +1,31 @@
+module go_to_LR (
+	input logic [1:0][7:0][15:0] gprc,
+	input logic [2:0][2:0] src_i,
+	input logic [2:0][40:0] enable,
+	input logic [15:0] LR_i
+);
+	parameter R = 0; // Register index
+	parameter LD = 33; // LD instruction 
+
+	
+	always_comb begin 
+		// If an LD instruction with SRC address FFFF is input, this triggers the link
+		if (enable[LD] && ) begin
+			
+			// Get the output address without offsets
+			gprc[R][src_i[mem_access_stage]];
+			
+			// If increments or decrements are needed do them here
+			if (pre[mem_access_stage] == 1'b1) begin
+				if (inc[mem_access_stage] == 1'b1) begin
+					output_address = gprc[R][src_i[mem_access_stage]] + 16'b1;
+				end else if (dec[mem_access_stage] == 1'b1) begin
+					output_address = gprc[R][src_i[mem_access_stage]] - 16'b1;
+				end
+			end
+		end
+	end
+
+endmodule
+			
+			

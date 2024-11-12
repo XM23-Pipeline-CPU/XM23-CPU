@@ -1,5 +1,5 @@
 Analysis & Synthesis report for XM23
-Sun Oct 27 20:26:05 2024
+Tue Nov 12 19:45:28 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -21,20 +21,27 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  13. Inverted Register Statistics
  14. Multiplexer Restructuring Statistics (Restructuring Performed)
  15. Source assignments for p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|altsyncram_hlb2:altsyncram1
- 16. Parameter Settings for User Entity Instance: Top-level Entity: |XM23
- 17. Parameter Settings for User Entity Instance: p_ram:pram|altsyncram:altsyncram_component
- 18. Parameter Settings for User Entity Instance: branch:branch_inst
- 19. Parameter Settings for User Entity Instance: update_psw:update_psw_inst
- 20. altsyncram Parameter Settings by Entity Instance
- 21. Port Connectivity Checks: "branch:branch_inst"
- 22. Port Connectivity Checks: "pipeline_controller:controller"
- 23. Port Connectivity Checks: "pipeline_registers:pipeline"
- 24. Port Connectivity Checks: "p_ram:pram"
- 25. In-System Memory Content Editor Settings
- 26. Post-Synthesis Netlist Statistics for Top Partition
- 27. Elapsed Time Per Partition
- 28. Analysis & Synthesis Messages
- 29. Analysis & Synthesis Suppressed Messages
+ 16. Source assignments for d_ram:dram|altsyncram:altsyncram_component|altsyncram_grj1:auto_generated|altsyncram_jab2:altsyncram1
+ 17. Parameter Settings for User Entity Instance: Top-level Entity: |XM23
+ 18. Parameter Settings for User Entity Instance: p_ram:pram|altsyncram:altsyncram_component
+ 19. Parameter Settings for User Entity Instance: memory_access_d_ram:dram_control_inst
+ 20. Parameter Settings for User Entity Instance: d_ram:dram|altsyncram:altsyncram_component
+ 21. Parameter Settings for User Entity Instance: branch:branch_inst
+ 22. Parameter Settings for User Entity Instance: go_to_LR:go_to_LR_inst
+ 23. Parameter Settings for User Entity Instance: update_psw:update_psw_inst
+ 24. altsyncram Parameter Settings by Entity Instance
+ 25. Port Connectivity Checks: "go_to_LR:go_to_LR_inst"
+ 26. Port Connectivity Checks: "pipeline_controller:controller"
+ 27. Port Connectivity Checks: "pipeline_registers:pipeline"
+ 28. Port Connectivity Checks: "d_ram:dram"
+ 29. Port Connectivity Checks: "memory_access_d_ram:dram_control_inst"
+ 30. Port Connectivity Checks: "p_ram:pram"
+ 31. Port Connectivity Checks: "program_counter:pcounter"
+ 32. In-System Memory Content Editor Settings
+ 33. Post-Synthesis Netlist Statistics for Top Partition
+ 34. Elapsed Time Per Partition
+ 35. Analysis & Synthesis Messages
+ 36. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -61,18 +68,18 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Oct 27 20:26:05 2024       ;
+; Analysis & Synthesis Status        ; Successful - Tue Nov 12 19:45:28 2024       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; XM23                                        ;
 ; Top-level Entity Name              ; XM23                                        ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 1,560                                       ;
-;     Total combinational functions  ; 1,428                                       ;
-;     Dedicated logic registers      ; 519                                         ;
-; Total registers                    ; 519                                         ;
+; Total logic elements               ; 2,351                                       ;
+;     Total combinational functions  ; 2,203                                       ;
+;     Dedicated logic registers      ; 654                                         ;
+; Total registers                    ; 654                                         ;
 ; Total pins                         ; 3                                           ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 524,288                                     ;
+; Total memory bits                  ; 1,048,576                                   ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
 ; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
@@ -188,99 +195,106 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                               ;
-+--------------------------------------------------------------------+-----------------+----------------------------------------------+------------------------------------------------------------------------------------------------------------------+-------------+
-; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                                                     ; Library     ;
-+--------------------------------------------------------------------+-----------------+----------------------------------------------+------------------------------------------------------------------------------------------------------------------+-------------+
-; branch.sv                                                          ; yes             ; User SystemVerilog HDL File                  ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/branch.sv                                                          ;             ;
-; program_memory.mif                                                 ; yes             ; User Memory Initialization File              ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/program_memory.mif                                                 ;             ;
-; regnum_to_values_to_alu.sv                                         ; yes             ; User SystemVerilog HDL File                  ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/regnum_to_values_to_alu.sv                                         ;             ;
-; decode_stage.sv                                                    ; yes             ; User SystemVerilog HDL File                  ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/decode_stage.sv                                                    ;             ;
-; pipeline_registers.sv                                              ; yes             ; User SystemVerilog HDL File                  ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/pipeline_registers.sv                                              ;             ;
-; pipeline_controller.sv                                             ; yes             ; User SystemVerilog HDL File                  ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/pipeline_controller.sv                                             ;             ;
-; alu_XOR.sv                                                         ; yes             ; User SystemVerilog HDL File                  ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_XOR.sv                                                         ;             ;
-; alu_SUB.sv                                                         ; yes             ; User SystemVerilog HDL File                  ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_SUB.sv                                                         ;             ;
-; alu_OR.sv                                                          ; yes             ; User SystemVerilog HDL File                  ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_OR.sv                                                          ;             ;
-; alu_DADD.sv                                                        ; yes             ; User SystemVerilog HDL File                  ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_DADD.sv                                                        ;             ;
-; alu_BIT.sv                                                         ; yes             ; User SystemVerilog HDL File                  ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_BIT.sv                                                         ;             ;
-; alu_BIS.sv                                                         ; yes             ; User SystemVerilog HDL File                  ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_BIS.sv                                                         ;             ;
-; alu_BIC.sv                                                         ; yes             ; User SystemVerilog HDL File                  ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_BIC.sv                                                         ;             ;
-; alu_AND.sv                                                         ; yes             ; User SystemVerilog HDL File                  ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_AND.sv                                                         ;             ;
-; alu_ADD.sv                                                         ; yes             ; User SystemVerilog HDL File                  ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_ADD.sv                                                         ;             ;
-; alu.sv                                                             ; yes             ; User SystemVerilog HDL File                  ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu.sv                                                             ;             ;
-; XM23.sv                                                            ; yes             ; User SystemVerilog HDL File                  ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv                                                            ;             ;
-; alu_ADDC.sv                                                        ; yes             ; User SystemVerilog HDL File                  ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_ADDC.sv                                                        ;             ;
-; alu_SUBC.sv                                                        ; yes             ; User SystemVerilog HDL File                  ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_SUBC.sv                                                        ;             ;
-; update_psw.sv                                                      ; yes             ; User SystemVerilog HDL File                  ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/update_psw.sv                                                      ;             ;
-; p_ram.v                                                            ; yes             ; User Wizard-Generated File                   ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/p_ram.v                                                            ;             ;
-; program_counter.sv                                                 ; yes             ; User SystemVerilog HDL File                  ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/program_counter.sv                                                 ;             ;
-; alu_MOV.sv                                                         ; yes             ; User SystemVerilog HDL File                  ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_MOV.sv                                                         ;             ;
-; alu_SRA.sv                                                         ; yes             ; User SystemVerilog HDL File                  ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_SRA.sv                                                         ;             ;
-; alu_RRC.sv                                                         ; yes             ; User SystemVerilog HDL File                  ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_RRC.sv                                                         ;             ;
-; alu_COMP.sv                                                        ; yes             ; User SystemVerilog HDL File                  ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_COMP.sv                                                        ;             ;
-; alu_SWPB.sv                                                        ; yes             ; User SystemVerilog HDL File                  ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_SWPB.sv                                                        ;             ;
-; alu_SXT.sv                                                         ; yes             ; User SystemVerilog HDL File                  ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_SXT.sv                                                         ;             ;
-; altsyncram.tdf                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf                                            ;             ;
-; stratix_ram_block.inc                                              ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                     ;             ;
-; lpm_mux.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.inc                                               ;             ;
-; lpm_decode.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_decode.inc                                            ;             ;
-; aglobal201.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                                            ;             ;
-; a_rdenreg.inc                                                      ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_rdenreg.inc                                             ;             ;
-; altrom.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.inc                                                ;             ;
-; altram.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altram.inc                                                ;             ;
-; altdpram.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altdpram.inc                                              ;             ;
-; db/altsyncram_q6k1.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/altsyncram_q6k1.tdf                                             ;             ;
-; db/altsyncram_hlb2.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/altsyncram_hlb2.tdf                                             ;             ;
-; db/decode_msa.tdf                                                  ; yes             ; Auto-Generated Megafunction                  ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/decode_msa.tdf                                                  ;             ;
-; db/decode_f8a.tdf                                                  ; yes             ; Auto-Generated Megafunction                  ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/decode_f8a.tdf                                                  ;             ;
-; db/mux_lob.tdf                                                     ; yes             ; Auto-Generated Megafunction                  ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/mux_lob.tdf                                                     ;             ;
-; sld_mod_ram_rom.vhd                                                ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd                                       ;             ;
-; sld_jtag_endpoint_adapter.vhd                                      ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd                             ;             ;
-; sld_jtag_endpoint_adapter_impl.sv                                  ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter_impl.sv                         ;             ;
-; sld_rom_sr.vhd                                                     ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_rom_sr.vhd                                            ;             ;
-; sld_hub.vhd                                                        ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_hub.vhd                                               ; altera_sld  ;
-; db/ip/sld928a91a1/alt_sld_fab.v                                    ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/ip/sld928a91a1/alt_sld_fab.v                                    ; alt_sld_fab ;
-; db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab.v             ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab.v             ; alt_sld_fab ;
-; db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; yes             ; Auto-Found SystemVerilog HDL File            ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; alt_sld_fab ;
-; db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; alt_sld_fab ;
-; db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; yes             ; Encrypted Auto-Found VHDL File               ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; alt_sld_fab ;
-; db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; alt_sld_fab ;
-; sld_jtag_hub.vhd                                                   ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                          ;             ;
-+--------------------------------------------------------------------+-----------------+----------------------------------------------+------------------------------------------------------------------------------------------------------------------+-------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                    ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------+-------------+
+; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                                                          ; Library     ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------+-------------+
+; branch.sv                                                          ; yes             ; User SystemVerilog HDL File                  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/branch.sv                                                          ;             ;
+; program_memory.mif                                                 ; yes             ; User Memory Initialization File              ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/program_memory.mif                                                 ;             ;
+; regnum_to_values_to_alu.sv                                         ; yes             ; User SystemVerilog HDL File                  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/regnum_to_values_to_alu.sv                                         ;             ;
+; decode_stage.sv                                                    ; yes             ; User SystemVerilog HDL File                  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/decode_stage.sv                                                    ;             ;
+; pipeline_registers.sv                                              ; yes             ; User SystemVerilog HDL File                  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/pipeline_registers.sv                                              ;             ;
+; pipeline_controller.sv                                             ; yes             ; User SystemVerilog HDL File                  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/pipeline_controller.sv                                             ;             ;
+; alu_XOR.sv                                                         ; yes             ; User SystemVerilog HDL File                  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_XOR.sv                                                         ;             ;
+; alu_SUB.sv                                                         ; yes             ; User SystemVerilog HDL File                  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_SUB.sv                                                         ;             ;
+; alu_OR.sv                                                          ; yes             ; User SystemVerilog HDL File                  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_OR.sv                                                          ;             ;
+; alu_DADD.sv                                                        ; yes             ; User SystemVerilog HDL File                  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_DADD.sv                                                        ;             ;
+; alu_BIT.sv                                                         ; yes             ; User SystemVerilog HDL File                  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_BIT.sv                                                         ;             ;
+; alu_BIS.sv                                                         ; yes             ; User SystemVerilog HDL File                  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_BIS.sv                                                         ;             ;
+; alu_BIC.sv                                                         ; yes             ; User SystemVerilog HDL File                  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_BIC.sv                                                         ;             ;
+; alu_AND.sv                                                         ; yes             ; User SystemVerilog HDL File                  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_AND.sv                                                         ;             ;
+; alu_ADD.sv                                                         ; yes             ; User SystemVerilog HDL File                  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_ADD.sv                                                         ;             ;
+; alu.sv                                                             ; yes             ; User SystemVerilog HDL File                  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu.sv                                                             ;             ;
+; XM23.sv                                                            ; yes             ; User SystemVerilog HDL File                  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv                                                            ;             ;
+; alu_ADDC.sv                                                        ; yes             ; User SystemVerilog HDL File                  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_ADDC.sv                                                        ;             ;
+; alu_SUBC.sv                                                        ; yes             ; User SystemVerilog HDL File                  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_SUBC.sv                                                        ;             ;
+; update_psw.sv                                                      ; yes             ; User SystemVerilog HDL File                  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/update_psw.sv                                                      ;             ;
+; p_ram.v                                                            ; yes             ; User Wizard-Generated File                   ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/p_ram.v                                                            ;             ;
+; d_ram.v                                                            ; yes             ; User Wizard-Generated File                   ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/d_ram.v                                                            ;             ;
+; program_counter.sv                                                 ; yes             ; User SystemVerilog HDL File                  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/program_counter.sv                                                 ;             ;
+; moves.sv                                                           ; yes             ; User SystemVerilog HDL File                  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/moves.sv                                                           ;             ;
+; alu_MOV.sv                                                         ; yes             ; User SystemVerilog HDL File                  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_MOV.sv                                                         ;             ;
+; alu_SRA.sv                                                         ; yes             ; User SystemVerilog HDL File                  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_SRA.sv                                                         ;             ;
+; alu_RRC.sv                                                         ; yes             ; User SystemVerilog HDL File                  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_RRC.sv                                                         ;             ;
+; alu_COMP.sv                                                        ; yes             ; User SystemVerilog HDL File                  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_COMP.sv                                                        ;             ;
+; alu_SWPB.sv                                                        ; yes             ; User SystemVerilog HDL File                  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_SWPB.sv                                                        ;             ;
+; alu_SXT.sv                                                         ; yes             ; User SystemVerilog HDL File                  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_SXT.sv                                                         ;             ;
+; memory_access_d_ram.sv                                             ; yes             ; User SystemVerilog HDL File                  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/memory_access_d_ram.sv                                             ;             ;
+; go_to_LR.sv                                                        ; yes             ; User SystemVerilog HDL File                  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/go_to_LR.sv                                                        ;             ;
+; altsyncram.tdf                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf                                                 ;             ;
+; stratix_ram_block.inc                                              ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                          ;             ;
+; lpm_mux.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.inc                                                    ;             ;
+; lpm_decode.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_decode.inc                                                 ;             ;
+; aglobal201.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                                                 ;             ;
+; a_rdenreg.inc                                                      ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_rdenreg.inc                                                  ;             ;
+; altrom.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.inc                                                     ;             ;
+; altram.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altram.inc                                                     ;             ;
+; altdpram.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altdpram.inc                                                   ;             ;
+; db/altsyncram_q6k1.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/altsyncram_q6k1.tdf                                             ;             ;
+; db/altsyncram_hlb2.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/altsyncram_hlb2.tdf                                             ;             ;
+; db/decode_msa.tdf                                                  ; yes             ; Auto-Generated Megafunction                  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/decode_msa.tdf                                                  ;             ;
+; db/decode_f8a.tdf                                                  ; yes             ; Auto-Generated Megafunction                  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/decode_f8a.tdf                                                  ;             ;
+; db/mux_lob.tdf                                                     ; yes             ; Auto-Generated Megafunction                  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/mux_lob.tdf                                                     ;             ;
+; sld_mod_ram_rom.vhd                                                ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd                                            ;             ;
+; sld_jtag_endpoint_adapter.vhd                                      ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd                                  ;             ;
+; sld_jtag_endpoint_adapter_impl.sv                                  ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter_impl.sv                              ;             ;
+; sld_rom_sr.vhd                                                     ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_rom_sr.vhd                                                 ;             ;
+; db/altsyncram_grj1.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/altsyncram_grj1.tdf                                             ;             ;
+; db/altsyncram_jab2.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/altsyncram_jab2.tdf                                             ;             ;
+; data_memory.mif                                                    ; yes             ; Auto-Found Memory Initialization File        ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/data_memory.mif                                                    ;             ;
+; sld_hub.vhd                                                        ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_hub.vhd                                                    ; altera_sld  ;
+; db/ip/sld928a91a1/alt_sld_fab.v                                    ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/ip/sld928a91a1/alt_sld_fab.v                                    ; alt_sld_fab ;
+; db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab.v             ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab.v             ; alt_sld_fab ;
+; db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; yes             ; Auto-Found SystemVerilog HDL File            ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; alt_sld_fab ;
+; db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; alt_sld_fab ;
+; db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; yes             ; Encrypted Auto-Found VHDL File               ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; alt_sld_fab ;
+; db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; alt_sld_fab ;
+; sld_jtag_hub.vhd                                                   ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                               ;             ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------+-------------+
 
 
-+------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary          ;
-+---------------------------------------------+--------+
-; Resource                                    ; Usage  ;
-+---------------------------------------------+--------+
-; Estimated Total logic elements              ; 1,560  ;
-;                                             ;        ;
-; Total combinational functions               ; 1428   ;
-; Logic element usage by number of LUT inputs ;        ;
-;     -- 4 input functions                    ; 787    ;
-;     -- 3 input functions                    ; 428    ;
-;     -- <=2 input functions                  ; 213    ;
-;                                             ;        ;
-; Logic elements by mode                      ;        ;
-;     -- normal mode                          ; 1247   ;
-;     -- arithmetic mode                      ; 181    ;
-;                                             ;        ;
-; Total registers                             ; 519    ;
-;     -- Dedicated logic registers            ; 519    ;
-;     -- I/O registers                        ; 0      ;
-;                                             ;        ;
-; I/O pins                                    ; 3      ;
-; Total memory bits                           ; 524288 ;
-;                                             ;        ;
-; Embedded Multiplier 9-bit elements          ; 0      ;
-;                                             ;        ;
-; Maximum fan-out node                        ; clk    ;
-; Maximum fan-out                             ; 342    ;
-; Total fan-out                               ; 8825   ;
-; Average fan-out                             ; 4.36   ;
-+---------------------------------------------+--------+
++-------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary           ;
++---------------------------------------------+---------+
+; Resource                                    ; Usage   ;
++---------------------------------------------+---------+
+; Estimated Total logic elements              ; 2,351   ;
+;                                             ;         ;
+; Total combinational functions               ; 2203    ;
+; Logic element usage by number of LUT inputs ;         ;
+;     -- 4 input functions                    ; 1358    ;
+;     -- 3 input functions                    ; 606     ;
+;     -- <=2 input functions                  ; 239     ;
+;                                             ;         ;
+; Logic elements by mode                      ;         ;
+;     -- normal mode                          ; 1972    ;
+;     -- arithmetic mode                      ; 231     ;
+;                                             ;         ;
+; Total registers                             ; 654     ;
+;     -- Dedicated logic registers            ; 654     ;
+;     -- I/O registers                        ; 0       ;
+;                                             ;         ;
+; I/O pins                                    ; 3       ;
+; Total memory bits                           ; 1048576 ;
+;                                             ;         ;
+; Embedded Multiplier 9-bit elements          ; 0       ;
+;                                             ;         ;
+; Maximum fan-out node                        ; clk     ;
+; Maximum fan-out                             ; 393     ;
+; Total fan-out                               ; 13960   ;
+; Average fan-out                             ; 4.65    ;
++---------------------------------------------+---------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -288,18 +302,30 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                              ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |XM23                                                                                                                                   ; 1428 (47)           ; 519 (34)                  ; 524288      ; 0            ; 0       ; 0         ; 3    ; 0            ; |XM23                                                                                                                                                                                                                                                                                                                                            ; XM23                              ; work         ;
-;    |alu:alu_inst|                                                                                                                       ; 335 (220)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|alu:alu_inst                                                                                                                                                                                                                                                                                                                               ; alu                               ; work         ;
+; |XM23                                                                                                                                   ; 2203 (47)           ; 654 (34)                  ; 1048576     ; 0            ; 0       ; 0         ; 3    ; 0            ; |XM23                                                                                                                                                                                                                                                                                                                                            ; XM23                              ; work         ;
+;    |alu:alu_inst|                                                                                                                       ; 325 (212)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|alu:alu_inst                                                                                                                                                                                                                                                                                                                               ; alu                               ; work         ;
 ;       |alu_ADD:add_op|                                                                                                                  ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|alu:alu_inst|alu_ADD:add_op                                                                                                                                                                                                                                                                                                                ; alu_ADD                           ; work         ;
 ;       |alu_ADDC:addc_op|                                                                                                                ; 17 (17)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|alu:alu_inst|alu_ADDC:addc_op                                                                                                                                                                                                                                                                                                              ; alu_ADDC                          ; work         ;
 ;       |alu_AND:and_op|                                                                                                                  ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|alu:alu_inst|alu_AND:and_op                                                                                                                                                                                                                                                                                                                ; alu_AND                           ; work         ;
-;       |alu_BIS:bis_op|                                                                                                                  ; 19 (19)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|alu:alu_inst|alu_BIS:bis_op                                                                                                                                                                                                                                                                                                                ; alu_BIS                           ; work         ;
+;       |alu_BIS:bis_op|                                                                                                                  ; 17 (17)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|alu:alu_inst|alu_BIS:bis_op                                                                                                                                                                                                                                                                                                                ; alu_BIS                           ; work         ;
 ;       |alu_DADD:dadd_op|                                                                                                                ; 22 (22)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|alu:alu_inst|alu_DADD:dadd_op                                                                                                                                                                                                                                                                                                              ; alu_DADD                          ; work         ;
 ;       |alu_OR:or_op|                                                                                                                    ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|alu:alu_inst|alu_OR:or_op                                                                                                                                                                                                                                                                                                                  ; alu_OR                            ; work         ;
 ;       |alu_SUB:sub_op|                                                                                                                  ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|alu:alu_inst|alu_SUB:sub_op                                                                                                                                                                                                                                                                                                                ; alu_SUB                           ; work         ;
 ;       |alu_SUBC:subc_op|                                                                                                                ; 17 (17)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|alu:alu_inst|alu_SUBC:subc_op                                                                                                                                                                                                                                                                                                              ; alu_SUBC                          ; work         ;
 ;    |branch:branch_inst|                                                                                                                 ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|branch:branch_inst                                                                                                                                                                                                                                                                                                                         ; branch                            ; work         ;
-;    |decode_stage:decode|                                                                                                                ; 116 (116)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|decode_stage:decode                                                                                                                                                                                                                                                                                                                        ; decode_stage                      ; work         ;
+;    |d_ram:dram|                                                                                                                         ; 161 (0)             ; 58 (0)                    ; 524288      ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|d_ram:dram                                                                                                                                                                                                                                                                                                                                 ; d_ram                             ; work         ;
+;       |altsyncram:altsyncram_component|                                                                                                 ; 161 (0)             ; 58 (0)                    ; 524288      ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|d_ram:dram|altsyncram:altsyncram_component                                                                                                                                                                                                                                                                                                 ; altsyncram                        ; work         ;
+;          |altsyncram_grj1:auto_generated|                                                                                               ; 161 (0)             ; 58 (0)                    ; 524288      ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|d_ram:dram|altsyncram:altsyncram_component|altsyncram_grj1:auto_generated                                                                                                                                                                                                                                                                  ; altsyncram_grj1                   ; work         ;
+;             |altsyncram_jab2:altsyncram1|                                                                                               ; 80 (0)              ; 4 (4)                     ; 524288      ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|d_ram:dram|altsyncram:altsyncram_component|altsyncram_grj1:auto_generated|altsyncram_jab2:altsyncram1                                                                                                                                                                                                                                      ; altsyncram_jab2                   ; work         ;
+;                |decode_f8a:rden_decode_a|                                                                                               ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|d_ram:dram|altsyncram:altsyncram_component|altsyncram_grj1:auto_generated|altsyncram_jab2:altsyncram1|decode_f8a:rden_decode_a                                                                                                                                                                                                             ; decode_f8a                        ; work         ;
+;                |decode_msa:decode4|                                                                                                     ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|d_ram:dram|altsyncram:altsyncram_component|altsyncram_grj1:auto_generated|altsyncram_jab2:altsyncram1|decode_msa:decode4                                                                                                                                                                                                                   ; decode_msa                        ; work         ;
+;                |decode_msa:decode5|                                                                                                     ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|d_ram:dram|altsyncram:altsyncram_component|altsyncram_grj1:auto_generated|altsyncram_jab2:altsyncram1|decode_msa:decode5                                                                                                                                                                                                                   ; decode_msa                        ; work         ;
+;                |mux_lob:mux6|                                                                                                           ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|d_ram:dram|altsyncram:altsyncram_component|altsyncram_grj1:auto_generated|altsyncram_jab2:altsyncram1|mux_lob:mux6                                                                                                                                                                                                                         ; mux_lob                           ; work         ;
+;                |mux_lob:mux7|                                                                                                           ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|d_ram:dram|altsyncram:altsyncram_component|altsyncram_grj1:auto_generated|altsyncram_jab2:altsyncram1|mux_lob:mux7                                                                                                                                                                                                                         ; mux_lob                           ; work         ;
+;             |sld_mod_ram_rom:mgl_prim2|                                                                                                 ; 81 (58)             ; 54 (45)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|d_ram:dram|altsyncram:altsyncram_component|altsyncram_grj1:auto_generated|sld_mod_ram_rom:mgl_prim2                                                                                                                                                                                                                                        ; sld_mod_ram_rom                   ; work         ;
+;                |sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|                                                                     ; 23 (23)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|d_ram:dram|altsyncram:altsyncram_component|altsyncram_grj1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr                                                                                                                                                                                     ; sld_rom_sr                        ; work         ;
+;    |decode_stage:decode|                                                                                                                ; 112 (112)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|decode_stage:decode                                                                                                                                                                                                                                                                                                                        ; decode_stage                      ; work         ;
+;    |memory_access_d_ram:dram_control_inst|                                                                                              ; 234 (234)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|memory_access_d_ram:dram_control_inst                                                                                                                                                                                                                                                                                                      ; memory_access_d_ram               ; work         ;
 ;    |p_ram:pram|                                                                                                                         ; 156 (0)             ; 58 (0)                    ; 524288      ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|p_ram:pram                                                                                                                                                                                                                                                                                                                                 ; p_ram                             ; work         ;
 ;       |altsyncram:altsyncram_component|                                                                                                 ; 156 (0)             ; 58 (0)                    ; 524288      ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|p_ram:pram|altsyncram:altsyncram_component                                                                                                                                                                                                                                                                                                 ; altsyncram                        ; work         ;
 ;          |altsyncram_q6k1:auto_generated|                                                                                               ; 156 (0)             ; 58 (0)                    ; 524288      ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated                                                                                                                                                                                                                                                                  ; altsyncram_q6k1                   ; work         ;
@@ -310,19 +336,19 @@ https://fpgasoftware.intel.com/eula.
 ;                |mux_lob:mux7|                                                                                                           ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|altsyncram_hlb2:altsyncram1|mux_lob:mux7                                                                                                                                                                                                                         ; mux_lob                           ; work         ;
 ;             |sld_mod_ram_rom:mgl_prim2|                                                                                                 ; 80 (58)             ; 54 (45)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|sld_mod_ram_rom:mgl_prim2                                                                                                                                                                                                                                        ; sld_mod_ram_rom                   ; work         ;
 ;                |sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|                                                                     ; 22 (22)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr                                                                                                                                                                                     ; sld_rom_sr                        ; work         ;
-;    |pipeline_controller:controller|                                                                                                     ; 76 (76)             ; 61 (61)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|pipeline_controller:controller                                                                                                                                                                                                                                                                                                             ; pipeline_controller               ; work         ;
-;    |pipeline_registers:pipeline|                                                                                                        ; 373 (373)           ; 265 (265)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|pipeline_registers:pipeline                                                                                                                                                                                                                                                                                                                ; pipeline_registers                ; work         ;
-;    |program_counter:pcounter|                                                                                                           ; 18 (18)             ; 15 (15)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|program_counter:pcounter                                                                                                                                                                                                                                                                                                                   ; program_counter                   ; work         ;
-;    |regnum_to_values_to_alu:regnum_inst|                                                                                                ; 178 (178)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|regnum_to_values_to_alu:regnum_inst                                                                                                                                                                                                                                                                                                        ; regnum_to_values_to_alu           ; work         ;
-;    |sld_hub:auto_hub|                                                                                                                   ; 120 (1)             ; 86 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                           ; sld_hub                           ; altera_sld   ;
-;       |alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric| ; 119 (0)             ; 86 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric                                                                                                                                                                                           ; alt_sld_fab_with_jtag_input       ; altera_sld   ;
-;          |alt_sld_fab:instrumentation_fabric|                                                                                           ; 119 (0)             ; 86 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric                                                                                                                                                        ; alt_sld_fab                       ; alt_sld_fab  ;
-;             |alt_sld_fab_alt_sld_fab:alt_sld_fab|                                                                                       ; 119 (1)             ; 86 (5)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab                                                                                                                    ; alt_sld_fab_alt_sld_fab           ; alt_sld_fab  ;
-;                |alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|                                                                            ; 118 (0)             ; 81 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric                                                                        ; alt_sld_fab_alt_sld_fab_sldfabric ; alt_sld_fab  ;
-;                   |sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|                                                                        ; 118 (82)            ; 81 (53)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub                           ; sld_jtag_hub                      ; work         ;
-;                      |sld_rom_sr:hub_info_reg|                                                                                          ; 18 (18)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg   ; sld_rom_sr                        ; work         ;
+;    |pipeline_controller:controller|                                                                                                     ; 77 (77)             ; 61 (61)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|pipeline_controller:controller                                                                                                                                                                                                                                                                                                             ; pipeline_controller               ; work         ;
+;    |pipeline_registers:pipeline|                                                                                                        ; 710 (710)           ; 316 (316)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|pipeline_registers:pipeline                                                                                                                                                                                                                                                                                                                ; pipeline_registers                ; work         ;
+;    |program_counter:pcounter|                                                                                                           ; 20 (20)             ; 15 (15)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|program_counter:pcounter                                                                                                                                                                                                                                                                                                                   ; program_counter                   ; work         ;
+;    |regnum_to_values_to_alu:regnum_inst|                                                                                                ; 179 (179)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|regnum_to_values_to_alu:regnum_inst                                                                                                                                                                                                                                                                                                        ; regnum_to_values_to_alu           ; work         ;
+;    |sld_hub:auto_hub|                                                                                                                   ; 172 (1)             ; 112 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                           ; sld_hub                           ; altera_sld   ;
+;       |alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric| ; 171 (0)             ; 112 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric                                                                                                                                                                                           ; alt_sld_fab_with_jtag_input       ; altera_sld   ;
+;          |alt_sld_fab:instrumentation_fabric|                                                                                           ; 171 (0)             ; 112 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric                                                                                                                                                        ; alt_sld_fab                       ; alt_sld_fab  ;
+;             |alt_sld_fab_alt_sld_fab:alt_sld_fab|                                                                                       ; 171 (1)             ; 112 (6)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab                                                                                                                    ; alt_sld_fab_alt_sld_fab           ; alt_sld_fab  ;
+;                |alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|                                                                            ; 170 (0)             ; 106 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric                                                                        ; alt_sld_fab_alt_sld_fab_sldfabric ; alt_sld_fab  ;
+;                   |sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|                                                                        ; 170 (133)           ; 106 (78)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub                           ; sld_jtag_hub                      ; work         ;
+;                      |sld_rom_sr:hub_info_reg|                                                                                          ; 19 (19)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg   ; sld_rom_sr                        ; work         ;
 ;                      |sld_shadow_jsm:shadow_jsm|                                                                                        ; 18 (18)             ; 19 (19)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm ; sld_shadow_jsm                    ; altera_sld   ;
-;    |update_psw:update_psw_inst|                                                                                                         ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|update_psw:update_psw_inst                                                                                                                                                                                                                                                                                                                 ; update_psw                        ; work         ;
+;    |update_psw:update_psw_inst|                                                                                                         ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|update_psw:update_psw_inst                                                                                                                                                                                                                                                                                                                 ; update_psw                        ; work         ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -332,6 +358,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+--------+--------------------+
 ; Name                                                                                                             ; Type ; Mode           ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size   ; MIF                ;
 +------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+--------+--------------------+
+; d_ram:dram|altsyncram:altsyncram_component|altsyncram_grj1:auto_generated|altsyncram_jab2:altsyncram1|ALTSYNCRAM ; AUTO ; True Dual Port ; 32768        ; 16           ; 32768        ; 16           ; 524288 ; data_memory.mif    ;
 ; p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|altsyncram_hlb2:altsyncram1|ALTSYNCRAM ; AUTO ; True Dual Port ; 32768        ; 16           ; 32768        ; 16           ; 524288 ; program_memory.mif ;
 +------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+--------+--------------------+
 
@@ -346,23 +373,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Altera ; Signal Tap   ; N/A     ; N/A          ; Licensed     ; |XM23|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_presplit:presplit   ;                 ;
 ; Altera ; Signal Tap   ; N/A     ; N/A          ; Licensed     ; |XM23|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric ;                 ;
 ; Altera ; Signal Tap   ; N/A     ; N/A          ; Licensed     ; |XM23|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_splitter:splitter   ;                 ;
+; Altera ; RAM: 1-PORT  ; 20.1    ; N/A          ; N/A          ; |XM23|d_ram:dram                                                                                                                                                                                                                                                          ; d_ram.v         ;
 ; Altera ; RAM: 1-PORT  ; 20.1    ; N/A          ; N/A          ; |XM23|p_ram:pram                                                                                                                                                                                                                                                          ; p_ram.v         ;
 +--------+--------------+---------+--------------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                             ;
-+--------------------------------------------------------+-------------------------------------------------------+
-; Register name                                          ; Reason for Removal                                    ;
-+--------------------------------------------------------+-------------------------------------------------------+
-; pipeline_registers:pipeline|mem_access_result_i[0..15] ; Stuck at GND due to stuck port data_in                ;
-; pipeline_registers:pipeline|enable_i[0][18]            ; Stuck at GND due to stuck port data_in                ;
-; pipeline_controller:controller|LBPC1[0]                ; Merged with pipeline_controller:controller|PC_next[0] ;
-; program_counter:pcounter|true_PC[0]                    ; Lost fanout                                           ;
-; pipeline_controller:controller|PC_next[0]              ; Lost fanout                                           ;
-; pipeline_controller:controller|LBPC2[0]                ; Lost fanout                                           ;
-; Total Number of Removed Registers = 21                 ;                                                       ;
-+--------------------------------------------------------+-------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                  ;
++---------------------------------------------+-------------------------------------------------------+
+; Register name                               ; Reason for Removal                                    ;
++---------------------------------------------+-------------------------------------------------------+
+; pipeline_registers:pipeline|enable_i[0][18] ; Stuck at GND due to stuck port data_in                ;
+; pipeline_controller:controller|LBPC1[0]     ; Merged with pipeline_controller:controller|PC_next[0] ;
+; program_counter:pcounter|true_PC[0]         ; Lost fanout                                           ;
+; pipeline_controller:controller|PC_next[0]   ; Lost fanout                                           ;
+; pipeline_controller:controller|LBPC2[0]     ; Lost fanout                                           ;
+; Total Number of Removed Registers = 5       ;                                                       ;
++---------------------------------------------+-------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------+
@@ -379,12 +406,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 519   ;
-; Number of registers using Synchronous Clear  ; 145   ;
-; Number of registers using Synchronous Load   ; 169   ;
-; Number of registers using Asynchronous Clear ; 96    ;
+; Total registers                              ; 654   ;
+; Number of registers using Synchronous Clear  ; 22    ;
+; Number of registers using Synchronous Load   ; 74    ;
+; Number of registers using Asynchronous Clear ; 151   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 261   ;
+; Number of registers using Clock Enable       ; 343   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -405,39 +432,58 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |XM23|p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[0]                                     ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |XM23|p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[14]                                               ;
-; 3:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |XM23|p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[12]                                               ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |XM23|p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[0] ;
-; 7:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |XM23|pipeline_registers:pipeline|gprc_i[0][7][0]                                                                                                                            ;
-; 7:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |XM23|pipeline_registers:pipeline|gprc_i[0][6][14]                                                                                                                           ;
-; 7:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |XM23|pipeline_registers:pipeline|gprc_i[0][5][5]                                                                                                                            ;
-; 7:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |XM23|pipeline_registers:pipeline|gprc_i[0][4][10]                                                                                                                           ;
-; 7:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |XM23|pipeline_registers:pipeline|gprc_i[0][3][10]                                                                                                                           ;
-; 7:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |XM23|pipeline_registers:pipeline|gprc_i[0][2][4]                                                                                                                            ;
-; 7:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |XM23|pipeline_registers:pipeline|gprc_i[0][1][13]                                                                                                                           ;
-; 7:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |XM23|pipeline_registers:pipeline|gprc_i[0][0][10]                                                                                                                           ;
-; 26:1               ; 4 bits    ; 68 LEs        ; 44 LEs               ; 24 LEs                 ; Yes        ; |XM23|p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[3]      ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |XM23|update_psw:update_psw_inst|psw_msk[1]                                                                                                                                  ;
-; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |XM23|regnum_to_values_to_alu:regnum_inst|Mux38                                                                                                                              ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |XM23|p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[1]                                     ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |XM23|p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[6]                                                ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |XM23|d_ram:dram|altsyncram:altsyncram_component|altsyncram_grj1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[2]                                     ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |XM23|d_ram:dram|altsyncram:altsyncram_component|altsyncram_grj1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[6]                                                ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |XM23|p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[11]                                               ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |XM23|d_ram:dram|altsyncram:altsyncram_component|altsyncram_grj1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[3]                                                ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |XM23|p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[3] ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |XM23|d_ram:dram|altsyncram:altsyncram_component|altsyncram_grj1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[1] ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |XM23|pipeline_registers:pipeline|exec_result_i[0][11]                                                                                                                       ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |XM23|pipeline_registers:pipeline|exec_result_i[0][7]                                                                                                                        ;
+; 8:1                ; 15 bits   ; 75 LEs        ; 45 LEs               ; 30 LEs                 ; Yes        ; |XM23|pipeline_registers:pipeline|gprc_i[0][7][8]                                                                                                                            ;
+; 8:1                ; 15 bits   ; 75 LEs        ; 45 LEs               ; 30 LEs                 ; Yes        ; |XM23|pipeline_registers:pipeline|gprc_i[0][6][9]                                                                                                                            ;
+; 8:1                ; 15 bits   ; 75 LEs        ; 45 LEs               ; 30 LEs                 ; Yes        ; |XM23|pipeline_registers:pipeline|gprc_i[0][5][4]                                                                                                                            ;
+; 8:1                ; 15 bits   ; 75 LEs        ; 45 LEs               ; 30 LEs                 ; Yes        ; |XM23|pipeline_registers:pipeline|gprc_i[0][4][5]                                                                                                                            ;
+; 8:1                ; 15 bits   ; 75 LEs        ; 45 LEs               ; 30 LEs                 ; Yes        ; |XM23|pipeline_registers:pipeline|gprc_i[0][3][1]                                                                                                                            ;
+; 8:1                ; 15 bits   ; 75 LEs        ; 45 LEs               ; 30 LEs                 ; Yes        ; |XM23|pipeline_registers:pipeline|gprc_i[0][2][13]                                                                                                                           ;
+; 8:1                ; 15 bits   ; 75 LEs        ; 45 LEs               ; 30 LEs                 ; Yes        ; |XM23|pipeline_registers:pipeline|gprc_i[0][1][7]                                                                                                                            ;
+; 8:1                ; 15 bits   ; 75 LEs        ; 45 LEs               ; 30 LEs                 ; Yes        ; |XM23|pipeline_registers:pipeline|gprc_i[0][0][12]                                                                                                                           ;
+; 26:1               ; 4 bits    ; 68 LEs        ; 44 LEs               ; 24 LEs                 ; Yes        ; |XM23|p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[0]      ;
+; 26:1               ; 4 bits    ; 68 LEs        ; 48 LEs               ; 20 LEs                 ; Yes        ; |XM23|d_ram:dram|altsyncram:altsyncram_component|altsyncram_grj1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[3]      ;
+; 8:1                ; 15 bits   ; 75 LEs        ; 75 LEs               ; 0 LEs                  ; No         ; |XM23|memory_access_d_ram:dram_control_inst|Mux31                                                                                                                            ;
+; 8:1                ; 15 bits   ; 75 LEs        ; 75 LEs               ; 0 LEs                  ; No         ; |XM23|memory_access_d_ram:dram_control_inst|Mux9                                                                                                                             ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |XM23|memory_access_d_ram:dram_control_inst|output_address[8]                                                                                                                ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |XM23|pipeline_registers:pipeline|Mux4                                                                                                                                       ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |XM23|pipeline_registers:pipeline|Mux27                                                                                                                                      ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |XM23|regnum_to_values_to_alu:regnum_inst|Mux33                                                                                                                              ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |XM23|update_psw:update_psw_inst|psw_msk[2]                                                                                                                                  ;
 ; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |XM23|alu:alu_inst|alu_BIS:bis_op|ShiftLeft0                                                                                                                                 ;
 ; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |XM23|alu:alu_inst|alu_BIS:bis_op|ShiftLeft0                                                                                                                                 ;
-; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |XM23|pipeline_registers:pipeline|Mux23                                                                                                                                      ;
-; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |XM23|pipeline_registers:pipeline|Mux7                                                                                                                                       ;
-; 9:1                ; 13 bits   ; 78 LEs        ; 78 LEs               ; 0 LEs                  ; No         ; |XM23|regnum_to_values_to_alu:regnum_inst|src_val[6]                                                                                                                         ;
-; 16:1               ; 3 bits    ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |XM23|regnum_to_values_to_alu:regnum_inst|src_val[1]                                                                                                                         ;
-; 16:1               ; 2 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |XM23|alu:alu_inst|result[12]                                                                                                                                                ;
-; 17:1               ; 3 bits    ; 33 LEs        ; 30 LEs               ; 3 LEs                  ; No         ; |XM23|alu:alu_inst|result[11]                                                                                                                                                ;
-; 17:1               ; 2 bits    ; 22 LEs        ; 20 LEs               ; 2 LEs                  ; No         ; |XM23|alu:alu_inst|result[14]                                                                                                                                                ;
+; 5:1                ; 15 bits   ; 45 LEs        ; 15 LEs               ; 30 LEs                 ; No         ; |XM23|memory_access_d_ram:dram_control_inst|output_data[12]                                                                                                                  ;
+; 9:1                ; 13 bits   ; 78 LEs        ; 78 LEs               ; 0 LEs                  ; No         ; |XM23|regnum_to_values_to_alu:regnum_inst|src_val[10]                                                                                                                        ;
+; 16:1               ; 3 bits    ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |XM23|regnum_to_values_to_alu:regnum_inst|src_val[0]                                                                                                                         ;
+; 16:1               ; 2 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |XM23|alu:alu_inst|result[8]                                                                                                                                                 ;
+; 17:1               ; 3 bits    ; 33 LEs        ; 30 LEs               ; 3 LEs                  ; No         ; |XM23|alu:alu_inst|result[9]                                                                                                                                                 ;
+; 17:1               ; 2 bits    ; 22 LEs        ; 20 LEs               ; 2 LEs                  ; No         ; |XM23|alu:alu_inst|result[13]                                                                                                                                                ;
 ; 18:1               ; 3 bits    ; 36 LEs        ; 30 LEs               ; 6 LEs                  ; No         ; |XM23|alu:alu_inst|result[1]                                                                                                                                                 ;
 ; 18:1               ; 2 bits    ; 24 LEs        ; 20 LEs               ; 4 LEs                  ; No         ; |XM23|alu:alu_inst|result[6]                                                                                                                                                 ;
 ; 18:1               ; 3 bits    ; 36 LEs        ; 3 LEs                ; 33 LEs                 ; No         ; |XM23|decode_stage:decode|S                                                                                                                                                  ;
-; 24:1               ; 7 bits    ; 112 LEs       ; 14 LEs               ; 98 LEs                 ; No         ; |XM23|decode_stage:decode|async_set[1]                                                                                                                                       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------+
 ; Source assignments for p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|altsyncram_hlb2:altsyncram1 ;
++---------------------------------+--------------------+------+----------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                             ;
++---------------------------------+--------------------+------+----------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                              ;
++---------------------------------+--------------------+------+----------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for d_ram:dram|altsyncram:altsyncram_component|altsyncram_grj1:auto_generated|altsyncram_jab2:altsyncram1 ;
 +---------------------------------+--------------------+------+----------------------------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                                             ;
 +---------------------------------+--------------------+------+----------------------------------------------------------------+
@@ -516,6 +562,82 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: memory_access_d_ram:dram_control_inst ;
++------------------+-------+---------------------------------------------------------+
+; Parameter Name   ; Value ; Type                                                    ;
++------------------+-------+---------------------------------------------------------+
+; R                ; 0     ; Signed Integer                                          ;
+; mem_access_stage ; 1     ; Signed Integer                                          ;
+; LD               ; 33    ; Signed Integer                                          ;
+; ST               ; 34    ; Signed Integer                                          ;
+; LDR              ; 39    ; Signed Integer                                          ;
+; STR              ; 40    ; Signed Integer                                          ;
++------------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: d_ram:dram|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+-----------------------------+
+; Parameter Name                     ; Value                ; Type                        ;
++------------------------------------+----------------------+-----------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                     ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                  ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE              ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                     ;
+; OPERATION_MODE                     ; SINGLE_PORT          ; Untyped                     ;
+; WIDTH_A                            ; 16                   ; Signed Integer              ;
+; WIDTHAD_A                          ; 15                   ; Signed Integer              ;
+; NUMWORDS_A                         ; 32768                ; Signed Integer              ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                     ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                     ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                     ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                     ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                     ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                     ;
+; WIDTH_B                            ; 1                    ; Untyped                     ;
+; WIDTHAD_B                          ; 1                    ; Untyped                     ;
+; NUMWORDS_B                         ; 1                    ; Untyped                     ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                     ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                     ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                     ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                     ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                     ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                     ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                     ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                     ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                     ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                     ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                     ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                     ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer              ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                     ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                     ;
+; BYTE_SIZE                          ; 8                    ; Untyped                     ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                     ;
+; READ_DURING_WRITE_MODE_PORT_A      ; DONT_CARE            ; Untyped                     ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                     ;
+; INIT_FILE                          ; data_memory.mif      ; Untyped                     ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                     ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                     ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                     ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                     ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                     ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                     ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                     ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                     ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                     ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                     ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                     ;
+; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                     ;
+; CBXI_PARAMETER                     ; altsyncram_grj1      ; Untyped                     ;
++------------------------------------+----------------------+-----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-----------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: branch:branch_inst ;
 +----------------+-------+----------------------------------------+
@@ -526,6 +648,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; N              ; 2     ; Signed Integer                         ;
 ; V              ; 4     ; Signed Integer                         ;
 +----------------+-------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: go_to_LR:go_to_LR_inst ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; R              ; 0     ; Signed Integer                             ;
+; exec_stage     ; 0     ; Signed Integer                             ;
+; LD             ; 33    ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -548,8 +682,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+--------------------------------------------+
 ; Name                                      ; Value                                      ;
 +-------------------------------------------+--------------------------------------------+
-; Number of entity instances                ; 1                                          ;
+; Number of entity instances                ; 2                                          ;
 ; Entity Instance                           ; p_ram:pram|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; SINGLE_PORT                                ;
+;     -- WIDTH_A                            ; 16                                         ;
+;     -- NUMWORDS_A                         ; 32768                                      ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                               ;
+;     -- WIDTH_B                            ; 1                                          ;
+;     -- NUMWORDS_B                         ; 1                                          ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                     ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                               ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                       ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                  ;
+; Entity Instance                           ; d_ram:dram|altsyncram:altsyncram_component ;
 ;     -- OPERATION_MODE                     ; SINGLE_PORT                                ;
 ;     -- WIDTH_A                            ; 16                                         ;
 ;     -- NUMWORDS_A                         ; 32768                                      ;
@@ -563,55 +708,73 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+--------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "branch:branch_inst"                                                                 ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; LR_o ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "go_to_LR:go_to_LR_inst"                                                                                                                              ;
++--------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                                                                                      ;
++--------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; enable[2..1] ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; link_back_o  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; gprc         ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; src_i        ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++--------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "pipeline_controller:controller"                                                                                                                ;
++--------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                                                                                      ;
++--------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; PSW_in ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; LBPSW  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
++--------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "pipeline_controller:controller"                                                                                                                       ;
+; Port Connectivity Checks: "pipeline_registers:pipeline"                                                                                                                          ;
 +---------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port          ; Type   ; Severity ; Details                                                                                                                                      ;
 +---------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; PSW_in        ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-; LBPSW         ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
-; display_stage ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-; led           ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; SLP_o[2..1]   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; N_o[2..1]     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; Z_o[2..1]     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; C_o[2..1]     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; V_o[2..1]     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; B_o[2..1]     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; PRPO_o[2..1]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; DEC_o[2..1]   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; INC_o[2..1]   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; fetch_in      ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; CEX           ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; p_reg         ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; WB_o          ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; PR_o          ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; F_o           ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; T_o           ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; SA_o          ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; exec_result_o ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
 +---------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "pipeline_registers:pipeline"                                                                                                                              ;
-+-------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port              ; Type   ; Severity ; Details                                                                                                                                      ;
-+-------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; moves_result      ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
-; enable_o[2..1]    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; SLP_o[2..1]       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; N_o[2..1]         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; Z_o[2..1]         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; C_o[2..1]         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; V_o[2..1]         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; fetch_in          ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-; CEX               ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-; mem_access_result ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-; p_reg             ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
-; WB_o              ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
-; PRPO_o            ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
-; DEC_o             ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
-; INC_o             ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
-; PR_o              ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
-; F_o               ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
-; T_o               ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
-; SA_o              ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
-; OFF_o             ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
-; B_o               ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
-; exec_result_o     ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
-+-------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "d_ram:dram"                                                                                                                                                                          ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; address ; Input ; Warning  ; Input port expression (16 bits) is wider than the input port (15 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; wren    ; Input ; Warning  ; Input port expression (16 bits) is wider than the input port (1 bits) it drives.  The 15 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------+
+; Port Connectivity Checks: "memory_access_d_ram:dram_control_inst" ;
++-----------+-------+----------+------------------------------------+
+; Port      ; Type  ; Severity ; Details                            ;
++-----------+-------+----------+------------------------------------+
+; pre[2..1] ; Input ; Info     ; Stuck at GND                       ;
+; inc[2..1] ; Input ; Info     ; Stuck at GND                       ;
+; dec[2..1] ; Input ; Info     ; Stuck at GND                       ;
++-----------+-------+----------+------------------------------------+
 
 
 +----------------------------------------+
@@ -624,12 +787,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+--------------+
 
 
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "program_counter:pcounter"                                                                                                                        ;
++-----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                                                                                                                      ;
++-----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; link_back ; Input ; Info     ; Explicitly unconnected                                                                                                                       ;
+; LR        ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
 +---------------------------------------------------------------------------------------------------------------------------------------+
 ; In-System Memory Content Editor Settings                                                                                              ;
 +----------------+-------------+-------+-------+------------+---------------------------------------------------------------------------+
 ; Instance Index ; Instance ID ; Width ; Depth ; Mode       ; Hierarchy Location                                                        ;
 +----------------+-------------+-------+-------+------------+---------------------------------------------------------------------------+
 ; 0              ; pram        ; 16    ; 32768 ; Read/Write ; p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated ;
+; 1              ; dram        ; 16    ; 32768 ; Read/Write ; d_ram:dram|altsyncram:altsyncram_component|altsyncram_grj1:auto_generated ;
 +----------------+-------------+-------+-------+------------+---------------------------------------------------------------------------+
 
 
@@ -638,31 +812,30 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 30                          ;
-; cycloneiii_ff         ; 433                         ;
-;     CLR               ; 38                          ;
-;     CLR SLD           ; 1                           ;
-;     ENA               ; 46                          ;
-;     ENA CLR           ; 9                           ;
-;     ENA CLR SLD       ; 15                          ;
-;     ENA SCLR          ; 5                           ;
-;     ENA SCLR SLD      ; 128                         ;
-;     SLD               ; 15                          ;
-;     plain             ; 176                         ;
-; cycloneiii_lcell_comb ; 1308                        ;
-;     arith             ; 173                         ;
-;         2 data inputs ; 84                          ;
-;         3 data inputs ; 89                          ;
-;     normal            ; 1135                        ;
+; boundary_port         ; 57                          ;
+; cycloneiii_ff         ; 542                         ;
+;     CLR               ; 44                          ;
+;     CLR SLD           ; 2                           ;
+;     ENA               ; 204                         ;
+;     ENA CLR           ; 16                          ;
+;     ENA CLR SLD       ; 30                          ;
+;     ENA SCLR          ; 10                          ;
+;     SLD               ; 26                          ;
+;     plain             ; 210                         ;
+; cycloneiii_lcell_comb ; 2031                        ;
+;     arith             ; 223                         ;
+;         2 data inputs ; 106                         ;
+;         3 data inputs ; 117                         ;
+;     normal            ; 1808                        ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 8                           ;
-;         2 data inputs ; 84                          ;
-;         3 data inputs ; 310                         ;
-;         4 data inputs ; 732                         ;
-; cycloneiii_ram_block  ; 64                          ;
+;         1 data inputs ; 11                          ;
+;         2 data inputs ; 81                          ;
+;         3 data inputs ; 419                         ;
+;         4 data inputs ; 1296                        ;
+; cycloneiii_ram_block  ; 128                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 20.10                       ;
-; Average LUT depth     ; 8.93                        ;
+; Average LUT depth     ; 7.76                        ;
 +-----------------------+-----------------------------+
 
 
@@ -671,7 +844,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:14     ;
+; Top            ; 00:00:15     ;
 +----------------+--------------+
 
 
@@ -681,85 +854,93 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sun Oct 27 20:25:34 2024
+    Info: Processing started: Tue Nov 12 19:44:58 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off XM23 -c XM23
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file branch.sv
-    Info (12023): Found entity 1: branch File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/branch.sv Line: 1
+    Info (12023): Found entity 1: branch File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/branch.sv Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file regnum_to_values_to_alu.sv
-    Info (12023): Found entity 1: regnum_to_values_to_alu File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/regnum_to_values_to_alu.sv Line: 3
+    Info (12023): Found entity 1: regnum_to_values_to_alu File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/regnum_to_values_to_alu.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file decode_stage.sv
-    Info (12023): Found entity 1: decode_stage File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/decode_stage.sv Line: 1
+    Info (12023): Found entity 1: decode_stage File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/decode_stage.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file pipeline_registers.sv
-    Info (12023): Found entity 1: pipeline_registers File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/pipeline_registers.sv Line: 1
+    Info (12023): Found entity 1: pipeline_registers File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/pipeline_registers.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file pipeline_controller.sv
-    Info (12023): Found entity 1: pipeline_controller File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/pipeline_controller.sv Line: 8
+    Info (12023): Found entity 1: pipeline_controller File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/pipeline_controller.sv Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file memory_access.sv
-    Info (12023): Found entity 1: memory_access File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/memory_access.sv Line: 1
+    Info (12023): Found entity 1: memory_access File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/memory_access.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu_xor.sv
-    Info (12023): Found entity 1: alu_XOR File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_XOR.sv Line: 2
+    Info (12023): Found entity 1: alu_XOR File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_XOR.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file alu_top_level.sv
-    Info (12023): Found entity 1: alu_top_level File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_top_level.sv Line: 2
+    Info (12023): Found entity 1: alu_top_level File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_top_level.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file alu_sub.sv
-    Info (12023): Found entity 1: alu_SUB File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_SUB.sv Line: 2
+    Info (12023): Found entity 1: alu_SUB File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_SUB.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file alu_or.sv
-    Info (12023): Found entity 1: alu_OR File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_OR.sv Line: 2
+    Info (12023): Found entity 1: alu_OR File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_OR.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file alu_dadd.sv
-    Info (12023): Found entity 1: alu_DADD File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_DADD.sv Line: 2
+    Info (12023): Found entity 1: alu_DADD File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_DADD.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file alu_bit.sv
-    Info (12023): Found entity 1: alu_BIT File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_BIT.sv Line: 2
+    Info (12023): Found entity 1: alu_BIT File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_BIT.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file alu_bis.sv
-    Info (12023): Found entity 1: alu_BIS File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_BIS.sv Line: 2
+    Info (12023): Found entity 1: alu_BIS File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_BIS.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file alu_bic.sv
-    Info (12023): Found entity 1: alu_BIC File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_BIC.sv Line: 2
+    Info (12023): Found entity 1: alu_BIC File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_BIC.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file alu_and.sv
-    Info (12023): Found entity 1: alu_AND File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_AND.sv Line: 2
+    Info (12023): Found entity 1: alu_AND File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_AND.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file alu_add.sv
-    Info (12023): Found entity 1: alu_ADD File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_ADD.sv Line: 2
+    Info (12023): Found entity 1: alu_ADD File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_ADD.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file alu.sv
-    Info (12023): Found entity 1: alu File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu.sv Line: 2
+    Info (12023): Found entity 1: alu File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu.sv Line: 2
+Warning (10275): Verilog HDL Module Instantiation warning at XM23.sv(147): ignored dangling comma in List of Port Connections File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv Line: 147
+Warning (10275): Verilog HDL Module Instantiation warning at XM23.sv(361): ignored dangling comma in List of Port Connections File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv Line: 361
 Info (12021): Found 1 design units, including 1 entities, in source file xm23.sv
-    Info (12023): Found entity 1: XM23 File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 1
+    Info (12023): Found entity 1: XM23 File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv Line: 8
 Info (12021): Found 1 design units, including 1 entities, in source file alu_addc.sv
-    Info (12023): Found entity 1: alu_ADDC File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_ADDC.sv Line: 2
+    Info (12023): Found entity 1: alu_ADDC File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_ADDC.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file alu_subc.sv
-    Info (12023): Found entity 1: alu_SUBC File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_SUBC.sv Line: 2
+    Info (12023): Found entity 1: alu_SUBC File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_SUBC.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file update_psw.sv
-    Info (12023): Found entity 1: update_psw File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/update_psw.sv Line: 1
+    Info (12023): Found entity 1: update_psw File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/update_psw.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file p_ram.v
-    Info (12023): Found entity 1: p_ram File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/p_ram.v Line: 40
+    Info (12023): Found entity 1: p_ram File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/p_ram.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file d_ram.v
-    Info (12023): Found entity 1: d_ram File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/d_ram.v Line: 40
+    Info (12023): Found entity 1: d_ram File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/d_ram.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file program_counter.sv
-    Info (12023): Found entity 1: program_counter File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/program_counter.sv Line: 1
+    Info (12023): Found entity 1: program_counter File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/program_counter.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file moves.sv
-    Info (12023): Found entity 1: moves File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/moves.sv Line: 1
+    Info (12023): Found entity 1: moves File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/moves.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu_mov.sv
-    Info (12023): Found entity 1: alu_MOV File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_MOV.sv Line: 1
+    Info (12023): Found entity 1: alu_MOV File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_MOV.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu_sra.sv
-    Info (12023): Found entity 1: alu_SRA File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_SRA.sv Line: 1
+    Info (12023): Found entity 1: alu_SRA File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_SRA.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu_rrc.sv
-    Info (12023): Found entity 1: alu_RRC File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_RRC.sv Line: 1
+    Info (12023): Found entity 1: alu_RRC File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_RRC.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu_comp.sv
-    Info (12023): Found entity 1: alu_COMP File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_COMP.sv Line: 1
+    Info (12023): Found entity 1: alu_COMP File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_COMP.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu_swpb.sv
-    Info (12023): Found entity 1: alu_SWPB File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_SWPB.sv Line: 1
+    Info (12023): Found entity 1: alu_SWPB File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_SWPB.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu_sxt.sv
-    Info (12023): Found entity 1: alu_SXT File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_SXT.sv Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at alu_SUB.sv(12): created implicit net for "carry_out" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_SUB.sv Line: 12
-Warning (10236): Verilog HDL Implicit Net warning at alu_DADD.sv(48): created implicit net for "carry_out" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_DADD.sv Line: 48
-Warning (10236): Verilog HDL Implicit Net warning at alu_ADD.sv(12): created implicit net for "carry_out" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_ADD.sv Line: 12
-Warning (10236): Verilog HDL Implicit Net warning at alu_ADDC.sv(14): created implicit net for "carry_out" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_ADDC.sv Line: 14
-Warning (10236): Verilog HDL Implicit Net warning at alu_SUBC.sv(14): created implicit net for "carry_out" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_SUBC.sv Line: 14
+    Info (12023): Found entity 1: alu_SXT File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_SXT.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file memory_access_d_ram.sv
+    Info (12023): Found entity 1: memory_access_d_ram File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/memory_access_d_ram.sv Line: 1
+Warning (10229): Verilog HDL Expression warning at go_to_LR.sv(18): truncated literal to match 4 bits File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/go_to_LR.sv Line: 18
+Info (12021): Found 1 design units, including 1 entities, in source file go_to_lr.sv
+    Info (12023): Found entity 1: go_to_LR File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/go_to_LR.sv Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at alu_SUB.sv(12): created implicit net for "carry_out" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_SUB.sv Line: 12
+Warning (10236): Verilog HDL Implicit Net warning at alu_DADD.sv(48): created implicit net for "carry_out" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_DADD.sv Line: 48
+Warning (10236): Verilog HDL Implicit Net warning at alu_ADD.sv(12): created implicit net for "carry_out" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_ADD.sv Line: 12
+Warning (10236): Verilog HDL Implicit Net warning at XM23.sv(360): created implicit net for "clear_pipeline_wire" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv Line: 360
+Warning (10236): Verilog HDL Implicit Net warning at alu_ADDC.sv(14): created implicit net for "carry_out" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_ADDC.sv Line: 14
+Warning (10236): Verilog HDL Implicit Net warning at alu_SUBC.sv(14): created implicit net for "carry_out" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_SUBC.sv Line: 14
 Info (12127): Elaborating entity "XM23" for the top level hierarchy
-Warning (10030): Net "moves_result_wire" at XM23.sv(74) has no driver or initial value, using a default initial value '0' File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 74
+Warning (10030): Net "clear_pipeline_LR_wire" at XM23.sv(88) has no driver or initial value, using a default initial value '0' File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv Line: 88
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gprc_o_wire" into its bus
-Info (12128): Elaborating entity "program_counter" for hierarchy "program_counter:pcounter" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 110
-Info (12128): Elaborating entity "p_ram" for hierarchy "p_ram:pram" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 119
-Info (12128): Elaborating entity "altsyncram" for hierarchy "p_ram:pram|altsyncram:altsyncram_component" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/p_ram.v Line: 86
-Info (12130): Elaborated megafunction instantiation "p_ram:pram|altsyncram:altsyncram_component" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/p_ram.v Line: 86
-Info (12133): Instantiated megafunction "p_ram:pram|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/p_ram.v Line: 86
+Info (12128): Elaborating entity "program_counter" for hierarchy "program_counter:pcounter" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv Line: 147
+Info (12128): Elaborating entity "p_ram" for hierarchy "p_ram:pram" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv Line: 159
+Info (12128): Elaborating entity "altsyncram" for hierarchy "p_ram:pram|altsyncram:altsyncram_component" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/p_ram.v Line: 86
+Info (12130): Elaborated megafunction instantiation "p_ram:pram|altsyncram:altsyncram_component" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/p_ram.v Line: 86
+Info (12133): Instantiated megafunction "p_ram:pram|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/p_ram.v Line: 86
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
     Info (12134): Parameter "init_file" = "program_memory.mif"
@@ -776,25 +957,25 @@ Info (12133): Instantiated megafunction "p_ram:pram|altsyncram:altsyncram_compon
     Info (12134): Parameter "width_a" = "16"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_q6k1.tdf
-    Info (12023): Found entity 1: altsyncram_q6k1 File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/altsyncram_q6k1.tdf Line: 28
+    Info (12023): Found entity 1: altsyncram_q6k1 File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/altsyncram_q6k1.tdf Line: 28
 Info (12128): Elaborating entity "altsyncram_q6k1" for hierarchy "p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_hlb2.tdf
-    Info (12023): Found entity 1: altsyncram_hlb2 File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/altsyncram_hlb2.tdf Line: 34
-Info (12128): Elaborating entity "altsyncram_hlb2" for hierarchy "p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|altsyncram_hlb2:altsyncram1" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/altsyncram_q6k1.tdf Line: 37
-Warning (113028): 32762 out of 32768 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported. File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/program_memory.mif Line: 1
-    Warning (113027): Addresses ranging from 6 to 32767 are not initialized File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/program_memory.mif Line: 1
+    Info (12023): Found entity 1: altsyncram_hlb2 File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/altsyncram_hlb2.tdf Line: 34
+Info (12128): Elaborating entity "altsyncram_hlb2" for hierarchy "p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|altsyncram_hlb2:altsyncram1" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/altsyncram_q6k1.tdf Line: 37
+Warning (113028): 32762 out of 32768 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported. File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/program_memory.mif Line: 1
+    Warning (113027): Addresses ranging from 6 to 32767 are not initialized File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/program_memory.mif Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_msa.tdf
-    Info (12023): Found entity 1: decode_msa File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/decode_msa.tdf Line: 23
-Info (12128): Elaborating entity "decode_msa" for hierarchy "p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|altsyncram_hlb2:altsyncram1|decode_msa:decode4" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/altsyncram_hlb2.tdf Line: 50
+    Info (12023): Found entity 1: decode_msa File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/decode_msa.tdf Line: 23
+Info (12128): Elaborating entity "decode_msa" for hierarchy "p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|altsyncram_hlb2:altsyncram1|decode_msa:decode4" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/altsyncram_hlb2.tdf Line: 50
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_f8a.tdf
-    Info (12023): Found entity 1: decode_f8a File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/decode_f8a.tdf Line: 23
-Info (12128): Elaborating entity "decode_f8a" for hierarchy "p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|altsyncram_hlb2:altsyncram1|decode_f8a:rden_decode_a" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/altsyncram_hlb2.tdf Line: 52
+    Info (12023): Found entity 1: decode_f8a File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/decode_f8a.tdf Line: 23
+Info (12128): Elaborating entity "decode_f8a" for hierarchy "p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|altsyncram_hlb2:altsyncram1|decode_f8a:rden_decode_a" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/altsyncram_hlb2.tdf Line: 52
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_lob.tdf
-    Info (12023): Found entity 1: mux_lob File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/mux_lob.tdf Line: 23
-Info (12128): Elaborating entity "mux_lob" for hierarchy "p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|altsyncram_hlb2:altsyncram1|mux_lob:mux6" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/altsyncram_hlb2.tdf Line: 54
-Info (12128): Elaborating entity "sld_mod_ram_rom" for hierarchy "p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/altsyncram_q6k1.tdf Line: 38
-Info (12130): Elaborated megafunction instantiation "p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/altsyncram_q6k1.tdf Line: 38
-Info (12133): Instantiated megafunction "p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|sld_mod_ram_rom:mgl_prim2" with the following parameter: File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/altsyncram_q6k1.tdf Line: 38
+    Info (12023): Found entity 1: mux_lob File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/mux_lob.tdf Line: 23
+Info (12128): Elaborating entity "mux_lob" for hierarchy "p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|altsyncram_hlb2:altsyncram1|mux_lob:mux6" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/altsyncram_hlb2.tdf Line: 54
+Info (12128): Elaborating entity "sld_mod_ram_rom" for hierarchy "p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/altsyncram_q6k1.tdf Line: 38
+Info (12130): Elaborated megafunction instantiation "p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/altsyncram_q6k1.tdf Line: 38
+Info (12133): Instantiated megafunction "p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|sld_mod_ram_rom:mgl_prim2" with the following parameter: File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/altsyncram_q6k1.tdf Line: 38
     Info (12134): Parameter "CVALUE" = "0000000000000000"
     Info (12134): Parameter "IS_DATA_IN_RAM" = "1"
     Info (12134): Parameter "IS_READABLE" = "1"
@@ -806,50 +987,99 @@ Info (12133): Instantiated megafunction "p_ram:pram|altsyncram:altsyncram_compon
 Info (12128): Elaborating entity "sld_jtag_endpoint_adapter" for hierarchy "p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 302
 Info (12128): Elaborating entity "sld_jtag_endpoint_adapter_impl" for hierarchy "p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd Line: 232
 Info (12128): Elaborating entity "sld_rom_sr" for hierarchy "p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 828
-Info (12128): Elaborating entity "decode_stage" for hierarchy "decode_stage:decode" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 148
-Warning (10230): Verilog HDL assignment warning at decode_stage.sv(450): truncated value with size 4 to match size of target (1) File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/decode_stage.sv Line: 450
-Info (12128): Elaborating entity "pipeline_registers" for hierarchy "pipeline_registers:pipeline" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 201
-Warning (10034): Output port "p_reg" at pipeline_registers.sv(35) has no driver File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/pipeline_registers.sv Line: 35
+Info (12128): Elaborating entity "memory_access_d_ram" for hierarchy "memory_access_d_ram:dram_control_inst" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv Line: 178
+Warning (10230): Verilog HDL assignment warning at memory_access_d_ram.sv(70): truncated value with size 17 to match size of target (16) File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/memory_access_d_ram.sv Line: 70
+Warning (10230): Verilog HDL assignment warning at memory_access_d_ram.sv(82): truncated value with size 17 to match size of target (16) File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/memory_access_d_ram.sv Line: 82
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gprc" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gprc" into its bus
+Info (12128): Elaborating entity "d_ram" for hierarchy "d_ram:dram" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv Line: 190
+Info (12128): Elaborating entity "altsyncram" for hierarchy "d_ram:dram|altsyncram:altsyncram_component" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/d_ram.v Line: 86
+Info (12130): Elaborated megafunction instantiation "d_ram:dram|altsyncram:altsyncram_component" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/d_ram.v Line: 86
+Info (12133): Instantiated megafunction "d_ram:dram|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/d_ram.v Line: 86
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "data_memory.mif"
+    Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=YES,INSTANCE_NAME=dram"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "32768"
+    Info (12134): Parameter "operation_mode" = "SINGLE_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "DONT_CARE"
+    Info (12134): Parameter "widthad_a" = "15"
+    Info (12134): Parameter "width_a" = "16"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_grj1.tdf
+    Info (12023): Found entity 1: altsyncram_grj1 File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/altsyncram_grj1.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_grj1" for hierarchy "d_ram:dram|altsyncram:altsyncram_component|altsyncram_grj1:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_jab2.tdf
+    Info (12023): Found entity 1: altsyncram_jab2 File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/altsyncram_jab2.tdf Line: 34
+Info (12128): Elaborating entity "altsyncram_jab2" for hierarchy "d_ram:dram|altsyncram:altsyncram_component|altsyncram_grj1:auto_generated|altsyncram_jab2:altsyncram1" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/altsyncram_grj1.tdf Line: 37
+Warning (113028): 32762 out of 32768 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported. File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/data_memory.mif Line: 1
+    Warning (113027): Addresses ranging from 6 to 32767 are not initialized File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/data_memory.mif Line: 1
+Info (12128): Elaborating entity "sld_mod_ram_rom" for hierarchy "d_ram:dram|altsyncram:altsyncram_component|altsyncram_grj1:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/altsyncram_grj1.tdf Line: 38
+Info (12130): Elaborated megafunction instantiation "d_ram:dram|altsyncram:altsyncram_component|altsyncram_grj1:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/altsyncram_grj1.tdf Line: 38
+Info (12133): Instantiated megafunction "d_ram:dram|altsyncram:altsyncram_component|altsyncram_grj1:auto_generated|sld_mod_ram_rom:mgl_prim2" with the following parameter: File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/altsyncram_grj1.tdf Line: 38
+    Info (12134): Parameter "CVALUE" = "0000000000000000"
+    Info (12134): Parameter "IS_DATA_IN_RAM" = "1"
+    Info (12134): Parameter "IS_READABLE" = "1"
+    Info (12134): Parameter "NODE_NAME" = "1685217645"
+    Info (12134): Parameter "NUMWORDS" = "32768"
+    Info (12134): Parameter "SHIFT_COUNT_BITS" = "5"
+    Info (12134): Parameter "WIDTH_WORD" = "16"
+    Info (12134): Parameter "WIDTHAD" = "15"
+Info (12128): Elaborating entity "decode_stage" for hierarchy "decode_stage:decode" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv Line: 219
+Warning (10230): Verilog HDL assignment warning at decode_stage.sv(432): truncated value with size 4 to match size of target (1) File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/decode_stage.sv Line: 432
+Info (12128): Elaborating entity "pipeline_registers" for hierarchy "pipeline_registers:pipeline" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv Line: 283
+Warning (10034): Output port "p_reg" at pipeline_registers.sv(38) has no driver File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/pipeline_registers.sv Line: 38
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gprc_o" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gprc_i" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gprc_o" into its bus
-Info (12128): Elaborating entity "pipeline_controller" for hierarchy "pipeline_controller:controller" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 221
-Info (12128): Elaborating entity "regnum_to_values_to_alu" for hierarchy "regnum_to_values_to_alu:regnum_inst" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 234
+Info (12128): Elaborating entity "pipeline_controller" for hierarchy "pipeline_controller:controller" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv Line: 303
+Info (12128): Elaborating entity "regnum_to_values_to_alu" for hierarchy "regnum_to_values_to_alu:regnum_inst" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv Line: 316
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gprc" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gprc" into its bus
-Info (12128): Elaborating entity "alu" for hierarchy "alu:alu_inst" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 249
-Info (12128): Elaborating entity "alu_AND" for hierarchy "alu:alu_inst|alu_AND:and_op" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu.sv Line: 39
-Info (12128): Elaborating entity "alu_OR" for hierarchy "alu:alu_inst|alu_OR:or_op" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu.sv Line: 40
-Info (12128): Elaborating entity "alu_XOR" for hierarchy "alu:alu_inst|alu_XOR:xor_op" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu.sv Line: 41
-Info (12128): Elaborating entity "alu_BIT" for hierarchy "alu:alu_inst|alu_BIT:bit_op" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu.sv Line: 43
-Warning (10230): Verilog HDL assignment warning at alu_BIT.sv(7): truncated value with size 32 to match size of target (16) File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_BIT.sv Line: 7
-Info (12128): Elaborating entity "alu_BIC" for hierarchy "alu:alu_inst|alu_BIC:bic_op" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu.sv Line: 44
-Warning (10230): Verilog HDL assignment warning at alu_BIC.sv(7): truncated value with size 32 to match size of target (16) File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_BIC.sv Line: 7
-Info (12128): Elaborating entity "alu_BIS" for hierarchy "alu:alu_inst|alu_BIS:bis_op" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu.sv Line: 45
-Warning (10230): Verilog HDL assignment warning at alu_BIS.sv(7): truncated value with size 32 to match size of target (16) File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_BIS.sv Line: 7
-Info (12128): Elaborating entity "alu_ADD" for hierarchy "alu:alu_inst|alu_ADD:add_op" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu.sv Line: 47
-Warning (10036): Verilog HDL or VHDL warning at alu_ADD.sv(12): object "carry_out" assigned a value but never read File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_ADD.sv Line: 12
-Info (12128): Elaborating entity "alu_SUB" for hierarchy "alu:alu_inst|alu_SUB:sub_op" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu.sv Line: 48
-Warning (10036): Verilog HDL or VHDL warning at alu_SUB.sv(12): object "carry_out" assigned a value but never read File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_SUB.sv Line: 12
-Info (12128): Elaborating entity "alu_ADDC" for hierarchy "alu:alu_inst|alu_ADDC:addc_op" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu.sv Line: 49
-Warning (10036): Verilog HDL or VHDL warning at alu_ADDC.sv(14): object "carry_out" assigned a value but never read File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_ADDC.sv Line: 14
-Info (12128): Elaborating entity "alu_SUBC" for hierarchy "alu:alu_inst|alu_SUBC:subc_op" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu.sv Line: 50
-Warning (10036): Verilog HDL or VHDL warning at alu_SUBC.sv(14): object "carry_out" assigned a value but never read File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_SUBC.sv Line: 14
-Info (12128): Elaborating entity "alu_DADD" for hierarchy "alu:alu_inst|alu_DADD:dadd_op" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu.sv Line: 51
-Warning (10036): Verilog HDL or VHDL warning at alu_DADD.sv(48): object "carry_out" assigned a value but never read File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_DADD.sv Line: 48
-Info (12128): Elaborating entity "alu_MOV" for hierarchy "alu:alu_inst|alu_MOV:mov_op" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu.sv Line: 53
-Info (12128): Elaborating entity "alu_SRA" for hierarchy "alu:alu_inst|alu_SRA:sra_op" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu.sv Line: 55
-Warning (10230): Verilog HDL assignment warning at alu_SRA.sv(5): truncated value with size 17 to match size of target (16) File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_SRA.sv Line: 5
-Info (12128): Elaborating entity "alu_RRC" for hierarchy "alu:alu_inst|alu_RRC:rrc_op" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu.sv Line: 56
-Info (12128): Elaborating entity "alu_COMP" for hierarchy "alu:alu_inst|alu_COMP:comp_op" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu.sv Line: 57
-Info (12128): Elaborating entity "alu_SWPB" for hierarchy "alu:alu_inst|alu_SWPB:swpb_op" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu.sv Line: 58
-Info (12128): Elaborating entity "alu_SXT" for hierarchy "alu:alu_inst|alu_SXT:sxt_op" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu.sv Line: 59
-Info (12128): Elaborating entity "branch" for hierarchy "branch:branch_inst" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 267
-Info (12128): Elaborating entity "update_psw" for hierarchy "update_psw:update_psw_inst" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 293
+Info (12128): Elaborating entity "alu" for hierarchy "alu:alu_inst" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv Line: 331
+Info (12128): Elaborating entity "alu_AND" for hierarchy "alu:alu_inst|alu_AND:and_op" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu.sv Line: 39
+Info (12128): Elaborating entity "alu_OR" for hierarchy "alu:alu_inst|alu_OR:or_op" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu.sv Line: 40
+Info (12128): Elaborating entity "alu_XOR" for hierarchy "alu:alu_inst|alu_XOR:xor_op" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu.sv Line: 41
+Info (12128): Elaborating entity "alu_BIT" for hierarchy "alu:alu_inst|alu_BIT:bit_op" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu.sv Line: 43
+Warning (10230): Verilog HDL assignment warning at alu_BIT.sv(7): truncated value with size 32 to match size of target (16) File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_BIT.sv Line: 7
+Info (12128): Elaborating entity "alu_BIC" for hierarchy "alu:alu_inst|alu_BIC:bic_op" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu.sv Line: 44
+Warning (10230): Verilog HDL assignment warning at alu_BIC.sv(7): truncated value with size 32 to match size of target (16) File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_BIC.sv Line: 7
+Info (12128): Elaborating entity "alu_BIS" for hierarchy "alu:alu_inst|alu_BIS:bis_op" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu.sv Line: 45
+Warning (10230): Verilog HDL assignment warning at alu_BIS.sv(7): truncated value with size 32 to match size of target (16) File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_BIS.sv Line: 7
+Info (12128): Elaborating entity "alu_ADD" for hierarchy "alu:alu_inst|alu_ADD:add_op" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu.sv Line: 47
+Warning (10036): Verilog HDL or VHDL warning at alu_ADD.sv(12): object "carry_out" assigned a value but never read File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_ADD.sv Line: 12
+Info (12128): Elaborating entity "alu_SUB" for hierarchy "alu:alu_inst|alu_SUB:sub_op" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu.sv Line: 48
+Warning (10036): Verilog HDL or VHDL warning at alu_SUB.sv(12): object "carry_out" assigned a value but never read File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_SUB.sv Line: 12
+Info (12128): Elaborating entity "alu_ADDC" for hierarchy "alu:alu_inst|alu_ADDC:addc_op" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu.sv Line: 49
+Warning (10036): Verilog HDL or VHDL warning at alu_ADDC.sv(14): object "carry_out" assigned a value but never read File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_ADDC.sv Line: 14
+Info (12128): Elaborating entity "alu_SUBC" for hierarchy "alu:alu_inst|alu_SUBC:subc_op" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu.sv Line: 50
+Warning (10036): Verilog HDL or VHDL warning at alu_SUBC.sv(14): object "carry_out" assigned a value but never read File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_SUBC.sv Line: 14
+Info (12128): Elaborating entity "alu_DADD" for hierarchy "alu:alu_inst|alu_DADD:dadd_op" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu.sv Line: 51
+Warning (10036): Verilog HDL or VHDL warning at alu_DADD.sv(48): object "carry_out" assigned a value but never read File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_DADD.sv Line: 48
+Info (12128): Elaborating entity "alu_MOV" for hierarchy "alu:alu_inst|alu_MOV:mov_op" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu.sv Line: 53
+Info (12128): Elaborating entity "alu_SRA" for hierarchy "alu:alu_inst|alu_SRA:sra_op" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu.sv Line: 55
+Warning (10230): Verilog HDL assignment warning at alu_SRA.sv(5): truncated value with size 17 to match size of target (16) File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_SRA.sv Line: 5
+Info (12128): Elaborating entity "alu_RRC" for hierarchy "alu:alu_inst|alu_RRC:rrc_op" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu.sv Line: 56
+Info (12128): Elaborating entity "alu_COMP" for hierarchy "alu:alu_inst|alu_COMP:comp_op" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu.sv Line: 57
+Info (12128): Elaborating entity "alu_SWPB" for hierarchy "alu:alu_inst|alu_SWPB:swpb_op" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu.sv Line: 58
+Info (12128): Elaborating entity "alu_SXT" for hierarchy "alu:alu_inst|alu_SXT:sxt_op" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu.sv Line: 59
+Info (12128): Elaborating entity "branch" for hierarchy "branch:branch_inst" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv Line: 350
+Info (12128): Elaborating entity "go_to_LR" for hierarchy "go_to_LR:go_to_LR_inst" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv Line: 361
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gprc" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gprc" into its bus
+Info (12128): Elaborating entity "moves" for hierarchy "moves:moves_inst" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv Line: 373
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gprc" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gprc" into its bus
+Info (12128): Elaborating entity "update_psw" for hierarchy "update_psw:update_psw_inst" File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv Line: 399
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "carry_arr" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "overflow_arr" into its bus
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2024.10.27.20:25:44 Progress: Loading sld928a91a1/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2024.11.12.19:45:06 Progress: Loading sld928a91a1/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -860,39 +1090,39 @@ Info (11172): Ident: "alt_sld_fab" instantiated altera_connection_identification
 Info (11172): Alt_sld_fab: Done "alt_sld_fab" with 6 modules, 6 files
 Info (11171): Finished IP generation for the debug fabric: alt_sld_fab.
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld928a91a1/alt_sld_fab.v
-    Info (12023): Found entity 1: alt_sld_fab File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/ip/sld928a91a1/alt_sld_fab.v Line: 9
+    Info (12023): Found entity 1: alt_sld_fab File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/ip/sld928a91a1/alt_sld_fab.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab.v
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab.v Line: 9
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_ident.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_ident File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_ident.sv Line: 33
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_ident File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_ident.sv Line: 33
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_presplit.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_presplit File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_presplit.sv Line: 3
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_presplit File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_presplit.sv Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd
-    Info (12022): Found design unit 1: alt_sld_fab_alt_sld_fab_sldfabric-rtl File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 102
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
+    Info (12022): Found design unit 1: alt_sld_fab_alt_sld_fab_sldfabric-rtl File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 142
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_splitter.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
-Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
+Warning (12241): 5 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
 Info (17049): 3 registers lost all their fanouts during netlist optimizations.
-Info (144001): Generated suppressed messages file C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/output_files/XM23.map.smsg
+Info (144001): Generated suppressed messages file C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/output_files/XM23.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1651 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2510 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 2 output pins
-    Info (21061): Implemented 1579 logic cells
-    Info (21064): Implemented 64 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 21 warnings
-    Info: Peak virtual memory: 4907 megabytes
-    Info: Processing ended: Sun Oct 27 20:26:05 2024
-    Info: Elapsed time: 00:00:31
-    Info: Total CPU time (on all processors): 00:00:26
+    Info (21061): Implemented 2374 logic cells
+    Info (21064): Implemented 128 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 29 warnings
+    Info: Peak virtual memory: 4922 megabytes
+    Info: Processing ended: Tue Nov 12 19:45:28 2024
+    Info: Elapsed time: 00:00:30
+    Info: Total CPU time (on all processors): 00:00:20
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/output_files/XM23.map.smsg.
+The suppressed messages can be found in C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/output_files/XM23.map.smsg.
 
 

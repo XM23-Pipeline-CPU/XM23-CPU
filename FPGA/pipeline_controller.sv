@@ -1,5 +1,6 @@
 /*---------------------------------------------*\
-|	Pipeline Controller - Author: Vlad Chiriac	|
+|	Pipeline Controller - Author: Vlad Chiriac   |
+|                              & Roee Omessi    |
 |	Module contains logic for: 						|
 | 		- Simple branch prediction						|
 | 		- RAW hazard prevention							|
@@ -43,18 +44,10 @@ module pipeline_controller (
 	input logic PSW_in,				
 	output logic [15:0] PC_next,
 	output logic [15:0] LBPC,			// PC to revert if needed (at exec)
-	output logic [15:0] LBPSW,			// PSW to revert if needed (at exec)
+	output logic [15:0] LBPSW			// PSW to revert if needed (at exec)
 	
 	//------------------------------------------------------------------------
 	
-	// For testing -----------------------------------------------------------
-	
-	input logic [1:0] display_stage,	//	async_set_from_decode:0b00
-												//	stage_3_dep:0b01
-												//	stage_4_dep:0b10
-	output logic [7:0] led      		// 8 LEDs for the output
-	
-	//------------------------------------------------------------------------
 );
 	// RAW hazard prevention Impl --------------------------------------------
 	
@@ -111,14 +104,4 @@ module pipeline_controller (
 	
 	//------------------------------------------------------------------------
 	
-
-	
-	// Debugging LEDs --------------------------------------------------------
-	
-	assign led = (display_stage == 2'b00) ? async_set_from_decode :
-                (display_stage == 2'b01) ? stage_3_dep :
-                (display_stage == 2'b10) ? stage_4_dep :
-					 8'b00000000;	// Invalid
-					 
-	//------------------------------------------------------------------------
 endmodule

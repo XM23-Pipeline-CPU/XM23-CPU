@@ -1,10 +1,18 @@
+/*---------------------------------------------*\
+|	Pipeline Controller - Author: Vlad Chiriac   |
+|                              & Roee Omessi    |
+|	Module contains logic for: 						|
+| 		- Undoing incorrect branches              |
+| 		- Setting the Link Register               |
+\*---------------------------------------------*/
+
 module branch (
-	input logic clk,					// Clock for storing LR
-	input logic [40:0] enable,		// Model Select
-	input logic [15:0] PSW_in,		// Input PSW
-	input logic [15:0] LBPC_in,	// LBPC (for setting link register for BL)
+	input logic clk,					   // Clock for storing LR
+	input logic [40:0] enable,		   // Mode Select
+	input logic [15:0] PSW_in,		   // Input PSW
+	input logic [15:0] LBPC_in,	   // LBPC (for setting link register for BL)
 	output logic branch_fail_o = 0,	// Output if the branch should not take place
-	output logic [15:0] LR_o		// Link Register (not general purpose)
+	output logic [15:0] LR_o		   // Link Register (not general purpose)
 	
 );
 	// PSW bits

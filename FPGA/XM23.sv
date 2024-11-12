@@ -1,28 +1,42 @@
-module XM23 (
-    input wire clk_in,    // Input clk (50 MHz from the FPGA)
-    input wire reset,       // Reset signal
-    output reg led          // LED output (blinking to confirm clk)
-);
-	reg clk = 0;       // This is the global clk for other modules (except memory which will take 50MHz)
-	reg [31:0] counter = 0;
-	parameter DIVIDER = 2;  // Divides 50 MHz clk to desired speed (DIVIDER+1 = number of edges until flip)
+/*-------------------------------------------------*\
+|	XM23 - Top Level Module - Author: Vlad Chiriac   |
+|                                  & Roee Omessi    |
+|	Module contains logic for: 						    |
+| 		- Connecting all submodules						 |
+\*-------------------------------------------------*/
 
-	// clk divider logic
+module XM23 (
+    input wire clk_in,     // Input clk (50 MHz from the FPGA)
+    input wire reset,      // Reset signal
+    output reg led         // LED output (blinking to confirm clk)
+);
+	
+	// Clock division logic -----------------------------------------------------------------------
+
+	reg clk = 0;            // This is the global clk for other modules 
+									// (except memory which will take 50MHz)
+	
+	reg [31:0] counter = 0;
+	parameter DIVIDER = 2;  // Divides 50 MHz clk to desired speed 
+	                        // (DIVIDER+1 = number of edges until flip)
+	
 	always @(posedge clk_in or posedge reset) begin
 	  if (reset) begin
 			counter <= 0;
 			clk <= 0;
 			led <= 0;
 	  end else if (counter == (DIVIDER - 1)) begin
-			clk <= ~clk;  // Toggle the clk output
+			clk <= ~clk;      // Toggle the clk output
 			led <= ~led;      // Toggle the LED (LED will blink)
 			counter <= 0;     // Reset the counter
 	  end else begin
 			counter <= counter + 1;
 	  end
 	end
-
-	// Declare wires for connections between modules
+	
+	// --------------------------------------------------------------------------------------------
+	
+	// Declare wires for connections between modules ----------------------------------------------
 	
 	// Reg/Wires for fetching from memory
 	wire [15:0] PC_wire;
@@ -30,6 +44,12 @@ module XM23 (
 	wire [15:0] LBPC_wire;
 	wire [15:0] inst_wire;
 	
+	// Wires for data memory access
+	wire [15:0] dram_address_wire;
+	wire [15:0] dram_write_enable_wire;
+	wire [15:0] dram_data_in_wire;
+	wire [15:0] dram_data_out_wire;
+
 	// Wire for failed branch prediction
 	wire branch_predict_fail_wire;
 	
@@ -63,6 +83,9 @@ module XM23 (
 
 	// Wires from pipeline_controller to pipeline_registers
 	wire [7:0]   stall_wire;
+	
+	// Wire to clear the pipeline registers for links
+	wire         clear_pipeline_LR_wire;
 
 	// Wires from alu_inst
 	wire [15:0]  alu_result_wire;    
@@ -94,6 +117,19 @@ module XM23 (
 	wire [2:0] C_o_wire;
 	wire [2:0] V_o_wire;
 	
+	// Wire from pipeline registers to get BBBBBBBB bytes for MOVL/MOVLZ/MOVLS/MOVH instructions
+	wire [2:0][7:0] B_o_wire;
+	
+	// Wires for pre/post increment/decrement and relative load/store
+	wire PRPO_o_wire;
+	wire DEC_o_wire;
+	wire INC_o_wire;
+	wire [2:0][12:0] OFF_o_wire;
+	
+	// --------------------------------------------------------------------------------------------
+	
+	// Connections between modules ----------------------------------------------------------------
+	
 	// Program_counter
 	program_counter pcounter(
 		// INPUT FROM CONTROLLER
@@ -101,21 +137,56 @@ module XM23 (
 		.LBPC(LBPC_wire),
 		.clk(clk),
 		.stall_in(stall_wire),
+		.link_back(),
 		
 		// INPUT FROM BRANCH INSTRUCTIONS
 		.branch_fail(branch_predict_fail_wire),
 		
 		// OUTPUT PC
-		.true_PC(PC_wire)
+		.true_PC(PC_wire),
 	);
 	
 	// fetch from program ram
 	p_ram pram(
+		// INPUT FROM TOP LEVEL
 		.clock(clk_in),
 		.address(PC_wire[15:1]),
 		.data(16'b0),	// Never writing
 		.wren(1'b0),	// ...
+		
+		// OUTPUT TO DECODE
 		.q(inst_wire)
+	);
+	
+	// control for the data memory
+	memory_access_d_ram dram_control_inst(
+		// INPUTS FROM PIPELINE REGISTERS
+		.enable(enable_o_wire),
+		.gprc(gprc_o_wire),
+		.src_i(S_o_wire),
+		.dst_i(D_o_wire),
+		.pre(PRPO_o_wire),
+		.inc(INC_o_wire),
+		.dec(DEC_o_wire),
+		.off(OFF_o_wire),
+		
+		// OUTPUT TO DRAM
+
+		.write_enable(dram_write_enable_wire),
+		.output_address(dram_address_wire),
+		.output_data(dram_data_in_wire)
+	);
+	
+	// data memory instantiation
+	d_ram dram(
+		// INPUT FROM TOP LEVEL
+		.clock(clk_in),
+		.address(dram_address_wire),
+		.data(dram_data_in_wire),
+		.wren(dram_write_enable_wire),
+		
+		// OUTPUT TO MEMORY ACCESS
+		.q(dram_data_out_wire)
 	);
 
 	// instructions are fed here from fetch
@@ -173,6 +244,9 @@ module XM23 (
 		.B(B_wire),
 		.enable(enable_wire),
 		
+		// INPUT FROM MEMORY ACCESS
+		.mem_access_result(dram_data_out_wire),
+		
 		// INPUTS FROM ALU
 		.alu_result(alu_result_wire),
 		
@@ -185,6 +259,9 @@ module XM23 (
 		
 		// INPUT FROM PIPELINE CONTROLLER
 		.stall_in(stall_wire),
+		
+		// INPUT FROM LR control and branch fail
+		.clear_in(clear_pipeline_LR_wire || branch_predict_fail_wire),
 
 		// OUTPUTS
 		.gprc_o(gprc_o_wire),
@@ -197,7 +274,12 @@ module XM23 (
 		.N_o(N_o_wire),
 		.Z_o(Z_o_wire),
 		.C_o(C_o_wire),
-		.V_o(V_o_wire)
+		.V_o(V_o_wire),
+		.B_o(B_o_wire),
+		.PRPO_o(PRPO_o_wire),
+		.DEC_o(DEC_o_wire),
+		.INC_o(INC_o_wire),
+		.OFF_o(OFF_o_wire)
 	);
 	
 	// takes dependency decisions from decoder
@@ -248,6 +330,7 @@ module XM23 (
 		.enable_psw_msk(enable_psw_msk_wire)
 	);
 	
+	// Branching instructions
 	branch branch_inst(
 		// INPUT FROM TOPLEVEL
 		.clk(clk),
@@ -264,6 +347,29 @@ module XM23 (
 		
 		// OUTPUT LR
 		.LR_o(LR_wire)
+	);
+	
+	go_to_LR go_to_LR_inst(
+		// INPUTS FROM PIPELINE REGISTERS
+		.enable(enable_o_wire[0]),
+		
+		// INPUT FROM BRANCHING INSTRUCTIONS LR
+		.LR_i(LR_wire),
+		
+		// OUTPUT TO PC
+		.link_back_o(clear_pipeline_wire),
+	);
+	
+	// module to do the MOVL/MOVLZ/MOVLS/MOVH instructions
+	moves moves_inst(
+		// INPUT FROM PIPELINE REGISTERS
+		.enable(enable_o_wire[1]),
+		.gprc(gprc_o_wire),
+		.dst_i(D_o_wire),
+		.b_i(B_o_wire),
+	
+		// OUTPUT TO PIPELINE REGISTERS
+		.result(moves_result_wire)
 	);
 	
 	// module to update the psw after alu
@@ -291,7 +397,7 @@ module XM23 (
 		.psw_out(psw_out_wire),
 		.psw_msk(psw_mask_wire)
 	);
+	
+	// --------------------------------------------------------------------------------------------
 		
-		
-
 endmodule

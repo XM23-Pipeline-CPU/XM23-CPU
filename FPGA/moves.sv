@@ -10,7 +10,7 @@ module moves (
 	// Mode Select Logic
 	always_comb begin
 		if (enable[35] == 1'b1) begin //MOVL
-			result[15:8] = gprc[0][dst_i][15:8];
+			result[15:8] = gprc[0][dst_i[0]][15:8];
 			result[7:0] = b_i;
 		end else if (enable[36] == 1'b1) begin //MOVLZ
 			result[15:8] = 8'b0;
@@ -20,7 +20,9 @@ module moves (
 			result[7:0] = b_i;
 		end else if (enable[38] == 1'b1) begin //MOVH
 			result[15:8] = b_i;
-			result[7:0] = gprc[0][dst_i][7:0];
+			result[7:0] = gprc[0][dst_i[0]][7:0];
+		end else begin
+			result[15:0] = 16'b0;
 		end
 	end
 	

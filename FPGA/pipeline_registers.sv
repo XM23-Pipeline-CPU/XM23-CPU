@@ -5,6 +5,9 @@ module pipeline_registers(
 	 // Stalling input (if any bit is set then stall)
 	 input logic [7:0] stall_in,
 	 
+	 // Clear pipeline
+	 input logic       clear_in,
+	 
 	 // Actual Instruction Registers input (need to update top level to actually use this)
 	 input logic [15:0] fetch_in,
 	 
@@ -120,8 +123,13 @@ module pipeline_registers(
 	
     // Shift register logic
     always_ff @(posedge clk) begin
+		  // If pipeline needs to be cleared
+        if (clear_in) begin
+		  
+				 enable_i[0] <= enable;
+				 
 		  // Bubble insertion if pipeline controller and decoder found stall dependancies
-		  if (!(|stall_in)) begin 
+		  end else if (!(|stall_in)) begin 
 				 
 				 // If no stall propagate decode info
 		       WB_i[0] <= WB;
@@ -205,7 +213,16 @@ module pipeline_registers(
 				// Memory access result from one clock cycle ago goes into correct register
 				// Correct register is defined by decode from three clock cycles ago
 				gprc_i[SELECT_REG][D_i[2]] <= mem_access_result_i;
+				
 		  end
+		  
+		  // Deal with increment/decrement (LD AND ST ONLY)
+		  if (enable_i[2][33]) begin
+           gprc_i[SELECT_REG][S_i[2]] <= gprc_i[SELECT_REG][S_i[2]] + (({15'b0, INC_i[2]} - {15'b0, DEC_i[2]}) << 1);
+		  end else if (enable_i[2][34]) begin
+			  gprc_i[SELECT_REG][D_i[2]] <= gprc_i[SELECT_REG][S_i[2]] + (({15'b0, INC_i[2]} - {15'b0, DEC_i[2]}) << 1);
+		  end
+		  
     end
 
     // Assign outputs from internal signals

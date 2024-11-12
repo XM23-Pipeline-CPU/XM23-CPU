@@ -6,6 +6,7 @@ vlib rtl_work
 vmap work rtl_work
 
 vlog -vlog01compat -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/p_ram.v}
+vlog -vlog01compat -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/d_ram.v}
 vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/branch.sv}
 vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/regnum_to_values_to_alu.sv}
 vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/decode_stage.sv}
@@ -26,4 +27,12 @@ vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {
 vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_SUBC.sv}
 vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/update_psw.sv}
 vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/program_counter.sv}
+vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/moves.sv}
+vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_MOV.sv}
+vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_SRA.sv}
+vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_RRC.sv}
+vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_COMP.sv}
+vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_SWPB.sv}
+vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_SXT.sv}
+vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/memory_access_d_ram.sv}
 

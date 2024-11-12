@@ -1,6 +1,8 @@
 module program_counter (
 	input logic [15:0] PC_next,
 	input logic [15:0] LBPC,
+	input logic [15:0] LR,
+	input logic        link_back,
 	input logic        branch_fail,
 	input logic        clk,
 	input logic [7:0]  stall_in,
@@ -12,7 +14,12 @@ module program_counter (
 			// Do nothing
 		end else if (branch_fail) begin
 			true_PC <= LBPC;
-			// Also clear pipeline (tbd)
+			// Also clear pipeline 
+			
+		end else if (link_back)	begin 
+			true_PC <= LR;
+			// Also clear pipeline 
+			
 		end else begin
 			true_PC <= PC_next;
 		end

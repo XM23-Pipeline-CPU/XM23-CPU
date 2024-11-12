@@ -1,4 +1,5 @@
 # Reading pref.tcl
+# Load canceled
 # do XM23_run_msim_rtl_verilog.do
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
@@ -12,27 +13,37 @@
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/p_ram.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:52:47 on Oct 27,2024
+# Start time: 15:45:36 on Nov 12,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/p_ram.v 
 # -- Compiling module p_ram
 # 
 # Top level modules:
 # 	p_ram
-# End time: 16:52:48 on Oct 27,2024, Elapsed time: 0:00:01
+# End time: 15:45:36 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/d_ram.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:45:36 on Nov 12,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/d_ram.v 
+# -- Compiling module d_ram
+# 
+# Top level modules:
+# 	d_ram
+# End time: 15:45:36 on Nov 12,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/branch.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:52:48 on Oct 27,2024
+# Start time: 15:45:36 on Nov 12,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/branch.sv 
 # -- Compiling module branch
 # 
 # Top level modules:
 # 	branch
-# End time: 16:52:48 on Oct 27,2024, Elapsed time: 0:00:00
+# End time: 15:45:36 on Nov 12,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/regnum_to_values_to_alu.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:52:48 on Oct 27,2024
+# Start time: 15:45:36 on Nov 12,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/regnum_to_values_to_alu.sv 
 # -- Compiling module regnum_to_values_to_alu
 # ** Warning: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/regnum_to_values_to_alu.sv(4): (vlog-13314) Defaulting port 'gprc' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
@@ -41,198 +52,271 @@
 # 
 # Top level modules:
 # 	regnum_to_values_to_alu
-# End time: 16:52:48 on Oct 27,2024, Elapsed time: 0:00:00
+# End time: 15:45:36 on Nov 12,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 3
 # vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/decode_stage.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:52:48 on Oct 27,2024
+# Start time: 15:45:36 on Nov 12,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/decode_stage.sv 
 # -- Compiling module decode_stage
 # ** Warning: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/decode_stage.sv(90): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
 # 
 # Top level modules:
 # 	decode_stage
-# End time: 16:52:48 on Oct 27,2024, Elapsed time: 0:00:00
+# End time: 15:45:36 on Nov 12,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 1
 # vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/pipeline_registers.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:52:48 on Oct 27,2024
+# Start time: 15:45:36 on Nov 12,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/pipeline_registers.sv 
 # -- Compiling module pipeline_registers
 # 
 # Top level modules:
 # 	pipeline_registers
-# End time: 16:52:48 on Oct 27,2024, Elapsed time: 0:00:00
+# End time: 15:45:36 on Nov 12,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/pipeline_controller.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:52:48 on Oct 27,2024
+# Start time: 15:45:36 on Nov 12,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/pipeline_controller.sv 
 # -- Compiling module pipeline_controller
 # 
 # Top level modules:
 # 	pipeline_controller
-# End time: 16:52:48 on Oct 27,2024, Elapsed time: 0:00:00
+# End time: 15:45:37 on Nov 12,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_XOR.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:52:48 on Oct 27,2024
+# Start time: 15:45:37 on Nov 12,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_XOR.sv 
 # -- Compiling module alu_XOR
 # 
 # Top level modules:
 # 	alu_XOR
-# End time: 16:52:48 on Oct 27,2024, Elapsed time: 0:00:00
+# End time: 15:45:37 on Nov 12,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_SUB.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:52:48 on Oct 27,2024
+# Start time: 15:45:37 on Nov 12,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_SUB.sv 
 # -- Compiling module alu_SUB
 # 
 # Top level modules:
 # 	alu_SUB
-# End time: 16:52:48 on Oct 27,2024, Elapsed time: 0:00:00
+# End time: 15:45:37 on Nov 12,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_OR.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:52:48 on Oct 27,2024
+# Start time: 15:45:37 on Nov 12,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_OR.sv 
 # -- Compiling module alu_OR
 # 
 # Top level modules:
 # 	alu_OR
-# End time: 16:52:49 on Oct 27,2024, Elapsed time: 0:00:01
+# End time: 15:45:37 on Nov 12,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_DADD.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:52:49 on Oct 27,2024
+# Start time: 15:45:37 on Nov 12,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_DADD.sv 
 # -- Compiling module alu_DADD
 # 
 # Top level modules:
 # 	alu_DADD
-# End time: 16:52:49 on Oct 27,2024, Elapsed time: 0:00:00
+# End time: 15:45:37 on Nov 12,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_BIT.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:52:49 on Oct 27,2024
+# Start time: 15:45:37 on Nov 12,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_BIT.sv 
 # -- Compiling module alu_BIT
 # 
 # Top level modules:
 # 	alu_BIT
-# End time: 16:52:49 on Oct 27,2024, Elapsed time: 0:00:00
+# End time: 15:45:37 on Nov 12,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_BIS.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:52:49 on Oct 27,2024
+# Start time: 15:45:37 on Nov 12,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_BIS.sv 
 # -- Compiling module alu_BIS
 # 
 # Top level modules:
 # 	alu_BIS
-# End time: 16:52:49 on Oct 27,2024, Elapsed time: 0:00:00
+# End time: 15:45:37 on Nov 12,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_BIC.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:52:49 on Oct 27,2024
+# Start time: 15:45:37 on Nov 12,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_BIC.sv 
 # -- Compiling module alu_BIC
 # 
 # Top level modules:
 # 	alu_BIC
-# End time: 16:52:49 on Oct 27,2024, Elapsed time: 0:00:00
+# End time: 15:45:37 on Nov 12,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_AND.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:52:49 on Oct 27,2024
+# Start time: 15:45:37 on Nov 12,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_AND.sv 
 # -- Compiling module alu_AND
 # 
 # Top level modules:
 # 	alu_AND
-# End time: 16:52:49 on Oct 27,2024, Elapsed time: 0:00:00
+# End time: 15:45:37 on Nov 12,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_ADD.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:52:49 on Oct 27,2024
+# Start time: 15:45:37 on Nov 12,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_ADD.sv 
 # -- Compiling module alu_ADD
 # 
 # Top level modules:
 # 	alu_ADD
-# End time: 16:52:49 on Oct 27,2024, Elapsed time: 0:00:00
+# End time: 15:45:37 on Nov 12,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:52:49 on Oct 27,2024
+# Start time: 15:45:37 on Nov 12,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu.sv 
 # -- Compiling module alu
 # 
 # Top level modules:
 # 	alu
-# End time: 16:52:49 on Oct 27,2024, Elapsed time: 0:00:00
+# End time: 15:45:37 on Nov 12,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:52:49 on Oct 27,2024
+# Start time: 15:45:37 on Nov 12,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv 
 # -- Compiling module XM23
 # 
 # Top level modules:
 # 	XM23
-# End time: 16:52:49 on Oct 27,2024, Elapsed time: 0:00:00
+# End time: 15:45:38 on Nov 12,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_ADDC.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:52:49 on Oct 27,2024
+# Start time: 15:45:38 on Nov 12,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_ADDC.sv 
 # -- Compiling module alu_ADDC
 # 
 # Top level modules:
 # 	alu_ADDC
-# End time: 16:52:49 on Oct 27,2024, Elapsed time: 0:00:00
+# End time: 15:45:38 on Nov 12,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_SUBC.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:52:49 on Oct 27,2024
+# Start time: 15:45:38 on Nov 12,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_SUBC.sv 
 # -- Compiling module alu_SUBC
 # 
 # Top level modules:
 # 	alu_SUBC
-# End time: 16:52:49 on Oct 27,2024, Elapsed time: 0:00:00
+# End time: 15:45:38 on Nov 12,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/update_psw.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:52:49 on Oct 27,2024
+# Start time: 15:45:38 on Nov 12,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/update_psw.sv 
 # -- Compiling module update_psw
 # 
 # Top level modules:
 # 	update_psw
-# End time: 16:52:49 on Oct 27,2024, Elapsed time: 0:00:00
+# End time: 15:45:38 on Nov 12,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/program_counter.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:52:49 on Oct 27,2024
+# Start time: 15:45:38 on Nov 12,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/program_counter.sv 
 # -- Compiling module program_counter
 # 
 # Top level modules:
 # 	program_counter
-# End time: 16:52:49 on Oct 27,2024, Elapsed time: 0:00:00
+# End time: 15:45:38 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/moves.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:45:38 on Nov 12,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/moves.sv 
+# -- Compiling module moves
+# ** Warning: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/moves.sv(3): (vlog-13314) Defaulting port 'gprc' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/moves.sv(4): (vlog-13314) Defaulting port 'dst_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# 
+# Top level modules:
+# 	moves
+# End time: 15:45:38 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_MOV.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:45:38 on Nov 12,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_MOV.sv 
+# -- Compiling module alu_MOV
+# 
+# Top level modules:
+# 	alu_MOV
+# End time: 15:45:38 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_SRA.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:45:38 on Nov 12,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_SRA.sv 
+# -- Compiling module alu_SRA
+# 
+# Top level modules:
+# 	alu_SRA
+# End time: 15:45:38 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_RRC.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:45:38 on Nov 12,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_RRC.sv 
+# -- Compiling module alu_RRC
+# 
+# Top level modules:
+# 	alu_RRC
+# End time: 15:45:38 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_COMP.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:45:38 on Nov 12,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_COMP.sv 
+# -- Compiling module alu_COMP
+# 
+# Top level modules:
+# 	alu_COMP
+# End time: 15:45:38 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_SWPB.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:45:38 on Nov 12,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_SWPB.sv 
+# -- Compiling module alu_SWPB
+# 
+# Top level modules:
+# 	alu_SWPB
+# End time: 15:45:38 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_SXT.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:45:38 on Nov 12,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_SXT.sv 
+# -- Compiling module alu_SXT
+# 
+# Top level modules:
+# 	alu_SXT
+# End time: 15:45:38 on Nov 12,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 vsim -gui -l msim_transcript work.XM23 -L altera_mf_ver
 # vsim -gui -l msim_transcript work.XM23 -L altera_mf_ver 
-# Start time: 16:53:22 on Oct 27,2024
+# Start time: 15:45:55 on Nov 12,2024
 # Loading sv_std.std
 # Loading work.XM23
 # Loading work.program_counter
 # Loading work.p_ram
 # Loading altera_mf_ver.altsyncram
+# Loading work.d_ram
 # Loading work.decode_stage
 # Loading work.pipeline_registers
 # Loading work.pipeline_controller
@@ -249,47 +333,132 @@ vsim -gui -l msim_transcript work.XM23 -L altera_mf_ver
 # Loading work.alu_ADDC
 # Loading work.alu_SUBC
 # Loading work.alu_DADD
+# Loading work.alu_MOV
+# Loading work.alu_SRA
+# Loading work.alu_RRC
+# Loading work.alu_COMP
+# Loading work.alu_SWPB
+# Loading work.alu_SXT
 # Loading work.branch
+# Loading work.moves
 # Loading work.update_psw
 # Loading altera_mf_ver.altsyncram_body
 # Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
 # Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'pipeline'.  Expected 50, found 30.
-#    Time: 0 ps  Iteration: 0  Instance: /XM23/pipeline File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv Line: 141
-# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'fetch_in'.
-# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'CEX'.
-# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'mem_access_result'.
-# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'p_reg'.
-# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'WB_o'.
-# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'SLP_o'.
-# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'N_o'.
-# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'Z_o'.
-# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'C_o'.
-# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'V_o'.
-# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'PRPO_o'.
-# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'DEC_o'.
-# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'INC_o'.
-# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'PR_o'.
-# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'F_o'.
-# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'T_o'.
-# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'SA_o'.
-# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'OFF_o'.
-# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'B_o'.
-# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(141): [TFMPC] - Missing connection for port 'exec_result_o'.
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'controller'.  Expected 13, found 9.
-#    Time: 0 ps  Iteration: 0  Instance: /XM23/controller File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv Line: 186
-# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(186): [TFMPC] - Missing connection for port 'PSW_in'.
-# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(186): [TFMPC] - Missing connection for port 'LBPSW'.
-# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(186): [TFMPC] - Missing connection for port 'display_stage'.
-# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(186): [TFMPC] - Missing connection for port 'led'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (15) does not match connection size (16) for port 'address'. The port definition is at: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/d_ram.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /XM23/dram File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv Line: 151
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'wren'. The port definition is at: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/d_ram.v(44).
+#    Time: 0 ps  Iteration: 0  Instance: /XM23/dram File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv Line: 151
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'pipeline'.  Expected 51, found 37.
+#    Time: 0 ps  Iteration: 0  Instance: /XM23/pipeline File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv Line: 192
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(192): [TFMPC] - Missing connection for port 'fetch_in'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(192): [TFMPC] - Missing connection for port 'CEX'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(192): [TFMPC] - Missing connection for port 'mem_access_result'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(192): [TFMPC] - Missing connection for port 'p_reg'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(192): [TFMPC] - Missing connection for port 'WB_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(192): [TFMPC] - Missing connection for port 'PRPO_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(192): [TFMPC] - Missing connection for port 'DEC_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(192): [TFMPC] - Missing connection for port 'INC_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(192): [TFMPC] - Missing connection for port 'PR_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(192): [TFMPC] - Missing connection for port 'F_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(192): [TFMPC] - Missing connection for port 'T_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(192): [TFMPC] - Missing connection for port 'SA_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(192): [TFMPC] - Missing connection for port 'OFF_o'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(192): [TFMPC] - Missing connection for port 'exec_result_o'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'controller'.  Expected 11, found 9.
+#    Time: 0 ps  Iteration: 0  Instance: /XM23/controller File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv Line: 246
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(246): [TFMPC] - Missing connection for port 'PSW_in'.
+# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(246): [TFMPC] - Missing connection for port 'LBPSW'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (24) for port 'b_i'. The port definition is at: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/moves.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /XM23/moves_inst File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv Line: 313
+add wave -position end  sim:/XM23/DIVIDER
 add wave -position end  sim:/XM23/clk_in
+add wave -position end  sim:/XM23/reset
+add wave -position end  sim:/XM23/led
 add wave -position end  sim:/XM23/clk
+add wave -position end  sim:/XM23/counter
 add wave -position end  sim:/XM23/PC_wire
+add wave -position end  sim:/XM23/PC_next_wire
+add wave -position end  sim:/XM23/LBPC_wire
 add wave -position end  sim:/XM23/inst_wire
+add wave -position end  sim:/XM23/dram_address_wire
+add wave -position end  sim:/XM23/dram_write_enable_wire
+add wave -position end  sim:/XM23/dram_data_in_wire
+add wave -position end  sim:/XM23/dram_data_out_wire
 add wave -position end  sim:/XM23/branch_predict_fail_wire
-add wave -position end  sim:/XM23/gprc_o_wire[0][1]
-add wave -position end  sim:/XM23/gprc_o_wire[0][0]
-add wave -position end  sim:/XM23/enable_o_wire[0]
-force -freeze sim:/XM23/clk_in 0 0, 1 {50 ps} -r 100
+add wave -position end  sim:/XM23/LR_wire
+add wave -position end  sim:/XM23/WB_wire
+add wave -position end  sim:/XM23/SLP_wire
+add wave -position end  sim:/XM23/N_wire
+add wave -position end  sim:/XM23/Z_wire
+add wave -position end  sim:/XM23/C_wire
+add wave -position end  sim:/XM23/V_wire
+add wave -position end  sim:/XM23/PRPO_wire
+add wave -position end  sim:/XM23/DEC_wire
+add wave -position end  sim:/XM23/INC_wire
+add wave -position end  sim:/XM23/RC_wire
+add wave -position end  sim:/XM23/D_wire
+add wave -position end  sim:/XM23/S_wire
+add wave -position end  sim:/XM23/PR_wire
+add wave -position end  sim:/XM23/F_wire
+add wave -position end  sim:/XM23/T_wire
+add wave -position end  sim:/XM23/SA_wire
+add wave -position end  sim:/XM23/OFF_wire
+add wave -position end  sim:/XM23/B_wire
+add wave -position end  sim:/XM23/enable_wire
+add wave -position end  sim:/XM23/async_set_wire
+add wave -position end  sim:/XM23/async_dep_wire
+add wave -position end  sim:/XM23/stall_wire
+add wave -position end  sim:/XM23/alu_result_wire
+add wave -position end  sim:/XM23/psw_out_wire
+add wave -position end  sim:/XM23/psw_mask_wire
+add wave -position end  sim:/XM23/enable_psw_msk_wire
+add wave -position end  sim:/XM23/moves_result_wire
+add wave -position end  sim:/XM23/gprc_o_wire
+add wave -position end  sim:/XM23/RC_o_wire
+add wave -position end  sim:/XM23/S_o_wire
+add wave -position end  sim:/XM23/D_o_wire
+add wave -position end  sim:/XM23/dst_val_wire
+add wave -position end  sim:/XM23/src_val_wire
+add wave -position end  sim:/XM23/enable_o_wire
+add wave -position end  sim:/XM23/PSW_o_wire
+add wave -position end  sim:/XM23/SLP_o_wire
+add wave -position end  sim:/XM23/N_o_wire
+add wave -position end  sim:/XM23/Z_o_wire
+add wave -position end  sim:/XM23/C_o_wire
+add wave -position end  sim:/XM23/V_o_wire
+add wave -position end  sim:/XM23/B_o_wire
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Vlad  Hostname: DESKTOP-2EU525A  ProcessID: 15008
+#           Attempting to use alternate WLF file "./wlfthdnrkn".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfthdnrkn
+force -freeze sim:/XM23/clk_in 1 0, 0 {50 ps} -r 100
 run
 run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# End time: 17:32:19 on Nov 12,2024, Elapsed time: 1:46:24
+# Errors: 0, Warnings: 23
