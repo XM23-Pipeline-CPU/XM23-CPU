@@ -32,7 +32,10 @@ module pipeline_registers(
 	 
 	 // Input to store memory access result
 	 input logic [15:0] mem_access_result,
-    
+	 
+	 // Input to update PSW if branch prediction failed
+    input logic        branch_fail,
+	 input logic [15:0] LBPSW,
 	 
 	 // Actual Instruction Registers output (need to update top level to actually use this)
 	 output logic [4:0][15:0] p_reg,
@@ -193,7 +196,13 @@ module pipeline_registers(
 		  
 		  // Update PSW
         // If mask bit is high, update that bit; otherwise, retain old value
-        PSW_i <= (PSW_i & ~PSW_mask) | (PSW & PSW_mask);
+		  // Additionally, restore LBPSW if branch failed
+		  if (branch_fail) begin
+		     PSW_i <= LBPSW;
+		  end else begin
+		     PSW_i <= (PSW_i & ~PSW_mask) | (PSW & PSW_mask);
+		  end
+        
 		  
 		  // Handling register writeback
 		  // If any of the instructions that modify the register are present from the execute stage, do

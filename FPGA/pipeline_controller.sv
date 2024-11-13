@@ -45,8 +45,7 @@ module pipeline_controller (
 	output logic [15:0] PC_next,
 	output logic [15:0] LBPC,			// PC to revert if needed (at exec)
 	output logic [15:0] LBPC_LR,		// PC to revert if needed (at exec) only for LR
-	output logic [15:0] LBPSW,			// PSW to revert if needed (at exec)
-	output logic [15:0] LBPSW_LR			// PSW to revert if needed (at exec)
+	output logic [15:0] LBPSW			// PSW to revert if needed (at exec)
 	
 	//------------------------------------------------------------------------
 	
@@ -85,12 +84,12 @@ module pipeline_controller (
 	assign LBPC_LR = LBPC1;
 	assign LBPC = LBPC2;
 	assign LBPSW = LBPSW2;
-	assign LBPSW_LR = LBPSW1;
 	
 	always_comb begin
 		// Sign-extend 13-bit input to 16-bit signed output
 		extended = { {3{thirteen_lsb[12]}}, thirteen_lsb } << 1;
 	end
+		
 	
 	always_ff @(negedge clk) begin
 		// Store LBPC1, LBPC2 and calculate next PC

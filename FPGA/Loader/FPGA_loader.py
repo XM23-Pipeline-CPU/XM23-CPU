@@ -153,7 +153,7 @@ def extract_address_type(buffer, program_file):
     start_addr = ((s_addH << 8) | s_addL)
 
     # Write starting address into reserved spot in data_file
-    program_file.write(f"{0xFFFE:04X} : {start_addr:04X};\n")
+    program_file.write(f"{0x7FFF:04X} : {start_addr:04X};\n")
 
     print(f"{start_addr:04x}")
     CS_index = (s_length + 1)*2

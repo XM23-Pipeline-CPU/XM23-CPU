@@ -7,9 +7,15 @@
 
 module XM23 (
     input wire clk_in,     // Input clk (50 MHz from the FPGA)
-    input wire reset,      // Reset signal
+    input wire init,       // Init mode signal (the FPGA should be in this mode when idle to setup for running the program)
     output reg led         // LED output (blinking to confirm clk)
 );
+
+	// Wire for forcing p_ram to read FFFE (7FFF in words) address for init
+	parameter FORCED   = 15'b111111111111111;
+	parameter UNFORCED = 15'b000000000000000;
+	
+	reg [14:0] PC_force = FORCED;
 	
 	// Clock division logic -----------------------------------------------------------------------
 
@@ -20,12 +26,14 @@ module XM23 (
 	parameter DIVIDER = 2;  // Divides 50 MHz clk to desired speed 
 	                        // (DIVIDER+1 = number of edges until flip)
 	
-	always @(posedge clk_in or posedge reset) begin
-	  if (reset) begin
-			counter <= 0;
+	always @(posedge clk_in) begin
+	  if (init) begin
+	      PC_force <= FORCED;
+			counter <= 1;
 			clk <= 0;
 			led <= 0;
 	  end else if (counter == (DIVIDER - 1)) begin
+	      PC_force <= UNFORCED;
 			clk <= ~clk;      // Toggle the clk output
 			led <= ~led;      // Toggle the LED (LED will blink)
 			counter <= 0;     // Reset the counter
@@ -37,6 +45,8 @@ module XM23 (
 	// --------------------------------------------------------------------------------------------
 	
 	// Declare wires for connections between modules ----------------------------------------------
+	
+	
 	
 	// Reg/Wires for fetching from memory
 	wire [15:0] PC_wire;
@@ -52,7 +62,8 @@ module XM23 (
 	wire [15:0] dram_data_out_wire;
 
 	// Wire for failed branch prediction
-	wire branch_predict_fail_wire;
+	wire        branch_predict_fail_wire;
+	wire [15:0] LBPSW_wire;
 	
 	// wire for LR (link register)
 	wire [15:0] LR_wire;
@@ -127,6 +138,9 @@ module XM23 (
 	wire INC_o_wire;
 	wire [2:0][12:0] OFF_o_wire;
 	
+	// Wire to disable decode for init
+	wire decode_disable_wire;
+	
 	// --------------------------------------------------------------------------------------------
 	
 	// Connections between modules ----------------------------------------------------------------
@@ -135,6 +149,9 @@ module XM23 (
 	program_counter pcounter(
 		// INPUT FROM TOP LEVEL
 		.clk(clk),
+		.init_clk(clk_in),
+		.init(init),
+		.PC_init(inst_wire),
 	
 		// INPUT FROM CONTROLLER
 		.PC_next(PC_next_wire),
@@ -147,14 +164,17 @@ module XM23 (
 		.branch_fail(branch_predict_fail_wire),
 		
 		// OUTPUT PC
-		.true_PC(PC_wire)
+		.true_PC(PC_wire),
+		
+		// OUTPUT TO DECODE TO PAUSE AT INIT
+		.decode_disable(decode_disable_wire)
 	);
 	
 	// fetch from program ram
 	p_ram pram(
 		// INPUT FROM TOP LEVEL
 		.clock(clk_in),
-		.address(PC_wire[15:1]),
+		.address(PC_wire[15:1] | PC_force),
 		.data(16'b0),	// Never writing
 		.wren(1'b0),	// ...
 		
@@ -197,6 +217,7 @@ module XM23 (
 	decode_stage decode(
 		// INPUT FROM FETCH
 		.inst(inst_wire),
+		.decode_disable(decode_disable_wire),
 		
 		// OUTPUTS
 		.WB(WB_wire),
@@ -248,6 +269,9 @@ module XM23 (
 		.B(B_wire),
 		.enable(enable_wire),
 		
+		// INPUT FROM BRANCH 
+		.branch_fail(branch_predict_fail_wire),
+		
 		// INPUT FROM MEMORY ACCESS
 		.mem_access_result(dram_data_out_wire),
 		
@@ -263,6 +287,7 @@ module XM23 (
 		
 		// INPUT FROM PIPELINE CONTROLLER
 		.stall_in(stall_wire),
+		.LBPSW(LBPSW_wire),
 		
 		// INPUT FROM LR control and branch fail
 		.clear_in(clear_pipeline_LR_wire || branch_predict_fail_wire),
@@ -304,7 +329,8 @@ module XM23 (
 		.stall(stall_wire),
 		.PC_next(PC_next_wire),
 		.LBPC(LBPC_wire),
-		.LBPC_LR(LBPC_LR_wire)
+		.LBPC_LR(LBPC_LR_wire),
+		.LBPSW(LBPSW_wire)
 	);
 	
 	// module to prepare data for alu from pipeline registers

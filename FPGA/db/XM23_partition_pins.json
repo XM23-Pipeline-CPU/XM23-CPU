@@ -8,11 +8,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "clk_in",
+					"name" : "init",
 					"strict" : false
 				},
 				{
-					"name" : "reset",
+					"name" : "clk_in",
 					"strict" : false
 				},
 				{
