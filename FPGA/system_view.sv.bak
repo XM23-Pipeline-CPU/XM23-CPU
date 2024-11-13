@@ -1,0 +1,11 @@
+module system_view (
+	input logic clk_in,
+	input logic [1:0][7:0][15:0] gprc,
+	input logic [15:0] psw,
+	input logic [15:0] pc,
+	input logic [15:0] inst
+);
+
+
+
+endmodule

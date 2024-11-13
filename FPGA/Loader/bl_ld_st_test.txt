@@ -1,6 +1,5 @@
 	org	#0000
-Start	BL	Start2	;dummy cause we are dummies
-Start2	BL	NEXT1
+Start	BL	NEXT1
 	ADD	#10,R0
 	ST	R0,R3	; store the value 10 into data address 20
 	LD	R3,R6	; load R6 with data from memory location specified by R3 	

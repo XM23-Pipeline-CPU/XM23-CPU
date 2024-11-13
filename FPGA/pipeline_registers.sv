@@ -1,6 +1,7 @@
 module pipeline_registers(
     // Clock
     input logic clk,
+	 input logic reset_gprc,
 	 
 	 // Stalling input (if any bit is set then stall)
 	 input logic [7:0] stall_in,
@@ -125,113 +126,117 @@ module pipeline_registers(
 	 };
 	
     // Shift register logic
-    always_ff @(posedge clk) begin
-		  // If pipeline needs to be cleared
-        if (clear_in) begin
-		  
-				 enable_i[0] <= enable;
-				 
-		  // Bubble insertion if pipeline controller and decoder found stall dependancies
-		  end else if (!(|stall_in)) begin 
-				 
-				 // If no stall propagate decode info
-		       WB_i[0] <= WB;
-				 SLP_i[0] <= SLP;
-				 N_i[0] <= N;
-				 Z_i[0] <= Z;
-				 C_i[0] <= C;
-				 V_i[0] <= V;
-				 PRPO_i[0] <= PRPO;
-				 DEC_i[0] <= DEC;
-				 INC_i[0] <= INC;
-				 RC_i[0] <= RC;
-				 D_i[0] <= D;
-				 S_i[0] <= S;
-				 PR_i[0] <= PR;
-				 F_i[0] <= F;
-				 T_i[0] <= T;
-				 SA_i[0] <= SA;
-				 OFF_i[0] <= OFF;
-				 B_i[0] <= B;
-				 enable_i[0] <= enable;
-				 
+    always_ff @(posedge clk or posedge reset_gprc) begin
+		  // If reset signal was hit
+		  if(reset_gprc == 1'b1) begin
+		       gprc_i[0] = {16'b0, 16'b0, 16'b0, 16'b0, 16'b0, 16'b0, 16'b0, 16'b0};
 		  end else begin
-		  
-				 // If stall then disable decode propagation.
-				 // Setting 0 to enable should disable all 
-				 // subsequent CPU functionality on the next shifted value
-			    enable_i[0] <= 41'b0;
-				 
+			  // If pipeline needs to be cleared
+			  if (clear_in) begin
+			  
+					 enable_i[0] <= enable;
+					 
+			  // Bubble insertion if pipeline controller and decoder found stall dependancies
+			  end else if (!(|stall_in)) begin 
+					 
+					 // If no stall propagate decode info
+					 WB_i[0] <= WB;
+					 SLP_i[0] <= SLP;
+					 N_i[0] <= N;
+					 Z_i[0] <= Z;
+					 C_i[0] <= C;
+					 V_i[0] <= V;
+					 PRPO_i[0] <= PRPO;
+					 DEC_i[0] <= DEC;
+					 INC_i[0] <= INC;
+					 RC_i[0] <= RC;
+					 D_i[0] <= D;
+					 S_i[0] <= S;
+					 PR_i[0] <= PR;
+					 F_i[0] <= F;
+					 T_i[0] <= T;
+					 SA_i[0] <= SA;
+					 OFF_i[0] <= OFF;
+					 B_i[0] <= B;
+					 enable_i[0] <= enable;
+					 
+			  end else begin
+			  
+					 // If stall then disable decode propagation.
+					 // Setting 0 to enable should disable all 
+					 // subsequent CPU functionality on the next shifted value
+					 enable_i[0] <= 41'b0;
+					 
+			  end
+			  
+			  // Shift all pipeline stages on the positive edge of the clock
+			  WB_i[2:1]    <= WB_i[1:0];
+			  SLP_i[2:1]   <= SLP_i[1:0];
+			  N_i[2:1]     <= N_i[1:0];
+			  Z_i[2:1]     <= Z_i[1:0];
+			  C_i[2:1]     <= C_i[1:0];
+			  V_i[2:1]     <= V_i[1:0];
+			  PRPO_i[2:1]  <= PRPO_i[1:0];
+			  DEC_i[2:1]   <= DEC_i[1:0];
+			  INC_i[2:1]   <= INC_i[1:0];
+			  RC_i[2:1]    <= RC_i[1:0];
+			  D_i[2:1]     <= D_i[1:0];
+			  S_i[2:1]     <= S_i[1:0];
+			  PR_i[2:1]    <= PR_i[1:0];
+			  F_i[2:1]     <= F_i[1:0];
+			  T_i[2:1]     <= T_i[1:0];
+			  SA_i[2:1]    <= SA_i[1:0];
+			  OFF_i[2:1]   <= OFF_i[1:0];
+			  B_i[2:1]     <= B_i[1:0];
+			  enable_i[2:1] <= enable_i[1:0];
+			  exec_result_i[1] <= exec_result_i[0];  
+			  mem_access_result_i <= mem_access_result;
+			  
+			  // Update the exec result wire with the correct input from either ALU or MOVES module
+			  if(!(|enable_i[0][38:35])) begin // if NOT moves
+					exec_result_i[0] <= alu_result; // take from alu
+			  end else begin
+					exec_result_i[0] <= moves_result; // take from moves
+			  end
+			  
+			  // Update PSW
+			  // If mask bit is high, update that bit; otherwise, retain old value
+			  // Additionally, restore LBPSW if branch failed
+			  if (branch_fail) begin
+				  PSW_i <= LBPSW;
+			  end else begin
+				  PSW_i <= (PSW_i & ~PSW_mask) | (PSW & PSW_mask);
+			  end
+			  
+			  
+			  // Handling register writeback
+			  // If any of the instructions that modify the register are present from the execute stage, do
+			  if ((|enable_i[2][13:9]) || (|enable_i[2][17:15]) || (|enable_i[2][27:19]) || (|enable_i[2][38:35])) begin
+					// Execute result from two clock cycles ago goes into correct register
+					// Correct register is defined by decode from three clock cycles ago
+					
+					// If any instruction that is not SWAP, insert result
+					if (!enable_i[2][22]) begin
+						gprc_i[SELECT_REG][D_i[2]] <= exec_result_i[1];
+					end else begin		// If SWAP, SWAP
+						gprc_i[SELECT_REG][D_i[2]] <= gprc_i[SELECT_REG][S_i[2]];
+						gprc_i[SELECT_REG][S_i[2]] <= gprc_i[SELECT_REG][D_i[2]];
+					end
+			  // If any of the instructions that modify the register are present from the memory access stage, do
+			  end else if (enable_i[2][33] || enable_i[2][39]) begin
+					// Memory access result from one clock cycle ago goes into correct register
+					// Correct register is defined by decode from three clock cycles ago
+					gprc_i[SELECT_REG][D_i[2]] <= mem_access_result_i;
+					
+			  end
+			  
+			  // Deal with increment/decrement (LD AND ST ONLY)
+			  if (enable_i[2][33]) begin
+				  gprc_i[SELECT_REG][S_i[2]] <= gprc_i[SELECT_REG][S_i[2]] + (({15'b0, INC_i[2]} - {15'b0, DEC_i[2]}) << 1);
+			  end else if (enable_i[2][34]) begin
+				  gprc_i[SELECT_REG][D_i[2]] <= gprc_i[SELECT_REG][S_i[2]] + (({15'b0, INC_i[2]} - {15'b0, DEC_i[2]}) << 1);
+			  end
 		  end
-		  
-		  // Shift all pipeline stages on the positive edge of the clock
-		  WB_i[2:1]    <= WB_i[1:0];
-        SLP_i[2:1]   <= SLP_i[1:0];
-        N_i[2:1]     <= N_i[1:0];
-        Z_i[2:1]     <= Z_i[1:0];
-        C_i[2:1]     <= C_i[1:0];
-        V_i[2:1]     <= V_i[1:0];
-        PRPO_i[2:1]  <= PRPO_i[1:0];
-        DEC_i[2:1]   <= DEC_i[1:0];
-        INC_i[2:1]   <= INC_i[1:0];
-        RC_i[2:1]    <= RC_i[1:0];
-        D_i[2:1]     <= D_i[1:0];
-        S_i[2:1]     <= S_i[1:0];
-        PR_i[2:1]    <= PR_i[1:0];
-        F_i[2:1]     <= F_i[1:0];
-        T_i[2:1]     <= T_i[1:0];
-        SA_i[2:1]    <= SA_i[1:0];
-        OFF_i[2:1]   <= OFF_i[1:0];
-        B_i[2:1]     <= B_i[1:0];
-        enable_i[2:1] <= enable_i[1:0];
-		  exec_result_i[1] <= exec_result_i[0];  
-		  mem_access_result_i <= mem_access_result;
-		  
-        // Update the exec result wire with the correct input from either ALU or MOVES module
-		  if(!(|enable_i[0][38:35])) begin // if NOT moves
-				exec_result_i[0] <= alu_result; // take from alu
-		  end else begin
-				exec_result_i[0] <= moves_result; // take from moves
-		  end
-		  
-		  // Update PSW
-        // If mask bit is high, update that bit; otherwise, retain old value
-		  // Additionally, restore LBPSW if branch failed
-		  if (branch_fail) begin
-		     PSW_i <= LBPSW;
-		  end else begin
-		     PSW_i <= (PSW_i & ~PSW_mask) | (PSW & PSW_mask);
-		  end
-        
-		  
-		  // Handling register writeback
-		  // If any of the instructions that modify the register are present from the execute stage, do
-		  if ((|enable_i[2][13:9]) || (|enable_i[2][17:15]) || (|enable_i[2][27:19]) || (|enable_i[2][38:35])) begin
-				// Execute result from two clock cycles ago goes into correct register
-				// Correct register is defined by decode from three clock cycles ago
-				
-				// If any instruction that is not SWAP, insert result
-				if (!enable_i[2][22]) begin
-					gprc_i[SELECT_REG][D_i[2]] <= exec_result_i[1];
-				end else begin		// If SWAP, SWAP
-					gprc_i[SELECT_REG][D_i[2]] <= gprc_i[SELECT_REG][S_i[2]];
-					gprc_i[SELECT_REG][S_i[2]] <= gprc_i[SELECT_REG][D_i[2]];
-				end
-		  // If any of the instructions that modify the register are present from the memory access stage, do
-		  end else if (enable_i[2][33] || enable_i[2][39]) begin
-				// Memory access result from one clock cycle ago goes into correct register
-				// Correct register is defined by decode from three clock cycles ago
-				gprc_i[SELECT_REG][D_i[2]] <= mem_access_result_i;
-				
-		  end
-		  
-		  // Deal with increment/decrement (LD AND ST ONLY)
-		  if (enable_i[2][33]) begin
-           gprc_i[SELECT_REG][S_i[2]] <= gprc_i[SELECT_REG][S_i[2]] + (({15'b0, INC_i[2]} - {15'b0, DEC_i[2]}) << 1);
-		  end else if (enable_i[2][34]) begin
-			  gprc_i[SELECT_REG][D_i[2]] <= gprc_i[SELECT_REG][S_i[2]] + (({15'b0, INC_i[2]} - {15'b0, DEC_i[2]}) << 1);
-		  end
-		  
     end
 
     // Assign outputs from internal signals

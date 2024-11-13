@@ -10,334 +10,355 @@
 # Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/p_ram.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA {C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/p_ram.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:43:34 on Nov 13,2024
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/p_ram.v 
+# Start time: 18:38:46 on Nov 13,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA" C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/p_ram.v 
 # -- Compiling module p_ram
 # 
 # Top level modules:
 # 	p_ram
-# End time: 16:43:34 on Nov 13,2024, Elapsed time: 0:00:00
+# End time: 18:38:47 on Nov 13,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/d_ram.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA {C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/d_ram.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:43:34 on Nov 13,2024
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/d_ram.v 
+# Start time: 18:38:47 on Nov 13,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA" C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/d_ram.v 
 # -- Compiling module d_ram
 # 
 # Top level modules:
 # 	d_ram
-# End time: 16:43:34 on Nov 13,2024, Elapsed time: 0:00:00
+# End time: 18:38:47 on Nov 13,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/branch.sv}
+# vlog -vlog01compat -work work +incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA {C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/reg_view.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:43:34 on Nov 13,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/branch.sv 
+# Start time: 18:38:47 on Nov 13,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA" C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/reg_view.v 
+# -- Compiling module reg_view
+# 
+# Top level modules:
+# 	reg_view
+# End time: 18:38:47 on Nov 13,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA {C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/branch.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:38:47 on Nov 13,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA" C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/branch.sv 
 # -- Compiling module branch
 # 
 # Top level modules:
 # 	branch
-# End time: 16:43:34 on Nov 13,2024, Elapsed time: 0:00:00
+# End time: 18:38:47 on Nov 13,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/regnum_to_values_to_alu.sv}
+# vlog -sv -work work +incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA {C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/regnum_to_values_to_alu.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:43:34 on Nov 13,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/regnum_to_values_to_alu.sv 
+# Start time: 18:38:47 on Nov 13,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA" C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/regnum_to_values_to_alu.sv 
 # -- Compiling module regnum_to_values_to_alu
-# ** Warning: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/regnum_to_values_to_alu.sv(4): (vlog-13314) Defaulting port 'gprc' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
-# ** Warning: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/regnum_to_values_to_alu.sv(6): (vlog-13314) Defaulting port 'src_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
-# ** Warning: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/regnum_to_values_to_alu.sv(7): (vlog-13314) Defaulting port 'dst_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/regnum_to_values_to_alu.sv(4): (vlog-13314) Defaulting port 'gprc' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/regnum_to_values_to_alu.sv(6): (vlog-13314) Defaulting port 'src_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/regnum_to_values_to_alu.sv(7): (vlog-13314) Defaulting port 'dst_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
 # 
 # Top level modules:
 # 	regnum_to_values_to_alu
-# End time: 16:43:34 on Nov 13,2024, Elapsed time: 0:00:00
+# End time: 18:38:47 on Nov 13,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 3
-# vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/decode_stage.sv}
+# vlog -sv -work work +incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA {C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/decode_stage.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:43:34 on Nov 13,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/decode_stage.sv 
+# Start time: 18:38:47 on Nov 13,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA" C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/decode_stage.sv 
 # -- Compiling module decode_stage
-# ** Warning: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/decode_stage.sv(91): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/decode_stage.sv(91): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
 # 
 # Top level modules:
 # 	decode_stage
-# End time: 16:43:34 on Nov 13,2024, Elapsed time: 0:00:00
+# End time: 18:38:47 on Nov 13,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 1
-# vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/pipeline_registers.sv}
+# vlog -sv -work work +incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA {C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/pipeline_registers.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:43:34 on Nov 13,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/pipeline_registers.sv 
+# Start time: 18:38:47 on Nov 13,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA" C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/pipeline_registers.sv 
 # -- Compiling module pipeline_registers
 # 
 # Top level modules:
 # 	pipeline_registers
-# End time: 16:43:34 on Nov 13,2024, Elapsed time: 0:00:00
+# End time: 18:38:47 on Nov 13,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/pipeline_controller.sv}
+# vlog -sv -work work +incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA {C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/pipeline_controller.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:43:34 on Nov 13,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/pipeline_controller.sv 
+# Start time: 18:38:47 on Nov 13,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA" C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/pipeline_controller.sv 
 # -- Compiling module pipeline_controller
 # 
 # Top level modules:
 # 	pipeline_controller
-# End time: 16:43:34 on Nov 13,2024, Elapsed time: 0:00:00
+# End time: 18:38:47 on Nov 13,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_XOR.sv}
+# vlog -sv -work work +incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA {C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_XOR.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:43:34 on Nov 13,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_XOR.sv 
+# Start time: 18:38:47 on Nov 13,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA" C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_XOR.sv 
 # -- Compiling module alu_XOR
 # 
 # Top level modules:
 # 	alu_XOR
-# End time: 16:43:34 on Nov 13,2024, Elapsed time: 0:00:00
+# End time: 18:38:47 on Nov 13,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_SUB.sv}
+# vlog -sv -work work +incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA {C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_SUB.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:43:34 on Nov 13,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_SUB.sv 
+# Start time: 18:38:47 on Nov 13,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA" C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_SUB.sv 
 # -- Compiling module alu_SUB
 # 
 # Top level modules:
 # 	alu_SUB
-# End time: 16:43:35 on Nov 13,2024, Elapsed time: 0:00:01
+# End time: 18:38:47 on Nov 13,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_OR.sv}
+# vlog -sv -work work +incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA {C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_OR.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:43:35 on Nov 13,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_OR.sv 
+# Start time: 18:38:47 on Nov 13,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA" C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_OR.sv 
 # -- Compiling module alu_OR
 # 
 # Top level modules:
 # 	alu_OR
-# End time: 16:43:35 on Nov 13,2024, Elapsed time: 0:00:00
+# End time: 18:38:48 on Nov 13,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_DADD.sv}
+# vlog -sv -work work +incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA {C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_DADD.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:43:35 on Nov 13,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_DADD.sv 
+# Start time: 18:38:48 on Nov 13,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA" C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_DADD.sv 
 # -- Compiling module alu_DADD
 # 
 # Top level modules:
 # 	alu_DADD
-# End time: 16:43:35 on Nov 13,2024, Elapsed time: 0:00:00
+# End time: 18:38:48 on Nov 13,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_BIT.sv}
+# vlog -sv -work work +incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA {C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_BIT.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:43:35 on Nov 13,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_BIT.sv 
+# Start time: 18:38:48 on Nov 13,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA" C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_BIT.sv 
 # -- Compiling module alu_BIT
 # 
 # Top level modules:
 # 	alu_BIT
-# End time: 16:43:35 on Nov 13,2024, Elapsed time: 0:00:00
+# End time: 18:38:48 on Nov 13,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_BIS.sv}
+# vlog -sv -work work +incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA {C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_BIS.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:43:35 on Nov 13,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_BIS.sv 
+# Start time: 18:38:48 on Nov 13,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA" C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_BIS.sv 
 # -- Compiling module alu_BIS
 # 
 # Top level modules:
 # 	alu_BIS
-# End time: 16:43:35 on Nov 13,2024, Elapsed time: 0:00:00
+# End time: 18:38:48 on Nov 13,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_BIC.sv}
+# vlog -sv -work work +incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA {C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_BIC.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:43:35 on Nov 13,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_BIC.sv 
+# Start time: 18:38:48 on Nov 13,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA" C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_BIC.sv 
 # -- Compiling module alu_BIC
 # 
 # Top level modules:
 # 	alu_BIC
-# End time: 16:43:35 on Nov 13,2024, Elapsed time: 0:00:00
+# End time: 18:38:48 on Nov 13,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_AND.sv}
+# vlog -sv -work work +incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA {C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_AND.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:43:35 on Nov 13,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_AND.sv 
+# Start time: 18:38:48 on Nov 13,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA" C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_AND.sv 
 # -- Compiling module alu_AND
 # 
 # Top level modules:
 # 	alu_AND
-# End time: 16:43:35 on Nov 13,2024, Elapsed time: 0:00:00
+# End time: 18:38:48 on Nov 13,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_ADD.sv}
+# vlog -sv -work work +incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA {C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_ADD.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:43:35 on Nov 13,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_ADD.sv 
+# Start time: 18:38:48 on Nov 13,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA" C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_ADD.sv 
 # -- Compiling module alu_ADD
 # 
 # Top level modules:
 # 	alu_ADD
-# End time: 16:43:35 on Nov 13,2024, Elapsed time: 0:00:00
+# End time: 18:38:48 on Nov 13,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu.sv}
+# vlog -sv -work work +incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA {C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:43:35 on Nov 13,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu.sv 
+# Start time: 18:38:48 on Nov 13,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA" C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu.sv 
 # -- Compiling module alu
 # 
 # Top level modules:
 # 	alu
-# End time: 16:43:35 on Nov 13,2024, Elapsed time: 0:00:00
+# End time: 18:38:48 on Nov 13,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv}
+# vlog -sv -work work +incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA {C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:43:35 on Nov 13,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv 
+# Start time: 18:38:48 on Nov 13,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA" C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv 
 # -- Compiling module XM23
 # 
 # Top level modules:
 # 	XM23
-# End time: 16:43:35 on Nov 13,2024, Elapsed time: 0:00:00
+# End time: 18:38:48 on Nov 13,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_ADDC.sv}
+# vlog -sv -work work +incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA {C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_ADDC.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:43:35 on Nov 13,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_ADDC.sv 
+# Start time: 18:38:48 on Nov 13,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA" C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_ADDC.sv 
 # -- Compiling module alu_ADDC
 # 
 # Top level modules:
 # 	alu_ADDC
-# End time: 16:43:35 on Nov 13,2024, Elapsed time: 0:00:00
+# End time: 18:38:48 on Nov 13,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_SUBC.sv}
+# vlog -sv -work work +incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA {C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_SUBC.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:43:35 on Nov 13,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_SUBC.sv 
+# Start time: 18:38:48 on Nov 13,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA" C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_SUBC.sv 
 # -- Compiling module alu_SUBC
 # 
 # Top level modules:
 # 	alu_SUBC
-# End time: 16:43:35 on Nov 13,2024, Elapsed time: 0:00:00
+# End time: 18:38:48 on Nov 13,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/update_psw.sv}
+# vlog -sv -work work +incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA {C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/update_psw.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:43:35 on Nov 13,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/update_psw.sv 
+# Start time: 18:38:48 on Nov 13,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA" C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/update_psw.sv 
 # -- Compiling module update_psw
 # 
 # Top level modules:
 # 	update_psw
-# End time: 16:43:35 on Nov 13,2024, Elapsed time: 0:00:00
+# End time: 18:38:48 on Nov 13,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/program_counter.sv}
+# vlog -sv -work work +incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA {C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/program_counter.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:43:35 on Nov 13,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/program_counter.sv 
+# Start time: 18:38:48 on Nov 13,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA" C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/program_counter.sv 
 # -- Compiling module program_counter
 # 
 # Top level modules:
 # 	program_counter
-# End time: 16:43:36 on Nov 13,2024, Elapsed time: 0:00:01
+# End time: 18:38:48 on Nov 13,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/moves.sv}
+# vlog -sv -work work +incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA {C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/moves.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:43:36 on Nov 13,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/moves.sv 
+# Start time: 18:38:48 on Nov 13,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA" C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/moves.sv 
 # -- Compiling module moves
-# ** Warning: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/moves.sv(3): (vlog-13314) Defaulting port 'gprc' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
-# ** Warning: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/moves.sv(4): (vlog-13314) Defaulting port 'dst_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/moves.sv(3): (vlog-13314) Defaulting port 'gprc' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/moves.sv(4): (vlog-13314) Defaulting port 'dst_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
 # 
 # Top level modules:
 # 	moves
-# End time: 16:43:36 on Nov 13,2024, Elapsed time: 0:00:00
+# End time: 18:38:49 on Nov 13,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 2
-# vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_MOV.sv}
+# vlog -sv -work work +incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA {C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_MOV.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:43:36 on Nov 13,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_MOV.sv 
+# Start time: 18:38:49 on Nov 13,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA" C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_MOV.sv 
 # -- Compiling module alu_MOV
 # 
 # Top level modules:
 # 	alu_MOV
-# End time: 16:43:36 on Nov 13,2024, Elapsed time: 0:00:00
+# End time: 18:38:49 on Nov 13,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_SRA.sv}
+# vlog -sv -work work +incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA {C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_SRA.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:43:36 on Nov 13,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_SRA.sv 
+# Start time: 18:38:49 on Nov 13,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA" C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_SRA.sv 
 # -- Compiling module alu_SRA
 # 
 # Top level modules:
 # 	alu_SRA
-# End time: 16:43:36 on Nov 13,2024, Elapsed time: 0:00:00
+# End time: 18:38:49 on Nov 13,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_RRC.sv}
+# vlog -sv -work work +incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA {C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_RRC.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:43:36 on Nov 13,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_RRC.sv 
+# Start time: 18:38:49 on Nov 13,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA" C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_RRC.sv 
 # -- Compiling module alu_RRC
 # 
 # Top level modules:
 # 	alu_RRC
-# End time: 16:43:36 on Nov 13,2024, Elapsed time: 0:00:00
+# End time: 18:38:49 on Nov 13,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_COMP.sv}
+# vlog -sv -work work +incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA {C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_COMP.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:43:36 on Nov 13,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_COMP.sv 
+# Start time: 18:38:49 on Nov 13,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA" C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_COMP.sv 
 # -- Compiling module alu_COMP
 # 
 # Top level modules:
 # 	alu_COMP
-# End time: 16:43:36 on Nov 13,2024, Elapsed time: 0:00:00
+# End time: 18:38:49 on Nov 13,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_SWPB.sv}
+# vlog -sv -work work +incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA {C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_SWPB.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:43:36 on Nov 13,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_SWPB.sv 
+# Start time: 18:38:49 on Nov 13,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA" C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_SWPB.sv 
 # -- Compiling module alu_SWPB
 # 
 # Top level modules:
 # 	alu_SWPB
-# End time: 16:43:36 on Nov 13,2024, Elapsed time: 0:00:00
+# End time: 18:38:49 on Nov 13,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_SXT.sv}
+# vlog -sv -work work +incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA {C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_SXT.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:43:36 on Nov 13,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/alu_SXT.sv 
+# Start time: 18:38:49 on Nov 13,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA" C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_SXT.sv 
 # -- Compiling module alu_SXT
 # 
 # Top level modules:
 # 	alu_SXT
-# End time: 16:43:36 on Nov 13,2024, Elapsed time: 0:00:00
+# End time: 18:38:49 on Nov 13,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/memory_access_d_ram.sv}
+# vlog -sv -work work +incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA {C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/memory_access_d_ram.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:43:36 on Nov 13,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/memory_access_d_ram.sv 
+# Start time: 18:38:49 on Nov 13,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA" C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/memory_access_d_ram.sv 
 # -- Compiling module memory_access_d_ram
-# ** Warning: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/memory_access_d_ram.sv(2): (vlog-13314) Defaulting port 'enable' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
-# ** Warning: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/memory_access_d_ram.sv(3): (vlog-13314) Defaulting port 'gprc' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
-# ** Warning: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/memory_access_d_ram.sv(4): (vlog-13314) Defaulting port 'off' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
-# ** Warning: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/memory_access_d_ram.sv(8): (vlog-13314) Defaulting port 'src_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
-# ** Warning: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/memory_access_d_ram.sv(9): (vlog-13314) Defaulting port 'dst_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/memory_access_d_ram.sv(2): (vlog-13314) Defaulting port 'enable' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/memory_access_d_ram.sv(3): (vlog-13314) Defaulting port 'gprc' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/memory_access_d_ram.sv(4): (vlog-13314) Defaulting port 'off' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/memory_access_d_ram.sv(8): (vlog-13314) Defaulting port 'src_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/memory_access_d_ram.sv(9): (vlog-13314) Defaulting port 'dst_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
 # 
 # Top level modules:
 # 	memory_access_d_ram
-# End time: 16:43:36 on Nov 13,2024, Elapsed time: 0:00:00
+# End time: 18:38:49 on Nov 13,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 5
-# vlog -sv -work work +incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA {C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/go_to_LR.sv}
+# vlog -sv -work work +incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA {C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/go_to_LR.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:43:36 on Nov 13,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA" C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/go_to_LR.sv 
+# Start time: 18:38:49 on Nov 13,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA" C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/go_to_LR.sv 
 # -- Compiling module go_to_LR
-# ** Warning: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/go_to_LR.sv(2): (vlog-13314) Defaulting port 'gprc' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
-# ** Warning: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/go_to_LR.sv(3): (vlog-13314) Defaulting port 'src_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
-# ** Warning: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/go_to_LR.sv(4): (vlog-13314) Defaulting port 'enable' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/go_to_LR.sv(2): (vlog-13314) Defaulting port 'gprc' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/go_to_LR.sv(3): (vlog-13314) Defaulting port 'src_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/go_to_LR.sv(4): (vlog-13314) Defaulting port 'enable' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
 # 
 # Top level modules:
 # 	go_to_LR
-# End time: 16:43:36 on Nov 13,2024, Elapsed time: 0:00:00
+# End time: 18:38:49 on Nov 13,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 3
+# vlog -sv -work work +incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA {C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/system_view.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:38:49 on Nov 13,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA" C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/system_view.sv 
+# -- Compiling module system_view
+# ** Warning: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/system_view.sv(3): (vlog-13314) Defaulting port 'gprc' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# 
+# Top level modules:
+# 	system_view
+# End time: 18:38:49 on Nov 13,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
 # 
 vsim -gui -l msim_transcript work.XM23 -L altera_mf_ver
 # vsim -gui -l msim_transcript work.XM23 -L altera_mf_ver 
-# Start time: 16:43:54 on Nov 13,2024
+# Start time: 18:39:08 on Nov 13,2024
 # Loading sv_std.std
 # Loading work.XM23
 # Loading work.program_counter
@@ -371,63 +392,65 @@ vsim -gui -l msim_transcript work.XM23 -L altera_mf_ver
 # Loading work.go_to_LR
 # Loading work.moves
 # Loading work.update_psw
+# Loading work.system_view
+# Loading work.reg_view
 # Loading altera_mf_ver.altsyncram_body
 # Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
 # Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
-# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (1) for port 'pre'. The port definition is at: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/memory_access_d_ram.sv(5).
-#    Time: 0 ps  Iteration: 0  Instance: /XM23/dram_control_inst File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv Line: 185
-# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (1) for port 'inc'. The port definition is at: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/memory_access_d_ram.sv(6).
-#    Time: 0 ps  Iteration: 0  Instance: /XM23/dram_control_inst File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv Line: 185
-# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (1) for port 'dec'. The port definition is at: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/memory_access_d_ram.sv(7).
-#    Time: 0 ps  Iteration: 0  Instance: /XM23/dram_control_inst File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv Line: 185
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'write_enable'. The port definition is at: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/memory_access_d_ram.sv(11).
-#    Time: 0 ps  Iteration: 0  Instance: /XM23/dram_control_inst File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv Line: 185
-# ** Warning: (vsim-3015) [PCDPC] - Port size (15) does not match connection size (16) for port 'address'. The port definition is at: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/d_ram.v(41).
-#    Time: 0 ps  Iteration: 0  Instance: /XM23/dram File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv Line: 204
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'wren'. The port definition is at: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/d_ram.v(44).
-#    Time: 0 ps  Iteration: 0  Instance: /XM23/dram File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv Line: 204
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'pipeline'.  Expected 52, found 43.
-#    Time: 0 ps  Iteration: 0  Instance: /XM23/pipeline File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv Line: 246
-# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (1) for port 'PRPO_o'. The port definition is at: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/pipeline_registers.sv(43).
-#    Time: 0 ps  Iteration: 0  Instance: /XM23/pipeline File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv Line: 246
-# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (1) for port 'DEC_o'. The port definition is at: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/pipeline_registers.sv(43).
-#    Time: 0 ps  Iteration: 0  Instance: /XM23/pipeline File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv Line: 246
-# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (1) for port 'INC_o'. The port definition is at: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/pipeline_registers.sv(43).
-#    Time: 0 ps  Iteration: 0  Instance: /XM23/pipeline File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv Line: 246
-# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(246): [TFMPC] - Missing connection for port 'fetch_in'.
-# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(246): [TFMPC] - Missing connection for port 'CEX'.
-# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(246): [TFMPC] - Missing connection for port 'p_reg'.
-# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(246): [TFMPC] - Missing connection for port 'WB_o'.
-# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(246): [TFMPC] - Missing connection for port 'PR_o'.
-# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(246): [TFMPC] - Missing connection for port 'F_o'.
-# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(246): [TFMPC] - Missing connection for port 'T_o'.
-# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(246): [TFMPC] - Missing connection for port 'SA_o'.
-# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(246): [TFMPC] - Missing connection for port 'exec_result_o'.
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'controller'.  Expected 13, found 10.
-#    Time: 0 ps  Iteration: 0  Instance: /XM23/controller File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv Line: 310
-# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(310): [TFMPC] - Missing connection for port 'PSW_in'.
-# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(310): [TFMPC] - Missing connection for port 'LBPSW'.
-# ** Warning: (vsim-3722) C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv(310): [TFMPC] - Missing connection for port 'LBPSW_LR'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (123) does not match connection size (41) for port 'enable'. The port definition is at: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/go_to_LR.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /XM23/go_to_LR_inst File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv Line: 377
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (24) for port 'b_i'. The port definition is at: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/moves.sv(5).
-#    Time: 0 ps  Iteration: 0  Instance: /XM23/moves_inst File: C:/Users/Vlad/Desktop/4thYearDal/SYP/XM23-CPU/FPGA/XM23.sv Line: 391
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (1) for port 'pre'. The port definition is at: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/memory_access_d_ram.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /XM23/dram_control_inst File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 186
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (1) for port 'inc'. The port definition is at: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/memory_access_d_ram.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /XM23/dram_control_inst File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 186
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (1) for port 'dec'. The port definition is at: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/memory_access_d_ram.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /XM23/dram_control_inst File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 186
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'write_enable'. The port definition is at: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/memory_access_d_ram.sv(11).
+#    Time: 0 ps  Iteration: 0  Instance: /XM23/dram_control_inst File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 186
+# ** Warning: (vsim-3015) [PCDPC] - Port size (15) does not match connection size (16) for port 'address'. The port definition is at: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/d_ram.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /XM23/dram File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 205
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'wren'. The port definition is at: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/d_ram.v(44).
+#    Time: 0 ps  Iteration: 0  Instance: /XM23/dram File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 205
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'pipeline'.  Expected 55, found 46.
+#    Time: 0 ps  Iteration: 0  Instance: /XM23/pipeline File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 247
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (1) for port 'PRPO_o'. The port definition is at: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/pipeline_registers.sv(47).
+#    Time: 0 ps  Iteration: 0  Instance: /XM23/pipeline File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 247
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (1) for port 'DEC_o'. The port definition is at: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/pipeline_registers.sv(47).
+#    Time: 0 ps  Iteration: 0  Instance: /XM23/pipeline File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 247
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (1) for port 'INC_o'. The port definition is at: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/pipeline_registers.sv(47).
+#    Time: 0 ps  Iteration: 0  Instance: /XM23/pipeline File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 247
+# ** Warning: (vsim-3722) C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv(247): [TFMPC] - Missing connection for port 'fetch_in'.
+# ** Warning: (vsim-3722) C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv(247): [TFMPC] - Missing connection for port 'CEX'.
+# ** Warning: (vsim-3722) C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv(247): [TFMPC] - Missing connection for port 'p_reg'.
+# ** Warning: (vsim-3722) C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv(247): [TFMPC] - Missing connection for port 'WB_o'.
+# ** Warning: (vsim-3722) C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv(247): [TFMPC] - Missing connection for port 'PR_o'.
+# ** Warning: (vsim-3722) C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv(247): [TFMPC] - Missing connection for port 'F_o'.
+# ** Warning: (vsim-3722) C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv(247): [TFMPC] - Missing connection for port 'T_o'.
+# ** Warning: (vsim-3722) C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv(247): [TFMPC] - Missing connection for port 'SA_o'.
+# ** Warning: (vsim-3722) C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv(247): [TFMPC] - Missing connection for port 'exec_result_o'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'controller'.  Expected 12, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /XM23/controller File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 316
+# ** Warning: (vsim-3722) C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv(316): [TFMPC] - Missing connection for port 'PSW_in'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (123) does not match connection size (41) for port 'enable'. The port definition is at: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/go_to_LR.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /XM23/go_to_LR_inst File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 384
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (24) for port 'b_i'. The port definition is at: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/moves.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /XM23/moves_inst File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 398
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'regview'.  Expected 5, found 4.
+#    Time: 0 ps  Iteration: 0  Instance: /XM23/system_view_inst/regview File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/system_view.sv Line: 27
+# ** Warning: (vsim-3722) C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/system_view.sv(27): [TFMPC] - Missing connection for port 'q'.
 add wave -position end  sim:/XM23/clk_in
-add wave -position end  sim:/XM23/init
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: Vlad  Hostname: DESKTOP-2EU525A  ProcessID: 15008
-#           Attempting to use alternate WLF file "./wlftbf89hr".
+#           Attempting to use alternate WLF file "./wlft8x84b6".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftbf89hr
-add wave -position end  sim:/XM23/PC_force
+#           Using alternate file: ./wlft8x84b6
+add wave -position end  sim:/XM23/init
 add wave -position end  sim:/XM23/clk
 add wave -position end  sim:/XM23/PC_wire
-add wave -position end  sim:/XM23/PC_next_wire
+add wave -position end  sim:/XM23/inst_wire
 add wave -position end  sim:/XM23/gprc_o_wire[0]
-add wave -position end sim:/XM23/pcounter/*
-add wave -position end sim:/XM23/pram/*
-force -freeze sim:/XM23/clk_in 1 0, 0 {5 ps} -r 10
+add wave -position end  sim:/XM23/system_view_inst/data
 force -freeze sim:/XM23/init 1 0
+force -freeze sim:/XM23/clk_in 1 0, 0 {50 ps} -r 100
+run
 run
 force -freeze sim:/XM23/init 0 0
 run
@@ -436,5 +459,63 @@ run
 run
 run
 run
-# End time: 16:46:28 on Nov 13,2024, Elapsed time: 0:02:34
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# End time: 18:40:34 on Nov 13,2024, Elapsed time: 0:01:26
 # Errors: 0, Warnings: 27

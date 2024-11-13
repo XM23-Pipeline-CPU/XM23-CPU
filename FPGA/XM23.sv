@@ -23,7 +23,7 @@ module XM23 (
 									// (except memory which will take 50MHz)
 	
 	reg [31:0] counter = 1;
-	parameter DIVIDER = 2;  // Divides 50 MHz clk to desired speed 
+	parameter DIVIDER = 3;  // Divides 50 MHz clk to desired speed 
 	                        // (DIVIDER+1 = number of edges until flip)
 	
 	always @(posedge clk_in) begin
@@ -247,6 +247,7 @@ module XM23 (
 	pipeline_registers pipeline (
 		// INPUTS FROM TOPLEVEL
 		.clk(clk),
+		.reset_gprc(init),
 		
 		// INPUTS FROM DECODE
 		.WB(WB_wire),
@@ -429,6 +430,14 @@ module XM23 (
 		// OUTPUTS
 		.psw_out(psw_out_wire),
 		.psw_msk(psw_mask_wire)
+	);
+	
+	system_view system_view_inst(
+		.clk(clk),
+		.gprc(gprc_o_wire),
+		.psw(PSW_o_wire),
+		.pc(PC_wire),
+		.inst(inst_wire)
 	);
 	
 	// --------------------------------------------------------------------------------------------

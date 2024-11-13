@@ -1,16 +1,16 @@
 X-Makina Assembler - Version XM-23p Single Pass+ Assembler - Release 24.05.16
 Input file name: loop_test_basic.txt
-Time of assembly: Wed 13 Nov 2024 15:13:05 
-  1	    	     		org	#0000
+Time of assembly: Wed 13 Nov 2024 19:00:59 
+  1	    	     		org	#1000
   2	    	     	START	
-  3	0000	40A8		ADD	#10,R0
+  3	1000	40A8		ADD	#10,R0
   4	    	     	LOOP
-  5	0002	4088		ADD	#1,R0
-  6	0004	45B0		CMP	#20,R0
-  7	0006	2002		BEQ	DONE
-  8	0008	4089		ADD	#1,R1
-  9	000A	3FFB		BRA	LOOP
- 10	    	     	DONE
+  5	1002	4088		ADD	#1,R0
+  6	1004	45B0		CMP	#20,R0
+  7	1006	2002		BEQ	DONE
+  8	1008	4089		ADD	#1,R1
+  9	100A	3FFB		BRA	LOOP
+ 10	100C	3FFF	DONE	BRA	DONE
  11	    	     	END START
 Successful completion of assembly - 2P
 
@@ -21,9 +21,9 @@ Name                               	Type	Value	Decimal
 
 Labels (Code)
 Name                               	Type	Value	Decimal
-DONE                               	REL	000C	12	PRI
-LOOP                               	REL	0002	2	PRI
-START                              	REL	0000	0	PRI
+DONE                               	REL	100C	4108	PRI
+LOOP                               	REL	1002	4098	PRI
+START                              	REL	1000	4096	PRI
 
 Labels (Data)
 Name                               	Type	Value	Decimal
@@ -39,5 +39,5 @@ R2                                 	REG	0002	2	PRI
 R1                                 	REG	0001	1	PRI
 R0                                 	REG	0000	0	PRI
 
-.XME file: C:\Users\Vlad\Desktop\4thYearDal\SYP\XM23-CPU\FPGA\Loader\loop_test_basic.xme
+.XME file: C:\Users\romes\OneDrive\Desktop\XM23-CPU\FPGA\Loader\loop_test_basic.xme
 

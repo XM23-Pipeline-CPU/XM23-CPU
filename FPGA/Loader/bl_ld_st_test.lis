@@ -1,20 +1,19 @@
 X-Makina Assembler - Version XM-23p Single Pass+ Assembler - Release 24.05.16
 Input file name: bl_ld_st_test.txt
-Time of assembly: Tue 12 Nov 2024 20:30:23 
+Time of assembly: Wed 13 Nov 2024 17:26:02 
   1	    	     		org	#0000
-  2	0000	0000	Start	BL	Start2	;dummy cause we are dummies
-  3	0002	07FE	Start2	BL	NEXT1
-  4	0004	40A8		ADD	#10,R0
-  5	0006	5C03		ST	R0,R3	; store the value 10 into data address 20
-  6	0008	581E		LD	R3,R6	; load R6 with data from memory location specified by R3 	
-  7	    	     	org	#1000
-  8	1000	40B1	NEXT1	ADD	#20,R1
-  9	1002	40B2		ADD	#20,R2
- 10	1004	40B3		ADD	#20,R3
- 11	1006	77FC		MOVLS	#FF,R4
- 12	1008	5825		LD	R4,R5		
+  2	0000	07FF	Start	BL	NEXT1
+  3	0002	40A8		ADD	#10,R0
+  4	0004	5C03		ST	R0,R3	; store the value 10 into data address 20
+  5	0006	581E		LD	R3,R6	; load R6 with data from memory location specified by R3 	
+  6	    	     	org	#1000
+  7	1000	40B1	NEXT1	ADD	#20,R1
+  8	1002	40B2		ADD	#20,R2
+  9	1004	40B3		ADD	#20,R3
+ 10	1006	77FC		MOVLS	#FF,R4
+ 11	1008	5825		LD	R4,R5		
+ 12	    	     	
  13	    	     	
- 14	    	     	
 
 Successful completion of assembly - 2P
 
@@ -26,7 +25,6 @@ Name                               	Type	Value	Decimal
 Labels (Code)
 Name                               	Type	Value	Decimal
 NEXT1                              	REL	1000	4096	PRI
-Start2                             	REL	0002	2	PRI
 Start                              	REL	0000	0	PRI
 
 Labels (Data)
