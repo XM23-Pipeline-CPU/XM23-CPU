@@ -1,0 +1,8 @@
+	org	#1000
+START	
+	BL	MID2
+MID2	ADD	#10,R0
+
+	org #0500
+	ADD	#20,R1
+END START

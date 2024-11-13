@@ -1,5 +1,5 @@
 Analysis & Synthesis report for XM23
-Tue Nov 12 22:43:32 2024
+Wed Nov 13 12:57:41 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -38,9 +38,10 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  30. Port Connectivity Checks: "p_ram:pram"
  31. In-System Memory Content Editor Settings
  32. Post-Synthesis Netlist Statistics for Top Partition
- 33. Elapsed Time Per Partition
- 34. Analysis & Synthesis Messages
- 35. Analysis & Synthesis Suppressed Messages
+ 33. Post-Synthesis Netlist Statistics for Partition sld_hub:auto_hub
+ 34. Elapsed Time Per Partition
+ 35. Analysis & Synthesis Messages
+ 36. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -67,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Nov 12 22:43:32 2024       ;
+; Analysis & Synthesis Status        ; Successful - Wed Nov 13 12:57:41 2024       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; XM23                                        ;
 ; Top-level Entity Name              ; XM23                                        ;
@@ -430,51 +431,61 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                                                                             ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |XM23|p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[0]                                     ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |XM23|p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[6]                                                ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |XM23|d_ram:dram|altsyncram:altsyncram_component|altsyncram_grj1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[4]                                     ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |XM23|d_ram:dram|altsyncram:altsyncram_component|altsyncram_grj1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[1]                                                ;
-; 3:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |XM23|p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[3]                                                ;
-; 3:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |XM23|d_ram:dram|altsyncram:altsyncram_component|altsyncram_grj1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[13]                                               ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |XM23|program_counter:pcounter|true_PC[0]                                                                                                                                    ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |XM23|p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[0] ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |XM23|d_ram:dram|altsyncram:altsyncram_component|altsyncram_grj1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[3] ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |XM23|pipeline_registers:pipeline|exec_result_i[0][9]                                                                                                                        ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |XM23|pipeline_registers:pipeline|exec_result_i[0][4]                                                                                                                        ;
-; 8:1                ; 15 bits   ; 75 LEs        ; 45 LEs               ; 30 LEs                 ; Yes        ; |XM23|pipeline_registers:pipeline|gprc_i[0][7][6]                                                                                                                            ;
-; 8:1                ; 15 bits   ; 75 LEs        ; 45 LEs               ; 30 LEs                 ; Yes        ; |XM23|pipeline_registers:pipeline|gprc_i[0][6][9]                                                                                                                            ;
-; 8:1                ; 15 bits   ; 75 LEs        ; 45 LEs               ; 30 LEs                 ; Yes        ; |XM23|pipeline_registers:pipeline|gprc_i[0][5][11]                                                                                                                           ;
-; 8:1                ; 15 bits   ; 75 LEs        ; 45 LEs               ; 30 LEs                 ; Yes        ; |XM23|pipeline_registers:pipeline|gprc_i[0][4][5]                                                                                                                            ;
-; 8:1                ; 15 bits   ; 75 LEs        ; 45 LEs               ; 30 LEs                 ; Yes        ; |XM23|pipeline_registers:pipeline|gprc_i[0][3][8]                                                                                                                            ;
-; 8:1                ; 15 bits   ; 75 LEs        ; 45 LEs               ; 30 LEs                 ; Yes        ; |XM23|pipeline_registers:pipeline|gprc_i[0][2][13]                                                                                                                           ;
-; 8:1                ; 15 bits   ; 75 LEs        ; 45 LEs               ; 30 LEs                 ; Yes        ; |XM23|pipeline_registers:pipeline|gprc_i[0][1][3]                                                                                                                            ;
-; 8:1                ; 15 bits   ; 75 LEs        ; 45 LEs               ; 30 LEs                 ; Yes        ; |XM23|pipeline_registers:pipeline|gprc_i[0][0][2]                                                                                                                            ;
-; 26:1               ; 4 bits    ; 68 LEs        ; 44 LEs               ; 24 LEs                 ; Yes        ; |XM23|p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[0]      ;
-; 26:1               ; 4 bits    ; 68 LEs        ; 48 LEs               ; 20 LEs                 ; Yes        ; |XM23|d_ram:dram|altsyncram:altsyncram_component|altsyncram_grj1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[0]      ;
-; 8:1                ; 15 bits   ; 75 LEs        ; 75 LEs               ; 0 LEs                  ; No         ; |XM23|memory_access_d_ram:dram_control_inst|Mux19                                                                                                                            ;
-; 8:1                ; 15 bits   ; 75 LEs        ; 75 LEs               ; 0 LEs                  ; No         ; |XM23|memory_access_d_ram:dram_control_inst|Mux14                                                                                                                            ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |XM23|memory_access_d_ram:dram_control_inst|output_address[5]                                                                                                                ;
-; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |XM23|go_to_LR:go_to_LR_inst|Mux3                                                                                                                                            ;
-; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |XM23|pipeline_registers:pipeline|Mux3                                                                                                                                       ;
-; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |XM23|pipeline_registers:pipeline|Mux0                                                                                                                                       ;
-; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |XM23|regnum_to_values_to_alu:regnum_inst|Mux35                                                                                                                              ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |XM23|update_psw:update_psw_inst|psw_msk[2]                                                                                                                                  ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |XM23|alu:alu_inst|alu_BIS:bis_op|ShiftLeft0                                                                                                                                 ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |XM23|alu:alu_inst|alu_BIS:bis_op|ShiftLeft0                                                                                                                                 ;
-; 5:1                ; 15 bits   ; 45 LEs        ; 15 LEs               ; 30 LEs                 ; No         ; |XM23|memory_access_d_ram:dram_control_inst|output_data[1]                                                                                                                   ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |XM23|regnum_to_values_to_alu:regnum_inst|src_val[1]                                                                                                                         ;
-; 16:1               ; 2 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |XM23|alu:alu_inst|result[12]                                                                                                                                                ;
-; 17:1               ; 3 bits    ; 33 LEs        ; 30 LEs               ; 3 LEs                  ; No         ; |XM23|alu:alu_inst|result[11]                                                                                                                                                ;
-; 17:1               ; 2 bits    ; 22 LEs        ; 20 LEs               ; 2 LEs                  ; No         ; |XM23|alu:alu_inst|result[13]                                                                                                                                                ;
-; 18:1               ; 3 bits    ; 36 LEs        ; 30 LEs               ; 6 LEs                  ; No         ; |XM23|alu:alu_inst|result[1]                                                                                                                                                 ;
-; 18:1               ; 2 bits    ; 24 LEs        ; 20 LEs               ; 4 LEs                  ; No         ; |XM23|alu:alu_inst|result[5]                                                                                                                                                 ;
-; 18:1               ; 3 bits    ; 36 LEs        ; 3 LEs                ; 33 LEs                 ; No         ; |XM23|decode_stage:decode|S                                                                                                                                                  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                                                                                                                                                                                                                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                                                                                                                                                                                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |XM23|p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[0]                                                                                                                                                                                                                       ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |XM23|p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[6]                                                                                                                                                                                                                                  ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |XM23|d_ram:dram|altsyncram:altsyncram_component|altsyncram_grj1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[4]                                                                                                                                                                                                                       ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |XM23|d_ram:dram|altsyncram:altsyncram_component|altsyncram_grj1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[1]                                                                                                                                                                                                                                  ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |XM23|p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[3]                                                                                                                                                                                                                                  ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |XM23|d_ram:dram|altsyncram:altsyncram_component|altsyncram_grj1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[13]                                                                                                                                                                                                                                 ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |XM23|program_counter:pcounter|true_PC[0]                                                                                                                                                                                                                                                                                                                      ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |XM23|p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[0]                                                                                                                                                                                   ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |XM23|d_ram:dram|altsyncram:altsyncram_component|altsyncram_grj1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[3]                                                                                                                                                                                   ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |XM23|pipeline_registers:pipeline|exec_result_i[0][9]                                                                                                                                                                                                                                                                                                          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |XM23|pipeline_registers:pipeline|exec_result_i[0][4]                                                                                                                                                                                                                                                                                                          ;
+; 8:1                ; 15 bits   ; 75 LEs        ; 45 LEs               ; 30 LEs                 ; Yes        ; |XM23|pipeline_registers:pipeline|gprc_i[0][7][6]                                                                                                                                                                                                                                                                                                              ;
+; 8:1                ; 15 bits   ; 75 LEs        ; 45 LEs               ; 30 LEs                 ; Yes        ; |XM23|pipeline_registers:pipeline|gprc_i[0][6][9]                                                                                                                                                                                                                                                                                                              ;
+; 8:1                ; 15 bits   ; 75 LEs        ; 45 LEs               ; 30 LEs                 ; Yes        ; |XM23|pipeline_registers:pipeline|gprc_i[0][5][11]                                                                                                                                                                                                                                                                                                             ;
+; 8:1                ; 15 bits   ; 75 LEs        ; 45 LEs               ; 30 LEs                 ; Yes        ; |XM23|pipeline_registers:pipeline|gprc_i[0][4][5]                                                                                                                                                                                                                                                                                                              ;
+; 8:1                ; 15 bits   ; 75 LEs        ; 45 LEs               ; 30 LEs                 ; Yes        ; |XM23|pipeline_registers:pipeline|gprc_i[0][3][8]                                                                                                                                                                                                                                                                                                              ;
+; 8:1                ; 15 bits   ; 75 LEs        ; 45 LEs               ; 30 LEs                 ; Yes        ; |XM23|pipeline_registers:pipeline|gprc_i[0][2][13]                                                                                                                                                                                                                                                                                                             ;
+; 8:1                ; 15 bits   ; 75 LEs        ; 45 LEs               ; 30 LEs                 ; Yes        ; |XM23|pipeline_registers:pipeline|gprc_i[0][1][3]                                                                                                                                                                                                                                                                                                              ;
+; 8:1                ; 15 bits   ; 75 LEs        ; 45 LEs               ; 30 LEs                 ; Yes        ; |XM23|pipeline_registers:pipeline|gprc_i[0][0][2]                                                                                                                                                                                                                                                                                                              ;
+; 26:1               ; 4 bits    ; 68 LEs        ; 44 LEs               ; 24 LEs                 ; Yes        ; |XM23|p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[0]                                                                                                                                                                                        ;
+; 26:1               ; 4 bits    ; 68 LEs        ; 48 LEs               ; 20 LEs                 ; Yes        ; |XM23|d_ram:dram|altsyncram:altsyncram_component|altsyncram_grj1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[0]                                                                                                                                                                                        ;
+; 8:1                ; 15 bits   ; 75 LEs        ; 75 LEs               ; 0 LEs                  ; No         ; |XM23|memory_access_d_ram:dram_control_inst|Mux19                                                                                                                                                                                                                                                                                                              ;
+; 8:1                ; 15 bits   ; 75 LEs        ; 75 LEs               ; 0 LEs                  ; No         ; |XM23|memory_access_d_ram:dram_control_inst|Mux14                                                                                                                                                                                                                                                                                                              ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |XM23|memory_access_d_ram:dram_control_inst|output_address[5]                                                                                                                                                                                                                                                                                                  ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |XM23|go_to_LR:go_to_LR_inst|Mux3                                                                                                                                                                                                                                                                                                                              ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |XM23|pipeline_registers:pipeline|Mux3                                                                                                                                                                                                                                                                                                                         ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |XM23|pipeline_registers:pipeline|Mux0                                                                                                                                                                                                                                                                                                                         ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |XM23|regnum_to_values_to_alu:regnum_inst|Mux35                                                                                                                                                                                                                                                                                                                ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |XM23|update_psw:update_psw_inst|psw_msk[2]                                                                                                                                                                                                                                                                                                                    ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |XM23|alu:alu_inst|alu_BIS:bis_op|ShiftLeft0                                                                                                                                                                                                                                                                                                                   ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |XM23|alu:alu_inst|alu_BIS:bis_op|ShiftLeft0                                                                                                                                                                                                                                                                                                                   ;
+; 5:1                ; 15 bits   ; 45 LEs        ; 15 LEs               ; 30 LEs                 ; No         ; |XM23|memory_access_d_ram:dram_control_inst|output_data[1]                                                                                                                                                                                                                                                                                                     ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |XM23|regnum_to_values_to_alu:regnum_inst|src_val[1]                                                                                                                                                                                                                                                                                                           ;
+; 16:1               ; 2 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |XM23|alu:alu_inst|result[12]                                                                                                                                                                                                                                                                                                                                  ;
+; 17:1               ; 3 bits    ; 33 LEs        ; 30 LEs               ; 3 LEs                  ; No         ; |XM23|alu:alu_inst|result[11]                                                                                                                                                                                                                                                                                                                                  ;
+; 17:1               ; 2 bits    ; 22 LEs        ; 20 LEs               ; 2 LEs                  ; No         ; |XM23|alu:alu_inst|result[13]                                                                                                                                                                                                                                                                                                                                  ;
+; 18:1               ; 3 bits    ; 36 LEs        ; 30 LEs               ; 6 LEs                  ; No         ; |XM23|alu:alu_inst|result[1]                                                                                                                                                                                                                                                                                                                                   ;
+; 18:1               ; 2 bits    ; 24 LEs        ; 20 LEs               ; 4 LEs                  ; No         ; |XM23|alu:alu_inst|result[5]                                                                                                                                                                                                                                                                                                                                   ;
+; 18:1               ; 3 bits    ; 36 LEs        ; 3 LEs                ; 33 LEs                 ; No         ; |XM23|decode_stage:decode|S                                                                                                                                                                                                                                                                                                                                    ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |XM23|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[1][6]                    ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |XM23|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[2][2]                    ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |XM23|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|hub_minor_ver_reg[2]                    ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |XM23|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irf_reg[1][6]                           ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |XM23|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irf_reg[2][0]                           ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |XM23|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|mixer_addr_reg_internal[3]              ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |XM23|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg|word_counter[3] ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |XM23|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irsr_reg[5]                             ;
+; 34:1               ; 4 bits    ; 88 LEs        ; 60 LEs               ; 28 LEs                 ; Yes        ; |XM23|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|design_hash_reg[0]                      ;
+; 28:1               ; 4 bits    ; 72 LEs        ; 48 LEs               ; 24 LEs                 ; Yes        ; |XM23|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg|WORD_SR[0]      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------+
@@ -832,13 +843,44 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 
 
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:12     ;
-+----------------+--------------+
++------------------------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Partition sld_hub:auto_hub ;
++-----------------------+------------------------------------------+
+; Type                  ; Count                                    ;
++-----------------------+------------------------------------------+
+; boundary_port         ; 165                                      ;
+; cycloneiii_ff         ; 112                                      ;
+;     CLR               ; 6                                        ;
+;     ENA               ; 16                                       ;
+;     ENA CLR           ; 46                                       ;
+;     ENA CLR SLD       ; 7                                        ;
+;     ENA SCLR          ; 5                                        ;
+;     ENA SLD           ; 9                                        ;
+;     SCLR              ; 7                                        ;
+;     plain             ; 16                                       ;
+; cycloneiii_lcell_comb ; 172                                      ;
+;     arith             ; 8                                        ;
+;         2 data inputs ; 8                                        ;
+;     normal            ; 164                                      ;
+;         0 data inputs ; 1                                        ;
+;         1 data inputs ; 6                                        ;
+;         2 data inputs ; 25                                       ;
+;         3 data inputs ; 70                                       ;
+;         4 data inputs ; 62                                       ;
+;                       ;                                          ;
+; Max LUT depth         ; 4.00                                     ;
+; Average LUT depth     ; 1.88                                     ;
++-----------------------+------------------------------------------+
+
+
++---------------------------------+
+; Elapsed Time Per Partition      ;
++------------------+--------------+
+; Partition Name   ; Elapsed Time ;
++------------------+--------------+
+; Top              ; 00:00:11     ;
+; sld_hub:auto_hub ; 00:00:00     ;
++------------------+--------------+
 
 
 +-------------------------------+
@@ -847,7 +889,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Nov 12 22:43:02 2024
+    Info: Processing started: Wed Nov 13 12:57:12 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off XM23 -c XM23
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -950,9 +992,8 @@ Info (12128): Elaborating entity "altsyncram_q6k1" for hierarchy "p_ram:pram|alt
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_hlb2.tdf
     Info (12023): Found entity 1: altsyncram_hlb2 File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/altsyncram_hlb2.tdf Line: 34
 Info (12128): Elaborating entity "altsyncram_hlb2" for hierarchy "p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|altsyncram_hlb2:altsyncram1" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/altsyncram_q6k1.tdf Line: 37
-Warning (113028): 32758 out of 32768 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 2 warnings found, and 2 warnings are reported. File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/program_memory.mif Line: 1
-    Warning (113027): Addresses ranging from 5 to 2047 are not initialized File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/program_memory.mif Line: 1
-    Warning (113027): Addresses ranging from 2053 to 32767 are not initialized File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/program_memory.mif Line: 1
+Warning (113028): 32761 out of 32768 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported. File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/program_memory.mif Line: 1
+    Warning (113027): Addresses ranging from 7 to 32767 are not initialized File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/program_memory.mif Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_msa.tdf
     Info (12023): Found entity 1: decode_msa File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/decode_msa.tdf Line: 23
 Info (12128): Elaborating entity "decode_msa" for hierarchy "p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|altsyncram_hlb2:altsyncram1|decode_msa:decode4" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/altsyncram_hlb2.tdf Line: 50
@@ -1068,7 +1109,7 @@ Info (12128): Elaborating entity "update_psw" for hierarchy "update_psw:update_p
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "carry_arr" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "overflow_arr" into its bus
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2024.11.12.22:43:12 Progress: Loading sld928a91a1/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2024.11.13.12:57:21 Progress: Loading sld928a91a1/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -1094,6 +1135,9 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/ip/s
 Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
 Info (17049): 4 registers lost all their fanouts during netlist optimizations.
+Info (13000): Registers with preset signals will power-up high File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_hub.vhd Line: 386
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Info (286031): Timing-Driven Synthesis is running on partition "sld_hub:auto_hub"
 Info (144001): Generated suppressed messages file C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/output_files/XM23.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -1102,11 +1146,11 @@ Info (21057): Implemented 2553 device resources after synthesis - the final reso
     Info (21059): Implemented 2 output pins
     Info (21061): Implemented 2417 logic cells
     Info (21064): Implemented 128 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 25 warnings
-    Info: Peak virtual memory: 4920 megabytes
-    Info: Processing ended: Tue Nov 12 22:43:32 2024
-    Info: Elapsed time: 00:00:30
-    Info: Total CPU time (on all processors): 00:00:24
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 24 warnings
+    Info: Peak virtual memory: 4919 megabytes
+    Info: Processing ended: Wed Nov 13 12:57:41 2024
+    Info: Elapsed time: 00:00:29
+    Info: Total CPU time (on all processors): 00:00:30
 
 
 +------------------------------------------+

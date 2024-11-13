@@ -1,5 +1,5 @@
 Fitter report for XM23
-Tue Nov 12 22:43:45 2024
+Wed Nov 13 12:57:53 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -69,7 +69,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Tue Nov 12 22:43:45 2024       ;
+; Fitter Status                      ; Successful - Wed Nov 13 12:57:53 2024       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; XM23                                        ;
 ; Top-level Entity Name              ; XM23                                        ;
@@ -155,19 +155,19 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 16          ;
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
-; Average used               ; 1.18        ;
+; Average used               ; 1.17        ;
 ; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   1.3%      ;
-;     Processor 3            ;   1.3%      ;
-;     Processor 4            ;   1.3%      ;
-;     Processor 5            ;   1.3%      ;
+;     Processor 3            ;   1.2%      ;
+;     Processor 4            ;   1.2%      ;
+;     Processor 5            ;   1.2%      ;
 ;     Processor 6            ;   1.2%      ;
 ;     Processor 7            ;   1.2%      ;
-;     Processor 8            ;   1.2%      ;
-;     Processors 9-16        ;   1.2%      ;
+;     Processor 8            ;   1.1%      ;
+;     Processors 9-16        ;   1.1%      ;
 +----------------------------+-------------+
 
 
@@ -1417,7 +1417,7 @@ RAM content values are presented in the following format: (Binary) (Octal) (Deci
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ;   Addr   ;              +0              ;              +1              ;              +2              ;              +3              ;              +4              ;              +5              ;              +6              ;              +7              ;
 +----------+------------------------------+------------------------------+------------------------------+------------------------------+------------------------------+------------------------------+------------------------------+------------------------------+
-;0;(0000000000000000) (0) (0) (00)    ;(0000011111111110) (3776) (2046) (7FE)   ;(0100000010101000) (40250) (16552) (40A8)   ;(0101110000000011) (56003) (23555) (5C03)   ;(0101100000011110) (54036) (22558) (581E)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;
+;0;(0000000000000000) (0) (0) (00)    ;(0100000010101000) (40250) (16552) (40A8)   ;(0100000010001000) (40210) (16520) (4088)   ;(0100010110110000) (42660) (17840) (45B0)   ;(0010000000000010) (20002) (8194) (2002)   ;(0100000010001001) (40211) (16521) (4089)   ;(0011111111111011) (37773) (16379) (3FFB)   ;(0000000000000000) (0) (0) (00)   ;
 ;8;(0000000000000000) (0) (0) (00)    ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;
 ;16;(0000000000000000) (0) (0) (00)    ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;
 ;24;(0000000000000000) (0) (0) (00)    ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;
@@ -1673,7 +1673,7 @@ RAM content values are presented in the following format: (Binary) (Octal) (Deci
 ;2024;(0000000000000000) (0) (0) (00)    ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;
 ;2032;(0000000000000000) (0) (0) (00)    ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;
 ;2040;(0000000000000000) (0) (0) (00)    ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;
-;2048;(0100000010110001) (40261) (16561) (40B1)    ;(0100000010110010) (40262) (16562) (40B2)   ;(0100000010110011) (40263) (16563) (40B3)   ;(0111011111111100) (73774) (30716) (77FC)   ;(0101100000100101) (54045) (22565) (5825)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;
+;2048;(0000000000000000) (0) (0) (00)    ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;
 ;2056;(0000000000000000) (0) (0) (00)    ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;
 ;2064;(0000000000000000) (0) (0) (00)    ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;
 ;2072;(0000000000000000) (0) (0) (00)    ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;
@@ -9978,7 +9978,7 @@ Info (176215): I/O bank details before I/O pin placement
         Info (176213): I/O bank number 6 does not use VREF pins and has undetermined VCCIO pins. 1 total pin(s) used --  57 pins available
         Info (176213): I/O bank number 7 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  72 pins available
         Info (176213): I/O bank number 8 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  71 pins available
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:02
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
@@ -9992,7 +9992,7 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.42 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.39 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -10000,10 +10000,10 @@ Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Info (144001): Generated suppressed messages file C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/output_files/XM23.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 6750 megabytes
-    Info: Processing ended: Tue Nov 12 22:43:46 2024
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:12
+    Info: Peak virtual memory: 6751 megabytes
+    Info: Processing ended: Wed Nov 13 12:57:54 2024
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:14
 
 
 +----------------------------+

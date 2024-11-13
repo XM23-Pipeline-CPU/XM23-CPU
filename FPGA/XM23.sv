@@ -16,7 +16,7 @@ module XM23 (
 	reg clk = 0;            // This is the global clk for other modules 
 									// (except memory which will take 50MHz)
 	
-	reg [31:0] counter = 0;
+	reg [31:0] counter = 1;
 	parameter DIVIDER = 2;  // Divides 50 MHz clk to desired speed 
 	                        // (DIVIDER+1 = number of edges until flip)
 	

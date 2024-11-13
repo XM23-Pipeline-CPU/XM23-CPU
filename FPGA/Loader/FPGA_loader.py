@@ -140,7 +140,7 @@ def extract_data_type(buffer, data_file):
     return 0
 
 # Function to extract S-record type 9 (starting address type)
-def extract_address_type(buffer):
+def extract_address_type(buffer, program_file):
     calc_CS = 0
     print("Record type: S9    Start Address: ", end="")
 
@@ -149,19 +149,22 @@ def extract_address_type(buffer):
     s_addL = int(buffer[6:8], 16)
     calc_CS += s_length + s_addH + s_addL
 
-    start_addr = (s_addH << 8) | s_addL
-    #PC.w = start_addr
-    print(f"{start_addr:04x}", end="")
+    # Convert byte address to Word address
+    start_addr = ((s_addH << 8) | s_addL)
 
+    # Write starting address into reserved spot in data_file
+    program_file.write(f"{0xFFFE:04X} : {start_addr:04X};\n")
+
+    print(f"{start_addr:04x}")
     CS_index = (s_length + 1)*2
     s_checksum = int(buffer[CS_index:CS_index+2], 16)
     calc_CS += s_checksum
 
     if (calc_CS % 256) != 0xFF:
-        print("\nChecksum does not compute, error in data transmission.")
+        print("Checksum does not compute, error in data transmission.")
         return 1
     else:
-        print("\nChecksum computes, no errors in data transmission.")
+        print("Checksum computes, no errors in data transmission.")
     print("\n")
     return 0
 
@@ -197,7 +200,7 @@ def loader(argv):
                     if extract_data_type(buffer, data_mif):       # Handle data memory
                         return 1
                 elif s_type == 9:
-                    if extract_address_type(buffer):    # Handle starting address
+                    if extract_address_type(buffer, program_mif):    # Handle starting address
                         return 1
                 else:
                     print("Invalid record type. Press any key to quit.")
