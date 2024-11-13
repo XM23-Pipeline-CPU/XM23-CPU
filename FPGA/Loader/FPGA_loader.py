@@ -64,7 +64,8 @@ def extract_program_type(buffer, program_file):
     s_addL = int(buffer[6:8], 16)
     calc_CS += s_length + s_addH + s_addL
 
-    s_address = (s_addH << 8) | s_addL
+    # Translating byte starting address to words
+    s_address = ((s_addH << 8) | s_addL) >> 1
     offset = 0
 
     first = True
@@ -106,7 +107,8 @@ def extract_data_type(buffer, data_file):
     s_addL = int(buffer[6:8], 16)
     calc_CS += s_length + s_addH + s_addL
 
-    s_address = (s_addH << 8) | s_addL
+    # Translating byte starting address to words
+    s_address = ((s_addH << 8) | s_addL) >> 1
     offset = 0
 
     first = True

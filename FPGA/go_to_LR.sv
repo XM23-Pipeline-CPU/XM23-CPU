@@ -11,12 +11,11 @@ module go_to_LR (
 	parameter LD = 33; // LD instruction 
 	
 	always_comb begin
-	
-		link_back_o = 1'b0;
-		
 		// If an LD instruction with SRC address FFFF is input, this triggers the link at execute stage
-		if (enable[exec_stage][LD] && gprc[R][src_i[exec_stage]] == 4'hFFFF) begin
+		if (enable[exec_stage][LD] && (gprc[R][src_i[exec_stage]] == 16'b1111111111111111)) begin
 			link_back_o = 1'b1;
+		end else begin
+			link_back_o = 1'b0;
 		end
 		
 	end

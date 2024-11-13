@@ -13,10 +13,10 @@ module moves (
 			result[15:8] = gprc[0][dst_i[0]][15:8];
 			result[7:0] = b_i;
 		end else if (enable[36] == 1'b1) begin //MOVLZ
-			result[15:8] = 8'b0;
+			result[15:8] = 8'b00000000;
 			result[7:0] = b_i;
 		end if (enable[37] == 1'b1) begin //MOVLS
-			result[15:8] = 8'b1;
+			result[15:8] = 8'b11111111;
 			result[7:0] = b_i;
 		end else if (enable[38] == 1'b1) begin //MOVH
 			result[15:8] = b_i;

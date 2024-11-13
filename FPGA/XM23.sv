@@ -42,6 +42,7 @@ module XM23 (
 	wire [15:0] PC_wire;
 	wire [15:0] PC_next_wire;
 	wire [15:0] LBPC_wire;
+	wire [15:0] LBPC_LR_wire;
 	wire [15:0] inst_wire;
 	
 	// Wires for data memory access
@@ -132,18 +133,21 @@ module XM23 (
 	
 	// Program_counter
 	program_counter pcounter(
+		// INPUT FROM TOP LEVEL
+		.clk(clk),
+	
 		// INPUT FROM CONTROLLER
 		.PC_next(PC_next_wire),
 		.LBPC(LBPC_wire),
-		.clk(clk),
+		.LR(LR_wire),
+		.link_back(clear_pipeline_LR_wire),
 		.stall_in(stall_wire),
-		.link_back(),
 		
 		// INPUT FROM BRANCH INSTRUCTIONS
 		.branch_fail(branch_predict_fail_wire),
 		
 		// OUTPUT PC
-		.true_PC(PC_wire),
+		.true_PC(PC_wire)
 	);
 	
 	// fetch from program ram
@@ -299,7 +303,8 @@ module XM23 (
 		// OUTPUT
 		.stall(stall_wire),
 		.PC_next(PC_next_wire),
-		.LBPC(LBPC_wire)
+		.LBPC(LBPC_wire),
+		.LBPC_LR(LBPC_LR_wire)
 	);
 	
 	// module to prepare data for alu from pipeline registers
@@ -340,7 +345,7 @@ module XM23 (
 		.PSW_in(PSW_o_wire),
 		
 		// INPUTS FROM CONTROLLER
-		.LBPC_in(LBPC_wire),
+		.LBPC_in(LBPC_LR_wire),
 		
 		// OUTPUT TO PC
 		.branch_fail_o(branch_predict_fail_wire),
@@ -352,18 +357,20 @@ module XM23 (
 	go_to_LR go_to_LR_inst(
 		// INPUTS FROM PIPELINE REGISTERS
 		.enable(enable_o_wire[0]),
+		.src_i(S_o_wire),
+		.gprc(gprc_o_wire),
 		
 		// INPUT FROM BRANCHING INSTRUCTIONS LR
 		.LR_i(LR_wire),
 		
 		// OUTPUT TO PC
-		.link_back_o(clear_pipeline_wire),
+		.link_back_o(clear_pipeline_LR_wire)
 	);
 	
 	// module to do the MOVL/MOVLZ/MOVLS/MOVH instructions
 	moves moves_inst(
 		// INPUT FROM PIPELINE REGISTERS
-		.enable(enable_o_wire[1]),
+		.enable(enable_o_wire[0]),
 		.gprc(gprc_o_wire),
 		.dst_i(D_o_wire),
 		.b_i(B_o_wire),

@@ -1,0 +1,37 @@
+X-Makina Assembler - Version XM-23p Single Pass+ Assembler - Release 24.05.16
+Input file name: test_basic.asm
+Time of assembly: Tue 12 Nov 2024 20:12:43 
+  1	    	     		org	#0000
+  2	    	     	Start
+  3	0000	40B0		ADD	#20,R0 ;add 20 to r0
+  4	0002	40A9		ADD	#10,R1 ;add 10 to r1
+  5	0004	4208		SUB	R1,R0  ;sub r1 from r0, store in r0
+  6	    	     	END Start
+
+Successful completion of assembly - 1P
+
+** Symbol table **
+
+Constants (Equates)
+Name                               	Type	Value	Decimal
+
+Labels (Code)
+Name                               	Type	Value	Decimal
+Start                              	REL	0000	0	PRI
+
+Labels (Data)
+Name                               	Type	Value	Decimal
+
+Registers
+Name                               	Type	Value	Decimal
+R7                                 	REG	0007	7	PRI
+R6                                 	REG	0006	6	PRI
+R5                                 	REG	0005	5	PRI
+R4                                 	REG	0004	4	PRI
+R3                                 	REG	0003	3	PRI
+R2                                 	REG	0002	2	PRI
+R1                                 	REG	0001	1	PRI
+R0                                 	REG	0000	0	PRI
+
+.XME file: C:\Users\romes\OneDrive\Desktop\XM23-CPU\FPGA\Loader\test_basic.xme
+

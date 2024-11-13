@@ -44,7 +44,9 @@ module pipeline_controller (
 	input logic PSW_in,				
 	output logic [15:0] PC_next,
 	output logic [15:0] LBPC,			// PC to revert if needed (at exec)
-	output logic [15:0] LBPSW			// PSW to revert if needed (at exec)
+	output logic [15:0] LBPC_LR,		// PC to revert if needed (at exec) only for LR
+	output logic [15:0] LBPSW,			// PSW to revert if needed (at exec)
+	output logic [15:0] LBPSW_LR			// PSW to revert if needed (at exec)
 	
 	//------------------------------------------------------------------------
 	
@@ -80,8 +82,10 @@ module pipeline_controller (
 	logic [15:0] LBPSW1;	// Likewise for PSW
 	logic [15:0] LBPSW2;
 	
+	assign LBPC_LR = LBPC1;
 	assign LBPC = LBPC2;
 	assign LBPSW = LBPSW2;
+	assign LBPSW_LR = LBPSW1;
 	
 	always_comb begin
 		// Sign-extend 13-bit input to 16-bit signed output
