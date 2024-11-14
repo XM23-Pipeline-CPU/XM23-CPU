@@ -7,9 +7,8 @@ module alu_SUBC (
 
 );
 
-    logic [16:0] wide_result;
-	 assign wide_result = {1'b0, a} - {1'b0, b} - carry_in;
-	 
-	 assign result = wide_result[15:0]; // Bitwise AND operation
-	 assign carry_out = wide_result[16];
+   logic [15:0] src;
+	assign src = ~b;
+	assign result = a + src + carry_in;
+
 endmodule 

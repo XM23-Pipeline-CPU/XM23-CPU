@@ -1,6 +1,6 @@
 X-Makina Assembler - Version XM-23 Single Pass+ Assembler - Release 02.06.23
 Input file name: PRIME_SIEVE.asm
-Time of assembly: Fri 18 Aug 2023 19:13:32 
+Time of assembly: Wed 13 Nov 2024 20:46:21 
   1	    	     	LR	equ	R5
   2	    	     	PC	equ	R7
   3	    	     	P	equ	R0
@@ -48,7 +48,7 @@ Time of assembly: Fri 18 Aug 2023 19:13:32
  45	    	     	STOPLOOP1
  46	    	     	
  47	    	     	
- 48	    	     	;at this point, any value in memory beteen locations 0000 and LIMIT (1000) should be a 1 or a zero.
+ 48	    	     	;at this point, any value in memory between locations 0000 and LIMIT should be a 1 or a zero.
  49	    	     	;if the value is a 1 that means it is not a prime, if a value is zero it is a prime
  50	    	     	;Now program goes through memory, checks if value in address is 0 or 1, if its 0, then write that address somewhere else to save it
  51	    	     	
@@ -109,5 +109,5 @@ R2                                 	REG	0002	2	PRI
 R1                                 	REG	0001	1	PRI
 R0                                 	REG	0000	0	PRI
 
-.XME file: C:\Users\romes\OneDrive - Dalhousie University\Desktop\Dal\6 - Summer 2023\3403 - Comp Arc\Assembler\PRIME_SIEVE.xme
+.XME file: C:\Users\romes\OneDrive\Desktop\XM23-CPU\Assembly Examples\PRIME_SIEVE.xme
 

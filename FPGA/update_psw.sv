@@ -26,6 +26,10 @@ module update_psw(
 	logic zero_bit;
 	logic negative_bit;
 	
+	// Defining internal signal for 2's comp of b
+	logic [15:0] comp_b;
+	assign comp_b = (~b) + 1'b1;
+	
 	parameter C = 0;
 	parameter Z = 1;
 	parameter N = 2;
@@ -65,8 +69,28 @@ module update_psw(
 		zero_bit = 0;
 		negative_bit = 0;
 		
-		// If coming from classic alu instructions
-		if ((|enable[20:9])) begin
+		// If coming from SUB, SUBC, CMP
+		if ((|enable[12:11]) || enable[14]) begin
+			// Set carry, overflow, zero, and negative bits
+			carry_bit = carry_arr[comp_b[15]][a[15]][result[15]];
+			overflow_bit = overflow_arr[comp_b[15]][a[15]][result[15]];
+			zero_bit = !(|result);
+			negative_bit = result[15];
+
+			// Update PSW and mask based on flag values
+			psw_out[C] = carry_bit; // Set PSW[0] to carry
+			psw_out[Z] = zero_bit;
+			psw_out[N] = negative_bit;
+			psw_out[V] = overflow_bit;
+
+			if(enable_psw_msk == 1'b1) begin
+				psw_msk[C] = 1'b1;
+				psw_msk[Z] = 1'b1;
+				psw_msk[N] = 1'b1;
+				psw_msk[V] = 1'b1;
+			end
+		// if coming from any other classic ALU instruction
+		end else if ((|enable[10:9]) || (enable[13]) || (|enable[20:15])) begin
 			// Set carry, overflow, zero, and negative bits
 			carry_bit = carry_arr[b[15]][a[15]][result[15]];
 			overflow_bit = overflow_arr[b[15]][a[15]][result[15]];
@@ -74,10 +98,10 @@ module update_psw(
 			negative_bit = result[15];
 
 			// Update PSW and mask based on flag values
-			psw_out[0] = carry_bit; // Set PSW[0] to carry
-			psw_out[1] = zero_bit;
-			psw_out[2] = negative_bit;
-			psw_out[4] = overflow_bit;
+			psw_out[C] = carry_bit; // Set PSW[0] to carry
+			psw_out[Z] = zero_bit;
+			psw_out[N] = negative_bit;
+			psw_out[V] = overflow_bit;
 
 			if(enable_psw_msk == 1'b1) begin
 				psw_msk[C] = 1'b1;

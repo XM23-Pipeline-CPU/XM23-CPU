@@ -476,6 +476,7 @@ module decode_stage(
 				  enable[35] = 1'b1;
 				  
 				  async_set[D] = 1'b1; //set dependency
+				  async_dep[D] = 1'b1; //be added as dependency
 				  
 			 end else if ((inst & MASK_MOVLZ) == EXPECTED_MOVLZ) begin
 				  B = inst[10:3];
@@ -497,6 +498,7 @@ module decode_stage(
 				  enable[38] = 1'b1;
 
 				  async_set[D] = 1'b1; //set dependency
+				  async_dep[D] = 1'b1; //be added as dependency
 				  
 			 end else if ((inst & MASK_LDR) == EXPECTED_LDR) begin
 				  OFF = inst[13:7];

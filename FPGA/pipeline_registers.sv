@@ -134,7 +134,7 @@ module pipeline_registers(
 			  // If pipeline needs to be cleared
 			  if (clear_in) begin
 			  
-					 enable_i[0] <= enable;
+					 enable_i[0] <= 41'b0;
 					 
 			  // Bubble insertion if pipeline controller and decoder found stall dependancies
 			  end else if (!(|stall_in)) begin 

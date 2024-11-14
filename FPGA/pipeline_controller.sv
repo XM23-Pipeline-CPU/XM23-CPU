@@ -74,7 +74,8 @@ module pipeline_controller (
 	
 	// Simple branch prediction Impl -----------------------------------------
 	
-	logic signed [15:0] extended;
+	logic signed [15:0] extended_13;
+	logic signed [15:0] extended_9;
 	logic [15:0] LBPC1;	// We need two LBPCs 
 	logic [15:0] LBPC2;	// incase there are multiple consecutive branches.
 	
@@ -87,7 +88,12 @@ module pipeline_controller (
 	
 	always_comb begin
 		// Sign-extend 13-bit input to 16-bit signed output
-		extended = { {3{thirteen_lsb[12]}}, thirteen_lsb } << 1;
+		extended_13 = { {3{thirteen_lsb[12]}}, thirteen_lsb } << 1;
+	end
+	
+	always_comb begin
+		// Sign-extend 9-bit input to 16-bit signed output
+		extended_9 = { {7{thirteen_lsb[8]}}, thirteen_lsb[8:0] } << 1;
 	end
 		
 	
@@ -98,8 +104,10 @@ module pipeline_controller (
 		// Likewise for PSW
 		LBPSW2 <= LBPSW1;
 		LBPSW1 <= PSW_in;
-		if ((three_msb == 3'b000) || (three_msb == 3'b001)) begin 
-			PC_next <= PC_in + extended + 16'b0000000000000010;
+		if ((three_msb == 3'b000)) begin 
+			PC_next <= PC_in + extended_13 + 16'b0000000000000010;
+		end else if ((three_msb == 3'b001)) begin
+			PC_next <= PC_in + extended_9 + 16'b0000000000000010;
 		end else begin
 			PC_next <= PC_in + 16'b0000000000000010;
 		end

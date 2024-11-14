@@ -1,0 +1,126 @@
+X-Makina Assembler - Version XM-23 Single Pass+ Assembler - Release 02.06.23
+Input file name: PRIME_SIEVE_FPGA.asm
+Time of assembly: Wed 13 Nov 2024 21:16:37 
+  1	    	     	LR	equ	R5
+  2	    	     	PC	equ	R7
+  3	    	     	P	equ	R0
+  4	    	     	PP	equ 	R1
+  5	    	     	CNT	equ	R2
+  6	    	     	VAL	equ	R3
+  7	    	     	I	equ	R4
+  8	    	     	ONE	equ	R5
+  9	    	     	LIMNUM	equ	#3800		;greatest number is 7FFF because of comparisons with negatives (signed)
+ 10	    	     	LIMIT	equ	R6
+ 11	    	     	
+ 12	    	     	
+ 13	    	     	
+ 14	    	     		org	#FF00		;MAIN LOOP OCCURS AT FF00
+ 15	    	     	START
+ 16	FF00	6006		movl	LIMNUM,LIMIT
+ 17	FF02	79C6		movh	LIMNUM,LIMIT
+ 18	FF04	680D		movlz	$1,ONE		; save number 1 in R5
+ 19	FF06	6810		movlz	$2,P		; Save number 2 in R0
+ 20	    	     	LOOP1	
+ 21	FF08	4C02		mov	P,CNT		;set counter to P
+ 22	FF0A	6801		movlz	#0000,PP	; reset R1
+ 23	    	     	
+ 24	    	     	; Following loop creates P^2
+ 25	FF0C	4001	MULTLP	add	P,PP		;add P to PP
+ 26	FF0E	428A		sub	$1,CNT		;decrement counter (initially set to P)
+ 27	FF10	27FD		bnz	MULTLP		;as long as counter isnt zero, continue looping
+ 28	    	     	
+ 29	FF12	4531		cmp	LIMIT,PP	;compare P squared to limit
+ 30	FF14	3413		BGE	STOPLOOP1	;stop looping if P squared is larger than loop limit
+ 31	FF16	4C06		mov	P,R6		;temporarly store P in R6
+ 32	FF18	4006		add	P,R6		;multiply P by 2 and save it in R6
+ 33	FF1A	5833		ld	R6,VAL		;loads value from memory (val <- mem[2p])
+ 34	FF1C	6006		movl	LIMNUM,LIMIT	;restoring R6 to LIMIT
+ 35	FF1E	79C6		movh	LIMNUM,LIMIT	
+ 36	FF20	4583		cmp	$0,VAL		
+ 37	FF22	240A		BNE	SKIP1		;if value is NOT zero, then skip following lines
+ 38	    	     		
+ 39	    	     	
+ 40	FF24	4C0C		mov	PP,I		;set I initiaially equal to P squared		
+ 41	FF26	4534	LOOP2	cmp	LIMIT,I		;compare I to limit
+ 42	FF28	3407		BGE	STOPLOOP2	;if I is larger than limit, then dont loop again
+ 43	FF2A	4C26		mov	I,R6		;temporarly store I in R6
+ 44	FF2C	4026		add	I,R6		;multiply I by 2 and save it in R6
+ 45	FF2E	5C2E		st	ONE,R6		;store 1 in memory to indicate not prime
+ 46	FF30	6006		movl	LIMNUM,LIMIT	;restoring R6 to LIMIT
+ 47	FF32	79C6		movh	LIMNUM,LIMIT	
+ 48	FF34	4004		add	P,I		;increment I by P
+ 49	FF36	3FF7		BRA	LOOP2		;do loop again
+ 50	    	     	STOPLOOP2
+ 51	    	     	
+ 52	FF38	4088	SKIP1	add	$1,P		;increment P by 1
+ 53	FF3A	3FE6		BRA	LOOP1		;Loop again
+ 54	    	     	STOPLOOP1
+ 55	    	     	
+ 56	    	     	
+ 57	    	     	;at this point, any value in memory between locations 0000 and LIMIT should be a 1 or a zero.
+ 58	    	     	;if the value is a 1 that means it is not a prime, if a value is zero it is a prime
+ 59	    	     	;Now program goes through memory, checks if value in address is 0 or 1, if its 0, then write that address somewhere else to save it
+ 60	    	     	
+ 61	    	     	
+ 62	FF3C	6005		movl	#A000,R5	;can now override R5 (not needed any more) to set starting point for saving memory at location 10,000 (A000)
+ 63	FF3E	7D05		movh	#A000,R5	
+ 64	FF40	6810		movlz	#0002,P
+ 65	FF42	4530	LOOP3	cmp	LIMIT,P
+ 66	FF44	340D		BGE	STOPLOOP3	;stop looping if P is greater than or equal to limit
+ 67	FF46	4C06		mov	P,R6		;temporarly store P in R6
+ 68	FF48	4006		add	P,R6		;multiply P by 2 and save it in R6
+ 69	FF4A	5833		ld	R6,VAL		;loads value from memory (val <- mem[2p])
+ 70	FF4C	6006		movl	LIMNUM,LIMIT	;restoring R6 to LIMIT
+ 71	FF4E	79C6		movh	LIMNUM,LIMIT
+ 72	FF50	4583		cmp	$0,VAL		
+ 73	FF52	2404		BNE	SKIP2		;if value is not zero, it is not a prime, so skip saving it to memory
+ 74	FF54	4D18		swpb	P		;swap bytes of P because of little endian (for presentation)
+ 75	FF56	5C05		st	P,R5		;Store the byte address of val, not val itself
+ 76	FF58	4D18		swpb	P		;swap bytes back to how they should be
+ 77	FF5A	4095		add	$2,R5		;Increment by two as we are storing addresses - 16 bits
+ 78	FF5C	4088	SKIP2	add	$1,P
+ 79	FF5E	3FF1		BRA	LOOP3
+ 80	    	     	STOPLOOP3
+ 81	FF60	3C1F	BRA	DONE
+ 82	    	     	
+ 83	    	     	
+ 84	    	     		org	#FFA0
+ 85	FFA0	3FFF	DONE	BRA	DONE
+ 86	    	     	end START
+
+Successful completion of assembly - 2P
+
+** Symbol table **
+Name                               	Type	Value	Decimal
+DONE                               	REL	FFA0	-96	PRI
+SKIP2                              	REL	FF5C	-164	PRI
+STOPLOOP3                          	REL	FF60	-160	PRI
+LOOP3                              	REL	FF42	-190	PRI
+STOPLOOP2                          	REL	FF38	-200	PRI
+LOOP2                              	REL	FF26	-218	PRI
+SKIP1                              	REL	FF38	-200	PRI
+STOPLOOP1                          	REL	FF3C	-196	PRI
+MULTLP                             	REL	FF0C	-244	PRI
+LOOP1                              	REL	FF08	-248	PRI
+START                              	REL	FF00	-256	PRI
+LIMIT                              	REG	0006	6	PRI
+LIMNUM                             	CON	3800	14336	PRI
+ONE                                	REG	0005	5	PRI
+I                                  	REG	0004	4	PRI
+VAL                                	REG	0003	3	PRI
+CNT                                	REG	0002	2	PRI
+PP                                 	REG	0001	1	PRI
+P                                  	REG	0000	0	PRI
+PC                                 	REG	0007	7	PRI
+LR                                 	REG	0005	5	PRI
+R7                                 	REG	0007	7	PRI
+R6                                 	REG	0006	6	PRI
+R5                                 	REG	0005	5	PRI
+R4                                 	REG	0004	4	PRI
+R3                                 	REG	0003	3	PRI
+R2                                 	REG	0002	2	PRI
+R1                                 	REG	0001	1	PRI
+R0                                 	REG	0000	0	PRI
+
+.XME file: C:\Users\romes\OneDrive\Desktop\XM23-CPU\Assembly Examples\PRIME_SIEVE_FPGA.xme
+

@@ -9,7 +9,7 @@ module memory_access_d_ram (
 	input logic [2:0][2:0] dst_i,
 	
 	output logic write_enable,
-	output logic [15:0] output_address,
+	output logic [14:0] output_address,
 	output logic [15:0] output_data
 );
 
@@ -24,21 +24,21 @@ module memory_access_d_ram (
 	
 		// Default
 		write_enable = 1'b0;
-		output_address = 16'b0;
+		output_address = 15'b0;
 		output_data = 16'b0;
 		
 		// LD
 		if (enable[mem_access_stage][LD]) begin
 			
 			// Get the output address without offsets
-			output_address = gprc[R][src_i[mem_access_stage]];
+			output_address = gprc[R][src_i[mem_access_stage]][15:1];
 			
 			// If increments or decrements are needed do them here
 			if (pre[mem_access_stage] == 1'b1) begin
 				if (inc[mem_access_stage] == 1'b1) begin
-					output_address = gprc[R][src_i[mem_access_stage]] + 16'b1;
+					output_address = gprc[R][src_i[mem_access_stage]][15:1] + 15'b1;
 				end else if (dec[mem_access_stage] == 1'b1) begin
-					output_address = gprc[R][src_i[mem_access_stage]] - 16'b1;
+					output_address = gprc[R][src_i[mem_access_stage]][15:1] - 15'b1;
 				end
 			end
 		
@@ -52,14 +52,14 @@ module memory_access_d_ram (
 			output_data = gprc[R][src_i[mem_access_stage]];
 			
 			// Get the output address without offsets
-			output_address = gprc[R][dst_i[mem_access_stage]];
+			output_address = gprc[R][dst_i[mem_access_stage]][15:1];
 			
 			// If increments or decrements are needed do them here
 			if (pre[mem_access_stage] == 1'b1) begin
 				if (inc[mem_access_stage] == 1'b1) begin
-					output_address = gprc[R][dst_i[mem_access_stage]] + 16'b1;
+					output_address = gprc[R][dst_i[mem_access_stage]][15:1] + 15'b1;
 				end else if (dec[mem_access_stage] == 1'b1) begin
-					output_address = gprc[R][dst_i[mem_access_stage]] - 16'b1;
+					output_address = gprc[R][dst_i[mem_access_stage]][15:1] - 15'b1;
 				end
 			end	 
 			
@@ -67,7 +67,7 @@ module memory_access_d_ram (
 		end else if (enable[mem_access_stage][LDR]) begin
 			
 			// Get the output address with offset and sign extension
-			output_address = gprc[R][src_i[mem_access_stage]] + { {9{off[mem_access_stage][7]}}, off[mem_access_stage][7:0]}; 
+			output_address = gprc[R][src_i[mem_access_stage]][15:1] + { {8{off[mem_access_stage][6]}}, off[mem_access_stage][6:0]}; 
 			
 		// STR
 		end else if (enable[mem_access_stage][STR]) begin
@@ -79,7 +79,7 @@ module memory_access_d_ram (
 			output_data = gprc[R][src_i[mem_access_stage]];
 			
 			// Get the output address with offset and sign extension
-			output_address = gprc[R][dst_i[mem_access_stage]] + { {9{off[mem_access_stage][7]}}, off[mem_access_stage][7:0]}; 		
+			output_address = gprc[R][dst_i[mem_access_stage]][15:1] + { {8{off[mem_access_stage][6]}}, off[mem_access_stage][6:0]}; 		
 			
 		end	
 		
