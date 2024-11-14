@@ -1,6 +1,7 @@
 #include "memory.h"
 
 unsigned int GLOBAL_CLOCK = 0;	//Initilize global clock
+unsigned int GLOBAL_CLOCK_FPGA = 0;
 
 cache_line cache[CACHE_SIZE];
 char cache_type = 'A';

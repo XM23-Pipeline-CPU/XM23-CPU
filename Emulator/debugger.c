@@ -3,6 +3,7 @@
 #include <signal.h> /* Signal handling software */
 #include <stdbool.h>
 #include <ctype.h>
+#include <time.h>
 
 //Credit to Dr. Larry Hughes for all CTRL_C software interrupt code//
 
@@ -15,6 +16,7 @@ volatile sig_atomic_t ctrl_c_fnd; /* T|F - indicates whether ^C detected */
 /// <param name=""></param>
 void cont_mode(unsigned short breakpoint)
 {
+	clock_t start = clock();	//start clock from this point on
 	ctrl_c_fnd = false;
 	signal(SIGINT, (_crt_signal_t)sigint_hdlr);
 	//while not at breakpoint
@@ -25,13 +27,17 @@ void cont_mode(unsigned short breakpoint)
 		PC.w += 2;				//increment
 		decode_inst(IR.w);		//decode + execute
 		GLOBAL_CLOCK += 3;		// Increment 1 for fetch, decode, and execute
+		GLOBAL_CLOCK_FPGA += 5;
 	}
 	if (breakpoint == ENDMEM)	//executes last instruction
 	{
 		fetch();
 		decode_inst(IR.w);
 		GLOBAL_CLOCK += 3;
+		GLOBAL_CLOCK_FPGA += 5;
 	}
+	clock_t end = clock();		//end timer
+	printf("Time: %d ms\n", end - start);	//print total run time
 	return;
 }
 
@@ -57,6 +63,7 @@ void debug_mode(void)
 		do
 		{
 			printf("\n\nCurrent Clock: %d\n", GLOBAL_CLOCK);
+			printf("Current Non-pipelined FPGA Clock: %d\n", GLOBAL_CLOCK_FPGA);
 			printf("Choose one of the following:\n");
 			printf("QUIT              : (0)\n");
 			printf("CONTINUE          : (1)\n");
@@ -145,6 +152,7 @@ void debug_mode(void)
 			PC.w += 2;
 			decode_inst(IR.w);
 			GLOBAL_CLOCK += 3;
+			GLOBAL_CLOCK_FPGA += 5;
 		}
 		else if (choice == 2)	//if CHANGE PC chosen
 		{

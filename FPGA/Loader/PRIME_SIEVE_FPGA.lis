@@ -1,6 +1,6 @@
 X-Makina Assembler - Version XM-23p Single Pass+ Assembler - Release 24.05.16
 Input file name: PRIME_SIEVE_FPGA.asm
-Time of assembly: Wed 13 Nov 2024 21:48:28 
+Time of assembly: Thu 14 Nov 2024 19:01:02 
   1	    	     	LR	equ	R5
   2	    	     	PC	equ	R7
   3	    	     	P	equ	R0
@@ -81,7 +81,7 @@ Time of assembly: Wed 13 Nov 2024 21:48:28
  78	FF5C	4088	SKIP2	add	$1,P
  79	FF5E	3FF1		BRA	LOOP3
  80	    	     	STOPLOOP3
- 81	FF60	3FFF	DONE 	BRA	DONE
+ 81	FF60	3FFF	DONE	BRA	DONE
  82	    	     	end START
 
 Successful completion of assembly - 2P

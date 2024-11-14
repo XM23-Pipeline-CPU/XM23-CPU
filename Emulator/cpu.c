@@ -1332,6 +1332,7 @@ void double_fault_handler(void)
 		do
 		{
 			printf("\n\nCurrent Clock: %d\n", GLOBAL_CLOCK);
+			printf("Current Non-pipelined FPGA Clock: %d\n", GLOBAL_CLOCK_FPGA);
 			printf("Choose one of the following:\n");
 			printf("TERMINATE CPU     : (0)\n");
 			printf("View Registers    : (1)\n");

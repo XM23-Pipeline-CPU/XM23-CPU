@@ -61,7 +61,6 @@ int main(int argc, char *argv[])
 		}
 	} while (mode != 0 && mode != 1 && mode != 2);
 
-	clock_t start = clock();	//start clock from this point on
 	if (mode == 0)
 		return 0;
 	if (mode == 1)				//continuous mode runs from memory address 0x0000 to 0xFFFE
@@ -82,11 +81,10 @@ int main(int argc, char *argv[])
 		debug_mode();
 	
 
-	clock_t end = clock();		//end timer
 	terminate_print_files();
 	flush_cache();
 	printf("Clock Cycles: %d\n", GLOBAL_CLOCK);
-	printf("Time: %d ms\n", end - start);	//print total run time
+	printf("Non-pipelined FPGA Clock Cycles: %d\n", GLOBAL_CLOCK_FPGA);
 	printf("\nPress (1) to print memory into file, or any other key to quit.");
 	setvbuf(stdin, NULL, _IONBF, 0);		//clear stdin to allow getchar to work
 	if (getchar() == '1')

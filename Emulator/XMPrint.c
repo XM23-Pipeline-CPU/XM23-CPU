@@ -78,7 +78,7 @@ void print_inst(int choice, unsigned int inst)
 		else if(print_verbosity == VERBOSE)
 			fprintf(printDest, "\n\nPC      INST    TYPE    CEX     PSW     R0      R1      R2      R3      R4      R5      SP\n");
 		else
-			fprintf(printDest, "\n\nPC      INST    TYPE    CEX.C   CEX.T   CEX.F   C    Z    N    SLP  CP   FLT  PP   R0      R1      R2      R3      R4      R5      SP\n");
+			fprintf(printDest, "\n\nPC      INST    TYPE    CEX.C   CEX.T   CEX.F   C    Z    N    SLP  V    CP   FLT  PP   R0      R1      R2      R3      R4      R5      SP\n");
 		first = 0;
 	}
 		
@@ -270,7 +270,7 @@ void print_inst(int choice, unsigned int inst)
 	//fprintf(              CEX.C   CEX.T   CEX.F   C   Z   N   SLP CP  FLT PP  R0      R1      R2      R3      R4      R5      SP\n");
 	else if (print_verbosity == VERBOSE_PLUS)
 	{
-		fprintf(printDest, "%04x    %04x    %04x    %01x    %01x    %01x    %01x    %01x    %01x    %01x    %04x    %04x    %04x    %04x    %04x    %04x    %04x",
+		fprintf(printDest, "%04x    %04x    %04x    %01x    %01x    %01x    %01x    %01x    %01x    %01x    %01x    %04x    %04x    %04x    %04x    %04x    %04x    %04x",
 			CEX.cond,
 			CEX.tru,
 			CEX.fls,
@@ -278,6 +278,7 @@ void print_inst(int choice, unsigned int inst)
 			PSW.z,
 			PSW.n,
 			PSW.slp,
+			PSW.v,
 			PSW.cp,
 			PSW.flt,
 			PSW.pp,

@@ -29,6 +29,7 @@ extern int div_num;
 #define BYTE		1
 
 extern unsigned int GLOBAL_CLOCK;
+extern unsigned int GLOBAL_CLOCK_FPGA;
 
 //defines type for accessing array of four nibbles
 typedef struct nibbles
