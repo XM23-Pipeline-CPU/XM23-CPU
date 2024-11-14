@@ -434,7 +434,6 @@ module decode_stage(
             Z = inst[1];
             C = inst[0];
             enable[30] = 1'b1;
-            // Not implemented
 
          end else if ((inst & MASK_CLRCC) == EXPECTED_CLRCC) begin
             V = inst[4];
@@ -443,7 +442,6 @@ module decode_stage(
             Z = inst[1];
             C = inst[0];
             enable[31] = 1'b1;
-            // Not implemented
 
          end else if ((inst & MASK_CEX) == EXPECTED_CEX) begin
             C = inst[9:6];

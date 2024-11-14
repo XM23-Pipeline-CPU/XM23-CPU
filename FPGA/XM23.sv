@@ -6,9 +6,12 @@
 \*-------------------------------------------------*/
 
 module XM23 (
-   input  wire clk_in, // Input clk (50 MHz from the FPGA)
-   input  wire init,   // Init mode signal (the FPGA should be in this mode when idle to setup for running the program)
-   output reg led      // LED output (blinking to confirm clk)
+   input  wire       clk_in, // Input clk (50 MHz from the FPGA)
+   input  wire       init,   // Init mode signal (the FPGA should be in this mode when idle to setup for running the program)
+   input  wire [1:0] speed,  // Input from switches that determine clock speed
+   output reg        led,    // LED output (blinking to confirm clk)
+   
+   output wire [6:0] seven_seg_display [7:0] // External display wire
 );
 
    // Wire for forcing p_ram to read FFFE (7FFF in words) address for init
@@ -18,13 +21,26 @@ module XM23 (
 
    // Clock division logic -----------------------------------------------------------------------
 
-   reg clk = 0;            // This is the global clk for other modules
-                           // (except memory which will take 50MHz)
+   // This is the global clk for other modules
+   // (except memory which will take 50MHz)
+   reg clk = 0;
+                           
 
    // Initialize counter for the divider
    reg [31:0] counter = 1;
-   parameter DIVIDER  = 3; // Divides 50 MHz clk to desired speed
-                           // (DIVIDER = number of edges until flip)
+   
+   // Divides 50 MHz clk to desired speed
+   // (DIVIDER = number of edges until flip)
+   logic [31:0] DIVIDER = 3;
+   always_comb begin
+      case (speed)                     // runs at
+         2'b11: DIVIDER = 3;           // 8.333 MHz (fastest it can go)
+         2'b10: DIVIDER = 250_000;     // 100 Hz
+         2'b01: DIVIDER = 2_500_000;   // 10 Hz
+         2'b00: DIVIDER = 25_000_000;  // 1 Hz
+         default: DIVIDER = 3;
+      endcase
+   end
 
    always @(posedge clk_in) begin
      if (init) begin
@@ -40,6 +56,21 @@ module XM23 (
      end else begin
          counter <= counter + 1;
      end
+   end
+   
+   // program finish instruction = BRA to itself
+   parameter PROGRAM_FINISH = 16'b0011111111111111;
+   logic [63:0] global_clock_count = 64'b0;
+   
+   // Global clock counter gets incremented always unless
+   // instruction is the program_finish instruction (BRA to itself)
+   // or unless 'init' resets it back to 0
+   always @(posedge clk or posedge init) begin
+      if(init) begin
+         global_clock_count <= 0;
+      end else if (inst_wire != PROGRAM_FINISH) begin
+         global_clock_count <= global_clock_count + 1;
+      end
    end
 
    // --------------------------------------------------------------------------------------------
@@ -138,6 +169,9 @@ module XM23 (
 
    // Wire to disable decode for init
    wire decode_disable_wire;
+   
+   // seven segment display wire
+   wire [6:0] seven_seg_display_wire [7:0];
 
    // --------------------------------------------------------------------------------------------
 
@@ -439,6 +473,14 @@ module XM23 (
       .pc(PC_wire),
       .inst(inst_wire)
    );
+   
+   // Driver to display clock count
+   seven_segment_display_driver(
+      .binary_in(global_clock_count[26:0]),
+      .segments(seven_seg_display_wire)
+   );
+   
+   assign seven_seg_display = seven_seg_display_wire;
 
    // --------------------------------------------------------------------------------------------
 

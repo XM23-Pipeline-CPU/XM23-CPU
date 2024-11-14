@@ -48,7 +48,7 @@ module pipeline_registers(
    output logic [2:0][40:0] enable_o,
 
    output logic [15:0] PSW_o,            // Output PSW
-   output logic [1:0][7:0][15:0] gprc_o, // Output General purpose registers and constants
+   output logic [1:0][7:0][15:0] gprc_o  // Output General purpose registers and constants
 );
 
    // Parameters
