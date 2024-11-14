@@ -1,6 +1,7 @@
+// alu_MOV.sv
 module alu_MOV (
-    input logic [15:0] b,    // Operand B
-    output logic [15:0] result // Result
+   input  logic [15:0] b,     // Operand B
+   output logic [15:0] result // Result
 );
-	 assign result = b;
+   assign result = b;
 endmodule
