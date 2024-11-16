@@ -8,7 +8,7 @@ module seven_segment_display_driver (
    // Temporary register to store shifting result during conversion
    logic [58:0] shift_reg;
 
-   integer i;
+   integer i, j;
 
    // Binary to BCD conversion using "Double Dabble"
    always_comb begin
@@ -57,8 +57,8 @@ module seven_segment_display_driver (
 
    // Convert each BCD digit to a seven-segment code
    always_comb begin
-      for (i = 0; i < 8; i++) begin
-         segments[i] = decode_bcd_to_segment(bcd_digits[i]);
+      for (j = 0; j < 8; j++) begin
+         segments[j] = decode_bcd_to_segment(bcd_digits[j]);
       end
    end
 

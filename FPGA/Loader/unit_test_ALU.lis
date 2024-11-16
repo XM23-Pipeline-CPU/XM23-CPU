@@ -1,0 +1,37 @@
+X-Makina Assembler - Version XM-23p Single Pass+ Assembler - Release 24.05.16
+Input file name: unit_test_ALU.asm
+Time of assembly: Sat 16 Nov 2024 14:01:58 
+  1	    	     		org	#1000
+  2	    	     	START	
+  3	1000	40B0		ADD	#20,R0
+  4	1002	42A8		SUB	#10,R0
+  5	1004	3FFF	DONE	BRA	DONE
+  6	    	     	END START
+Successful completion of assembly - 1P
+
+** Symbol table **
+
+Constants (Equates)
+Name                               	Type	Value	Decimal
+
+Labels (Code)
+Name                               	Type	Value	Decimal
+DONE                               	REL	1004	4100	PRI
+START                              	REL	1000	4096	PRI
+
+Labels (Data)
+Name                               	Type	Value	Decimal
+
+Registers
+Name                               	Type	Value	Decimal
+R7                                 	REG	0007	7	PRI
+R6                                 	REG	0006	6	PRI
+R5                                 	REG	0005	5	PRI
+R4                                 	REG	0004	4	PRI
+R3                                 	REG	0003	3	PRI
+R2                                 	REG	0002	2	PRI
+R1                                 	REG	0001	1	PRI
+R0                                 	REG	0000	0	PRI
+
+.XME file: C:\Users\romes\OneDrive\Desktop\XM23-CPU\FPGA\Loader\unit_test_ALU.xme
+

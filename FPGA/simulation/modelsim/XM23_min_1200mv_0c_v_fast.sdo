@@ -24,13 +24,13 @@
 //
 
 // 
-// This SDF file should be used for ModelSim-Altera (SystemVerilog) only
+// This SDF file should be used for ModelSim-Altera (Verilog) only
 // 
 
 (DELAYFILE
   (SDFVERSION "2.1")
   (DESIGN "XM23")
-  (DATE "11/14/2024 18:28:11")
+  (DATE "11/16/2024 14:42:29")
   (VENDOR "Altera")
   (PROGRAM "Quartus Prime")
   (VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition")
@@ -84028,7 +84028,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~32)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~32)
     (DELAY
       (ABSOLUTE
         (PORT dataa (416:416:416) (509:509:509))
@@ -84044,7 +84044,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~31)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~31)
     (DELAY
       (ABSOLUTE
         (PORT dataa (414:414:414) (506:506:506))
@@ -84060,7 +84060,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~30)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~30)
     (DELAY
       (ABSOLUTE
         (PORT dataa (408:408:408) (499:499:499))
@@ -84076,7 +84076,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~35)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~35)
     (DELAY
       (ABSOLUTE
         (PORT dataa (217:217:217) (265:265:265))
@@ -84092,7 +84092,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~33)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~33)
     (DELAY
       (ABSOLUTE
         (PORT dataa (216:216:216) (263:263:263))
@@ -84108,7 +84108,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~34)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~34)
     (DELAY
       (ABSOLUTE
         (PORT dataa (217:217:217) (264:264:264))
@@ -84124,7 +84124,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~38)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~38)
     (DELAY
       (ABSOLUTE
         (PORT dataa (198:198:198) (242:242:242))
@@ -84140,7 +84140,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~37)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~37)
     (DELAY
       (ABSOLUTE
         (PORT dataa (201:201:201) (245:245:245))
@@ -84156,7 +84156,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~36)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~36)
     (DELAY
       (ABSOLUTE
         (PORT dataa (199:199:199) (243:243:243))
@@ -84172,7 +84172,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~39)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~39)
     (DELAY
       (ABSOLUTE
         (PORT dataa (118:118:118) (155:155:155))
@@ -84188,7 +84188,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~41)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~41)
     (DELAY
       (ABSOLUTE
         (PORT dataa (118:118:118) (155:155:155))
@@ -84204,7 +84204,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~40)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~40)
     (DELAY
       (ABSOLUTE
         (PORT dataa (122:122:122) (159:159:159))
@@ -84220,7 +84220,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~42)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~42)
     (DELAY
       (ABSOLUTE
         (PORT dataa (119:119:119) (156:156:156))
@@ -84236,7 +84236,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~43)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~43)
     (DELAY
       (ABSOLUTE
         (PORT dataa (119:119:119) (156:156:156))
@@ -84252,7 +84252,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~44)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~44)
     (DELAY
       (ABSOLUTE
         (PORT dataa (118:118:118) (156:156:156))
@@ -84268,7 +84268,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~47)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~47)
     (DELAY
       (ABSOLUTE
         (PORT dataa (367:367:367) (444:444:444))
@@ -84284,7 +84284,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~45)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~45)
     (DELAY
       (ABSOLUTE
         (PORT dataa (370:370:370) (447:447:447))
@@ -84300,7 +84300,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~46)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~46)
     (DELAY
       (ABSOLUTE
         (PORT dataa (370:370:370) (448:448:448))
@@ -84316,7 +84316,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~50)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~50)
     (DELAY
       (ABSOLUTE
         (PORT dataa (119:119:119) (155:155:155))
@@ -84332,7 +84332,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~49)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~49)
     (DELAY
       (ABSOLUTE
         (PORT dataa (119:119:119) (157:157:157))
@@ -84348,7 +84348,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~48)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~48)
     (DELAY
       (ABSOLUTE
         (PORT dataa (119:119:119) (155:155:155))
@@ -84364,7 +84364,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~53)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~53)
     (DELAY
       (ABSOLUTE
         (PORT dataa (118:118:118) (155:155:155))
@@ -84380,7 +84380,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~51)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~51)
     (DELAY
       (ABSOLUTE
         (PORT dataa (121:121:121) (159:159:159))
@@ -84396,7 +84396,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~52)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~52)
     (DELAY
       (ABSOLUTE
         (PORT dataa (120:120:120) (159:159:159))
@@ -84412,7 +84412,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~56)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~56)
     (DELAY
       (ABSOLUTE
         (PORT dataa (393:393:393) (485:485:485))
@@ -84428,7 +84428,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~54)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~54)
     (DELAY
       (ABSOLUTE
         (PORT dataa (390:390:390) (482:482:482))
@@ -84444,7 +84444,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~55)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~55)
     (DELAY
       (ABSOLUTE
         (PORT dataa (397:397:397) (489:489:489))
@@ -84460,7 +84460,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~57)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~57)
     (DELAY
       (ABSOLUTE
         (PORT dataa (120:120:120) (158:158:158))
@@ -84476,7 +84476,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~58)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~58)
     (DELAY
       (ABSOLUTE
         (PORT dataa (120:120:120) (158:158:158))
@@ -84492,7 +84492,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~59)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~59)
     (DELAY
       (ABSOLUTE
         (PORT dataa (118:118:118) (154:154:154))
@@ -84508,7 +84508,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~61)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~61)
     (DELAY
       (ABSOLUTE
         (PORT dataa (120:120:120) (158:158:158))
@@ -84524,7 +84524,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~62)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~62)
     (DELAY
       (ABSOLUTE
         (PORT dataa (119:119:119) (156:156:156))
@@ -84540,7 +84540,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~60)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~60)
     (DELAY
       (ABSOLUTE
         (PORT dataa (122:122:122) (161:161:161))
@@ -84556,7 +84556,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~65)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~65)
     (DELAY
       (ABSOLUTE
         (PORT dataa (350:350:350) (416:416:416))
@@ -84572,7 +84572,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~64)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~64)
     (DELAY
       (ABSOLUTE
         (PORT dataa (352:352:352) (418:418:418))
@@ -84588,7 +84588,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~63)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~63)
     (DELAY
       (ABSOLUTE
         (PORT dataa (352:352:352) (417:417:417))
@@ -84604,7 +84604,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~66)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~66)
     (DELAY
       (ABSOLUTE
         (PORT dataa (120:120:120) (156:156:156))
@@ -84620,7 +84620,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~67)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~67)
     (DELAY
       (ABSOLUTE
         (PORT dataa (120:120:120) (157:157:157))
@@ -84636,7 +84636,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~68)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~68)
     (DELAY
       (ABSOLUTE
         (PORT dataa (119:119:119) (155:155:155))
@@ -84652,7 +84652,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~70)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~70)
     (DELAY
       (ABSOLUTE
         (PORT dataa (123:123:123) (162:162:162))
@@ -84668,7 +84668,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~69)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~69)
     (DELAY
       (ABSOLUTE
         (PORT dataa (123:123:123) (162:162:162))
@@ -84684,7 +84684,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~71)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~71)
     (DELAY
       (ABSOLUTE
         (PORT dataa (118:118:118) (155:155:155))
@@ -84700,7 +84700,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~73)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~73)
     (DELAY
       (ABSOLUTE
         (PORT dataa (362:362:362) (427:427:427))
@@ -84716,7 +84716,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~72)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~72)
     (DELAY
       (ABSOLUTE
         (PORT dataa (356:356:356) (421:421:421))
@@ -84732,7 +84732,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~74)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~74)
     (DELAY
       (ABSOLUTE
         (PORT dataa (358:358:358) (424:424:424))
@@ -84748,7 +84748,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~75)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~75)
     (DELAY
       (ABSOLUTE
         (PORT dataa (119:119:119) (156:156:156))
@@ -84764,7 +84764,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~76)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~76)
     (DELAY
       (ABSOLUTE
         (PORT dataa (118:118:118) (156:156:156))
@@ -84780,7 +84780,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~77)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~77)
     (DELAY
       (ABSOLUTE
         (PORT dataa (121:121:121) (159:159:159))
@@ -84796,7 +84796,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~80)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~80)
     (DELAY
       (ABSOLUTE
         (PORT dataa (121:121:121) (160:160:160))
@@ -84812,7 +84812,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~78)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~78)
     (DELAY
       (ABSOLUTE
         (PORT dataa (122:122:122) (161:161:161))
@@ -84828,7 +84828,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~79)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~79)
     (DELAY
       (ABSOLUTE
         (PORT dataa (120:120:120) (158:158:158))
@@ -84844,7 +84844,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~83)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~83)
     (DELAY
       (ABSOLUTE
         (PORT dataa (191:191:191) (233:233:233))
@@ -84860,7 +84860,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~82)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~82)
     (DELAY
       (ABSOLUTE
         (PORT dataa (192:192:192) (234:234:234))
@@ -84876,7 +84876,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~81)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~81)
     (DELAY
       (ABSOLUTE
         (PORT dataa (191:191:191) (234:234:234))
@@ -84892,7 +84892,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~86)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~86)
     (DELAY
       (ABSOLUTE
         (PORT dataa (556:556:556) (658:658:658))
@@ -84908,7 +84908,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~85)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~85)
     (DELAY
       (ABSOLUTE
         (PORT dataa (554:554:554) (657:657:657))
@@ -84924,7 +84924,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~84)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~84)
     (DELAY
       (ABSOLUTE
         (PORT dataa (556:556:556) (658:658:658))
@@ -84940,7 +84940,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~89)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~89)
     (DELAY
       (ABSOLUTE
         (PORT dataa (120:120:120) (158:158:158))
@@ -84956,7 +84956,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~87)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~87)
     (DELAY
       (ABSOLUTE
         (PORT dataa (122:122:122) (160:160:160))
@@ -84972,7 +84972,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~88)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~88)
     (DELAY
       (ABSOLUTE
         (PORT dataa (119:119:119) (157:157:157))
@@ -84988,7 +84988,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~90)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~90)
     (DELAY
       (ABSOLUTE
         (PORT dataa (478:478:478) (560:560:560))
@@ -85004,7 +85004,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~91)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~91)
     (DELAY
       (ABSOLUTE
         (PORT dataa (478:478:478) (560:560:560))
@@ -85020,7 +85020,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~92)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~92)
     (DELAY
       (ABSOLUTE
         (PORT dataa (478:478:478) (560:560:560))
@@ -85036,7 +85036,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~94)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~94)
     (DELAY
       (ABSOLUTE
         (PORT dataa (490:490:490) (584:584:584))
@@ -85052,7 +85052,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~95)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~95)
     (DELAY
       (ABSOLUTE
         (PORT dataa (490:490:490) (583:583:583))
@@ -85068,7 +85068,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~93)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~93)
     (DELAY
       (ABSOLUTE
         (PORT dataa (489:489:489) (583:583:583))
@@ -85084,7 +85084,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\[29\]\~97)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\[29\]\~97)
     (DELAY
       (ABSOLUTE
         (PORT dataa (986:986:986) (1126:1126:1126))
@@ -85100,7 +85100,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\[28\]\~96)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\[28\]\~96)
     (DELAY
       (ABSOLUTE
         (PORT dataa (983:983:983) (1122:1122:1122))
@@ -85116,7 +85116,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\[30\]\~98)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\[30\]\~98)
     (DELAY
       (ABSOLUTE
         (PORT dataa (984:984:984) (1123:1123:1123))
@@ -85132,7 +85132,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|WideOr6\~0)
+    (INSTANCE seven_segment_display_driver_inst\|WideOr6\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (135:135:135) (178:178:178))
@@ -85148,7 +85148,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|WideOr5\~0)
+    (INSTANCE seven_segment_display_driver_inst\|WideOr5\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (134:134:134) (176:176:176))
@@ -85164,7 +85164,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|WideOr4\~0)
+    (INSTANCE seven_segment_display_driver_inst\|WideOr4\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (136:136:136) (180:180:180))
@@ -85180,7 +85180,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|WideOr3\~0)
+    (INSTANCE seven_segment_display_driver_inst\|WideOr3\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (135:135:135) (176:176:176))
@@ -85196,7 +85196,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|WideOr2\~0)
+    (INSTANCE seven_segment_display_driver_inst\|WideOr2\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (137:137:137) (180:180:180))
@@ -85212,7 +85212,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|WideOr1\~0)
+    (INSTANCE seven_segment_display_driver_inst\|WideOr1\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (134:134:134) (176:176:176))
@@ -85228,7 +85228,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|WideOr0\~0)
+    (INSTANCE seven_segment_display_driver_inst\|WideOr0\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (137:137:137) (181:181:181))
@@ -85244,7 +85244,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~165)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~165)
     (DELAY
       (ABSOLUTE
         (PORT dataa (187:187:187) (229:229:229))
@@ -85260,7 +85260,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|LessThan0\~0)
+    (INSTANCE seven_segment_display_driver_inst\|LessThan0\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (416:416:416) (508:508:508))
@@ -85274,7 +85274,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|LessThan0\~1)
+    (INSTANCE seven_segment_display_driver_inst\|LessThan0\~1)
     (DELAY
       (ABSOLUTE
         (PORT datac (392:392:392) (475:475:475))
@@ -85286,7 +85286,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~101)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~101)
     (DELAY
       (ABSOLUTE
         (PORT dataa (115:115:115) (145:145:145))
@@ -85302,7 +85302,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~106)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~106)
     (DELAY
       (ABSOLUTE
         (PORT dataa (418:418:418) (512:512:512))
@@ -85318,7 +85318,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~107)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~107)
     (DELAY
       (ABSOLUTE
         (PORT dataa (128:128:128) (164:164:164))
@@ -85334,7 +85334,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~102)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~102)
     (DELAY
       (ABSOLUTE
         (PORT dataa (417:417:417) (509:509:509))
@@ -85350,7 +85350,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~103)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~103)
     (DELAY
       (ABSOLUTE
         (PORT dataa (188:188:188) (229:229:229))
@@ -85364,7 +85364,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~105)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~105)
     (DELAY
       (ABSOLUTE
         (PORT dataa (128:128:128) (165:165:165))
@@ -85380,7 +85380,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~104)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~104)
     (DELAY
       (ABSOLUTE
         (PORT dataa (194:194:194) (238:238:238))
@@ -85396,7 +85396,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~110)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~110)
     (DELAY
       (ABSOLUTE
         (PORT dataa (300:300:300) (353:353:353))
@@ -85412,7 +85412,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~111)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~111)
     (DELAY
       (ABSOLUTE
         (PORT dataa (298:298:298) (351:351:351))
@@ -85428,7 +85428,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~109)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~109)
     (DELAY
       (ABSOLUTE
         (PORT dataa (120:120:120) (158:158:158))
@@ -85444,7 +85444,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~108)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~108)
     (DELAY
       (ABSOLUTE
         (PORT dataa (299:299:299) (352:352:352))
@@ -85460,7 +85460,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~115)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~115)
     (DELAY
       (ABSOLUTE
         (PORT dataa (119:119:119) (156:156:156))
@@ -85476,7 +85476,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~114)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~114)
     (DELAY
       (ABSOLUTE
         (PORT dataa (119:119:119) (156:156:156))
@@ -85492,7 +85492,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~112)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~112)
     (DELAY
       (ABSOLUTE
         (PORT dataa (119:119:119) (157:157:157))
@@ -85508,7 +85508,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~113)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~113)
     (DELAY
       (ABSOLUTE
         (PORT dataa (119:119:119) (157:157:157))
@@ -85524,7 +85524,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~118)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~118)
     (DELAY
       (ABSOLUTE
         (PORT dataa (207:207:207) (254:254:254))
@@ -85540,7 +85540,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~119)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~119)
     (DELAY
       (ABSOLUTE
         (PORT dataa (202:202:202) (248:248:248))
@@ -85556,7 +85556,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~116)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~116)
     (DELAY
       (ABSOLUTE
         (PORT dataa (203:203:203) (249:249:249))
@@ -85572,7 +85572,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~117)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~117)
     (DELAY
       (ABSOLUTE
         (PORT dataa (368:368:368) (446:446:446))
@@ -85588,7 +85588,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~120)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~120)
     (DELAY
       (ABSOLUTE
         (PORT dataa (119:119:119) (156:156:156))
@@ -85604,7 +85604,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~121)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~121)
     (DELAY
       (ABSOLUTE
         (PORT dataa (119:119:119) (156:156:156))
@@ -85620,7 +85620,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~123)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~123)
     (DELAY
       (ABSOLUTE
         (PORT dataa (119:119:119) (156:156:156))
@@ -85636,7 +85636,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~122)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~122)
     (DELAY
       (ABSOLUTE
         (PORT dataa (119:119:119) (155:155:155))
@@ -85652,7 +85652,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~124)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~124)
     (DELAY
       (ABSOLUTE
         (PORT dataa (355:355:355) (425:425:425))
@@ -85668,7 +85668,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~126)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~126)
     (DELAY
       (ABSOLUTE
         (PORT dataa (355:355:355) (425:425:425))
@@ -85684,7 +85684,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~127)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~127)
     (DELAY
       (ABSOLUTE
         (PORT dataa (354:354:354) (424:424:424))
@@ -85700,7 +85700,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~125)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~125)
     (DELAY
       (ABSOLUTE
         (PORT dataa (119:119:119) (157:157:157))
@@ -85716,7 +85716,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~131)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~131)
     (DELAY
       (ABSOLUTE
         (PORT dataa (188:188:188) (232:232:232))
@@ -85732,7 +85732,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~129)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~129)
     (DELAY
       (ABSOLUTE
         (PORT dataa (395:395:395) (487:487:487))
@@ -85748,7 +85748,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~130)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~130)
     (DELAY
       (ABSOLUTE
         (PORT dataa (193:193:193) (237:237:237))
@@ -85764,7 +85764,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~128)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~128)
     (DELAY
       (ABSOLUTE
         (PORT dataa (193:193:193) (238:238:238))
@@ -85780,7 +85780,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~134)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~134)
     (DELAY
       (ABSOLUTE
         (PORT dataa (118:118:118) (156:156:156))
@@ -85796,7 +85796,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~135)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~135)
     (DELAY
       (ABSOLUTE
         (PORT dataa (123:123:123) (162:162:162))
@@ -85812,7 +85812,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~133)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~133)
     (DELAY
       (ABSOLUTE
         (PORT dataa (120:120:120) (158:158:158))
@@ -85828,7 +85828,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~132)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~132)
     (DELAY
       (ABSOLUTE
         (PORT dataa (119:119:119) (156:156:156))
@@ -85844,7 +85844,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~138)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~138)
     (DELAY
       (ABSOLUTE
         (PORT dataa (120:120:120) (159:159:159))
@@ -85860,7 +85860,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~139)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~139)
     (DELAY
       (ABSOLUTE
         (PORT dataa (120:120:120) (157:157:157))
@@ -85876,7 +85876,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~137)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~137)
     (DELAY
       (ABSOLUTE
         (PORT dataa (121:121:121) (160:160:160))
@@ -85892,7 +85892,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~136)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~136)
     (DELAY
       (ABSOLUTE
         (PORT dataa (120:120:120) (159:159:159))
@@ -85908,7 +85908,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~142)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~142)
     (DELAY
       (ABSOLUTE
         (PORT dataa (205:205:205) (251:251:251))
@@ -85924,7 +85924,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~140)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~140)
     (DELAY
       (ABSOLUTE
         (PORT dataa (206:206:206) (253:253:253))
@@ -85940,7 +85940,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~143)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~143)
     (DELAY
       (ABSOLUTE
         (PORT dataa (207:207:207) (254:254:254))
@@ -85956,7 +85956,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~141)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~141)
     (DELAY
       (ABSOLUTE
         (PORT dataa (351:351:351) (417:417:417))
@@ -85972,7 +85972,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~144)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~144)
     (DELAY
       (ABSOLUTE
         (PORT dataa (120:120:120) (158:158:158))
@@ -85988,7 +85988,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~146)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~146)
     (DELAY
       (ABSOLUTE
         (PORT dataa (119:119:119) (155:155:155))
@@ -86004,7 +86004,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~147)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~147)
     (DELAY
       (ABSOLUTE
         (PORT dataa (121:121:121) (159:159:159))
@@ -86020,7 +86020,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~145)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~145)
     (DELAY
       (ABSOLUTE
         (PORT dataa (120:120:120) (157:157:157))
@@ -86036,7 +86036,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~150)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~150)
     (DELAY
       (ABSOLUTE
         (PORT dataa (118:118:118) (155:155:155))
@@ -86052,7 +86052,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~151)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~151)
     (DELAY
       (ABSOLUTE
         (PORT dataa (122:122:122) (161:161:161))
@@ -86068,7 +86068,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~148)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~148)
     (DELAY
       (ABSOLUTE
         (PORT dataa (122:122:122) (160:160:160))
@@ -86084,7 +86084,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~149)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~149)
     (DELAY
       (ABSOLUTE
         (PORT dataa (122:122:122) (160:160:160))
@@ -86100,7 +86100,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~154)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~154)
     (DELAY
       (ABSOLUTE
         (PORT dataa (122:122:122) (161:161:161))
@@ -86116,7 +86116,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~152)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~152)
     (DELAY
       (ABSOLUTE
         (PORT dataa (119:119:119) (158:158:158))
@@ -86132,7 +86132,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~153)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~153)
     (DELAY
       (ABSOLUTE
         (PORT dataa (356:356:356) (421:421:421))
@@ -86148,7 +86148,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~155)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~155)
     (DELAY
       (ABSOLUTE
         (PORT dataa (123:123:123) (162:162:162))
@@ -86164,7 +86164,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~158)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~158)
     (DELAY
       (ABSOLUTE
         (PORT dataa (676:676:676) (782:782:782))
@@ -86180,7 +86180,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~157)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~157)
     (DELAY
       (ABSOLUTE
         (PORT dataa (118:118:118) (155:155:155))
@@ -86196,7 +86196,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~159)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~159)
     (DELAY
       (ABSOLUTE
         (PORT dataa (676:676:676) (782:782:782))
@@ -86212,7 +86212,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~156)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~156)
     (DELAY
       (ABSOLUTE
         (PORT dataa (675:675:675) (780:780:780))
@@ -86228,7 +86228,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~163)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~163)
     (DELAY
       (ABSOLUTE
         (PORT dataa (121:121:121) (160:160:160))
@@ -86244,7 +86244,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~162)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~162)
     (DELAY
       (ABSOLUTE
         (PORT dataa (118:118:118) (155:155:155))
@@ -86260,7 +86260,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~160)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~160)
     (DELAY
       (ABSOLUTE
         (PORT dataa (120:120:120) (159:159:159))
@@ -86276,7 +86276,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~161)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~161)
     (DELAY
       (ABSOLUTE
         (PORT dataa (122:122:122) (161:161:161))
@@ -86292,7 +86292,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~167)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~167)
     (DELAY
       (ABSOLUTE
         (PORT dataa (122:122:122) (161:161:161))
@@ -86308,7 +86308,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~166)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~166)
     (DELAY
       (ABSOLUTE
         (PORT dataa (116:116:116) (153:153:153))
@@ -86324,7 +86324,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~164)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~164)
     (DELAY
       (ABSOLUTE
         (PORT dataa (123:123:123) (162:162:162))
@@ -86340,7 +86340,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~170)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~170)
     (DELAY
       (ABSOLUTE
         (PORT dataa (503:503:503) (591:591:591))
@@ -86356,7 +86356,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~169)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~169)
     (DELAY
       (ABSOLUTE
         (PORT dataa (556:556:556) (659:659:659))
@@ -86372,7 +86372,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~171)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~171)
     (DELAY
       (ABSOLUTE
         (PORT dataa (502:502:502) (590:590:590))
@@ -86388,7 +86388,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~168)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~168)
     (DELAY
       (ABSOLUTE
         (PORT dataa (500:500:500) (587:587:587))
@@ -86404,7 +86404,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~172)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~172)
     (DELAY
       (ABSOLUTE
         (PORT dataa (118:118:118) (155:155:155))
@@ -86420,7 +86420,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~175)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~175)
     (DELAY
       (ABSOLUTE
         (PORT dataa (120:120:120) (158:158:158))
@@ -86436,7 +86436,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~173)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~173)
     (DELAY
       (ABSOLUTE
         (PORT dataa (123:123:123) (161:161:161))
@@ -86452,7 +86452,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~174)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~174)
     (DELAY
       (ABSOLUTE
         (PORT dataa (120:120:120) (158:158:158))
@@ -86468,7 +86468,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~176)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~176)
     (DELAY
       (ABSOLUTE
         (PORT dataa (118:118:118) (155:155:155))
@@ -86484,7 +86484,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~177)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~177)
     (DELAY
       (ABSOLUTE
         (PORT dataa (478:478:478) (560:560:560))
@@ -86500,7 +86500,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~179)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~179)
     (DELAY
       (ABSOLUTE
         (PORT dataa (117:117:117) (155:155:155))
@@ -86516,7 +86516,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~178)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~178)
     (DELAY
       (ABSOLUTE
         (PORT dataa (123:123:123) (161:161:161))
@@ -86532,7 +86532,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~182)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~182)
     (DELAY
       (ABSOLUTE
         (PORT dataa (981:981:981) (1134:1134:1134))
@@ -86548,7 +86548,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~180)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~180)
     (DELAY
       (ABSOLUTE
         (PORT dataa (980:980:980) (1132:1132:1132))
@@ -86564,7 +86564,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~100)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~100)
     (DELAY
       (ABSOLUTE
         (PORT dataa (490:490:490) (584:584:584))
@@ -86580,7 +86580,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~181)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~181)
     (DELAY
       (ABSOLUTE
         (PORT dataa (984:984:984) (1136:1136:1136))
@@ -86596,7 +86596,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\[32\]\~183)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\[32\]\~183)
     (DELAY
       (ABSOLUTE
         (PORT dataa (119:119:119) (155:155:155))
@@ -86612,7 +86612,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\[31\]\~99)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\[31\]\~99)
     (DELAY
       (ABSOLUTE
         (PORT dataa (115:115:115) (145:145:145))
@@ -86628,7 +86628,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\[33\]\~184)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\[33\]\~184)
     (DELAY
       (ABSOLUTE
         (PORT dataa (119:119:119) (155:155:155))
@@ -86644,7 +86644,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\[34\]\~185)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\[34\]\~185)
     (DELAY
       (ABSOLUTE
         (PORT dataa (119:119:119) (157:157:157))
@@ -86660,7 +86660,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|WideOr13\~0)
+    (INSTANCE seven_segment_display_driver_inst\|WideOr13\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (138:138:138) (182:182:182))
@@ -86676,7 +86676,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|WideOr12\~0)
+    (INSTANCE seven_segment_display_driver_inst\|WideOr12\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (135:135:135) (180:180:180))
@@ -86692,7 +86692,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|WideOr11\~0)
+    (INSTANCE seven_segment_display_driver_inst\|WideOr11\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (138:138:138) (182:182:182))
@@ -86708,7 +86708,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|WideOr10\~0)
+    (INSTANCE seven_segment_display_driver_inst\|WideOr10\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (135:135:135) (177:177:177))
@@ -86724,7 +86724,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|WideOr9\~0)
+    (INSTANCE seven_segment_display_driver_inst\|WideOr9\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (133:133:133) (176:176:176))
@@ -86740,7 +86740,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|WideOr8\~0)
+    (INSTANCE seven_segment_display_driver_inst\|WideOr8\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (140:140:140) (184:184:184))
@@ -86756,7 +86756,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|WideOr7\~0)
+    (INSTANCE seven_segment_display_driver_inst\|WideOr7\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (132:132:132) (175:175:175))
@@ -86772,7 +86772,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~214)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~214)
     (DELAY
       (ABSOLUTE
         (PORT dataa (118:118:118) (155:155:155))
@@ -86788,7 +86788,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~210)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~210)
     (DELAY
       (ABSOLUTE
         (PORT dataa (206:206:206) (252:252:252))
@@ -86804,7 +86804,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~442)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~442)
     (DELAY
       (ABSOLUTE
         (PORT dataa (119:119:119) (156:156:156))
@@ -86820,7 +86820,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~188)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~188)
     (DELAY
       (ABSOLUTE
         (PORT dataa (206:206:206) (253:253:253))
@@ -86836,7 +86836,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~441)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~441)
     (DELAY
       (ABSOLUTE
         (PORT dataa (300:300:300) (353:353:353))
@@ -86852,7 +86852,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~443)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~443)
     (DELAY
       (ABSOLUTE
         (PORT dataa (129:129:129) (166:166:166))
@@ -86868,7 +86868,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~191)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~191)
     (DELAY
       (ABSOLUTE
         (PORT dataa (348:348:348) (416:416:416))
@@ -86884,7 +86884,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~192)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~192)
     (DELAY
       (ABSOLUTE
         (PORT dataa (351:351:351) (419:419:419))
@@ -86900,7 +86900,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~190)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~190)
     (DELAY
       (ABSOLUTE
         (PORT dataa (119:119:119) (155:155:155))
@@ -86916,7 +86916,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~189)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~189)
     (DELAY
       (ABSOLUTE
         (PORT dataa (351:351:351) (419:419:419))
@@ -86932,7 +86932,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~196)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~196)
     (DELAY
       (ABSOLUTE
         (PORT dataa (120:120:120) (158:158:158))
@@ -86948,7 +86948,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~193)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~193)
     (DELAY
       (ABSOLUTE
         (PORT dataa (118:118:118) (155:155:155))
@@ -86964,7 +86964,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~195)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~195)
     (DELAY
       (ABSOLUTE
         (PORT dataa (119:119:119) (158:158:158))
@@ -86980,7 +86980,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~194)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~194)
     (DELAY
       (ABSOLUTE
         (PORT dataa (356:356:356) (426:426:426))
@@ -86996,7 +86996,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~199)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~199)
     (DELAY
       (ABSOLUTE
         (PORT dataa (341:341:341) (408:408:408))
@@ -87012,7 +87012,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~200)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~200)
     (DELAY
       (ABSOLUTE
         (PORT dataa (347:347:347) (415:415:415))
@@ -87028,7 +87028,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~198)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~198)
     (DELAY
       (ABSOLUTE
         (PORT dataa (194:194:194) (238:238:238))
@@ -87044,7 +87044,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~197)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~197)
     (DELAY
       (ABSOLUTE
         (PORT dataa (346:346:346) (413:413:413))
@@ -87060,7 +87060,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~201)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~201)
     (DELAY
       (ABSOLUTE
         (PORT dataa (120:120:120) (158:158:158))
@@ -87076,7 +87076,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~203)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~203)
     (DELAY
       (ABSOLUTE
         (PORT dataa (119:119:119) (156:156:156))
@@ -87092,7 +87092,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~204)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~204)
     (DELAY
       (ABSOLUTE
         (PORT dataa (121:121:121) (159:159:159))
@@ -87108,7 +87108,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~202)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~202)
     (DELAY
       (ABSOLUTE
         (PORT dataa (123:123:123) (162:162:162))
@@ -87124,7 +87124,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~207)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~207)
     (DELAY
       (ABSOLUTE
         (PORT dataa (120:120:120) (158:158:158))
@@ -87140,7 +87140,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~205)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~205)
     (DELAY
       (ABSOLUTE
         (PORT dataa (118:118:118) (154:154:154))
@@ -87156,7 +87156,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~206)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~206)
     (DELAY
       (ABSOLUTE
         (PORT dataa (117:117:117) (155:155:155))
@@ -87172,7 +87172,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~208)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~208)
     (DELAY
       (ABSOLUTE
         (PORT dataa (121:121:121) (159:159:159))
@@ -87188,7 +87188,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~211)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~211)
     (DELAY
       (ABSOLUTE
         (PORT dataa (191:191:191) (234:234:234))
@@ -87204,7 +87204,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~209)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~209)
     (DELAY
       (ABSOLUTE
         (PORT dataa (191:191:191) (233:233:233))
@@ -87220,7 +87220,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~212)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~212)
     (DELAY
       (ABSOLUTE
         (PORT dataa (190:190:190) (233:233:233))
@@ -87236,7 +87236,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~215)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~215)
     (DELAY
       (ABSOLUTE
         (PORT dataa (555:555:555) (654:654:654))
@@ -87252,7 +87252,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~213)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~213)
     (DELAY
       (ABSOLUTE
         (PORT dataa (553:553:553) (651:651:651))
@@ -87268,7 +87268,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~216)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~216)
     (DELAY
       (ABSOLUTE
         (PORT dataa (554:554:554) (653:653:653))
@@ -87284,7 +87284,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~219)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~219)
     (DELAY
       (ABSOLUTE
         (PORT dataa (530:530:530) (622:622:622))
@@ -87300,7 +87300,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~220)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~220)
     (DELAY
       (ABSOLUTE
         (PORT dataa (531:531:531) (623:623:623))
@@ -87316,7 +87316,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~217)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~217)
     (DELAY
       (ABSOLUTE
         (PORT dataa (534:534:534) (627:627:627))
@@ -87332,7 +87332,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~218)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~218)
     (DELAY
       (ABSOLUTE
         (PORT dataa (119:119:119) (154:154:154))
@@ -87348,7 +87348,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~224)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~224)
     (DELAY
       (ABSOLUTE
         (PORT dataa (121:121:121) (160:160:160))
@@ -87364,7 +87364,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~221)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~221)
     (DELAY
       (ABSOLUTE
         (PORT dataa (120:120:120) (159:159:159))
@@ -87380,7 +87380,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~223)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~223)
     (DELAY
       (ABSOLUTE
         (PORT dataa (120:120:120) (159:159:159))
@@ -87396,7 +87396,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~222)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~222)
     (DELAY
       (ABSOLUTE
         (PORT dataa (122:122:122) (160:160:160))
@@ -87412,7 +87412,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~228)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~228)
     (DELAY
       (ABSOLUTE
         (PORT dataa (507:507:507) (591:591:591))
@@ -87428,7 +87428,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~225)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~225)
     (DELAY
       (ABSOLUTE
         (PORT dataa (507:507:507) (592:592:592))
@@ -87444,7 +87444,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~226)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~226)
     (DELAY
       (ABSOLUTE
         (PORT dataa (676:676:676) (782:782:782))
@@ -87460,7 +87460,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~227)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~227)
     (DELAY
       (ABSOLUTE
         (PORT dataa (507:507:507) (591:591:591))
@@ -87476,7 +87476,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~229)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~229)
     (DELAY
       (ABSOLUTE
         (PORT dataa (118:118:118) (154:154:154))
@@ -87492,7 +87492,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~231)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~231)
     (DELAY
       (ABSOLUTE
         (PORT dataa (120:120:120) (158:158:158))
@@ -87508,7 +87508,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~232)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~232)
     (DELAY
       (ABSOLUTE
         (PORT dataa (121:121:121) (159:159:159))
@@ -87524,7 +87524,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~230)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~230)
     (DELAY
       (ABSOLUTE
         (PORT dataa (122:122:122) (160:160:160))
@@ -87540,7 +87540,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~236)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~236)
     (DELAY
       (ABSOLUTE
         (PORT dataa (117:117:117) (155:155:155))
@@ -87556,7 +87556,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~235)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~235)
     (DELAY
       (ABSOLUTE
         (PORT dataa (119:119:119) (158:158:158))
@@ -87572,7 +87572,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~233)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~233)
     (DELAY
       (ABSOLUTE
         (PORT dataa (121:121:121) (159:159:159))
@@ -87588,7 +87588,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~234)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~234)
     (DELAY
       (ABSOLUTE
         (PORT dataa (122:122:122) (161:161:161))
@@ -87604,7 +87604,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~240)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~240)
     (DELAY
       (ABSOLUTE
         (PORT dataa (362:362:362) (431:431:431))
@@ -87620,7 +87620,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~239)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~239)
     (DELAY
       (ABSOLUTE
         (PORT dataa (360:360:360) (429:429:429))
@@ -87636,7 +87636,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~237)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~237)
     (DELAY
       (ABSOLUTE
         (PORT dataa (361:361:361) (430:430:430))
@@ -87652,7 +87652,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~238)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~238)
     (DELAY
       (ABSOLUTE
         (PORT dataa (499:499:499) (587:587:587))
@@ -87668,7 +87668,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~244)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~244)
     (DELAY
       (ABSOLUTE
         (PORT dataa (118:118:118) (154:154:154))
@@ -87684,7 +87684,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~243)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~243)
     (DELAY
       (ABSOLUTE
         (PORT dataa (120:120:120) (158:158:158))
@@ -87700,7 +87700,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~242)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~242)
     (DELAY
       (ABSOLUTE
         (PORT dataa (120:120:120) (158:158:158))
@@ -87716,7 +87716,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~241)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~241)
     (DELAY
       (ABSOLUTE
         (PORT dataa (118:118:118) (155:155:155))
@@ -87732,7 +87732,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~247)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~247)
     (DELAY
       (ABSOLUTE
         (PORT dataa (120:120:120) (158:158:158))
@@ -87748,7 +87748,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~248)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~248)
     (DELAY
       (ABSOLUTE
         (PORT dataa (119:119:119) (156:156:156))
@@ -87764,7 +87764,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~245)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~245)
     (DELAY
       (ABSOLUTE
         (PORT dataa (119:119:119) (156:156:156))
@@ -87780,7 +87780,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~246)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~246)
     (DELAY
       (ABSOLUTE
         (PORT dataa (121:121:121) (160:160:160))
@@ -87796,7 +87796,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~250)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~250)
     (DELAY
       (ABSOLUTE
         (PORT dataa (877:877:877) (1006:1006:1006))
@@ -87812,7 +87812,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~249)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~249)
     (DELAY
       (ABSOLUTE
         (PORT dataa (871:871:871) (1000:1000:1000))
@@ -87828,7 +87828,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~187)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~187)
     (DELAY
       (ABSOLUTE
         (PORT dataa (977:977:977) (1128:1128:1128))
@@ -87844,7 +87844,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~251)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~251)
     (DELAY
       (ABSOLUTE
         (PORT dataa (872:872:872) (1001:1001:1001))
@@ -87860,7 +87860,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\[38\]\~254)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\[38\]\~254)
     (DELAY
       (ABSOLUTE
         (PORT dataa (121:121:121) (159:159:159))
@@ -87876,7 +87876,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\[35\]\~186)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\[35\]\~186)
     (DELAY
       (ABSOLUTE
         (PORT dataa (120:120:120) (158:158:158))
@@ -87892,7 +87892,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\[36\]\~252)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\[36\]\~252)
     (DELAY
       (ABSOLUTE
         (PORT dataa (117:117:117) (155:155:155))
@@ -87908,7 +87908,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\[37\]\~253)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\[37\]\~253)
     (DELAY
       (ABSOLUTE
         (PORT dataa (118:118:118) (155:155:155))
@@ -87924,7 +87924,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|WideOr20\~0)
+    (INSTANCE seven_segment_display_driver_inst\|WideOr20\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (136:136:136) (179:179:179))
@@ -87940,7 +87940,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|WideOr19\~0)
+    (INSTANCE seven_segment_display_driver_inst\|WideOr19\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (135:135:135) (177:177:177))
@@ -87956,7 +87956,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|WideOr18\~0)
+    (INSTANCE seven_segment_display_driver_inst\|WideOr18\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (135:135:135) (179:179:179))
@@ -87972,7 +87972,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|WideOr17\~0)
+    (INSTANCE seven_segment_display_driver_inst\|WideOr17\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (135:135:135) (177:177:177))
@@ -87988,7 +87988,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|WideOr16\~0)
+    (INSTANCE seven_segment_display_driver_inst\|WideOr16\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (135:135:135) (177:177:177))
@@ -88004,7 +88004,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|WideOr15\~0)
+    (INSTANCE seven_segment_display_driver_inst\|WideOr15\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (135:135:135) (178:178:178))
@@ -88020,7 +88020,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|WideOr14\~0)
+    (INSTANCE seven_segment_display_driver_inst\|WideOr14\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (135:135:135) (178:178:178))
@@ -88036,7 +88036,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~257)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~257)
     (DELAY
       (ABSOLUTE
         (PORT dataa (349:349:349) (417:417:417))
@@ -88052,7 +88052,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~258)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~258)
     (DELAY
       (ABSOLUTE
         (PORT dataa (120:120:120) (158:158:158))
@@ -88068,7 +88068,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~3)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~3)
     (DELAY
       (ABSOLUTE
         (PORT dataa (363:363:363) (437:437:437))
@@ -88084,7 +88084,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~445)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~445)
     (DELAY
       (ABSOLUTE
         (PORT dataa (408:408:408) (499:499:499))
@@ -88100,7 +88100,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~261)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~261)
     (DELAY
       (ABSOLUTE
         (PORT dataa (115:115:115) (151:151:151))
@@ -88114,7 +88114,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~259)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~259)
     (DELAY
       (ABSOLUTE
         (PORT dataa (344:344:344) (411:411:411))
@@ -88130,7 +88130,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~444)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~444)
     (DELAY
       (ABSOLUTE
         (PORT dataa (413:413:413) (505:505:505))
@@ -88146,7 +88146,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~260)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~260)
     (DELAY
       (ABSOLUTE
         (PORT dataa (113:113:113) (148:148:148))
@@ -88160,7 +88160,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~265)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~265)
     (DELAY
       (ABSOLUTE
         (PORT dataa (529:529:529) (618:618:618))
@@ -88176,7 +88176,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~262)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~262)
     (DELAY
       (ABSOLUTE
         (PORT dataa (525:525:525) (614:614:614))
@@ -88192,7 +88192,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~264)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~264)
     (DELAY
       (ABSOLUTE
         (PORT dataa (525:525:525) (613:613:613))
@@ -88208,7 +88208,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~263)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~263)
     (DELAY
       (ABSOLUTE
         (PORT dataa (119:119:119) (156:156:156))
@@ -88224,7 +88224,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~266)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~266)
     (DELAY
       (ABSOLUTE
         (PORT dataa (119:119:119) (156:156:156))
@@ -88240,7 +88240,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~268)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~268)
     (DELAY
       (ABSOLUTE
         (PORT dataa (120:120:120) (157:157:157))
@@ -88256,7 +88256,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~267)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~267)
     (DELAY
       (ABSOLUTE
         (PORT dataa (121:121:121) (160:160:160))
@@ -88272,7 +88272,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~269)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~269)
     (DELAY
       (ABSOLUTE
         (PORT dataa (120:120:120) (157:157:157))
@@ -88288,7 +88288,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~272)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~272)
     (DELAY
       (ABSOLUTE
         (PORT dataa (119:119:119) (158:158:158))
@@ -88304,7 +88304,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~270)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~270)
     (DELAY
       (ABSOLUTE
         (PORT dataa (123:123:123) (161:161:161))
@@ -88320,7 +88320,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~273)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~273)
     (DELAY
       (ABSOLUTE
         (PORT dataa (120:120:120) (159:159:159))
@@ -88336,7 +88336,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~271)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~271)
     (DELAY
       (ABSOLUTE
         (PORT dataa (191:191:191) (234:234:234))
@@ -88352,7 +88352,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~276)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~276)
     (DELAY
       (ABSOLUTE
         (PORT dataa (349:349:349) (413:413:413))
@@ -88368,7 +88368,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~275)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~275)
     (DELAY
       (ABSOLUTE
         (PORT dataa (556:556:556) (655:655:655))
@@ -88384,7 +88384,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~277)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~277)
     (DELAY
       (ABSOLUTE
         (PORT dataa (349:349:349) (413:413:413))
@@ -88400,7 +88400,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~274)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~274)
     (DELAY
       (ABSOLUTE
         (PORT dataa (349:349:349) (413:413:413))
@@ -88416,7 +88416,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~278)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~278)
     (DELAY
       (ABSOLUTE
         (PORT dataa (118:118:118) (155:155:155))
@@ -88432,7 +88432,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~281)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~281)
     (DELAY
       (ABSOLUTE
         (PORT dataa (120:120:120) (158:158:158))
@@ -88448,7 +88448,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~279)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~279)
     (DELAY
       (ABSOLUTE
         (PORT dataa (528:528:528) (620:620:620))
@@ -88464,7 +88464,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~280)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~280)
     (DELAY
       (ABSOLUTE
         (PORT dataa (121:121:121) (159:159:159))
@@ -88480,7 +88480,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~284)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~284)
     (DELAY
       (ABSOLUTE
         (PORT dataa (119:119:119) (158:158:158))
@@ -88496,7 +88496,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~283)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~283)
     (DELAY
       (ABSOLUTE
         (PORT dataa (117:117:117) (154:154:154))
@@ -88512,7 +88512,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~285)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~285)
     (DELAY
       (ABSOLUTE
         (PORT dataa (118:118:118) (156:156:156))
@@ -88528,7 +88528,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~282)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~282)
     (DELAY
       (ABSOLUTE
         (PORT dataa (119:119:119) (157:157:157))
@@ -88544,7 +88544,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~288)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~288)
     (DELAY
       (ABSOLUTE
         (PORT dataa (194:194:194) (237:237:237))
@@ -88560,7 +88560,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~287)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~287)
     (DELAY
       (ABSOLUTE
         (PORT dataa (508:508:508) (592:592:592))
@@ -88576,7 +88576,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~289)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~289)
     (DELAY
       (ABSOLUTE
         (PORT dataa (194:194:194) (237:237:237))
@@ -88592,7 +88592,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~286)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~286)
     (DELAY
       (ABSOLUTE
         (PORT dataa (195:195:195) (238:238:238))
@@ -88608,7 +88608,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~292)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~292)
     (DELAY
       (ABSOLUTE
         (PORT dataa (119:119:119) (156:156:156))
@@ -88624,7 +88624,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~291)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~291)
     (DELAY
       (ABSOLUTE
         (PORT dataa (121:121:121) (159:159:159))
@@ -88640,7 +88640,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~290)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~290)
     (DELAY
       (ABSOLUTE
         (PORT dataa (119:119:119) (157:157:157))
@@ -88656,7 +88656,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~293)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~293)
     (DELAY
       (ABSOLUTE
         (PORT dataa (119:119:119) (156:156:156))
@@ -88672,7 +88672,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~296)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~296)
     (DELAY
       (ABSOLUTE
         (PORT dataa (189:189:189) (232:232:232))
@@ -88688,7 +88688,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~297)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~297)
     (DELAY
       (ABSOLUTE
         (PORT dataa (190:190:190) (233:233:233))
@@ -88704,7 +88704,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~295)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~295)
     (DELAY
       (ABSOLUTE
         (PORT dataa (121:121:121) (159:159:159))
@@ -88720,7 +88720,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~294)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~294)
     (DELAY
       (ABSOLUTE
         (PORT dataa (187:187:187) (230:230:230))
@@ -88736,7 +88736,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~298)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~298)
     (DELAY
       (ABSOLUTE
         (PORT dataa (121:121:121) (159:159:159))
@@ -88752,7 +88752,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~299)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~299)
     (DELAY
       (ABSOLUTE
         (PORT dataa (364:364:364) (434:434:434))
@@ -88768,7 +88768,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~301)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~301)
     (DELAY
       (ABSOLUTE
         (PORT dataa (122:122:122) (160:160:160))
@@ -88784,7 +88784,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~300)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~300)
     (DELAY
       (ABSOLUTE
         (PORT dataa (120:120:120) (158:158:158))
@@ -88800,7 +88800,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~302)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~302)
     (DELAY
       (ABSOLUTE
         (PORT dataa (120:120:120) (158:158:158))
@@ -88816,7 +88816,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~303)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~303)
     (DELAY
       (ABSOLUTE
         (PORT dataa (121:121:121) (159:159:159))
@@ -88832,7 +88832,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~305)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~305)
     (DELAY
       (ABSOLUTE
         (PORT dataa (118:118:118) (154:154:154))
@@ -88848,7 +88848,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~304)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~304)
     (DELAY
       (ABSOLUTE
         (PORT dataa (121:121:121) (159:159:159))
@@ -88864,7 +88864,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~308)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~308)
     (DELAY
       (ABSOLUTE
         (PORT dataa (364:364:364) (430:430:430))
@@ -88880,7 +88880,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~306)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~306)
     (DELAY
       (ABSOLUTE
         (PORT dataa (365:365:365) (432:432:432))
@@ -88896,7 +88896,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~307)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~307)
     (DELAY
       (ABSOLUTE
         (PORT dataa (119:119:119) (157:157:157))
@@ -88912,7 +88912,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~309)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~309)
     (DELAY
       (ABSOLUTE
         (PORT dataa (364:364:364) (430:430:430))
@@ -88928,7 +88928,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~310)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~310)
     (DELAY
       (ABSOLUTE
         (PORT dataa (120:120:120) (158:158:158))
@@ -88944,7 +88944,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~311)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~311)
     (DELAY
       (ABSOLUTE
         (PORT dataa (119:119:119) (155:155:155))
@@ -88960,7 +88960,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~312)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~312)
     (DELAY
       (ABSOLUTE
         (PORT dataa (118:118:118) (155:155:155))
@@ -88976,7 +88976,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~256)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~256)
     (DELAY
       (ABSOLUTE
         (PORT dataa (877:877:877) (1007:1007:1007))
@@ -88992,7 +88992,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\[41\]\~314)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\[41\]\~314)
     (DELAY
       (ABSOLUTE
         (PORT dataa (1052:1052:1052) (1183:1183:1183))
@@ -89008,7 +89008,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\[40\]\~313)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\[40\]\~313)
     (DELAY
       (ABSOLUTE
         (PORT dataa (1052:1052:1052) (1183:1183:1183))
@@ -89024,7 +89024,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\[42\]\~315)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\[42\]\~315)
     (DELAY
       (ABSOLUTE
         (PORT dataa (1051:1051:1051) (1181:1181:1181))
@@ -89040,7 +89040,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\[39\]\~255)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\[39\]\~255)
     (DELAY
       (ABSOLUTE
         (PORT dataa (120:120:120) (157:157:157))
@@ -89056,7 +89056,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|WideOr27\~0)
+    (INSTANCE seven_segment_display_driver_inst\|WideOr27\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (208:208:208) (261:261:261))
@@ -89072,7 +89072,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|WideOr26\~0)
+    (INSTANCE seven_segment_display_driver_inst\|WideOr26\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (213:213:213) (266:266:266))
@@ -89088,7 +89088,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|WideOr25\~0)
+    (INSTANCE seven_segment_display_driver_inst\|WideOr25\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (209:209:209) (261:261:261))
@@ -89104,7 +89104,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|WideOr24\~0)
+    (INSTANCE seven_segment_display_driver_inst\|WideOr24\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (211:211:211) (264:264:264))
@@ -89120,7 +89120,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|WideOr23\~0)
+    (INSTANCE seven_segment_display_driver_inst\|WideOr23\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (211:211:211) (264:264:264))
@@ -89136,7 +89136,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|WideOr22\~0)
+    (INSTANCE seven_segment_display_driver_inst\|WideOr22\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (210:210:210) (263:263:263))
@@ -89152,7 +89152,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|WideOr21\~0)
+    (INSTANCE seven_segment_display_driver_inst\|WideOr21\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (211:211:211) (264:264:264))
@@ -89168,7 +89168,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~318)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~318)
     (DELAY
       (ABSOLUTE
         (PORT dataa (121:121:121) (159:159:159))
@@ -89184,7 +89184,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~319)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~319)
     (DELAY
       (ABSOLUTE
         (PORT dataa (531:531:531) (620:620:620))
@@ -89200,7 +89200,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~320)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~320)
     (DELAY
       (ABSOLUTE
         (PORT dataa (121:121:121) (158:158:158))
@@ -89216,7 +89216,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~321)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~321)
     (DELAY
       (ABSOLUTE
         (PORT dataa (116:116:116) (151:151:151))
@@ -89230,7 +89230,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~322)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~322)
     (DELAY
       (ABSOLUTE
         (PORT dataa (523:523:523) (614:614:614))
@@ -89246,7 +89246,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~324)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~324)
     (DELAY
       (ABSOLUTE
         (PORT dataa (522:522:522) (614:614:614))
@@ -89262,7 +89262,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~325)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~325)
     (DELAY
       (ABSOLUTE
         (PORT dataa (523:523:523) (614:614:614))
@@ -89278,7 +89278,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~323)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~323)
     (DELAY
       (ABSOLUTE
         (PORT dataa (349:349:349) (412:412:412))
@@ -89294,7 +89294,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~329)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~329)
     (DELAY
       (ABSOLUTE
         (PORT dataa (318:318:318) (372:372:372))
@@ -89310,7 +89310,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~326)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~326)
     (DELAY
       (ABSOLUTE
         (PORT dataa (319:319:319) (374:374:374))
@@ -89326,7 +89326,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~328)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~328)
     (DELAY
       (ABSOLUTE
         (PORT dataa (320:320:320) (375:375:375))
@@ -89342,7 +89342,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~327)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~327)
     (DELAY
       (ABSOLUTE
         (PORT dataa (122:122:122) (160:160:160))
@@ -89358,7 +89358,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~330)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~330)
     (DELAY
       (ABSOLUTE
         (PORT dataa (120:120:120) (157:157:157))
@@ -89374,7 +89374,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~333)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~333)
     (DELAY
       (ABSOLUTE
         (PORT dataa (119:119:119) (157:157:157))
@@ -89390,7 +89390,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~332)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~332)
     (DELAY
       (ABSOLUTE
         (PORT dataa (119:119:119) (155:155:155))
@@ -89406,7 +89406,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~331)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~331)
     (DELAY
       (ABSOLUTE
         (PORT dataa (122:122:122) (160:160:160))
@@ -89422,7 +89422,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~336)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~336)
     (DELAY
       (ABSOLUTE
         (PORT dataa (121:121:121) (160:160:160))
@@ -89438,7 +89438,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~337)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~337)
     (DELAY
       (ABSOLUTE
         (PORT dataa (119:119:119) (156:156:156))
@@ -89454,7 +89454,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~334)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~334)
     (DELAY
       (ABSOLUTE
         (PORT dataa (122:122:122) (160:160:160))
@@ -89470,7 +89470,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~335)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~335)
     (DELAY
       (ABSOLUTE
         (PORT dataa (195:195:195) (238:238:238))
@@ -89486,7 +89486,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~340)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~340)
     (DELAY
       (ABSOLUTE
         (PORT dataa (449:449:449) (522:522:522))
@@ -89502,7 +89502,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~338)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~338)
     (DELAY
       (ABSOLUTE
         (PORT dataa (448:448:448) (521:521:521))
@@ -89518,7 +89518,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~341)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~341)
     (DELAY
       (ABSOLUTE
         (PORT dataa (449:449:449) (522:522:522))
@@ -89534,7 +89534,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~339)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~339)
     (DELAY
       (ABSOLUTE
         (PORT dataa (119:119:119) (156:156:156))
@@ -89550,7 +89550,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~342)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~342)
     (DELAY
       (ABSOLUTE
         (PORT dataa (118:118:118) (155:155:155))
@@ -89566,7 +89566,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~344)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~344)
     (DELAY
       (ABSOLUTE
         (PORT dataa (121:121:121) (160:160:160))
@@ -89582,7 +89582,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~345)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~345)
     (DELAY
       (ABSOLUTE
         (PORT dataa (122:122:122) (160:160:160))
@@ -89598,7 +89598,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~343)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~343)
     (DELAY
       (ABSOLUTE
         (PORT dataa (190:190:190) (233:233:233))
@@ -89614,7 +89614,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~346)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~346)
     (DELAY
       (ABSOLUTE
         (PORT dataa (118:118:118) (155:155:155))
@@ -89630,7 +89630,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~348)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~348)
     (DELAY
       (ABSOLUTE
         (PORT dataa (119:119:119) (158:158:158))
@@ -89646,7 +89646,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~349)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~349)
     (DELAY
       (ABSOLUTE
         (PORT dataa (119:119:119) (156:156:156))
@@ -89662,7 +89662,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~347)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~347)
     (DELAY
       (ABSOLUTE
         (PORT dataa (122:122:122) (161:161:161))
@@ -89678,7 +89678,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~352)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~352)
     (DELAY
       (ABSOLUTE
         (PORT dataa (504:504:504) (593:593:593))
@@ -89694,7 +89694,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~350)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~350)
     (DELAY
       (ABSOLUTE
         (PORT dataa (508:508:508) (598:598:598))
@@ -89710,7 +89710,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~351)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~351)
     (DELAY
       (ABSOLUTE
         (PORT dataa (118:118:118) (155:155:155))
@@ -89726,7 +89726,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~353)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~353)
     (DELAY
       (ABSOLUTE
         (PORT dataa (502:502:502) (590:590:590))
@@ -89742,7 +89742,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~357)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~357)
     (DELAY
       (ABSOLUTE
         (PORT dataa (193:193:193) (242:242:242))
@@ -89758,7 +89758,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~354)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~354)
     (DELAY
       (ABSOLUTE
         (PORT dataa (191:191:191) (239:239:239))
@@ -89774,7 +89774,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~355)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~355)
     (DELAY
       (ABSOLUTE
         (PORT dataa (364:364:364) (430:430:430))
@@ -89790,7 +89790,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~356)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~356)
     (DELAY
       (ABSOLUTE
         (PORT dataa (193:193:193) (242:242:242))
@@ -89806,7 +89806,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~360)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~360)
     (DELAY
       (ABSOLUTE
         (PORT dataa (657:657:657) (755:755:755))
@@ -89822,7 +89822,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~358)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~358)
     (DELAY
       (ABSOLUTE
         (PORT dataa (656:656:656) (754:754:754))
@@ -89838,7 +89838,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~317)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~317)
     (DELAY
       (ABSOLUTE
         (PORT dataa (121:121:121) (159:159:159))
@@ -89854,7 +89854,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~359)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~359)
     (DELAY
       (ABSOLUTE
         (PORT dataa (657:657:657) (755:755:755))
@@ -89870,7 +89870,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\[44\]\~361)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\[44\]\~361)
     (DELAY
       (ABSOLUTE
         (PORT dataa (122:122:122) (161:161:161))
@@ -89886,7 +89886,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\[43\]\~316)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\[43\]\~316)
     (DELAY
       (ABSOLUTE
         (PORT dataa (1052:1052:1052) (1183:1183:1183))
@@ -89902,7 +89902,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\[46\]\~363)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\[46\]\~363)
     (DELAY
       (ABSOLUTE
         (PORT dataa (121:121:121) (160:160:160))
@@ -89918,7 +89918,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\[45\]\~362)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\[45\]\~362)
     (DELAY
       (ABSOLUTE
         (PORT dataa (121:121:121) (159:159:159))
@@ -89934,7 +89934,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|WideOr34\~0)
+    (INSTANCE seven_segment_display_driver_inst\|WideOr34\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (130:130:130) (174:174:174))
@@ -89950,7 +89950,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|WideOr33\~0)
+    (INSTANCE seven_segment_display_driver_inst\|WideOr33\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (140:140:140) (186:186:186))
@@ -89966,7 +89966,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|WideOr32\~0)
+    (INSTANCE seven_segment_display_driver_inst\|WideOr32\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (137:137:137) (181:181:181))
@@ -89982,7 +89982,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|WideOr31\~0)
+    (INSTANCE seven_segment_display_driver_inst\|WideOr31\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (141:141:141) (187:187:187))
@@ -89998,7 +89998,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|WideOr30\~0)
+    (INSTANCE seven_segment_display_driver_inst\|WideOr30\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (134:134:134) (180:180:180))
@@ -90014,7 +90014,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|WideOr29\~0)
+    (INSTANCE seven_segment_display_driver_inst\|WideOr29\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (134:134:134) (179:179:179))
@@ -90030,7 +90030,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|WideOr28\~0)
+    (INSTANCE seven_segment_display_driver_inst\|WideOr28\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (142:142:142) (187:187:187))
@@ -90046,7 +90046,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~369)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~369)
     (DELAY
       (ABSOLUTE
         (PORT dataa (119:119:119) (156:156:156))
@@ -90062,7 +90062,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~370)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~370)
     (DELAY
       (ABSOLUTE
         (PORT datab (537:537:537) (629:629:629))
@@ -90076,7 +90076,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~366)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~366)
     (DELAY
       (ABSOLUTE
         (PORT dataa (523:523:523) (615:615:615))
@@ -90092,7 +90092,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~367)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~367)
     (DELAY
       (ABSOLUTE
         (PORT dataa (116:116:116) (147:147:147))
@@ -90108,7 +90108,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~372)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~372)
     (DELAY
       (ABSOLUTE
         (PORT dataa (114:114:114) (150:150:150))
@@ -90122,7 +90122,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|LessThan30\~0)
+    (INSTANCE seven_segment_display_driver_inst\|LessThan30\~0)
     (DELAY
       (ABSOLUTE
         (PORT datac (464:464:464) (534:534:534))
@@ -90134,7 +90134,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~368)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~368)
     (DELAY
       (ABSOLUTE
         (PORT dataa (105:105:105) (136:136:136))
@@ -90150,7 +90150,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~371)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~371)
     (DELAY
       (ABSOLUTE
         (PORT dataa (118:118:118) (154:154:154))
@@ -90164,7 +90164,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~375)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~375)
     (DELAY
       (ABSOLUTE
         (PORT dataa (297:297:297) (352:352:352))
@@ -90180,7 +90180,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~374)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~374)
     (DELAY
       (ABSOLUTE
         (PORT dataa (118:118:118) (154:154:154))
@@ -90196,7 +90196,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~376)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~376)
     (DELAY
       (ABSOLUTE
         (PORT dataa (301:301:301) (357:357:357))
@@ -90212,7 +90212,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~373)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~373)
     (DELAY
       (ABSOLUTE
         (PORT dataa (300:300:300) (356:356:356))
@@ -90228,7 +90228,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~379)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~379)
     (DELAY
       (ABSOLUTE
         (PORT dataa (366:366:366) (434:434:434))
@@ -90244,7 +90244,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~380)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~380)
     (DELAY
       (ABSOLUTE
         (PORT dataa (368:368:368) (437:437:437))
@@ -90260,7 +90260,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~378)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~378)
     (DELAY
       (ABSOLUTE
         (PORT dataa (448:448:448) (521:521:521))
@@ -90276,7 +90276,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~377)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~377)
     (DELAY
       (ABSOLUTE
         (PORT dataa (369:369:369) (437:437:437))
@@ -90292,7 +90292,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~381)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~381)
     (DELAY
       (ABSOLUTE
         (PORT dataa (119:119:119) (155:155:155))
@@ -90308,7 +90308,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~384)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~384)
     (DELAY
       (ABSOLUTE
         (PORT dataa (120:120:120) (158:158:158))
@@ -90324,7 +90324,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~383)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~383)
     (DELAY
       (ABSOLUTE
         (PORT dataa (119:119:119) (155:155:155))
@@ -90340,7 +90340,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~382)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~382)
     (DELAY
       (ABSOLUTE
         (PORT dataa (122:122:122) (160:160:160))
@@ -90356,7 +90356,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~387)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~387)
     (DELAY
       (ABSOLUTE
         (PORT dataa (122:122:122) (160:160:160))
@@ -90372,7 +90372,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~388)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~388)
     (DELAY
       (ABSOLUTE
         (PORT dataa (118:118:118) (155:155:155))
@@ -90388,7 +90388,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~386)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~386)
     (DELAY
       (ABSOLUTE
         (PORT dataa (122:122:122) (160:160:160))
@@ -90404,7 +90404,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~385)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~385)
     (DELAY
       (ABSOLUTE
         (PORT dataa (119:119:119) (156:156:156))
@@ -90420,7 +90420,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~389)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~389)
     (DELAY
       (ABSOLUTE
         (PORT dataa (123:123:123) (162:162:162))
@@ -90436,7 +90436,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~391)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~391)
     (DELAY
       (ABSOLUTE
         (PORT dataa (116:116:116) (154:154:154))
@@ -90452,7 +90452,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~392)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~392)
     (DELAY
       (ABSOLUTE
         (PORT dataa (118:118:118) (157:157:157))
@@ -90468,7 +90468,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~390)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~390)
     (DELAY
       (ABSOLUTE
         (PORT dataa (505:505:505) (595:595:595))
@@ -90484,7 +90484,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~393)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~393)
     (DELAY
       (ABSOLUTE
         (PORT dataa (369:369:369) (441:441:441))
@@ -90500,7 +90500,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~395)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~395)
     (DELAY
       (ABSOLUTE
         (PORT dataa (368:368:368) (441:441:441))
@@ -90516,7 +90516,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~396)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~396)
     (DELAY
       (ABSOLUTE
         (PORT dataa (368:368:368) (441:441:441))
@@ -90532,7 +90532,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~394)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~394)
     (DELAY
       (ABSOLUTE
         (PORT dataa (192:192:192) (240:240:240))
@@ -90548,7 +90548,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~397)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~397)
     (DELAY
       (ABSOLUTE
         (PORT dataa (119:119:119) (158:158:158))
@@ -90564,7 +90564,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~398)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~398)
     (DELAY
       (ABSOLUTE
         (PORT dataa (122:122:122) (161:161:161))
@@ -90580,7 +90580,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~399)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~399)
     (DELAY
       (ABSOLUTE
         (PORT dataa (122:122:122) (161:161:161))
@@ -90596,7 +90596,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~365)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~365)
     (DELAY
       (ABSOLUTE
         (PORT dataa (656:656:656) (754:754:754))
@@ -90612,7 +90612,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\[49\]\~401)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\[49\]\~401)
     (DELAY
       (ABSOLUTE
         (PORT dataa (678:678:678) (785:785:785))
@@ -90628,7 +90628,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\[48\]\~400)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\[48\]\~400)
     (DELAY
       (ABSOLUTE
         (PORT dataa (681:681:681) (788:788:788))
@@ -90644,7 +90644,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\[50\]\~402)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\[50\]\~402)
     (DELAY
       (ABSOLUTE
         (PORT dataa (679:679:679) (786:786:786))
@@ -90660,7 +90660,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\[47\]\~364)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\[47\]\~364)
     (DELAY
       (ABSOLUTE
         (PORT dataa (119:119:119) (158:158:158))
@@ -90676,7 +90676,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|WideOr41\~0)
+    (INSTANCE seven_segment_display_driver_inst\|WideOr41\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (134:134:134) (176:176:176))
@@ -90692,7 +90692,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|WideOr40\~0)
+    (INSTANCE seven_segment_display_driver_inst\|WideOr40\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (134:134:134) (177:177:177))
@@ -90708,7 +90708,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|WideOr39\~0)
+    (INSTANCE seven_segment_display_driver_inst\|WideOr39\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (136:136:136) (180:180:180))
@@ -90724,7 +90724,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|WideOr38\~0)
+    (INSTANCE seven_segment_display_driver_inst\|WideOr38\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (134:134:134) (176:176:176))
@@ -90740,7 +90740,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|WideOr37\~0)
+    (INSTANCE seven_segment_display_driver_inst\|WideOr37\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (137:137:137) (181:181:181))
@@ -90756,7 +90756,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|WideOr36\~0)
+    (INSTANCE seven_segment_display_driver_inst\|WideOr36\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (137:137:137) (181:181:181))
@@ -90772,7 +90772,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|WideOr35\~0)
+    (INSTANCE seven_segment_display_driver_inst\|WideOr35\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (138:138:138) (181:181:181))
@@ -90788,7 +90788,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~406)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~406)
     (DELAY
       (ABSOLUTE
         (PORT dataa (298:298:298) (353:353:353))
@@ -90804,7 +90804,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~408)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~408)
     (DELAY
       (ABSOLUTE
         (PORT dataa (111:111:111) (147:147:147))
@@ -90818,7 +90818,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~407)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~407)
     (DELAY
       (ABSOLUTE
         (PORT dataa (369:369:369) (438:438:438))
@@ -90834,7 +90834,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~405)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~405)
     (DELAY
       (ABSOLUTE
         (PORT dataa (120:120:120) (158:158:158))
@@ -90850,7 +90850,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~411)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~411)
     (DELAY
       (ABSOLUTE
         (PORT dataa (638:638:638) (737:737:737))
@@ -90866,7 +90866,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~412)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~412)
     (DELAY
       (ABSOLUTE
         (PORT dataa (639:639:639) (740:740:740))
@@ -90882,7 +90882,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~410)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~410)
     (DELAY
       (ABSOLUTE
         (PORT dataa (118:118:118) (155:155:155))
@@ -90898,7 +90898,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~409)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~409)
     (DELAY
       (ABSOLUTE
         (PORT dataa (638:638:638) (738:738:738))
@@ -90914,7 +90914,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~413)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~413)
     (DELAY
       (ABSOLUTE
         (PORT dataa (118:118:118) (155:155:155))
@@ -90930,7 +90930,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~415)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~415)
     (DELAY
       (ABSOLUTE
         (PORT dataa (121:121:121) (159:159:159))
@@ -90946,7 +90946,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~416)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~416)
     (DELAY
       (ABSOLUTE
         (PORT dataa (121:121:121) (159:159:159))
@@ -90962,7 +90962,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~414)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~414)
     (DELAY
       (ABSOLUTE
         (PORT dataa (122:122:122) (160:160:160))
@@ -90978,7 +90978,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~419)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~419)
     (DELAY
       (ABSOLUTE
         (PORT dataa (347:347:347) (414:414:414))
@@ -90994,7 +90994,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~417)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~417)
     (DELAY
       (ABSOLUTE
         (PORT dataa (350:350:350) (417:417:417))
@@ -91010,7 +91010,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~420)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~420)
     (DELAY
       (ABSOLUTE
         (PORT dataa (347:347:347) (414:414:414))
@@ -91026,7 +91026,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~418)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~418)
     (DELAY
       (ABSOLUTE
         (PORT dataa (373:373:373) (447:447:447))
@@ -91042,7 +91042,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~421)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~421)
     (DELAY
       (ABSOLUTE
         (PORT dataa (118:118:118) (155:155:155))
@@ -91058,7 +91058,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~422)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~422)
     (DELAY
       (ABSOLUTE
         (PORT dataa (119:119:119) (158:158:158))
@@ -91074,7 +91074,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~423)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~423)
     (DELAY
       (ABSOLUTE
         (PORT dataa (121:121:121) (159:159:159))
@@ -91090,7 +91090,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~404)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~404)
     (DELAY
       (ABSOLUTE
         (PORT dataa (121:121:121) (160:160:160))
@@ -91106,7 +91106,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\[53\]\~425)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\[53\]\~425)
     (DELAY
       (ABSOLUTE
         (PORT dataa (346:346:346) (413:413:413))
@@ -91122,7 +91122,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\[52\]\~424)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\[52\]\~424)
     (DELAY
       (ABSOLUTE
         (PORT dataa (348:348:348) (415:415:415))
@@ -91138,7 +91138,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\[51\]\~403)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\[51\]\~403)
     (DELAY
       (ABSOLUTE
         (PORT dataa (684:684:684) (791:791:791))
@@ -91154,7 +91154,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\[54\]\~426)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\[54\]\~426)
     (DELAY
       (ABSOLUTE
         (PORT dataa (347:347:347) (413:413:413))
@@ -91170,7 +91170,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|WideOr48\~0)
+    (INSTANCE seven_segment_display_driver_inst\|WideOr48\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (135:135:135) (178:178:178))
@@ -91186,7 +91186,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|WideOr47\~0)
+    (INSTANCE seven_segment_display_driver_inst\|WideOr47\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (137:137:137) (181:181:181))
@@ -91202,7 +91202,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|WideOr46\~0)
+    (INSTANCE seven_segment_display_driver_inst\|WideOr46\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (134:134:134) (176:176:176))
@@ -91218,7 +91218,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|WideOr45\~0)
+    (INSTANCE seven_segment_display_driver_inst\|WideOr45\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (134:134:134) (176:176:176))
@@ -91234,7 +91234,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|WideOr44\~0)
+    (INSTANCE seven_segment_display_driver_inst\|WideOr44\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (137:137:137) (180:180:180))
@@ -91250,7 +91250,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|WideOr43\~0)
+    (INSTANCE seven_segment_display_driver_inst\|WideOr43\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (134:134:134) (176:176:176))
@@ -91266,7 +91266,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|WideOr42\~0)
+    (INSTANCE seven_segment_display_driver_inst\|WideOr42\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (137:137:137) (181:181:181))
@@ -91282,7 +91282,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~429)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~429)
     (DELAY
       (ABSOLUTE
         (PORT dataa (639:639:639) (739:739:739))
@@ -91298,7 +91298,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~430)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~430)
     (DELAY
       (ABSOLUTE
         (PORT dataa (119:119:119) (155:155:155))
@@ -91314,7 +91314,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|LessThan63\~0)
+    (INSTANCE seven_segment_display_driver_inst\|LessThan63\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (638:638:638) (737:737:737))
@@ -91328,7 +91328,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~432)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~432)
     (DELAY
       (ABSOLUTE
         (PORT dataa (114:114:114) (148:148:148))
@@ -91342,7 +91342,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~433)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~433)
     (DELAY
       (ABSOLUTE
         (PORT dataa (351:351:351) (419:419:419))
@@ -91358,7 +91358,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~434)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~434)
     (DELAY
       (ABSOLUTE
         (PORT dataa (113:113:113) (148:148:148))
@@ -91372,7 +91372,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~431)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~431)
     (DELAY
       (ABSOLUTE
         (PORT dataa (114:114:114) (148:148:148))
@@ -91386,7 +91386,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~437)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~437)
     (DELAY
       (ABSOLUTE
         (PORT dataa (618:618:618) (709:709:709))
@@ -91402,7 +91402,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~428)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~428)
     (DELAY
       (ABSOLUTE
         (PORT dataa (120:120:120) (158:158:158))
@@ -91418,7 +91418,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~436)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~436)
     (DELAY
       (ABSOLUTE
         (PORT dataa (618:618:618) (709:709:709))
@@ -91434,7 +91434,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\~435)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\~435)
     (DELAY
       (ABSOLUTE
         (PORT dataa (615:615:615) (706:706:706))
@@ -91450,7 +91450,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\[56\]\~438)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\[56\]\~438)
     (DELAY
       (ABSOLUTE
         (PORT dataa (113:113:113) (148:148:148))
@@ -91466,7 +91466,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\[55\]\~427)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\[55\]\~427)
     (DELAY
       (ABSOLUTE
         (PORT dataa (350:350:350) (417:417:417))
@@ -91482,7 +91482,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\[58\]\~440)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\[58\]\~440)
     (DELAY
       (ABSOLUTE
         (PORT dataa (114:114:114) (150:150:150))
@@ -91498,7 +91498,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|shift_reg\[57\]\~439)
+    (INSTANCE seven_segment_display_driver_inst\|shift_reg\[57\]\~439)
     (DELAY
       (ABSOLUTE
         (PORT dataa (114:114:114) (149:149:149))
@@ -91514,7 +91514,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|WideOr55\~0)
+    (INSTANCE seven_segment_display_driver_inst\|WideOr55\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (133:133:133) (176:176:176))
@@ -91530,7 +91530,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|WideOr54\~0)
+    (INSTANCE seven_segment_display_driver_inst\|WideOr54\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (140:140:140) (184:184:184))
@@ -91546,7 +91546,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|WideOr53\~0)
+    (INSTANCE seven_segment_display_driver_inst\|WideOr53\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (134:134:134) (177:177:177))
@@ -91562,7 +91562,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|WideOr52\~0)
+    (INSTANCE seven_segment_display_driver_inst\|WideOr52\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (132:132:132) (175:175:175))
@@ -91578,7 +91578,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|WideOr51\~0)
+    (INSTANCE seven_segment_display_driver_inst\|WideOr51\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (137:137:137) (182:182:182))
@@ -91594,7 +91594,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|WideOr50\~0)
+    (INSTANCE seven_segment_display_driver_inst\|WideOr50\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (138:138:138) (182:182:182))
@@ -91610,7 +91610,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE comb_608\|WideOr49\~0)
+    (INSTANCE seven_segment_display_driver_inst\|WideOr49\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (137:137:137) (181:181:181))

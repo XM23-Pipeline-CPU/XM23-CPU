@@ -38,4 +38,5 @@ vlog -sv -work work +incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA {C:/Us
 vlog -sv -work work +incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA {C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/memory_access_d_ram.sv}
 vlog -sv -work work +incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA {C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/go_to_LR.sv}
 vlog -sv -work work +incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA {C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/system_view.sv}
+vlog -sv -work work +incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA {C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/seven_segment_display_driver.sv}
 

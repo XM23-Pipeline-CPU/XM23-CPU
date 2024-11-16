@@ -11,83 +11,83 @@ cModel Technology
 Z0 dC:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/simulation/modelsim
 valu
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1731562520
+Z2 !s110 1731782567
 !i10b 1
-!s100 >FQL]foJ:STfK[UPLWGAA1
+!s100 P^D:z^no9=6b[4A_8j:U90
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IA7CHcLD9@TXQNDeE_CUCT1
+ICWnLZASj5YR34kLCU9h0I0
 Z4 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
-w1731555136
+Z5 w1731615542
 8C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu.sv
 FC:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu.sv
 !i122 17
-L0 2 125
-Z5 OV;L;2020.1;71
+L0 9 119
+Z6 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1731562520.000000
+Z7 !s108 1731782567.000000
 !s107 C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA|C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu.sv|
 !i113 1
-Z7 o-sv -work work
-Z8 !s92 -sv -work work +incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA
-Z9 tCvgOpt 0
+Z8 o-sv -work work
+Z9 !s92 -sv -work work +incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA
+Z10 tCvgOpt 0
 valu_ADD
 R1
 R2
 !i10b 1
-!s100 6C=4QUe5OLA^5XcU[3hk10
+!s100 0<oIUb=_dE0@V_cYo57_A2
 R3
-I]7Xc8Rhaen]cP]BCGkjAd0
+I3Yme00EeA0M3DkDL3RWDg0
 R4
 S1
 R0
-w1731554428
+R5
 8C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_ADD.sv
 FC:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_ADD.sv
 !i122 16
-Z10 L0 2 8
-R5
+Z11 L0 2 7
+R6
 r1
 !s85 0
 31
-R6
+R7
 !s107 C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_ADD.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA|C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_ADD.sv|
 !i113 1
-R7
 R8
 R9
+R10
 nalu_@a@d@d
 valu_ADDC
 R1
-R2
+Z12 !s110 1731782568
 !i10b 1
-!s100 E[a@OY0SInX41GAP:CWG`0
+!s100 8YP4;^]XXd09nlJ?i9K702
 R3
-Ijz46DL2b06Lo;VO]PoUom2
+Ieh:7=iTe0;D:zZEghKF8]0
 R4
 S1
 R0
-w1731554467
+R5
 8C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_ADDC.sv
 FC:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_ADDC.sv
 !i122 19
-L0 2 9
-R5
+L0 2 8
+R6
 r1
 !s85 0
 31
-R6
+Z13 !s108 1731782568.000000
 !s107 C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_ADDC.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA|C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_ADDC.sv|
 !i113 1
-R7
 R8
 R9
+R10
 nalu_@a@d@d@c
 valu_AND
 R1
@@ -99,22 +99,22 @@ I4TN@JH`8^6QG8PL1BGakD2
 R4
 S1
 R0
-w1727813088
+R5
 8C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_AND.sv
 FC:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_AND.sv
 !i122 15
-Z11 L0 2 7
-R5
+R11
+R6
 r1
 !s85 0
 31
-R6
+R7
 !s107 C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_AND.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA|C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_AND.sv|
 !i113 1
-R7
 R8
 R9
+R10
 nalu_@a@n@d
 valu_BIC
 R1
@@ -126,22 +126,22 @@ I9`b^1ARAdRP32?WL6U3AO0
 R4
 S1
 R0
-Z12 w1727813087
+R5
 8C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_BIC.sv
 FC:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_BIC.sv
 !i122 14
 R11
-R5
+R6
 r1
 !s85 0
 31
-R6
+R7
 !s107 C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_BIC.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA|C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_BIC.sv|
 !i113 1
-R7
 R8
 R9
+R10
 nalu_@b@i@c
 valu_BIS
 R1
@@ -153,22 +153,22 @@ IOnkb7?S;Y5<1kFo>G=kfJ0
 R4
 S1
 R0
-R12
+R5
 8C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_BIS.sv
 FC:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_BIS.sv
 !i122 13
 R11
-R5
+R6
 r1
 !s85 0
 31
-R6
+R7
 !s107 C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_BIS.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA|C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_BIS.sv|
 !i113 1
-R7
 R8
 R9
+R10
 nalu_@b@i@s
 valu_BIT
 R1
@@ -180,103 +180,103 @@ I<2`P2Q:h`NGMOMOh8:kOh0
 R4
 S1
 R0
-w1727813086
+R5
 8C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_BIT.sv
 FC:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_BIT.sv
 !i122 12
 R11
-R5
+R6
 r1
 !s85 0
 31
-R6
+R7
 !s107 C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_BIT.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA|C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_BIT.sv|
 !i113 1
-R7
 R8
 R9
+R10
 nalu_@b@i@t
 valu_COMP
 R1
-Z13 !s110 1731562521
+R12
 !i10b 1
-!s100 T=83GYVQ]A4h>:jehdZaN3
+!s100 4PE>ogG=gM:WnlYFU1L1T2
 R3
-IGi@a9_<>EGTlDHbP9`:j]0
+IVZ4AYVk=CM@cg3<kMW7dG3
 R4
 S1
 R0
-w1730067917
+R5
 8C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_COMP.sv
 FC:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_COMP.sv
 !i122 27
-Z14 L0 1 6
-R5
+Z14 L0 2 6
+R6
 r1
 !s85 0
 31
-Z15 !s108 1731562521.000000
+R13
 !s107 C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_COMP.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA|C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_COMP.sv|
 !i113 1
-R7
 R8
 R9
+R10
 nalu_@c@o@m@p
 valu_DADD
 R1
 R2
 !i10b 1
-!s100 V2AS_9LPFJ34O17_FZ8Bd0
+!s100 QCN^8i?7IL<I8a6d^KfJA0
 R3
-Ii5g2F7CIZ[0KLiQKh24ei0
+I4kBjARKfX[]jC_<MN`77N1
 R4
 S1
 R0
-Z16 w1727813085
+R5
 8C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_DADD.sv
 FC:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_DADD.sv
 !i122 11
-L0 2 49
-R5
+L0 2 54
+R6
 r1
 !s85 0
 31
-R6
+R7
 !s107 C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_DADD.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA|C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_DADD.sv|
 !i113 1
-R7
 R8
 R9
+R10
 nalu_@d@a@d@d
 valu_MOV
 R1
-R13
+R12
 !i10b 1
-!s100 XeZ>BoI^iIOM>jg>VYTYg1
+!s100 ;KjF3AKDzO_BAH;@jYIcP0
 R3
-IL0]J<8<95edGo2zGzlVll1
+I=JDkBS;g6KEF4o`Z:TZBI0
 R4
 S1
 R0
-w1730065932
+R5
 8C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_MOV.sv
 FC:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_MOV.sv
 !i122 24
 R14
-R5
+R6
 r1
 !s85 0
 31
-R15
+R13
 !s107 C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_MOV.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA|C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_MOV.sv|
 !i113 1
-R7
 R8
 R9
+R10
 nalu_@m@o@v
 valu_OR
 R1
@@ -288,240 +288,240 @@ IkgRH;^_ND_=@:lz[M5?0a2
 R4
 S1
 R0
-R16
+R5
 8C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_OR.sv
 FC:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_OR.sv
 !i122 10
 R11
-R5
+R6
 r1
 !s85 0
 31
-R6
+R7
 !s107 C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_OR.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA|C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_OR.sv|
 !i113 1
-R7
 R8
 R9
+R10
 nalu_@o@r
 valu_RRC
 R1
-R13
+R12
 !i10b 1
-!s100 Cl=6XRhd3C;706<26eSj:1
+!s100 i25@RcEe>Kf:5h`mPYFj<3
 R3
-I@9SPGR]ChN?6``Z5jQ=Z51
+I9_RGGbT<WVXe925h;D9B`3
 R4
 S1
 R0
-w1730069448
+R5
 8C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_RRC.sv
 FC:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_RRC.sv
 !i122 26
-L0 1 10
-R5
+Z15 L0 2 9
+R6
 r1
 !s85 0
 31
-R15
+R13
 !s107 C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_RRC.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA|C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_RRC.sv|
 !i113 1
-R7
 R8
 R9
+R10
 nalu_@r@r@c
 valu_SRA
 R1
-R13
+R12
 !i10b 1
-!s100 CMl;Tn=Uk_lR<fFEShc101
+!s100 bE?KZ^oiVWlff:>[>W[G32
 R3
-IieA^o<BcN5j4Iz1<Q[NHK0
+IKJ4l1fF7?]US0DSmE@@]62
 R4
 S1
 R0
-w1730067227
+R5
 8C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_SRA.sv
 FC:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_SRA.sv
 !i122 25
 R14
-R5
+R6
 r1
 !s85 0
 31
-R15
+R13
 !s107 C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_SRA.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA|C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_SRA.sv|
 !i113 1
-R7
 R8
 R9
+R10
 nalu_@s@r@a
 valu_SUB
 R1
 R2
 !i10b 1
-!s100 n3zJ;PMZm;L@50Xkg:1?X2
+!s100 Q7bHnMM6U`RHigOZ1iM^k1
 R3
-I2m[1M>=WUb7VB:FhVjTAO3
+IQ7f0_>J2>biI]n864W6770
 R4
 S1
 R0
-w1731554494
+R5
 8C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_SUB.sv
 FC:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_SUB.sv
 !i122 9
-L0 2 10
-R5
+R15
+R6
 r1
 !s85 0
 31
-R6
+R7
 !s107 C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_SUB.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA|C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_SUB.sv|
 !i113 1
-R7
 R8
 R9
+R10
 nalu_@s@u@b
 valu_SUBC
 R1
-R2
+R12
 !i10b 1
-!s100 9RZ>`?T@DYTnENWb<TU>h2
+!s100 M:khz;@OkW>LiF70zk0J92
 R3
-Im=Cc:S[<LLfNM^8f;nliN1
+I6J0f<cg3Ujgn[<Y2b62E23
 R4
 S1
 R0
-w1731554567
+R5
 8C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_SUBC.sv
 FC:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_SUBC.sv
 !i122 20
-L0 2 13
-R5
+L0 2 10
+R6
 r1
 !s85 0
 31
-R6
+R13
 !s107 C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_SUBC.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA|C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_SUBC.sv|
 !i113 1
-R7
 R8
 R9
+R10
 nalu_@s@u@b@c
 valu_SWPB
 R1
-R13
+R12
 !i10b 1
-!s100 fB>d7`AD<RJA[;TecLJFI2
+!s100 [0gmDKQ=_aRfZgfJe@e_C3
 R3
-If1FR1AKICzMgClLWD9e]`3
+ImIkB;kbADWD5WZUDjn`^93
 R4
 S1
 R0
-w1730067984
+R5
 8C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_SWPB.sv
 FC:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_SWPB.sv
 !i122 28
 R14
-R5
+R6
 r1
 !s85 0
 31
-R15
+R13
 !s107 C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_SWPB.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA|C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_SWPB.sv|
 !i113 1
-R7
 R8
 R9
+R10
 nalu_@s@w@p@b
 valu_SXT
 R1
-R13
+R12
 !i10b 1
-!s100 g3J]]?0SaUYJMW[0U^5c[3
+!s100 b2R3UDzC7mIN1@3P2S82;1
 R3
-I=Q3h@?U4_CJ]L46Hb:=fj3
+I:L0`CSH];6_o:EYMmJ9G]1
 R4
 S1
 R0
-w1730069164
+R5
 8C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_SXT.sv
 FC:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_SXT.sv
 !i122 29
 R14
-R5
+R6
 r1
 !s85 0
 31
-R15
+R13
 !s107 C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_SXT.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA|C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_SXT.sv|
 !i113 1
-R7
 R8
 R9
+R10
 nalu_@s@x@t
 valu_XOR
 R1
-Z17 !s110 1731562519
+R2
 !i10b 1
-!s100 7HRYoEnLZ7zn[@AHn@bl12
+!s100 4lleTMLkmQhcf5UNKzJTB0
 R3
-IL6kMnTG=ianCC@AbW^8NY2
+I1NY0m[6QYe40j<3DQ@>ml1
 R4
 S1
 R0
-w1727813000
+R5
 8C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_XOR.sv
 FC:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_XOR.sv
 !i122 8
-R10
-R5
+R11
+R6
 r1
 !s85 0
 31
-Z18 !s108 1731562519.000000
+R7
 !s107 C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_XOR.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA|C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_XOR.sv|
 !i113 1
-R7
 R8
 R9
+R10
 nalu_@x@o@r
 vbranch
 R1
-R17
+Z16 !s110 1731782566
 !i10b 1
-!s100 HHMUXQS?7N^Kez4oiU6?71
+!s100 PJS]W9Y^fZUHFIQnST7c?1
 R3
-I>IeCj<?1nE70Dlj[B[fBd2
+I7:0TSO1jTi1h7eSM0m=843
 R4
 S1
 R0
-w1731464152
+R5
 8C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/branch.sv
 FC:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/branch.sv
 !i122 3
-L0 9 69
-R5
+L0 9 68
+R6
 r1
 !s85 0
 31
-R18
+Z17 !s108 1731782566.000000
 !s107 C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/branch.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA|C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/branch.sv|
 !i113 1
-R7
 R8
 R9
+R10
 vd_ram
-R17
+R16
 !i10b 1
 !s100 J2Qno?lXV`<kiQG7NaAPR0
 R3
@@ -532,125 +532,125 @@ w1731517015
 8C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/d_ram.v
 FC:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/d_ram.v
 !i122 1
-Z19 L0 40 66
-R5
+Z18 L0 40 66
+R6
 r1
 !s85 0
 31
-R18
+R17
 !s107 C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/d_ram.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA|C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/d_ram.v|
 !i113 1
-Z20 o-vlog01compat -work work
-Z21 !s92 -vlog01compat -work work +incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA
-R9
+Z19 o-vlog01compat -work work
+Z20 !s92 -vlog01compat -work work +incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA
+R10
 vdecode_stage
 R1
-R17
+R2
 !i10b 1
-!s100 ?HNG29<glRZ;6K9<7lVSP0
+!s100 W1B:DUGoh?iLj`g5`=_PX3
 R3
-I<N4i2FZ04C0h`IabBDQ>]3
+Ig1_>6]A6I1U>^:9;U:^0g2
 R4
 S1
 R0
-w1731557832
+w1731616724
 8C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/decode_stage.sv
 FC:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/decode_stage.sv
 !i122 5
-L0 1 530
-R5
+L0 11 529
+R6
 r1
 !s85 0
 31
-R18
+R17
 !s107 C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/decode_stage.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA|C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/decode_stage.sv|
 !i113 1
-R7
 R8
 R9
+R10
 vgo_to_LR
 R1
-R13
+Z21 !s110 1731782569
 !i10b 1
-!s100 kFP4JFohAebZ8I6nI^D0[1
+!s100 k[b2NBH?OT>_@iEAZjR2O3
 R3
-IjAz227?UMebe_b_iEKdYU1
+IfU6^d5D0]`ESlek[5<[eF0
 R4
 S1
 R0
-w1731461747
+R5
 8C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/go_to_LR.sv
 FC:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/go_to_LR.sv
 !i122 31
-L0 1 23
-R5
+L0 10 20
+R6
 r1
 !s85 0
 31
-R15
+Z22 !s108 1731782569.000000
 !s107 C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/go_to_LR.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA|C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/go_to_LR.sv|
 !i113 1
-R7
 R8
 R9
+R10
 ngo_to_@l@r
 vmemory_access_d_ram
 R1
-R13
+R21
 !i10b 1
-!s100 KF;H3=40S]UCW0k`ARQ2M1
+!s100 lHc[=CmY?WT13_<ZII@];2
 R3
-IMo;@MHe2[PiR<QJgb3YbS1
+IeD844>zDJB=O>j[9;Q5^21
 R4
 S1
 R0
-w1731562442
+R5
 8C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/memory_access_d_ram.sv
 FC:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/memory_access_d_ram.sv
 !i122 30
-L0 1 88
-R5
+L0 8 85
+R6
 r1
 !s85 0
 31
-R15
+R13
 !s107 C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/memory_access_d_ram.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA|C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/memory_access_d_ram.sv|
 !i113 1
-R7
 R8
 R9
+R10
 vmoves
 R1
-R13
+R12
 !i10b 1
-!s100 dgon<i24;@6jik9`8DLh`0
+!s100 X;3IK>B5i3CCcR<RHVMD@0
 R3
-IlSjHgiRjS8;2ZbnCQ9zYn0
+I>iA[Jd[gcIlMnMd7I2HON2
 R4
 S1
 R0
-w1731551037
+R5
 8C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/moves.sv
 FC:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/moves.sv
 !i122 23
-L0 1 25
-R5
+L0 7 28
+R6
 r1
 !s85 0
 31
-R15
+R13
 !s107 C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/moves.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA|C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/moves.sv|
 !i113 1
-R7
 R8
 R9
+R10
 vp_ram
-!s110 1731562518
+R16
 !i10b 1
 !s100 ]iBS9g4DRlzhlBYNiNmi[0
 R3
@@ -661,98 +661,98 @@ w1731517029
 8C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/p_ram.v
 FC:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/p_ram.v
 !i122 0
-R19
-R5
+R18
+R6
 r1
 !s85 0
 31
-!s108 1731562518.000000
+R17
 !s107 C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/p_ram.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA|C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/p_ram.v|
 !i113 1
+R19
 R20
-R21
-R9
+R10
 vpipeline_controller
 R1
-R17
+R2
 !i10b 1
-!s100 ]3T5gFk?IWo7g3I_HE6BA3
+!s100 6`1>FfEOX@B_EIZ34FJIS0
 R3
-IXCa>P00biLHXn?cQXD7i@3
+I^nVP0zRS``c3hZEG=g5ed2
 R4
 S1
 R0
-w1731549538
+Z23 w1731615543
 8C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/pipeline_controller.sv
 FC:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/pipeline_controller.sv
 !i122 7
-L0 9 110
-R5
+L0 9 109
+R6
 r1
 !s85 0
 31
-R18
+R7
 !s107 C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/pipeline_controller.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA|C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/pipeline_controller.sv|
 !i113 1
-R7
 R8
 R9
+R10
 vpipeline_registers
 R1
-R17
+R2
 !i10b 1
-!s100 _T;B:G@>C7F8:bgLAQc[h0
+!s100 ^DzRJC<14>=0Ncn=cdj?>2
 R3
-IVC@cM4zkDGkB8RdNWH[kU2
+IZTfW?fQ^8K:U5A4WWOk`:3
 R4
 S1
 R0
-w1731559990
+w1731615611
 8C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/pipeline_registers.sv
 FC:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/pipeline_registers.sv
 !i122 6
-L0 1 269
-R5
+L0 12 230
+R6
 r1
 !s85 0
 31
-R18
+R7
 !s107 C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/pipeline_registers.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA|C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/pipeline_registers.sv|
 !i113 1
-R7
 R8
 R9
+R10
 vprogram_counter
 R1
-R13
+R12
 !i10b 1
-!s100 J@1J9z3aeI53i3AQfj4ne3
+!s100 L9Eh;H<f5OB6]8AoZbKQ]2
 R3
-IM4bVA0dSOF@0jjOd<bG8E2
+IhS;TQkahdJAMWezRESRDX0
 R4
 S1
 R0
-w1731532107
+R23
 8C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/program_counter.sv
 FC:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/program_counter.sv
 !i122 22
-L0 1 54
-R5
+L0 8 53
+R6
 r1
 !s85 0
 31
-R15
+R13
 !s107 C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/program_counter.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA|C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/program_counter.sv|
 !i113 1
-R7
 R8
 R9
+R10
 vreg_view
-R17
+R16
 !i10b 1
 !s100 Z_QGcPYkY8hB7;NZfW56L2
 R3
@@ -763,120 +763,146 @@ w1731538405
 8C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/reg_view.v
 FC:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/reg_view.v
 !i122 2
-R19
-R5
+R18
+R6
 r1
 !s85 0
 31
-R18
+R17
 !s107 C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/reg_view.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA|C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/reg_view.v|
 !i113 1
+R19
 R20
-R21
-R9
+R10
 vregnum_to_values_to_alu
 R1
-R17
+R16
 !i10b 1
-!s100 =dnO::nSB:VVEjLD1i=b51
+!s100 5;A6Pb>RedbQbm]U4cic11
 R3
-Im3neZ_9K^ed41VA^?`23i1
+IHXdj:zm2fPiO>_7eli8HX2
 R4
 S1
 R0
-w1727662505
+R23
 8C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/regnum_to_values_to_alu.sv
 FC:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/regnum_to_values_to_alu.sv
 !i122 4
-L0 3 25
-R5
+L0 11 23
+R6
 r1
 !s85 0
 31
-R18
+R17
 !s107 C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/regnum_to_values_to_alu.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA|C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/regnum_to_values_to_alu.sv|
 !i113 1
-R7
 R8
 R9
-vsystem_view
+R10
+vseven_segment_display_driver
 R1
-R13
+R21
 !i10b 1
-!s100 iZ^2YEIEZz_5]CVbAY=ci3
+!s100 HOzh<MH?=_hYNJ`EdQ@o;2
 R3
-I>K5_ZPi[ZKe:Z2?0g<Lba2
+IKz3Ue^iHboKh?9nc5X1dW0
 R4
 S1
 R0
-w1731538093
+w1731781145
+8C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/seven_segment_display_driver.sv
+FC:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/seven_segment_display_driver.sv
+!i122 33
+L0 1 65
+R6
+r1
+!s85 0
+31
+R22
+!s107 C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/seven_segment_display_driver.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA|C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/seven_segment_display_driver.sv|
+!i113 1
+R8
+R9
+R10
+vsystem_view
+R1
+R21
+!i10b 1
+!s100 f_454BX@?MBJf]fS9kNZ:2
+R3
+I`?annPDDILAJdod5WNDXe0
+R4
+S1
+R0
+R23
 8C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/system_view.sv
 FC:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/system_view.sv
 !i122 32
-L0 1 28
-R5
+L0 10 26
+R6
 r1
 !s85 0
 31
-R15
+R22
 !s107 C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/system_view.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA|C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/system_view.sv|
 !i113 1
-R7
 R8
 R9
+R10
 vupdate_psw
 R1
-R2
+R12
 !i10b 1
-!s100 _mF[AmOW1b3WYXh<3@>JL0
+!s100 LomM5]JTM@EoCGF:Qjz<P0
 R3
-I^iN]@NhiJlbdXH[z`@[1f2
+IB2GUDob=GZZ=I;g>:2ilY2
 R4
 S1
 R0
-w1731555512
+R23
 8C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/update_psw.sv
 FC:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/update_psw.sv
 !i122 21
-L0 1 145
-R5
+L0 8 141
+R6
 r1
 !s85 0
 31
-R6
+R13
 !s107 C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/update_psw.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA|C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/update_psw.sv|
 !i113 1
-R7
 R8
 R9
+R10
 vXM23
 R1
-R2
+R12
 !i10b 1
-!s100 2NckEaod?^B=PJfBc7Gj:2
+!s100 33AV;3hn2cOFbZolUFBSO2
 R3
-Ih1k5<WQB2haC5iY<Ye5H42
+ITAY<j?WJZ5?8^@d4T?`Wg2
 R4
 S1
 R0
-w1731560685
+w1731781243
 8C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv
 FC:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv
 !i122 18
-L0 8 438
-R5
+L0 8 481
+R6
 r1
 !s85 0
 31
-R6
+R13
 !s107 C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA|C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv|
 !i113 1
-R7
 R8
 R9
+R10
 n@x@m23

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for XM23
-Thu Nov 14 18:27:46 2024
+Sat Nov 16 14:42:04 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -71,7 +71,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Nov 14 18:27:46 2024       ;
+; Analysis & Synthesis Status        ; Successful - Sat Nov 16 14:42:04 2024       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; XM23                                        ;
 ; Top-level Entity Name              ; XM23                                        ;
@@ -351,7 +351,7 @@ https://fpgasoftware.intel.com/eula.
 ;    |pipeline_registers:pipeline_registers_inst|                                                                                         ; 726 (726)           ; 317 (317)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|pipeline_registers:pipeline_registers_inst                                                                                                                                                                                                                                                                                                 ; pipeline_registers                ; work         ;
 ;    |program_counter:program_counter_inst|                                                                                               ; 39 (39)             ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|program_counter:program_counter_inst                                                                                                                                                                                                                                                                                                       ; program_counter                   ; work         ;
 ;    |regnum_to_values_to_alu:regnum_to_values_to_alu_inst|                                                                               ; 100 (100)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|regnum_to_values_to_alu:regnum_to_values_to_alu_inst                                                                                                                                                                                                                                                                                       ; regnum_to_values_to_alu           ; work         ;
-;    |seven_segment_display_driver:comb_608|                                                                                              ; 477 (477)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|seven_segment_display_driver:comb_608                                                                                                                                                                                                                                                                                                      ; seven_segment_display_driver      ; work         ;
+;    |seven_segment_display_driver:seven_segment_display_driver_inst|                                                                     ; 477 (477)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|seven_segment_display_driver:seven_segment_display_driver_inst                                                                                                                                                                                                                                                                             ; seven_segment_display_driver      ; work         ;
 ;    |sld_hub:auto_hub|                                                                                                                   ; 205 (1)             ; 130 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                           ; sld_hub                           ; altera_sld   ;
 ;       |alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric| ; 204 (0)             ; 130 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric                                                                                                                                                                                           ; alt_sld_fab_with_jtag_input       ; altera_sld   ;
 ;          |alt_sld_fab:instrumentation_fabric|                                                                                           ; 204 (0)             ; 130 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric                                                                                                                                                        ; alt_sld_fab                       ; alt_sld_fab  ;
@@ -1015,7 +1015,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Nov 14 18:27:19 2024
+    Info: Processing started: Sat Nov 16 14:41:36 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off XM23 -c XM23
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -1092,12 +1092,11 @@ Info (12021): Found 1 design units, including 1 entities, in source file seven_s
     Info (12023): Found entity 1: seven_segment_display_driver File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/seven_segment_display_driver.sv Line: 1
 Warning (10236): Verilog HDL Implicit Net warning at pipeline_registers.sv(240): created implicit net for "exec_result_o" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/pipeline_registers.sv Line: 240
 Warning (10236): Verilog HDL Implicit Net warning at alu_DADD.sv(54): created implicit net for "carry_out" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_DADD.sv Line: 54
-Critical Warning (10846): Verilog HDL Instantiation warning at XM23.sv(481): instance has no name File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 481
 Info (12127): Elaborating entity "XM23" for the top level hierarchy
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gprc_o_wire" into its bus
-Info (12128): Elaborating entity "program_counter" for hierarchy "program_counter:program_counter_inst" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 203
+Info (12128): Elaborating entity "program_counter" for hierarchy "program_counter:program_counter_inst" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 204
 Warning (10230): Verilog HDL assignment warning at program_counter.sv(36): truncated value with size 32 to match size of target (2) File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/program_counter.sv Line: 36
-Info (12128): Elaborating entity "p_ram" for hierarchy "p_ram:pram" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 215
+Info (12128): Elaborating entity "p_ram" for hierarchy "p_ram:pram" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 216
 Info (12128): Elaborating entity "altsyncram" for hierarchy "p_ram:pram|altsyncram:altsyncram_component" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/p_ram.v Line: 86
 Info (12130): Elaborated megafunction instantiation "p_ram:pram|altsyncram:altsyncram_component" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/p_ram.v Line: 86
 Info (12133): Instantiated megafunction "p_ram:pram|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/p_ram.v Line: 86
@@ -1122,9 +1121,9 @@ Info (12128): Elaborating entity "altsyncram_q6k1" for hierarchy "p_ram:pram|alt
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_hlb2.tdf
     Info (12023): Found entity 1: altsyncram_hlb2 File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/altsyncram_hlb2.tdf Line: 34
 Info (12128): Elaborating entity "altsyncram_hlb2" for hierarchy "p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|altsyncram_hlb2:altsyncram1" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/altsyncram_q6k1.tdf Line: 37
-Warning (113028): 32718 out of 32768 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 2 warnings found, and 2 warnings are reported. File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/program_memory.mif Line: 1
-    Warning (113027): Addresses ranging from 0 to 32639 are not initialized File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/program_memory.mif Line: 1
-    Warning (113027): Addresses ranging from 32689 to 32766 are not initialized File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/program_memory.mif Line: 1
+Warning (113028): 32760 out of 32768 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 2 warnings found, and 2 warnings are reported. File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/program_memory.mif Line: 1
+    Warning (113027): Addresses ranging from 0 to 2047 are not initialized File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/program_memory.mif Line: 1
+    Warning (113027): Addresses ranging from 2055 to 32766 are not initialized File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/program_memory.mif Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_msa.tdf
     Info (12023): Found entity 1: decode_msa File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/decode_msa.tdf Line: 23
 Info (12128): Elaborating entity "decode_msa" for hierarchy "p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|altsyncram_hlb2:altsyncram1|decode_msa:decode4" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/altsyncram_hlb2.tdf Line: 50
@@ -1148,10 +1147,10 @@ Info (12133): Instantiated megafunction "p_ram:pram|altsyncram:altsyncram_compon
 Info (12128): Elaborating entity "sld_jtag_endpoint_adapter" for hierarchy "p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 302
 Info (12128): Elaborating entity "sld_jtag_endpoint_adapter_impl" for hierarchy "p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd Line: 232
 Info (12128): Elaborating entity "sld_rom_sr" for hierarchy "p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 828
-Info (12128): Elaborating entity "memory_access_d_ram" for hierarchy "memory_access_d_ram:memory_access_d_ram_inst" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 234
+Info (12128): Elaborating entity "memory_access_d_ram" for hierarchy "memory_access_d_ram:memory_access_d_ram_inst" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 235
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gprc" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gprc" into its bus
-Info (12128): Elaborating entity "d_ram" for hierarchy "d_ram:dram" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 246
+Info (12128): Elaborating entity "d_ram" for hierarchy "d_ram:dram" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 247
 Info (12128): Elaborating entity "altsyncram" for hierarchy "d_ram:dram|altsyncram:altsyncram_component" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/d_ram.v Line: 86
 Info (12130): Elaborated megafunction instantiation "d_ram:dram|altsyncram:altsyncram_component" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/d_ram.v Line: 86
 Info (12133): Instantiated megafunction "d_ram:dram|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/d_ram.v Line: 86
@@ -1189,19 +1188,19 @@ Info (12133): Instantiated megafunction "d_ram:dram|altsyncram:altsyncram_compon
     Info (12134): Parameter "SHIFT_COUNT_BITS" = "5"
     Info (12134): Parameter "WIDTH_WORD" = "16"
     Info (12134): Parameter "WIDTHAD" = "15"
-Info (12128): Elaborating entity "decode_stage" for hierarchy "decode_stage:decode_stage_inst" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 276
+Info (12128): Elaborating entity "decode_stage" for hierarchy "decode_stage:decode_stage_inst" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 277
 Warning (10230): Verilog HDL assignment warning at decode_stage.sv(447): truncated value with size 4 to match size of target (1) File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/decode_stage.sv Line: 447
-Info (12128): Elaborating entity "pipeline_registers" for hierarchy "pipeline_registers:pipeline_registers_inst" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 345
+Info (12128): Elaborating entity "pipeline_registers" for hierarchy "pipeline_registers:pipeline_registers_inst" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 346
 Warning (10036): Verilog HDL or VHDL warning at pipeline_registers.sv(240): object "exec_result_o" assigned a value but never read File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/pipeline_registers.sv Line: 240
 Warning (10230): Verilog HDL assignment warning at pipeline_registers.sv(240): truncated value with size 16 to match size of target (1) File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/pipeline_registers.sv Line: 240
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gprc_o" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gprc_i" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gprc_o" into its bus
-Info (12128): Elaborating entity "pipeline_controller" for hierarchy "pipeline_controller:pipeline_controller_inst" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 367
-Info (12128): Elaborating entity "regnum_to_values_to_alu" for hierarchy "regnum_to_values_to_alu:regnum_to_values_to_alu_inst" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 380
+Info (12128): Elaborating entity "pipeline_controller" for hierarchy "pipeline_controller:pipeline_controller_inst" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 368
+Info (12128): Elaborating entity "regnum_to_values_to_alu" for hierarchy "regnum_to_values_to_alu:regnum_to_values_to_alu_inst" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 381
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gprc" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gprc" into its bus
-Info (12128): Elaborating entity "alu" for hierarchy "alu:alu_inst" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 395
+Info (12128): Elaborating entity "alu" for hierarchy "alu:alu_inst" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 396
 Info (12128): Elaborating entity "alu_AND" for hierarchy "alu:alu_inst|alu_AND:and_op" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu.sv Line: 42
 Info (12128): Elaborating entity "alu_OR" for hierarchy "alu:alu_inst|alu_OR:or_op" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu.sv Line: 43
 Info (12128): Elaborating entity "alu_XOR" for hierarchy "alu:alu_inst|alu_XOR:xor_op" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu.sv Line: 44
@@ -1224,17 +1223,17 @@ Info (12128): Elaborating entity "alu_RRC" for hierarchy "alu:alu_inst|alu_RRC:r
 Info (12128): Elaborating entity "alu_COMP" for hierarchy "alu:alu_inst|alu_COMP:comp_op" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu.sv Line: 60
 Info (12128): Elaborating entity "alu_SWPB" for hierarchy "alu:alu_inst|alu_SWPB:swpb_op" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu.sv Line: 61
 Info (12128): Elaborating entity "alu_SXT" for hierarchy "alu:alu_inst|alu_SXT:sxt_op" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu.sv Line: 62
-Info (12128): Elaborating entity "branch" for hierarchy "branch:branch_inst" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 414
-Info (12128): Elaborating entity "go_to_LR" for hierarchy "go_to_LR:go_to_LR_inst" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 428
+Info (12128): Elaborating entity "branch" for hierarchy "branch:branch_inst" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 415
+Info (12128): Elaborating entity "go_to_LR" for hierarchy "go_to_LR:go_to_LR_inst" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 429
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gprc" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gprc" into its bus
-Info (12128): Elaborating entity "moves" for hierarchy "moves:moves_inst" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 440
+Info (12128): Elaborating entity "moves" for hierarchy "moves:moves_inst" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 441
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gprc" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gprc" into its bus
-Info (12128): Elaborating entity "update_psw" for hierarchy "update_psw:update_psw_inst" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 466
+Info (12128): Elaborating entity "update_psw" for hierarchy "update_psw:update_psw_inst" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 467
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "carry_arr" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "overflow_arr" into its bus
-Info (12128): Elaborating entity "system_view" for hierarchy "system_view:system_view_inst" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 475
+Info (12128): Elaborating entity "system_view" for hierarchy "system_view:system_view_inst" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 476
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gprc" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gprc" into its bus
 Info (12128): Elaborating entity "reg_view" for hierarchy "system_view:system_view_inst|reg_view:regview" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/system_view.sv Line: 34
@@ -1275,7 +1274,7 @@ Info (12133): Instantiated megafunction "system_view:system_view_inst|reg_view:r
     Info (12134): Parameter "SHIFT_COUNT_BITS" = "8"
     Info (12134): Parameter "WIDTH_WORD" = "176"
     Info (12134): Parameter "WIDTHAD" = "1"
-Info (12128): Elaborating entity "seven_segment_display_driver" for hierarchy "seven_segment_display_driver:comb_608" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 481
+Info (12128): Elaborating entity "seven_segment_display_driver" for hierarchy "seven_segment_display_driver:seven_segment_display_driver_inst" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 482
 Warning (10230): Verilog HDL assignment warning at seven_segment_display_driver.sv(25): truncated value with size 32 to match size of target (4) File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/seven_segment_display_driver.sv Line: 25
 Warning (10230): Verilog HDL assignment warning at seven_segment_display_driver.sv(24): truncated value with size 32 to match size of target (4) File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/seven_segment_display_driver.sv Line: 24
 Warning (10230): Verilog HDL assignment warning at seven_segment_display_driver.sv(23): truncated value with size 32 to match size of target (4) File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/seven_segment_display_driver.sv Line: 23
@@ -1285,7 +1284,7 @@ Warning (10230): Verilog HDL assignment warning at seven_segment_display_driver.
 Warning (10230): Verilog HDL assignment warning at seven_segment_display_driver.sv(19): truncated value with size 32 to match size of target (4) File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/seven_segment_display_driver.sv Line: 19
 Warning (10230): Verilog HDL assignment warning at seven_segment_display_driver.sv(18): truncated value with size 32 to match size of target (4) File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/seven_segment_display_driver.sv Line: 18
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2024.11.14.18:27:29 Progress: Loading sld928a91a1/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2024.11.16.14:41:46 Progress: Loading sld928a91a1/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -1319,11 +1318,11 @@ Info (21057): Implemented 3720 device resources after synthesis - the final reso
     Info (21059): Implemented 58 output pins
     Info (21061): Implemented 3350 logic cells
     Info (21064): Implemented 304 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 30 warnings
-    Info: Peak virtual memory: 4934 megabytes
-    Info: Processing ended: Thu Nov 14 18:27:46 2024
-    Info: Elapsed time: 00:00:27
-    Info: Total CPU time (on all processors): 00:00:28
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 29 warnings
+    Info: Peak virtual memory: 4924 megabytes
+    Info: Processing ended: Sat Nov 16 14:42:04 2024
+    Info: Elapsed time: 00:00:28
+    Info: Total CPU time (on all processors): 00:00:27
 
 
 +------------------------------------------+

@@ -65,7 +65,8 @@ module XM23 (
    // Global clock counter gets incremented always unless
    // instruction is the program_finish instruction (BRA to itself)
    // or unless 'init' resets it back to 0
-   always @(posedge clk or posedge init) begin
+   wire [15:0] inst_wire;
+	always @(posedge clk or posedge init) begin
       if(init) begin
          global_clock_count <= 0;
       end else if (inst_wire != PROGRAM_FINISH) begin
@@ -82,7 +83,7 @@ module XM23 (
    wire [15:0] PC_next_wire;
    wire [15:0] LBPC_wire;
    wire [15:0] LBPC_LR_wire;
-   wire [15:0] inst_wire;
+   
 
    // Wires for data memory access
    wire [15:0] dram_address_wire;
@@ -475,7 +476,7 @@ module XM23 (
    );
    
    // Driver to display clock count
-   seven_segment_display_driver(
+   seven_segment_display_driver seven_segment_display_driver_inst(
       .binary_in(global_clock_count[26:0]),
       .segments(seven_seg_display_wire)
    );
