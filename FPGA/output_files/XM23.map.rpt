@@ -1,5 +1,5 @@
 Analysis & Synthesis report for XM23
-Sat Nov 16 14:42:04 2024
+Sat Nov 23 19:50:37 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -35,16 +35,14 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  27. altsyncram Parameter Settings by Entity Instance
  28. Port Connectivity Checks: "system_view:system_view_inst|reg_view:regview"
  29. Port Connectivity Checks: "go_to_LR:go_to_LR_inst"
- 30. Port Connectivity Checks: "pipeline_controller:pipeline_controller_inst"
- 31. Port Connectivity Checks: "pipeline_registers:pipeline_registers_inst"
- 32. Port Connectivity Checks: "d_ram:dram"
- 33. Port Connectivity Checks: "memory_access_d_ram:memory_access_d_ram_inst"
- 34. Port Connectivity Checks: "p_ram:pram"
- 35. In-System Memory Content Editor Settings
- 36. Post-Synthesis Netlist Statistics for Top Partition
- 37. Elapsed Time Per Partition
- 38. Analysis & Synthesis Messages
- 39. Analysis & Synthesis Suppressed Messages
+ 30. Port Connectivity Checks: "pipeline_registers:pipeline_registers_inst"
+ 31. Port Connectivity Checks: "memory_access_d_ram:memory_access_d_ram_inst"
+ 32. Port Connectivity Checks: "p_ram:pram"
+ 33. In-System Memory Content Editor Settings
+ 34. Post-Synthesis Netlist Statistics for Top Partition
+ 35. Elapsed Time Per Partition
+ 36. Analysis & Synthesis Messages
+ 37. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -71,15 +69,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Nov 16 14:42:04 2024       ;
+; Analysis & Synthesis Status        ; Successful - Sat Nov 23 19:50:37 2024       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; XM23                                        ;
 ; Top-level Entity Name              ; XM23                                        ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 3,329                                       ;
-;     Total combinational functions  ; 3,166                                       ;
-;     Dedicated logic registers      ; 919                                         ;
-; Total registers                    ; 919                                         ;
+; Total logic elements               ; 3,346                                       ;
+;     Total combinational functions  ; 3,178                                       ;
+;     Dedicated logic registers      ; 924                                         ;
+; Total registers                    ; 924                                         ;
 ; Total pins                         ; 61                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 1,048,928                                   ;
@@ -278,20 +276,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------------------------+
 ; Resource                                    ; Usage                    ;
 +---------------------------------------------+--------------------------+
-; Estimated Total logic elements              ; 3,329                    ;
+; Estimated Total logic elements              ; 3,346                    ;
 ;                                             ;                          ;
-; Total combinational functions               ; 3166                     ;
+; Total combinational functions               ; 3178                     ;
 ; Logic element usage by number of LUT inputs ;                          ;
-;     -- 4 input functions                    ; 1926                     ;
-;     -- 3 input functions                    ; 903                      ;
-;     -- <=2 input functions                  ; 337                      ;
+;     -- 4 input functions                    ; 1914                     ;
+;     -- 3 input functions                    ; 909                      ;
+;     -- <=2 input functions                  ; 355                      ;
 ;                                             ;                          ;
 ; Logic elements by mode                      ;                          ;
-;     -- normal mode                          ; 2846                     ;
-;     -- arithmetic mode                      ; 320                      ;
+;     -- normal mode                          ; 2844                     ;
+;     -- arithmetic mode                      ; 334                      ;
 ;                                             ;                          ;
-; Total registers                             ; 919                      ;
-;     -- Dedicated logic registers            ; 919                      ;
+; Total registers                             ; 924                      ;
+;     -- Dedicated logic registers            ; 924                      ;
 ;     -- I/O registers                        ; 0                        ;
 ;                                             ;                          ;
 ; I/O pins                                    ; 61                       ;
@@ -301,7 +299,7 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                          ;
 ; Maximum fan-out node                        ; altera_internal_jtag~TDO ;
 ; Maximum fan-out                             ; 778                      ;
-; Total fan-out                               ; 19584                    ;
+; Total fan-out                               ; 19632                    ;
 ; Average fan-out                             ; 4.33                     ;
 +---------------------------------------------+--------------------------+
 
@@ -311,15 +309,14 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                              ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |XM23                                                                                                                                   ; 3166 (164)          ; 919 (62)                  ; 1048928     ; 0            ; 0       ; 0         ; 61   ; 0            ; |XM23                                                                                                                                                                                                                                                                                                                                            ; XM23                              ; work         ;
-;    |alu:alu_inst|                                                                                                                       ; 328 (212)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|alu:alu_inst                                                                                                                                                                                                                                                                                                                               ; alu                               ; work         ;
+; |XM23                                                                                                                                   ; 3178 (164)          ; 924 (62)                  ; 1048928     ; 0            ; 0       ; 0         ; 61   ; 0            ; |XM23                                                                                                                                                                                                                                                                                                                                            ; XM23                              ; work         ;
+;    |alu:alu_inst|                                                                                                                       ; 334 (218)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|alu:alu_inst                                                                                                                                                                                                                                                                                                                               ; alu                               ; work         ;
 ;       |alu_ADD:add_op|                                                                                                                  ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|alu:alu_inst|alu_ADD:add_op                                                                                                                                                                                                                                                                                                                ; alu_ADD                           ; work         ;
 ;       |alu_ADDC:addc_op|                                                                                                                ; 17 (17)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|alu:alu_inst|alu_ADDC:addc_op                                                                                                                                                                                                                                                                                                              ; alu_ADDC                          ; work         ;
 ;       |alu_AND:and_op|                                                                                                                  ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|alu:alu_inst|alu_AND:and_op                                                                                                                                                                                                                                                                                                                ; alu_AND                           ; work         ;
-;       |alu_BIC:bic_op|                                                                                                                  ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|alu:alu_inst|alu_BIC:bic_op                                                                                                                                                                                                                                                                                                                ; alu_BIC                           ; work         ;
 ;       |alu_BIS:bis_op|                                                                                                                  ; 19 (19)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|alu:alu_inst|alu_BIS:bis_op                                                                                                                                                                                                                                                                                                                ; alu_BIS                           ; work         ;
 ;       |alu_DADD:dadd_op|                                                                                                                ; 22 (22)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|alu:alu_inst|alu_DADD:dadd_op                                                                                                                                                                                                                                                                                                              ; alu_DADD                          ; work         ;
-;       |alu_OR:or_op|                                                                                                                    ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|alu:alu_inst|alu_OR:or_op                                                                                                                                                                                                                                                                                                                  ; alu_OR                            ; work         ;
+;       |alu_OR:or_op|                                                                                                                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|alu:alu_inst|alu_OR:or_op                                                                                                                                                                                                                                                                                                                  ; alu_OR                            ; work         ;
 ;       |alu_SUB:sub_op|                                                                                                                  ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|alu:alu_inst|alu_SUB:sub_op                                                                                                                                                                                                                                                                                                                ; alu_SUB                           ; work         ;
 ;       |alu_SUBC:subc_op|                                                                                                                ; 17 (17)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|alu:alu_inst|alu_SUBC:subc_op                                                                                                                                                                                                                                                                                                              ; alu_SUBC                          ; work         ;
 ;    |branch:branch_inst|                                                                                                                 ; 4 (4)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|branch:branch_inst                                                                                                                                                                                                                                                                                                                         ; branch                            ; work         ;
@@ -334,8 +331,8 @@ https://fpgasoftware.intel.com/eula.
 ;                |mux_lob:mux7|                                                                                                           ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|d_ram:dram|altsyncram:altsyncram_component|altsyncram_grj1:auto_generated|altsyncram_jab2:altsyncram1|mux_lob:mux7                                                                                                                                                                                                                         ; mux_lob                           ; work         ;
 ;             |sld_mod_ram_rom:mgl_prim2|                                                                                                 ; 81 (58)             ; 54 (45)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|d_ram:dram|altsyncram:altsyncram_component|altsyncram_grj1:auto_generated|sld_mod_ram_rom:mgl_prim2                                                                                                                                                                                                                                        ; sld_mod_ram_rom                   ; work         ;
 ;                |sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|                                                                     ; 23 (23)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|d_ram:dram|altsyncram:altsyncram_component|altsyncram_grj1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr                                                                                                                                                                                     ; sld_rom_sr                        ; work         ;
-;    |decode_stage:decode_stage_inst|                                                                                                     ; 138 (138)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|decode_stage:decode_stage_inst                                                                                                                                                                                                                                                                                                             ; decode_stage                      ; work         ;
-;    |go_to_LR:go_to_LR_inst|                                                                                                             ; 85 (85)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|go_to_LR:go_to_LR_inst                                                                                                                                                                                                                                                                                                                     ; go_to_LR                          ; work         ;
+;    |decode_stage:decode_stage_inst|                                                                                                     ; 137 (137)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|decode_stage:decode_stage_inst                                                                                                                                                                                                                                                                                                             ; decode_stage                      ; work         ;
+;    |go_to_LR:go_to_LR_inst|                                                                                                             ; 86 (86)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|go_to_LR:go_to_LR_inst                                                                                                                                                                                                                                                                                                                     ; go_to_LR                          ; work         ;
 ;    |memory_access_d_ram:memory_access_d_ram_inst|                                                                                       ; 234 (234)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|memory_access_d_ram:memory_access_d_ram_inst                                                                                                                                                                                                                                                                                               ; memory_access_d_ram               ; work         ;
 ;    |p_ram:pram|                                                                                                                         ; 156 (0)             ; 58 (0)                    ; 524288      ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|p_ram:pram                                                                                                                                                                                                                                                                                                                                 ; p_ram                             ; work         ;
 ;       |altsyncram:altsyncram_component|                                                                                                 ; 156 (0)             ; 58 (0)                    ; 524288      ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|p_ram:pram|altsyncram:altsyncram_component                                                                                                                                                                                                                                                                                                 ; altsyncram                        ; work         ;
@@ -347,8 +344,8 @@ https://fpgasoftware.intel.com/eula.
 ;                |mux_lob:mux7|                                                                                                           ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|altsyncram_hlb2:altsyncram1|mux_lob:mux7                                                                                                                                                                                                                         ; mux_lob                           ; work         ;
 ;             |sld_mod_ram_rom:mgl_prim2|                                                                                                 ; 80 (58)             ; 54 (45)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|sld_mod_ram_rom:mgl_prim2                                                                                                                                                                                                                                        ; sld_mod_ram_rom                   ; work         ;
 ;                |sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|                                                                     ; 22 (22)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr                                                                                                                                                                                     ; sld_rom_sr                        ; work         ;
-;    |pipeline_controller:pipeline_controller_inst|                                                                                       ; 95 (95)             ; 63 (63)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|pipeline_controller:pipeline_controller_inst                                                                                                                                                                                                                                                                                               ; pipeline_controller               ; work         ;
-;    |pipeline_registers:pipeline_registers_inst|                                                                                         ; 726 (726)           ; 317 (317)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|pipeline_registers:pipeline_registers_inst                                                                                                                                                                                                                                                                                                 ; pipeline_registers                ; work         ;
+;    |pipeline_controller:pipeline_controller_inst|                                                                                       ; 94 (94)             ; 68 (68)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|pipeline_controller:pipeline_controller_inst                                                                                                                                                                                                                                                                                               ; pipeline_controller               ; work         ;
+;    |pipeline_registers:pipeline_registers_inst|                                                                                         ; 717 (717)           ; 317 (317)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|pipeline_registers:pipeline_registers_inst                                                                                                                                                                                                                                                                                                 ; pipeline_registers                ; work         ;
 ;    |program_counter:program_counter_inst|                                                                                               ; 39 (39)             ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|program_counter:program_counter_inst                                                                                                                                                                                                                                                                                                       ; program_counter                   ; work         ;
 ;    |regnum_to_values_to_alu:regnum_to_values_to_alu_inst|                                                                               ; 100 (100)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|regnum_to_values_to_alu:regnum_to_values_to_alu_inst                                                                                                                                                                                                                                                                                       ; regnum_to_values_to_alu           ; work         ;
 ;    |seven_segment_display_driver:seven_segment_display_driver_inst|                                                                     ; 477 (477)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|seven_segment_display_driver:seven_segment_display_driver_inst                                                                                                                                                                                                                                                                             ; seven_segment_display_driver      ; work         ;
@@ -367,7 +364,7 @@ https://fpgasoftware.intel.com/eula.
 ;                |altsyncram_hvb2:altsyncram1|                                                                                            ; 0 (0)               ; 0 (0)                     ; 352         ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|system_view:system_view_inst|reg_view:regview|altsyncram:altsyncram_component|altsyncram_ujk1:auto_generated|altsyncram_hvb2:altsyncram1                                                                                                                                                                                                   ; altsyncram_hvb2                   ; work         ;
 ;                |sld_mod_ram_rom:mgl_prim2|                                                                                              ; 233 (211)           ; 197 (188)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|system_view:system_view_inst|reg_view:regview|altsyncram:altsyncram_component|altsyncram_ujk1:auto_generated|sld_mod_ram_rom:mgl_prim2                                                                                                                                                                                                     ; sld_mod_ram_rom                   ; work         ;
 ;                   |sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|                                                                  ; 22 (22)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|system_view:system_view_inst|reg_view:regview|altsyncram:altsyncram_component|altsyncram_ujk1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr                                                                                                                                                  ; sld_rom_sr                        ; work         ;
-;    |update_psw:update_psw_inst|                                                                                                         ; 21 (21)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|update_psw:update_psw_inst                                                                                                                                                                                                                                                                                                                 ; update_psw                        ; work         ;
+;    |update_psw:update_psw_inst|                                                                                                         ; 37 (37)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |XM23|update_psw:update_psw_inst                                                                                                                                                                                                                                                                                                                 ; update_psw                        ; work         ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -399,60 +396,31 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                             ;
-+------------------------------------------------------------+-------------------------------------------------------------------+
-; Register name                                              ; Reason for Removal                                                ;
-+------------------------------------------------------------+-------------------------------------------------------------------+
-; pipeline_controller:pipeline_controller_inst|LBPSW1[0..15] ; Stuck at GND due to stuck port data_in                            ;
-; pipeline_controller:pipeline_controller_inst|LBPSW2[0..15] ; Stuck at GND due to stuck port data_in                            ;
-; pipeline_registers:pipeline_registers_inst|enable_i[0][18] ; Stuck at GND due to stuck port data_in                            ;
-; pipeline_registers:pipeline_registers_inst|PSW_i[5..15]    ; Stuck at GND due to stuck port data_in                            ;
-; PC_force[1..14]                                            ; Merged with PC_force[0]                                           ;
-; pipeline_controller:pipeline_controller_inst|PC_next[0]    ; Merged with pipeline_controller:pipeline_controller_inst|LBPC1[0] ;
-; global_clock_count[27..63]                                 ; Lost fanout                                                       ;
-; Total Number of Removed Registers = 96                     ;                                                                   ;
-+------------------------------------------------------------+-------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                     ;
++------------------------------------------------------------------+---------------------------------------------------------------------+
+; Register name                                                    ; Reason for Removal                                                  ;
++------------------------------------------------------------------+---------------------------------------------------------------------+
+; pipeline_registers:pipeline_registers_inst|enable_i[0][18]       ; Stuck at GND due to stuck port data_in                              ;
+; PC_force[1..14]                                                  ; Merged with PC_force[0]                                             ;
+; pipeline_controller:pipeline_controller_inst|PC_next[0]          ; Merged with pipeline_controller:pipeline_controller_inst|LBPC1[0]   ;
+; pipeline_registers:pipeline_registers_inst|PSW_i[5..9,11..15]    ; Merged with pipeline_registers:pipeline_registers_inst|PSW_i[10]    ;
+; pipeline_controller:pipeline_controller_inst|LBPSW1[5..9,11..15] ; Merged with pipeline_controller:pipeline_controller_inst|LBPSW1[10] ;
+; pipeline_registers:pipeline_registers_inst|PSW_i[10]             ; Stuck at GND due to stuck port data_in                              ;
+; pipeline_controller:pipeline_controller_inst|LBPSW1[10]          ; Stuck at GND due to stuck port data_in                              ;
+; global_clock_count[27..63]                                       ; Lost fanout                                                         ;
+; Total Number of Removed Registers = 75                           ;                                                                     ;
++------------------------------------------------------------------+---------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                    ;
-+---------------------------------------------------------+---------------------------+----------------------------------------------------------+
-; Register name                                           ; Reason for Removal        ; Registers Removed due to This Register                   ;
-+---------------------------------------------------------+---------------------------+----------------------------------------------------------+
-; pipeline_controller:pipeline_controller_inst|LBPSW1[5]  ; Stuck at GND              ; pipeline_controller:pipeline_controller_inst|LBPSW2[5],  ;
-;                                                         ; due to stuck port data_in ; pipeline_registers:pipeline_registers_inst|PSW_i[5]      ;
-; pipeline_controller:pipeline_controller_inst|LBPSW1[6]  ; Stuck at GND              ; pipeline_controller:pipeline_controller_inst|LBPSW2[6],  ;
-;                                                         ; due to stuck port data_in ; pipeline_registers:pipeline_registers_inst|PSW_i[6]      ;
-; pipeline_controller:pipeline_controller_inst|LBPSW1[7]  ; Stuck at GND              ; pipeline_controller:pipeline_controller_inst|LBPSW2[7],  ;
-;                                                         ; due to stuck port data_in ; pipeline_registers:pipeline_registers_inst|PSW_i[7]      ;
-; pipeline_controller:pipeline_controller_inst|LBPSW1[8]  ; Stuck at GND              ; pipeline_controller:pipeline_controller_inst|LBPSW2[8],  ;
-;                                                         ; due to stuck port data_in ; pipeline_registers:pipeline_registers_inst|PSW_i[8]      ;
-; pipeline_controller:pipeline_controller_inst|LBPSW1[9]  ; Stuck at GND              ; pipeline_controller:pipeline_controller_inst|LBPSW2[9],  ;
-;                                                         ; due to stuck port data_in ; pipeline_registers:pipeline_registers_inst|PSW_i[9]      ;
-; pipeline_controller:pipeline_controller_inst|LBPSW1[10] ; Stuck at GND              ; pipeline_controller:pipeline_controller_inst|LBPSW2[10], ;
-;                                                         ; due to stuck port data_in ; pipeline_registers:pipeline_registers_inst|PSW_i[10]     ;
-; pipeline_controller:pipeline_controller_inst|LBPSW1[11] ; Stuck at GND              ; pipeline_controller:pipeline_controller_inst|LBPSW2[11], ;
-;                                                         ; due to stuck port data_in ; pipeline_registers:pipeline_registers_inst|PSW_i[11]     ;
-; pipeline_controller:pipeline_controller_inst|LBPSW1[12] ; Stuck at GND              ; pipeline_controller:pipeline_controller_inst|LBPSW2[12], ;
-;                                                         ; due to stuck port data_in ; pipeline_registers:pipeline_registers_inst|PSW_i[12]     ;
-; pipeline_controller:pipeline_controller_inst|LBPSW1[13] ; Stuck at GND              ; pipeline_controller:pipeline_controller_inst|LBPSW2[13], ;
-;                                                         ; due to stuck port data_in ; pipeline_registers:pipeline_registers_inst|PSW_i[13]     ;
-; pipeline_controller:pipeline_controller_inst|LBPSW1[14] ; Stuck at GND              ; pipeline_controller:pipeline_controller_inst|LBPSW2[14], ;
-;                                                         ; due to stuck port data_in ; pipeline_registers:pipeline_registers_inst|PSW_i[14]     ;
-; pipeline_controller:pipeline_controller_inst|LBPSW1[15] ; Stuck at GND              ; pipeline_controller:pipeline_controller_inst|LBPSW2[15], ;
-;                                                         ; due to stuck port data_in ; pipeline_registers:pipeline_registers_inst|PSW_i[15]     ;
-; pipeline_controller:pipeline_controller_inst|LBPSW1[0]  ; Stuck at GND              ; pipeline_controller:pipeline_controller_inst|LBPSW2[0]   ;
-;                                                         ; due to stuck port data_in ;                                                          ;
-; pipeline_controller:pipeline_controller_inst|LBPSW1[1]  ; Stuck at GND              ; pipeline_controller:pipeline_controller_inst|LBPSW2[1]   ;
-;                                                         ; due to stuck port data_in ;                                                          ;
-; pipeline_controller:pipeline_controller_inst|LBPSW1[2]  ; Stuck at GND              ; pipeline_controller:pipeline_controller_inst|LBPSW2[2]   ;
-;                                                         ; due to stuck port data_in ;                                                          ;
-; pipeline_controller:pipeline_controller_inst|LBPSW1[3]  ; Stuck at GND              ; pipeline_controller:pipeline_controller_inst|LBPSW2[3]   ;
-;                                                         ; due to stuck port data_in ;                                                          ;
-; pipeline_controller:pipeline_controller_inst|LBPSW1[4]  ; Stuck at GND              ; pipeline_controller:pipeline_controller_inst|LBPSW2[4]   ;
-;                                                         ; due to stuck port data_in ;                                                          ;
-+---------------------------------------------------------+---------------------------+----------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                ;
++------------------------------------------------------+---------------------------+---------------------------------------------------------+
+; Register name                                        ; Reason for Removal        ; Registers Removed due to This Register                  ;
++------------------------------------------------------+---------------------------+---------------------------------------------------------+
+; pipeline_registers:pipeline_registers_inst|PSW_i[10] ; Stuck at GND              ; pipeline_controller:pipeline_controller_inst|LBPSW1[10] ;
+;                                                      ; due to stuck port data_in ;                                                         ;
++------------------------------------------------------+---------------------------+---------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -460,12 +428,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 919   ;
+; Total registers                              ; 924   ;
 ; Number of registers using Synchronous Clear  ; 29    ;
-; Number of registers using Synchronous Load   ; 80    ;
+; Number of registers using Synchronous Load   ; 92    ;
 ; Number of registers using Asynchronous Clear ; 301   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 750   ;
+; Number of registers using Clock Enable       ; 758   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -490,50 +458,50 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                                                      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |XM23|led~reg0                                                                                                                                                                                                  ;
-; 3:1                ; 31 bits   ; 62 LEs        ; 31 LEs               ; 31 LEs                 ; Yes        ; |XM23|counter[9]                                                                                                                                                                                                ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |XM23|p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[1]                                                                        ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |XM23|p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[13]                                                                                  ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |XM23|d_ram:dram|altsyncram:altsyncram_component|altsyncram_grj1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[2]                                                                        ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |XM23|d_ram:dram|altsyncram:altsyncram_component|altsyncram_grj1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[15]                                                                                  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |XM23|system_view:system_view_inst|reg_view:regview|altsyncram:altsyncram_component|altsyncram_ujk1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[1]                                     ;
-; 3:1                ; 176 bits  ; 352 LEs       ; 176 LEs              ; 176 LEs                ; Yes        ; |XM23|system_view:system_view_inst|reg_view:regview|altsyncram:altsyncram_component|altsyncram_ujk1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[90]                                               ;
-; 3:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |XM23|p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[10]                                                                                  ;
-; 3:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |XM23|d_ram:dram|altsyncram:altsyncram_component|altsyncram_grj1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[2]                                                                                   ;
+; 3:1                ; 31 bits   ; 62 LEs        ; 31 LEs               ; 31 LEs                 ; Yes        ; |XM23|counter[8]                                                                                                                                                                                                ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |XM23|p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[4]                                                                        ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |XM23|p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[14]                                                                                  ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |XM23|d_ram:dram|altsyncram:altsyncram_component|altsyncram_grj1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[0]                                                                        ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |XM23|d_ram:dram|altsyncram:altsyncram_component|altsyncram_grj1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[7]                                                                                   ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |XM23|system_view:system_view_inst|reg_view:regview|altsyncram:altsyncram_component|altsyncram_ujk1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[7]                                     ;
+; 3:1                ; 176 bits  ; 352 LEs       ; 176 LEs              ; 176 LEs                ; Yes        ; |XM23|system_view:system_view_inst|reg_view:regview|altsyncram:altsyncram_component|altsyncram_ujk1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[5]                                                ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |XM23|p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[0]                                                                                   ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |XM23|d_ram:dram|altsyncram:altsyncram_component|altsyncram_grj1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[9]                                                                                   ;
 ; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |XM23|pipeline_registers:pipeline_registers_inst|OFF_i[0][3]                                                                                                                                                    ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |XM23|p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[0]                                    ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |XM23|d_ram:dram|altsyncram:altsyncram_component|altsyncram_grj1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[0]                                    ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |XM23|p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[2]                                    ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |XM23|d_ram:dram|altsyncram:altsyncram_component|altsyncram_grj1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[4]                                    ;
 ; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |XM23|system_view:system_view_inst|reg_view:regview|altsyncram:altsyncram_component|altsyncram_ujk1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[1] ;
-; 4:1                ; 29 bits   ; 58 LEs        ; 29 LEs               ; 29 LEs                 ; Yes        ; |XM23|pipeline_registers:pipeline_registers_inst|enable_i[0][23]                                                                                                                                                ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |XM23|pipeline_registers:pipeline_registers_inst|exec_result_i[0][1]                                                                                                                                            ;
-; 5:1                ; 16 bits   ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; Yes        ; |XM23|program_counter:program_counter_inst|true_PC[8]                                                                                                                                                           ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |XM23|pipeline_registers:pipeline_registers_inst|exec_result_i[0][9]                                                                                                                                            ;
-; 8:1                ; 15 bits   ; 75 LEs        ; 45 LEs               ; 30 LEs                 ; Yes        ; |XM23|pipeline_registers:pipeline_registers_inst|gprc_i[0][7][12]                                                                                                                                               ;
-; 8:1                ; 15 bits   ; 75 LEs        ; 45 LEs               ; 30 LEs                 ; Yes        ; |XM23|pipeline_registers:pipeline_registers_inst|gprc_i[0][6][12]                                                                                                                                               ;
-; 8:1                ; 15 bits   ; 75 LEs        ; 45 LEs               ; 30 LEs                 ; Yes        ; |XM23|pipeline_registers:pipeline_registers_inst|gprc_i[0][5][3]                                                                                                                                                ;
-; 8:1                ; 15 bits   ; 75 LEs        ; 45 LEs               ; 30 LEs                 ; Yes        ; |XM23|pipeline_registers:pipeline_registers_inst|gprc_i[0][4][4]                                                                                                                                                ;
-; 8:1                ; 15 bits   ; 75 LEs        ; 45 LEs               ; 30 LEs                 ; Yes        ; |XM23|pipeline_registers:pipeline_registers_inst|gprc_i[0][3][3]                                                                                                                                                ;
-; 8:1                ; 15 bits   ; 75 LEs        ; 45 LEs               ; 30 LEs                 ; Yes        ; |XM23|pipeline_registers:pipeline_registers_inst|gprc_i[0][2][10]                                                                                                                                               ;
-; 8:1                ; 15 bits   ; 75 LEs        ; 45 LEs               ; 30 LEs                 ; Yes        ; |XM23|pipeline_registers:pipeline_registers_inst|gprc_i[0][1][15]                                                                                                                                               ;
-; 8:1                ; 15 bits   ; 75 LEs        ; 45 LEs               ; 30 LEs                 ; Yes        ; |XM23|pipeline_registers:pipeline_registers_inst|gprc_i[0][0][15]                                                                                                                                               ;
-; 26:1               ; 4 bits    ; 68 LEs        ; 44 LEs               ; 24 LEs                 ; Yes        ; |XM23|p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[2]                                         ;
-; 26:1               ; 4 bits    ; 68 LEs        ; 48 LEs               ; 20 LEs                 ; Yes        ; |XM23|d_ram:dram|altsyncram:altsyncram_component|altsyncram_grj1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[3]                                         ;
-; 26:1               ; 4 bits    ; 68 LEs        ; 48 LEs               ; 20 LEs                 ; Yes        ; |XM23|system_view:system_view_inst|reg_view:regview|altsyncram:altsyncram_component|altsyncram_ujk1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[3]      ;
-; 8:1                ; 15 bits   ; 75 LEs        ; 75 LEs               ; 0 LEs                  ; No         ; |XM23|memory_access_d_ram:memory_access_d_ram_inst|Mux26                                                                                                                                                        ;
-; 8:1                ; 15 bits   ; 75 LEs        ; 75 LEs               ; 0 LEs                  ; No         ; |XM23|memory_access_d_ram:memory_access_d_ram_inst|Mux2                                                                                                                                                         ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |XM23|memory_access_d_ram:memory_access_d_ram_inst|output_address[1]                                                                                                                                            ;
-; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |XM23|go_to_LR:go_to_LR_inst|Mux0                                                                                                                                                                               ;
-; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |XM23|pipeline_registers:pipeline_registers_inst|Mux5                                                                                                                                                           ;
-; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |XM23|pipeline_registers:pipeline_registers_inst|Mux22                                                                                                                                                          ;
-; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |XM23|regnum_to_values_to_alu:regnum_to_values_to_alu_inst|Mux33                                                                                                                                                ;
+; 4:1                ; 29 bits   ; 58 LEs        ; 29 LEs               ; 29 LEs                 ; Yes        ; |XM23|pipeline_registers:pipeline_registers_inst|enable_i[0][34]                                                                                                                                                ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |XM23|pipeline_registers:pipeline_registers_inst|exec_result_i[0][2]                                                                                                                                            ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; Yes        ; |XM23|program_counter:program_counter_inst|true_PC[14]                                                                                                                                                          ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |XM23|pipeline_registers:pipeline_registers_inst|exec_result_i[0][15]                                                                                                                                           ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 48 LEs               ; 32 LEs                 ; Yes        ; |XM23|pipeline_registers:pipeline_registers_inst|gprc_i[0][7][9]                                                                                                                                                ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 48 LEs               ; 32 LEs                 ; Yes        ; |XM23|pipeline_registers:pipeline_registers_inst|gprc_i[0][6][0]                                                                                                                                                ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 48 LEs               ; 32 LEs                 ; Yes        ; |XM23|pipeline_registers:pipeline_registers_inst|gprc_i[0][5][0]                                                                                                                                                ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 48 LEs               ; 32 LEs                 ; Yes        ; |XM23|pipeline_registers:pipeline_registers_inst|gprc_i[0][4][0]                                                                                                                                                ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 48 LEs               ; 32 LEs                 ; Yes        ; |XM23|pipeline_registers:pipeline_registers_inst|gprc_i[0][3][0]                                                                                                                                                ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 48 LEs               ; 32 LEs                 ; Yes        ; |XM23|pipeline_registers:pipeline_registers_inst|gprc_i[0][2][0]                                                                                                                                                ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 48 LEs               ; 32 LEs                 ; Yes        ; |XM23|pipeline_registers:pipeline_registers_inst|gprc_i[0][1][13]                                                                                                                                               ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 48 LEs               ; 32 LEs                 ; Yes        ; |XM23|pipeline_registers:pipeline_registers_inst|gprc_i[0][0][3]                                                                                                                                                ;
+; 26:1               ; 4 bits    ; 68 LEs        ; 44 LEs               ; 24 LEs                 ; Yes        ; |XM23|p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[0]                                         ;
+; 26:1               ; 4 bits    ; 68 LEs        ; 48 LEs               ; 20 LEs                 ; Yes        ; |XM23|d_ram:dram|altsyncram:altsyncram_component|altsyncram_grj1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[0]                                         ;
+; 26:1               ; 4 bits    ; 68 LEs        ; 48 LEs               ; 20 LEs                 ; Yes        ; |XM23|system_view:system_view_inst|reg_view:regview|altsyncram:altsyncram_component|altsyncram_ujk1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[1]      ;
+; 8:1                ; 15 bits   ; 75 LEs        ; 75 LEs               ; 0 LEs                  ; No         ; |XM23|memory_access_d_ram:memory_access_d_ram_inst|Mux29                                                                                                                                                        ;
+; 8:1                ; 15 bits   ; 75 LEs        ; 75 LEs               ; 0 LEs                  ; No         ; |XM23|memory_access_d_ram:memory_access_d_ram_inst|Mux4                                                                                                                                                         ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |XM23|memory_access_d_ram:memory_access_d_ram_inst|output_address[0]                                                                                                                                            ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |XM23|go_to_LR:go_to_LR_inst|Mux8                                                                                                                                                                               ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |XM23|pipeline_registers:pipeline_registers_inst|Mux3                                                                                                                                                           ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |XM23|pipeline_registers:pipeline_registers_inst|Mux15                                                                                                                                                          ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |XM23|regnum_to_values_to_alu:regnum_to_values_to_alu_inst|Mux43                                                                                                                                                ;
 ; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |XM23|alu:alu_inst|alu_BIS:bis_op|ShiftLeft0                                                                                                                                                                    ;
 ; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |XM23|alu:alu_inst|alu_BIS:bis_op|ShiftLeft0                                                                                                                                                                    ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |XM23|update_psw:update_psw_inst|psw_msk[2]                                                                                                                                                                     ;
-; 5:1                ; 15 bits   ; 45 LEs        ; 15 LEs               ; 30 LEs                 ; No         ; |XM23|memory_access_d_ram:memory_access_d_ram_inst|output_data[9]                                                                                                                                               ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |XM23|regnum_to_values_to_alu:regnum_to_values_to_alu_inst|src_val[3]                                                                                                                                           ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |XM23|update_psw:update_psw_inst|psw_msk[4]                                                                                                                                                                     ;
+; 5:1                ; 15 bits   ; 45 LEs        ; 15 LEs               ; 30 LEs                 ; No         ; |XM23|memory_access_d_ram:memory_access_d_ram_inst|output_data[6]                                                                                                                                               ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |XM23|regnum_to_values_to_alu:regnum_to_values_to_alu_inst|src_val[0]                                                                                                                                           ;
 ; 16:1               ; 2 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |XM23|alu:alu_inst|result[12]                                                                                                                                                                                   ;
-; 17:1               ; 3 bits    ; 33 LEs        ; 30 LEs               ; 3 LEs                  ; No         ; |XM23|alu:alu_inst|result[10]                                                                                                                                                                                   ;
+; 17:1               ; 3 bits    ; 33 LEs        ; 30 LEs               ; 3 LEs                  ; No         ; |XM23|alu:alu_inst|result[9]                                                                                                                                                                                    ;
 ; 17:1               ; 2 bits    ; 22 LEs        ; 20 LEs               ; 2 LEs                  ; No         ; |XM23|alu:alu_inst|result[14]                                                                                                                                                                                   ;
-; 18:1               ; 3 bits    ; 36 LEs        ; 30 LEs               ; 6 LEs                  ; No         ; |XM23|alu:alu_inst|result[2]                                                                                                                                                                                    ;
+; 18:1               ; 3 bits    ; 36 LEs        ; 30 LEs               ; 6 LEs                  ; No         ; |XM23|alu:alu_inst|result[1]                                                                                                                                                                                    ;
 ; 18:1               ; 2 bits    ; 24 LEs        ; 20 LEs               ; 4 LEs                  ; No         ; |XM23|alu:alu_inst|result[5]                                                                                                                                                                                    ;
 ; 18:1               ; 3 bits    ; 36 LEs        ; 3 LEs                ; 33 LEs                 ; No         ; |XM23|decode_stage:decode_stage_inst|S                                                                                                                                                                          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -890,15 +858,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------------+-------+----------+------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "pipeline_controller:pipeline_controller_inst"                                                                                                 ;
-+--------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port   ; Type  ; Severity ; Details                                                                                                                                      ;
-+--------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; PSW_in ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+--------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-
-
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "pipeline_registers:pipeline_registers_inst"                                                                                                          ;
 +--------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
@@ -921,16 +880,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; T_o          ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
 ; SA_o         ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
 +--------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "d_ram:dram"                                                                                                                                                                          ;
-+---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
-+---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; address ; Input ; Warning  ; Input port expression (16 bits) is wider than the input port (15 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; wren    ; Input ; Warning  ; Input port expression (16 bits) is wider than the input port (1 bits) it drives.  The 15 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-+---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +--------------------------------------------------------------------------+
@@ -971,32 +920,32 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 142                         ;
-; cycloneiii_ff         ; 789                         ;
+; cycloneiii_ff         ; 794                         ;
 ;     CLR               ; 25                          ;
-;     CLR SLD           ; 10                          ;
-;     ENA               ; 427                         ;
-;     ENA CLR           ; 160                         ;
-;     ENA CLR SLD       ; 30                          ;
+;     CLR SLD           ; 2                           ;
+;     ENA               ; 423                         ;
+;     ENA CLR           ; 152                         ;
+;     ENA CLR SLD       ; 46                          ;
 ;     ENA SCLR          ; 15                          ;
-;     ENA SLD           ; 16                          ;
+;     ENA SLD           ; 20                          ;
 ;     SCLR              ; 1                           ;
 ;     SLD               ; 15                          ;
-;     plain             ; 90                          ;
-; cycloneiii_lcell_comb ; 2976                        ;
-;     arith             ; 311                         ;
+;     plain             ; 95                          ;
+; cycloneiii_lcell_comb ; 2988                        ;
+;     arith             ; 325                         ;
 ;         1 data inputs ; 3                           ;
 ;         2 data inputs ; 160                         ;
-;         3 data inputs ; 148                         ;
-;     normal            ; 2665                        ;
+;         3 data inputs ; 162                         ;
+;     normal            ; 2663                        ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 29                          ;
-;         2 data inputs ; 116                         ;
-;         3 data inputs ; 675                         ;
-;         4 data inputs ; 1843                        ;
+;         2 data inputs ; 134                         ;
+;         3 data inputs ; 667                         ;
+;         4 data inputs ; 1831                        ;
 ; cycloneiii_ram_block  ; 304                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 25.00                       ;
-; Average LUT depth     ; 8.99                        ;
+; Average LUT depth     ; 9.31                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1015,7 +964,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sat Nov 16 14:41:36 2024
+    Info: Processing started: Sat Nov 23 19:50:09 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off XM23 -c XM23
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -1094,9 +1043,9 @@ Warning (10236): Verilog HDL Implicit Net warning at pipeline_registers.sv(240):
 Warning (10236): Verilog HDL Implicit Net warning at alu_DADD.sv(54): created implicit net for "carry_out" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu_DADD.sv Line: 54
 Info (12127): Elaborating entity "XM23" for the top level hierarchy
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gprc_o_wire" into its bus
-Info (12128): Elaborating entity "program_counter" for hierarchy "program_counter:program_counter_inst" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 204
+Info (12128): Elaborating entity "program_counter" for hierarchy "program_counter:program_counter_inst" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 205
 Warning (10230): Verilog HDL assignment warning at program_counter.sv(36): truncated value with size 32 to match size of target (2) File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/program_counter.sv Line: 36
-Info (12128): Elaborating entity "p_ram" for hierarchy "p_ram:pram" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 216
+Info (12128): Elaborating entity "p_ram" for hierarchy "p_ram:pram" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 217
 Info (12128): Elaborating entity "altsyncram" for hierarchy "p_ram:pram|altsyncram:altsyncram_component" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/p_ram.v Line: 86
 Info (12130): Elaborated megafunction instantiation "p_ram:pram|altsyncram:altsyncram_component" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/p_ram.v Line: 86
 Info (12133): Instantiated megafunction "p_ram:pram|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/p_ram.v Line: 86
@@ -1121,9 +1070,8 @@ Info (12128): Elaborating entity "altsyncram_q6k1" for hierarchy "p_ram:pram|alt
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_hlb2.tdf
     Info (12023): Found entity 1: altsyncram_hlb2 File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/altsyncram_hlb2.tdf Line: 34
 Info (12128): Elaborating entity "altsyncram_hlb2" for hierarchy "p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|altsyncram_hlb2:altsyncram1" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/altsyncram_q6k1.tdf Line: 37
-Warning (113028): 32760 out of 32768 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 2 warnings found, and 2 warnings are reported. File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/program_memory.mif Line: 1
-    Warning (113027): Addresses ranging from 0 to 2047 are not initialized File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/program_memory.mif Line: 1
-    Warning (113027): Addresses ranging from 2055 to 32766 are not initialized File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/program_memory.mif Line: 1
+Warning (113028): 32755 out of 32768 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported. File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/program_memory.mif Line: 1
+    Warning (113027): Addresses ranging from 12 to 32766 are not initialized File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/program_memory.mif Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_msa.tdf
     Info (12023): Found entity 1: decode_msa File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/decode_msa.tdf Line: 23
 Info (12128): Elaborating entity "decode_msa" for hierarchy "p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|altsyncram_hlb2:altsyncram1|decode_msa:decode4" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/altsyncram_hlb2.tdf Line: 50
@@ -1147,10 +1095,10 @@ Info (12133): Instantiated megafunction "p_ram:pram|altsyncram:altsyncram_compon
 Info (12128): Elaborating entity "sld_jtag_endpoint_adapter" for hierarchy "p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 302
 Info (12128): Elaborating entity "sld_jtag_endpoint_adapter_impl" for hierarchy "p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd Line: 232
 Info (12128): Elaborating entity "sld_rom_sr" for hierarchy "p_ram:pram|altsyncram:altsyncram_component|altsyncram_q6k1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 828
-Info (12128): Elaborating entity "memory_access_d_ram" for hierarchy "memory_access_d_ram:memory_access_d_ram_inst" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 235
+Info (12128): Elaborating entity "memory_access_d_ram" for hierarchy "memory_access_d_ram:memory_access_d_ram_inst" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 236
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gprc" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gprc" into its bus
-Info (12128): Elaborating entity "d_ram" for hierarchy "d_ram:dram" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 247
+Info (12128): Elaborating entity "d_ram" for hierarchy "d_ram:dram" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 248
 Info (12128): Elaborating entity "altsyncram" for hierarchy "d_ram:dram|altsyncram:altsyncram_component" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/d_ram.v Line: 86
 Info (12130): Elaborated megafunction instantiation "d_ram:dram|altsyncram:altsyncram_component" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/d_ram.v Line: 86
 Info (12133): Instantiated megafunction "d_ram:dram|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/d_ram.v Line: 86
@@ -1175,8 +1123,8 @@ Info (12128): Elaborating entity "altsyncram_grj1" for hierarchy "d_ram:dram|alt
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_jab2.tdf
     Info (12023): Found entity 1: altsyncram_jab2 File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/altsyncram_jab2.tdf Line: 34
 Info (12128): Elaborating entity "altsyncram_jab2" for hierarchy "d_ram:dram|altsyncram:altsyncram_component|altsyncram_grj1:auto_generated|altsyncram_jab2:altsyncram1" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/altsyncram_grj1.tdf Line: 37
-Warning (113028): 32768 out of 32768 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported. File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/data_memory.mif Line: 1
-    Warning (113027): Addresses ranging from 0 to 32767 are not initialized File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/data_memory.mif Line: 1
+Warning (113028): 32766 out of 32768 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported. File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/data_memory.mif Line: 1
+    Warning (113027): Addresses ranging from 2 to 32767 are not initialized File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/data_memory.mif Line: 1
 Info (12128): Elaborating entity "sld_mod_ram_rom" for hierarchy "d_ram:dram|altsyncram:altsyncram_component|altsyncram_grj1:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/altsyncram_grj1.tdf Line: 38
 Info (12130): Elaborated megafunction instantiation "d_ram:dram|altsyncram:altsyncram_component|altsyncram_grj1:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/altsyncram_grj1.tdf Line: 38
 Info (12133): Instantiated megafunction "d_ram:dram|altsyncram:altsyncram_component|altsyncram_grj1:auto_generated|sld_mod_ram_rom:mgl_prim2" with the following parameter: File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/altsyncram_grj1.tdf Line: 38
@@ -1188,19 +1136,19 @@ Info (12133): Instantiated megafunction "d_ram:dram|altsyncram:altsyncram_compon
     Info (12134): Parameter "SHIFT_COUNT_BITS" = "5"
     Info (12134): Parameter "WIDTH_WORD" = "16"
     Info (12134): Parameter "WIDTHAD" = "15"
-Info (12128): Elaborating entity "decode_stage" for hierarchy "decode_stage:decode_stage_inst" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 277
+Info (12128): Elaborating entity "decode_stage" for hierarchy "decode_stage:decode_stage_inst" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 278
 Warning (10230): Verilog HDL assignment warning at decode_stage.sv(447): truncated value with size 4 to match size of target (1) File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/decode_stage.sv Line: 447
-Info (12128): Elaborating entity "pipeline_registers" for hierarchy "pipeline_registers:pipeline_registers_inst" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 346
+Info (12128): Elaborating entity "pipeline_registers" for hierarchy "pipeline_registers:pipeline_registers_inst" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 347
 Warning (10036): Verilog HDL or VHDL warning at pipeline_registers.sv(240): object "exec_result_o" assigned a value but never read File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/pipeline_registers.sv Line: 240
 Warning (10230): Verilog HDL assignment warning at pipeline_registers.sv(240): truncated value with size 16 to match size of target (1) File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/pipeline_registers.sv Line: 240
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gprc_o" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gprc_i" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gprc_o" into its bus
-Info (12128): Elaborating entity "pipeline_controller" for hierarchy "pipeline_controller:pipeline_controller_inst" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 368
-Info (12128): Elaborating entity "regnum_to_values_to_alu" for hierarchy "regnum_to_values_to_alu:regnum_to_values_to_alu_inst" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 381
+Info (12128): Elaborating entity "pipeline_controller" for hierarchy "pipeline_controller:pipeline_controller_inst" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 370
+Info (12128): Elaborating entity "regnum_to_values_to_alu" for hierarchy "regnum_to_values_to_alu:regnum_to_values_to_alu_inst" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 383
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gprc" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gprc" into its bus
-Info (12128): Elaborating entity "alu" for hierarchy "alu:alu_inst" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 396
+Info (12128): Elaborating entity "alu" for hierarchy "alu:alu_inst" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 398
 Info (12128): Elaborating entity "alu_AND" for hierarchy "alu:alu_inst|alu_AND:and_op" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu.sv Line: 42
 Info (12128): Elaborating entity "alu_OR" for hierarchy "alu:alu_inst|alu_OR:or_op" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu.sv Line: 43
 Info (12128): Elaborating entity "alu_XOR" for hierarchy "alu:alu_inst|alu_XOR:xor_op" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu.sv Line: 44
@@ -1223,17 +1171,17 @@ Info (12128): Elaborating entity "alu_RRC" for hierarchy "alu:alu_inst|alu_RRC:r
 Info (12128): Elaborating entity "alu_COMP" for hierarchy "alu:alu_inst|alu_COMP:comp_op" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu.sv Line: 60
 Info (12128): Elaborating entity "alu_SWPB" for hierarchy "alu:alu_inst|alu_SWPB:swpb_op" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu.sv Line: 61
 Info (12128): Elaborating entity "alu_SXT" for hierarchy "alu:alu_inst|alu_SXT:sxt_op" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/alu.sv Line: 62
-Info (12128): Elaborating entity "branch" for hierarchy "branch:branch_inst" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 415
-Info (12128): Elaborating entity "go_to_LR" for hierarchy "go_to_LR:go_to_LR_inst" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 429
+Info (12128): Elaborating entity "branch" for hierarchy "branch:branch_inst" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 417
+Info (12128): Elaborating entity "go_to_LR" for hierarchy "go_to_LR:go_to_LR_inst" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 431
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gprc" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gprc" into its bus
-Info (12128): Elaborating entity "moves" for hierarchy "moves:moves_inst" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 441
+Info (12128): Elaborating entity "moves" for hierarchy "moves:moves_inst" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 443
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gprc" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gprc" into its bus
-Info (12128): Elaborating entity "update_psw" for hierarchy "update_psw:update_psw_inst" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 467
+Info (12128): Elaborating entity "update_psw" for hierarchy "update_psw:update_psw_inst" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 469
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "carry_arr" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "overflow_arr" into its bus
-Info (12128): Elaborating entity "system_view" for hierarchy "system_view:system_view_inst" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 476
+Info (12128): Elaborating entity "system_view" for hierarchy "system_view:system_view_inst" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 478
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gprc" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gprc" into its bus
 Info (12128): Elaborating entity "reg_view" for hierarchy "system_view:system_view_inst|reg_view:regview" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/system_view.sv Line: 34
@@ -1274,7 +1222,7 @@ Info (12133): Instantiated megafunction "system_view:system_view_inst|reg_view:r
     Info (12134): Parameter "SHIFT_COUNT_BITS" = "8"
     Info (12134): Parameter "WIDTH_WORD" = "176"
     Info (12134): Parameter "WIDTHAD" = "1"
-Info (12128): Elaborating entity "seven_segment_display_driver" for hierarchy "seven_segment_display_driver:seven_segment_display_driver_inst" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 482
+Info (12128): Elaborating entity "seven_segment_display_driver" for hierarchy "seven_segment_display_driver:seven_segment_display_driver_inst" File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/XM23.sv Line: 484
 Warning (10230): Verilog HDL assignment warning at seven_segment_display_driver.sv(25): truncated value with size 32 to match size of target (4) File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/seven_segment_display_driver.sv Line: 25
 Warning (10230): Verilog HDL assignment warning at seven_segment_display_driver.sv(24): truncated value with size 32 to match size of target (4) File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/seven_segment_display_driver.sv Line: 24
 Warning (10230): Verilog HDL assignment warning at seven_segment_display_driver.sv(23): truncated value with size 32 to match size of target (4) File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/seven_segment_display_driver.sv Line: 23
@@ -1284,7 +1232,7 @@ Warning (10230): Verilog HDL assignment warning at seven_segment_display_driver.
 Warning (10230): Verilog HDL assignment warning at seven_segment_display_driver.sv(19): truncated value with size 32 to match size of target (4) File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/seven_segment_display_driver.sv Line: 19
 Warning (10230): Verilog HDL assignment warning at seven_segment_display_driver.sv(18): truncated value with size 32 to match size of target (4) File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/seven_segment_display_driver.sv Line: 18
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2024.11.16.14:41:46 Progress: Loading sld928a91a1/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2024.11.23.19:50:20 Progress: Loading sld928a91a1/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -1307,22 +1255,22 @@ Info (12021): Found 2 design units, including 1 entities, in source file db/ip/s
     Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_splitter.sv
     Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/db/ip/sld928a91a1/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
-Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
 Info (17049): 37 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/romes/OneDrive/Desktop/XM23-CPU/FPGA/output_files/XM23.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 3720 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 3753 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 7 input pins
     Info (21059): Implemented 58 output pins
-    Info (21061): Implemented 3350 logic cells
+    Info (21061): Implemented 3383 logic cells
     Info (21064): Implemented 304 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 29 warnings
-    Info: Peak virtual memory: 4924 megabytes
-    Info: Processing ended: Sat Nov 16 14:42:04 2024
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 28 warnings
+    Info: Peak virtual memory: 4932 megabytes
+    Info: Processing ended: Sat Nov 23 19:50:37 2024
     Info: Elapsed time: 00:00:28
-    Info: Total CPU time (on all processors): 00:00:27
+    Info: Total CPU time (on all processors): 00:00:25
 
 
 +------------------------------------------+

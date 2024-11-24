@@ -41,7 +41,7 @@ module pipeline_controller (
    input logic [2:0] three_msb, 		// test leading 3 bits 0b000 | 0b001
    input logic [12:0] thirteen_lsb,	// to get offset from bits 0-12
    input logic signed [15:0] PC_in,
-   input logic PSW_in,
+   input logic [15:0] PSW_in,
    output logic [15:0] PC_next,
    output logic [15:0] LBPC,			// PC to revert if needed (at exec)
    output logic [15:0] LBPC_LR,		// PC to revert if needed (at exec) only for LR
@@ -80,11 +80,10 @@ module pipeline_controller (
    logic [15:0] LBPC2;	// incase there are multiple consecutive branches.
 
    logic [15:0] LBPSW1;	// Likewise for PSW
-   logic [15:0] LBPSW2;
 
    assign LBPC_LR = LBPC1;
    assign LBPC = LBPC2;
-   assign LBPSW = LBPSW2;
+   assign LBPSW = LBPSW1;
 
    always_comb begin
       // Sign-extend 13-bit input to 16-bit signed output
@@ -100,8 +99,7 @@ module pipeline_controller (
       // Store LBPC1, LBPC2 and calculate next PC
       LBPC2 <= LBPC1;
       LBPC1 <= PC_in + 16'b0000000000000010;
-      // Likewise for PSW
-      LBPSW2 <= LBPSW1;
+      // PSW needs one fewer saved history PSWs than PC (because gets set later in pipeline stages)
       LBPSW1 <= PSW_in;
       if ((three_msb == 3'b000)) begin
          PC_next <= PC_in + extended_13 + 16'b0000000000000010;

@@ -1,6 +1,6 @@
 -- XM23 ASM to FPGA MIF File Conversion
 -- Roee Omessi and Vlad Chiriac
--- MIF File generated on 2024-11-13 12:50:45
+-- MIF File generated on 2024-11-23 17:48:44
 
 
 WIDTH=16;
@@ -8,4 +8,6 @@ DEPTH=32768;
 ADDRESS_RADIX=HEX;
 DATA_RADIX=HEX;
 CONTENT BEGIN
+0000 : 1000;
+0001 : 1200;
 END;

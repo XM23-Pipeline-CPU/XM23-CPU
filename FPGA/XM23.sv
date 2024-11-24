@@ -41,7 +41,8 @@ module XM23 (
          default: DIVIDER = 3;
       endcase
    end
-
+	
+	
    always @(posedge clk_in) begin
      if (init) begin
          PC_force <= FORCED;
@@ -86,8 +87,8 @@ module XM23 (
    
 
    // Wires for data memory access
-   wire [15:0] dram_address_wire;
-   wire [15:0] dram_write_enable_wire;
+   wire [14:0] dram_address_wire;
+   wire        dram_write_enable_wire;
    wire [15:0] dram_data_in_wire;
    wire [15:0] dram_data_out_wire;
 
@@ -350,6 +351,7 @@ module XM23 (
       // INPUT FROM TOPLEVEL
       .clk(clk),
       .PC_in(PC_wire),
+		.PSW_in(PSW_o_wire),
 
       // INPUT FROM FETCH
       .three_msb(inst_wire[15:13]),

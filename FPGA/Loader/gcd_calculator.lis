@@ -1,0 +1,71 @@
+X-Makina Assembler - Version XM-23p Single Pass+ Assembler - Release 24.05.16
+Input file name: gcd_calculator.asm
+Time of assembly: Sat 23 Nov 2024 19:46:22 
+  1	    	     	; defining some symbols
+  2	    	     	u	equ	R0
+  3	    	     	v	equ	R1
+  4	    	     	addr	equ	R2
+  5	    	     	zero	equ	#0000
+  6	    	     	
+  7	    	     	
+  8	    	     	; load default values into data memory
+  9	    	     	DATA
+ 10	    	     		ORG	zero		; set data memory starting address to 0x0000
+ 11	0000	1000		WORD	#1000		; store 0x1000 at byte address 0x0000
+ 12	0002	1200		WORD	#1200		; store 0x1200 at byte address 0x0002
+ 13	    	     	
+ 14	    	     	; start of gcd calculator code
+ 15	    	     	CODE
+ 16	    	     		ORG	zero		; set program memory starting address to 0x0000
+ 17	0000	6802		MOVLZ	zero,addr	; set data memory fetch address to 0x0000
+ 18	0002	5890		LD	addr+,u		; load value from memory 0x0000 into 'u' (R0), and post increment address
+ 19	0004	5891		LD	addr+,v		; load value from memory 0x0002 into 'v' (R1), and post increment address
+ 20	    	     	
+ 21	0006	4508	WHILE	CMP	v,u		; check if u == v (does u - v)
+ 22	0008	2005		BEQ	OUTPUT		; if equal, exit while loop
+ 23	000A	3002		BN	ELSE		; if u is smaller than v go to ELSE
+ 24	000C	4208	IF	SUB	v,u		; u = u - v
+ 25	000E	3FFB		BRA	WHILE		; go back to while loop
+ 26	0010	4201	ELSE	SUB	u,v		; v = v - u
+ 27	0012	3FF9		BRA	WHILE		; go back to while loop
+ 28	    	     	
+ 29	    	     	
+ 30	0014	5C02	OUTPUT	ST	u,addr		; store u in data memory location 0x0004
+ 31	0016	3FFF	DONE	BRA	DONE
+ 32	    	     	END
+
+Successful completion of assembly - 2P
+
+** Symbol table **
+
+Constants (Equates)
+Name                               	Type	Value	Decimal
+zero                               	CON	0000	0	PRI
+
+Labels (Code)
+Name                               	Type	Value	Decimal
+DONE                               	REL	0016	22	PRI
+IF                                 	REL	000C	12	PRI
+ELSE                               	REL	0010	16	PRI
+OUTPUT                             	REL	0014	20	PRI
+WHILE                              	REL	0006	6	PRI
+
+Labels (Data)
+Name                               	Type	Value	Decimal
+
+Registers
+Name                               	Type	Value	Decimal
+addr                               	REG	0002	2	PRI
+v                                  	REG	0001	1	PRI
+u                                  	REG	0000	0	PRI
+R7                                 	REG	0007	7	PRI
+R6                                 	REG	0006	6	PRI
+R5                                 	REG	0005	5	PRI
+R4                                 	REG	0004	4	PRI
+R3                                 	REG	0003	3	PRI
+R2                                 	REG	0002	2	PRI
+R1                                 	REG	0001	1	PRI
+R0                                 	REG	0000	0	PRI
+
+.XME file: C:\Users\romes\OneDrive\Desktop\XM23-CPU\FPGA\Loader\gcd_calculator.xme
+

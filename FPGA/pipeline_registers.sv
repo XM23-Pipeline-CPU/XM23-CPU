@@ -208,7 +208,7 @@ module pipeline_registers(
          if (enable_i[2][33]) begin
             gprc_i[SELECT_REG][S_i[2]] <= gprc_i[SELECT_REG][S_i[2]] + (({15'b0, INC_i[2]} - {15'b0, DEC_i[2]}) << 1);
          end else if (enable_i[2][34]) begin
-            gprc_i[SELECT_REG][D_i[2]] <= gprc_i[SELECT_REG][S_i[2]] + (({15'b0, INC_i[2]} - {15'b0, DEC_i[2]}) << 1);
+            gprc_i[SELECT_REG][D_i[2]] <= gprc_i[SELECT_REG][D_i[2]] + (({15'b0, INC_i[2]} - {15'b0, DEC_i[2]}) << 1);
          end
       end
    end
