@@ -190,12 +190,12 @@ module XM23 (
       // INPUT FROM CONTROLLER
       .PC_next(PC_next_wire),
       .LBPC(LBPC_wire),
-      .LR(LR_wire),
       .link_back(clear_pipeline_LR_wire),
       .stall_in(stall_wire),
 
       // INPUT FROM BRANCH INSTRUCTIONS
       .branch_fail(branch_predict_fail_wire),
+      .LR(LR_wire),
 
       // OUTPUT PC
       .true_PC(PC_wire),
@@ -422,9 +422,6 @@ module XM23 (
       .enable(enable_o_wire[0]),
       .src_i(S_o_wire),
       .gprc(gprc_o_wire),
-
-      // INPUT FROM BRANCHING INSTRUCTIONS LR
-      .LR_i(LR_wire),
 
       // OUTPUT TO PC
       .link_back_o(clear_pipeline_LR_wire)

@@ -12781,22 +12781,6 @@ enable[2][37] => ~NO_FANOUT~
 enable[2][38] => ~NO_FANOUT~
 enable[2][39] => ~NO_FANOUT~
 enable[2][40] => ~NO_FANOUT~
-LR_i[0] => ~NO_FANOUT~
-LR_i[1] => ~NO_FANOUT~
-LR_i[2] => ~NO_FANOUT~
-LR_i[3] => ~NO_FANOUT~
-LR_i[4] => ~NO_FANOUT~
-LR_i[5] => ~NO_FANOUT~
-LR_i[6] => ~NO_FANOUT~
-LR_i[7] => ~NO_FANOUT~
-LR_i[8] => ~NO_FANOUT~
-LR_i[9] => ~NO_FANOUT~
-LR_i[10] => ~NO_FANOUT~
-LR_i[11] => ~NO_FANOUT~
-LR_i[12] => ~NO_FANOUT~
-LR_i[13] => ~NO_FANOUT~
-LR_i[14] => ~NO_FANOUT~
-LR_i[15] => ~NO_FANOUT~
 link_back_o <= always0.DB_MAX_OUTPUT_PORT_TYPE
 
 

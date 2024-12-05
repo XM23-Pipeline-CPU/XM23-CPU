@@ -49,7 +49,4 @@ module alu_DADD (
 
    // Combine the corrected digits back into the 16-bit result
    assign result = {digit_result[3], digit_result[2], digit_result[1], digit_result[0]};
-
-   // Generate carry out for the overall result
-   assign carry_out = bcd_carry;
 endmodule

@@ -11,7 +11,6 @@ module go_to_LR (
    input  logic [1:0][7:0][15:0] gprc,
    input  logic [2:0][2:0]       src_i,
    input  logic [2:0][40:0]      enable,
-   input  logic [15:0]           LR_i,
    output logic                  link_back_o
 );
    parameter R = 0; // Register index
